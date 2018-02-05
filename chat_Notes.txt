@@ -1,0 +1,20 @@
+===================================================================================================================
+							rentstarz-CHAT INTEGRATION
+===================================================================================================================
+
+
+	ssh git@192.168.1.14 -p 4040 ---> server
+	-------------------------------------------------
+	
+	/var/www/html/rentstarz.com ---> FrontEnd (application/modules/User/externals/chat)
+
+	/var/www/html/rentstarz-chat-server ---> ChatBackend(Server Side)
+
+	-------------------------------------------------------------------
+
+	In rentstarz.com web side (Configuration FIle)---> application/modules/User/externals/chat/js/config.js
+
+	  --> io.sails.url  =  'http://git.titechnologies.in:5000';
+
+	
+====================================================================================================================

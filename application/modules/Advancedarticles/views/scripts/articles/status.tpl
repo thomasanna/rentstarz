@@ -1,0 +1,1 @@
+<a href="javascript:void(0);" class="buttonlink <?php echo $this->subclass ?>"><?php echo $this->label ?></a>

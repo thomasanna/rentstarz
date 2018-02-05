@@ -1,0 +1,123 @@
+ul.message-autosuggest
+{
+  position: absolute;
+  padding: 0px;
+  width: 300px;
+  list-style: none;
+  z-index: 50;
+  border: 1px solid $theme_border_dark_color;
+  margin: 0px;
+  list-style: none;
+  cursor: pointer;
+  white-space: nowrap;
+  background: $theme_body_background_color;
+}
+ul.message-autosuggest > li
+{
+  padding: 3px;
+  overflow: hidden;
+}
+ul.message-autosuggest > li + li
+{
+  border-top-width: 1px;
+}
+ul.message-autosuggest > li img
+{
+  width: 25px;
+  height: 25px;
+  display: block;
+  float: left;
+  margin-right: 5px;
+}
+html[dir="rtl"] ul.message-autosuggest > li img
+{
+  float: right;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+ul.message-autosuggest > li.autocompleter-selected
+{
+  background-color: $theme_list_background_color;
+}
+ul.message-autosuggest > li.autocompleter-choices
+{
+  font-size: .8em;
+}
+ul.message-autosuggest > li.autocompleter-choices .autocompleter-choice
+{
+  line-height: 25px;
+}
+ul.message-autosuggest > li:hover
+{
+  background-color: $theme_list_background_color_hover;
+}
+ul.message-autosuggest > li span.autocompleter-queried
+{
+  font-weight: bold;
+}
+ul.message-autosuggest .search-working
+{
+  background-image: none;
+}
+html[dir="rtl"] ul.message-autosuggest .friendlist
+{
+  background-position: 99% 50%;
+  padding-left: 0px;
+  padding-right: 28px;
+}
+#messages_compose #toValues-label > label
+{
+  display: none;
+}
+#messages_compose #toValues-wrapper
+{
+  height: 0px;
+}
+#messages_compose #toValues-element
+{
+  width: 400px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+div.event_calendar_container button.event_calendar
+{
+	background-repeat: no-repeat!important;
+	margin-top: 4px;
+}
+#ynrespnosive_event_create_form #toValues-wrapper #toValues-label,
+#ynrespnosive_sponsor_create_form #toValues-wrapper #toValues-label
+{
+	display: none;
+}
+#ynrespnosive_event_create_form #starttime-wrapper select + select,
+#ynrespnosive_event_create_form #endtime-wrapper select + select
+{
+	margin-left: 10px;
+}
+#ynrespnosive_sponsor_create_form
+{
+	width: 300px;
+}
+.photo-delete {
+    background-image: url(~/application/modules/Core/externals/images/admin/referrers_clear.png);
+    background-position: center;
+    position: absolute;
+    top: 5px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+}
+.metro_block_photos li 
+{
+	display: inline-block;
+	position: relative;
+	margin-right: 1em;
+	padding-top: 1em;
+}
+#global_page_ynresponsive1-admin-manage-photo-blocks-index table.admin_table tbody tr td{
+  background: #eee !important;
+  border-bottom: 1px solid #e2e2e2;
+  img{
+    width: 50px;
+  }
+}

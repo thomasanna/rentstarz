@@ -1,0 +1,1 @@
+INSERT IGNORE INTO `engine4_core_modules` (`name`, `title`, `description`, `version`, `enabled`, `type`) VALUES  ('cometchat', 'CometChat', 'enable audio video chat to your website!', '1.0.0', 1, 'extra') ;

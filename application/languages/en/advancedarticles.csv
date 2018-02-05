@@ -1,0 +1,363 @@
+NEW!;NEW!
+Below information about plugins from SpurIT;Below information about plugins from SpurIT
+Installed Plugins;Installed Plugins
+Free;Free
+your version:;your version:
+last version:;last version:
+N/A;N/A
+More...;More...
+Not Installed Paid Plugins;Not Installed Paid Plugins
+Not Installed Free Plugins;Not Installed Free Plugins
+artarticle;article
+Advanced Articles;Advanced Articles
+ADVANCED_ARTICLES_DESCRIPTION;Advanced Articles plugin allows to post articles with photos, comments and have a wide range of additional features.
+Article has been added.;Article has been added.
+Article has been edited.;Article has been edited.
+Activate;Activate
+Deactivate;Deactivate
+Your changes have been saved.;Your changes have been saved.
+Photo has been deleted.;Photo has been deleted.
+Max file size limit exceeded (probably).;Max file size limit exceeded (probably).
+Invalid request method;Invalid request method
+No file;No file
+Invalid Upload;Invalid Upload
+"%s article found";"%s article found";"%s articles found"
+ID;ID
+Title;Title
+Owner;Owner
+Views;Views
+Comments;Comments
+Likes;Likes
+Date;Date
+Options;Options
+Active;Active
+Inactive;Inactive
+Draft;Draft
+Featured;Featured
+Not Featured;Not Featured
+Sponsored;Sponsored
+Not Sponsored;Not Sponsored
+edit;edit
+delete;delete
+Delete;Delete
+Delete Selected;Delete Selected
+Add New Category;Add New Category
+"%d category found";"%d category found";"%d categories found"
+Category Name;Category Name
+You have already created the maximum number of articles allowed.;You have already created the maximum number of articles allowed.
+If you would like to create a new article, please %1$sdelete%2$s an old one first.;If you would like to create a new article, please %1$sdelete%2$s an old one first.
+Photos;Photos
+View Photos;View Photos
+Upload Photos;Upload Photos
+Manage Photos;Manage Photos
+This article does not have any photos.;This article does not have any photos.
+Get started by %1$suploading%2$s a new photo!;Get started by %1$suploading%2$s a new photo!
+Description;Description
+Delete Photo;Delete Photo
+Article Cover;Article Cover
+Save Changes;Save Changes
+You do not have any articles.;You do not have any articles.
+Get started by %1$sposting%2$s a new article!;Get started by %1$sposting%2$s a new article!
+Nobody has created a article with that criteria.;Nobody has created a article with that criteria.
+Be the first to %1$sadd%2$s a new article!;Be the first to %1$sadd%2$s a new article!
+featured;featured
+sponsored;sponsored
+"%s view";"%s view";"%s views"
+"%s comment";"%s comment";"%s comments"
+"%s like";"%s like";"%s likes"
+Publish Article;Publish Article
+Add Photos;Add Photos
+Edit;Edit
+Delete;Delete
+Take Print;Take Print
+Posted by;Posted by
+ADD TAG;ADD TAG
+Type a tag or select a name from the list.;Type a tag or select a name from the list.
+Photo %1$s of %2$s;Photo %1$s of %2$s
+Prev;Prev
+Next;Next
+Added by;Added by
+Tagged:;Tagged:
+Add Tag;Add Tag
+Share;Share
+Report;Report
+Make Profile Photo;Make Profile Photo
+Articles;Articles
+No one will be able to view this article until you %1$sactive%2$s it!;No one will be able to view this article until you %1$sactive%2$s it!
+Filed in;Filed in
+Article Tags:;Article Tags:
+Print Article;Print Article
+Details;Details
+posted by;posted by
+All Categories;All Categories
+Nobody has created an article yet.;Nobody has created an article yet.
+View %s\'s articles;View %s\'s articles
+Explore Tags;Explore Tags
+updated;updated
+"%s article";"%s article";"%s articles"
+
+Count;Count
+number of items to show;number of items to show
+
+Featured Articles;Featured Articles
+Category;Category
+Slideshow Interval (sec);Slideshow Interval (sec)
+Sort By;Sort By
+Created Date;Created Date
+Title;Title
+Most Commented;Most Commented
+Most Liked;Most Liked
+Most Viewed;Most Viewed
+Randomized;Randomized
+
+Popular Tags;Popular Tags
+Show Link Explore Tags;Show Link Explore Tags
+Yes;Yes
+No;No
+Tag Name;Tag Name
+Count Article;Count Article
+
+Profile Articles;Profile Articles
+Number of articles;Number of articles
+the number of articles to display by default;the number of articles to display by default
+
+Random Articles;Random Articles
+
+Recent Articles;Recent Articles
+
+Sponsored Articles;Sponsored Articles
+
+Most Viewed;Most Viewed
+
+Add Category;Add Category
+Category name;Category name
+Category URL;Category URL
+This URL may only contain alphanumeric characters and dashes - any other characters will be stripped.;This URL may only contain alphanumeric characters and dashes - any other characters will be stripped.
+cancel;cancel
+or;or
+
+Delete Category;Delete Category
+Are you sure you want to delete this category?;Are you sure you want to delete this category?
+
+Edit Category;Edit Category
+Status;Status
+Search;Search
+Member Level Settings;Member Level Settings
+ADVANCEDARTICLES_LEVEL_DESCRIPTION;These settings are applied on a per member level basis. Start by selecting the member level you want to modify, then adjust the settings for that level below.
+Select Member Level;Select Member Level
+Allow Viewing of Articles;Allow Viewing of Articles
+Do you want to let users view articles? If set to no, some other settings on this page may not apply.;Do you want to let users view articles? If set to no, some other settings on this page may not apply.
+Yes, allow members to view all articles, even private ones.;Yes, allow members to view all articles, even private ones.
+Yes, allow members to view articles.;Yes, allow members to view articles.
+No, do not allow articles to be viewed.;No, do not allow articles to be viewed.
+Allow Commenting of Articles;Allow Commenting of Articles
+Do you want to let users comment articles? If set to no, some other settings on this page may not apply.;Do you want to let users comment articles? If set to no, some other settings on this page may not apply.
+Yes, allow members to comment articles.;Yes, allow members to comment articles.
+No, do not allow members to comment articles.;No, do not allow members to comment articles.
+Allow Creation of Articles;Allow Creation of Articles
+Do you want to let users create articles? If set to no, some other settings on this page may not apply.;Do you want to let users create articles? If set to no, some other settings on this page may not apply.
+Yes, allow members to create articles.;Yes, allow members to create articles.
+No, do not allow articles to be created.;No, do not allow articles to be created.
+Allow Editing of Articles;Allow Editing of Articles
+Do you want to let users edit articles? If set to no, some other settings on this page may not apply.;Do you want to let users edit articles? If set to no, some other settings on this page may not apply.
+Yes, allow members to edit all articles.;Yes, allow members to edit all articles.
+Yes, allow members to edit their own articles.;Yes, allow members to edit their own articles.
+No, do not allow to edit their articles.;No, do not allow to edit their articles.
+Allow Deletion of Articles;Allow Deletion of Articles
+Do you want to let users delete articles? If set to no, some other settings on this page may not apply.;Do you want to let users delete articles? If set to no, some other settings on this page may not apply.
+Yes, allow members to delete all articles.;Yes, allow members to delete all articles.
+Yes, allow members to delete their own articles.;Yes, allow members to delete their own articles.
+No, do not allow to delete their articles.;No, do not allow to delete their articles.
+Allow Uploading of Photos;Allow Uploading of Photos
+Do you want to let users upload photos to an article?;Do you want to let users upload photos to an article?
+Yes, allow photo uploading to article.;Yes, allow photo uploading to article.
+No, do not allow photo uploading.;No, do not allow photo uploading.
+Allow Editing of Photos;Allow Editing of Photos
+Do you want to let users edit photos?;Do you want to let users edit photos?
+Yes, allow photo editing.;Yes, allow photo editing.
+No, do not allow photo editing.;No, do not allow photo editing.
+Allow Deletion of Photos;Allow Deletion of Photos
+Do you want to let users delete photos?;Do you want to let users delete photos?
+Yes, allow members to delete.;Yes, allow members to delete.
+No, do not allow members to delete.;No, do not allow members to delete.
+Mark as Featured on Creation;Mark as Featured on Creation
+Would you like to mark article as Featured when created?;Would you like to mark article as Featured when created?
+Yes, mark article as Featured.;Yes, mark article as Featured.
+No, do not mark article as Featured.;No, do not mark article as Featured.
+Mark as Sponsored on Creation;Mark as Sponsored on Creation
+Yes, mark article as Sponsored.;Yes, mark article as Sponsored.
+No, do not mark article as Sponsored.;No, do not mark article as Sponsored.
+Maximum Allowed Articles;Maximum Allowed Articles
+Enter the maximum number of allowed articles. Enter 0 for unlimited articles.;Enter the maximum number of allowed articles. Enter 0 for unlimited articles.
+
+Article Privacy;Article Privacy
+ART_PRIVACY_DESCRIPTION;"Your users can choose from any of the options checked below when they decide who can see their article. These options appear on your users' ""Add Article"" and ""Edit Article"" pages. If you do not check any options, everyone will be allowed to view articles."
+Everyone;Everyone
+All Registered Members;All Registered Members
+Friends and Networks;Friends and Networks
+Friends of Friends;Friends of Friends
+Friends Only;Friends Only
+Just Me;Just Me
+Comment Privacy;Comment Privacy
+Save Settings;Save Settings
+Privacy Settings;Privacy Settings
+Article Settings;Article Settings
+
+
+Global Settings;Global Settings
+These settings affect all members in your community.;These settings affect all members in your community.
+Articles per Page;Articles per Page
+How many articles will be shown per page?;How many articles will be shown per page?
+Article Photos;Article Photos
+How many photos be shown on article`s photo gallery section?;How many photos be shown on article`s photo gallery section?
+Settings;Settings
+
+Public Permissions;Public Permissions
+Yes, the public can view articles unless they are made private.;Yes, the public can view articles unless they are made private.
+No, the public cannot view articles.;No, the public cannot view articles.
+Permissions;Permissions
+
+Sorting Options;Sorting Options
+User preference;User preference
+Featured articles, then user preference;Featured articles, then user preference
+Featured articles, Sponsored articles, then user preference;Featured articles, Sponsored articles, then user preference
+Sponsored articles, then user preference;Sponsored articles, then user preference
+Sponsored articles, Featured articles, then user preference;Sponsored articles, Featured articles, then user preference
+Sorting;Sorting
+
+Add New Article;Add New Article
+Article Title;Article Title
+Main Photo;Main Photo
+Body;Body
+Show this article in search results;Show this article in search results
+Tags;Tags
+Separate tags with commas;Separate tags with commas
+Privacy;Privacy
+Who may see this article?;Who may see this article?
+Who may post comments on this article?;Who may post comments on this article?
+Featured article;Featured article
+Sponsored article;Sponsored article
+Add Article;Add Article
+Save As Draft;Save As Draft
+
+Add New Photos;Add New Photos
+Choose photos on your computer to add to this article.;Choose photos on your computer to add to this article.
+Save Photo;Save Photo
+Delete Article;Delete Article
+Are you sure you want to delete this article?;Are you sure you want to delete this article?
+
+Edit Article;Edit Article
+
+Browse By;Browse By
+Most Recent;Most Recent
+Last Updated;Last Updated
+
+Delete Article Photo;Delete Article Photo
+Are you sure you want to delete this photo?;Are you sure you want to delete this photo?
+
+Edit Article Photo;Edit Article Photo
+
+Show on the Search Options?;Show on the Search Options?
+Hide on the Search Options;Hide on the Search Options
+Show on the Search Options;Show on the Search Options
+Show on Article Page?;Show on Article Page?
+Hide on Article Page;Hide on Article Page
+Show on Article Page;Show on Article Page
+
+Add Article Question;Add Article Question
+Edit Article Question;Edit Article Question
+
+ITEM_TYPE_ARTARTICLE;Articles
+ITEM_TYPE_ADVANCEDARTICLES_ALBUM;Article Albums
+ITEM_TYPE_ADVANCEDARTICLES_CATEGORY;Article Categories
+ITEM_TYPE_ADVANCEDARTICLES_PHOTO;Article Photos
+
+If you want to contribute to the further development of free products then you can donate for this purpose any sum of money:;If you want to contribute to the further development of free products then you can donate for this purpose any sum of money:
+
+List of Categories;List of Categories
+View Articles;View Articles
+Global Settings;Global Settings
+Article Questions;Article Questions
+
+Articles Home;Articles Home
+Browse Articles;Browse Articles
+My Articles;My Articles
+Add New Article;Add New Article
+
+view article;view article
+ADVANCED_ARTICLES_DRAGDROP;Drag & Dop feature is available after adding the category, so you can move a category to each other and make two-level catalog
+
+Categories;Categories
+Display articles categories;Display articles categories
+
+Bread Crumbs;Bread Crumbs
+It allows users to keep track of their locations;It allows users to keep track of their locations
+
+Actions;Actions
+Main menu navigation (Browse Articles Home | Browse Articles | My Articles | Add New Article);Main menu navigation (Browse Articles Home | Browse Articles | My Articles | Add New Article)
+
+View Article;View Article
+Display articles title, body, info, comments etc...;Display articles title, body, info, comments etc...
+
+List Articles;List Articles
+Displays a list of posted articles with different filtering options;Displays a list of posted articles with different filtering options
+
+Owner Info;Owner Info
+Display owner info (photo, total submitted articles and actions);Display owner info (photo, total submitted articles and actions)
+
+Articles Archive;Articles Archive
+Display articles archive;Display articles archive
+
+Filter Form;Filter Form
+Display form to search for articles;Display form to search for articles
+
+Recent Articles;Recent Articles
+Displays a list of recently articles;Displays a list of recently articles
+
+Popular Tags;Popular Tags
+Display popular tag cloud;Display popular tag cloud
+
+Most Commented;Most Commented
+Displays a list of most commented articles;Displays a list of most commented articles
+
+Most Viewed;Most Viewed
+Displays a list of most viewed articles;Displays a list of most viewed articles
+
+Most Liked;Most Liked
+Displays a list of most liked articles;Displays a list of most liked articles
+
+Random;Random
+Displays a list of random articles;Displays a list of random articles
+
+Featured Articles;Featured Articles
+Display featured articles in slideshow format;Display featured articles in slideshow format
+
+Sponsored Articles;Sponsored Articles
+Display sponsored articles in slideshow format;Display sponsored articles in slideshow format
+
+Profile Articles;Profile Articles
+Displays a members articles on their profile;Displays a members articles on their profile
+
+Related Articles;Related Articles
+Display related articles by tags;Display related articles by tags
+
+Top Posters;Top Posters
+Displays list of top articles submitters;Displays list of top articles submitters
+
+by;by
+
+"ADMIN_ACTIVITY_TYPE_ARTARTICLE";"When a user (subject) posts a new article entry (object)."
+"ADMIN_ACTIVITY_TYPE_COMMENT_ARTARTICLE";"When a user (subject) comments on another user's (object) article entries."
+
+"_ACTIVITY_ACTIONTYPE_ARTARTICLE";"New article entries"
+"_ACTIVITY_ACTIONTYPE_COMMENT_ARTARTICLE";"Comments on your article"
+
+# action types
+"{item:$subject} has added a new article:";"{item:$subject} has added a new article:"
+"{item:$subject} commented on {item:$owner}'s {item:$object:article}: {body:$body}";"{item:$subject} commented on {item:$owner}'s {item:$object:article}: {body:$body}"
+
+Recent Article; Recent Article
+
+Subdirectory Link;Subdirectory Link
+http://you-site/subdirectory-link, (e.g. http://you-site/articles);http://you-site/subdirectory-link, (e.g. http://you-site/articles)
+

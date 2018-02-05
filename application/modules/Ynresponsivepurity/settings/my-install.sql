@@ -1,0 +1,1 @@
+INSERT IGNORE INTO `engine4_core_modules` (`name`, `title`, `description`, `version`, `enabled`, `type`) VALUES  ('ynresponsivepurity', 'YN - Responsive Purity Template', 'Responsive Purity Template', '4.01', 1, 'extra') ;

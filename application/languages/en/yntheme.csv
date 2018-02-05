@@ -1,0 +1,2 @@
+"CORE_VIEWS_SCRIPTS_YNADMINTHEMES_INDEX_STYLESHEETSPERMISSION";"Theme directory is not writeable, It can make your change has no affect. Please set full permissions recursively (CHMOD -R 0777) on ""application/themes/%s"" and try again."
+"CORE_VIEWS_SCRIPTS_YNADMINTHEMES_NOYN_INDEX";"Your current theme is ""%s"" active. It is not created by YouNet Company. It could make all your change change has no affect."

@@ -1,0 +1,1 @@
+ALTER TABLE `engine4_advancedarticles_artarticles` CHANGE `body` `body` MEDIUMTEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;

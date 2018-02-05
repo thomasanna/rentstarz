@@ -1,0 +1,42 @@
+/* =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
+ *                              MEDIA QUERIES
+ =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=* */
+@media only screen and (max-width : 1024px) {
+    .largeChatWindow {
+        width: 80%;
+        left: 10%;
+        right: 10%;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+    #global_page_user-index-tichatapp .container
+
+        {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+    #global_page_user-index-tichatapp  #global_wrapper {
+
+        padding: 0px;
+    }
+
+    #remoteVideo {
+        /* max-height:auto; */
+    }
+
+}
+
+@media only screen and (max-width : 540px) {
+    .chat-sidebar
+    {
+        display: none !important;
+    }
+
+    .chat-popup
+    {
+        display: none !important;
+    }
+}

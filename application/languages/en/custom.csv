@@ -1,0 +1,367 @@
+"NETWORK_VIEWS_SCRIPTS_ADMINMANAGE_INDEX_DESCRIPTION";"Networks are generally used for determining what members see in the ""what's new"" feed, letting members associate with each other based on common profile information (without needing to be friends directly), and serving advertisements to specific groups of members. Each member can join one or more networks if you allow them to, and their networks will be shown on their profile. If you decide to have networks, be sure that they relate to your community's theme. For example, if your community has members from various countries, you can create a network for each country. If you want your members to see recent posts from other people in their networks (even if they're not yet friends with each other), you can adjust that setting %s."
+"Groups";"Associations"
+"View All Groups";"View All Associations"
+"group";"associations";"associations"
+"%s group";"%s associations";"%s associations"
+"Search Groups:";"Search Associations:"
+"Tip: %1$sClick here%2$s to create a group or %3$sbrowse%2$s for groups to join!";"Tip: %1$sClick here%2$s to create a group or %3$sbrowse%2$s for associations to join!"
+"All My Groups";"All My Associations"
+"Only Groups I Lead";"Only Associations I Lead"
+"_ACTIVITY_ACTIONTYPE_GROUP_CREATE";"New associations"
+"ACTIVITY_TYPE_COMMENT_GROUP";"When someone comments on one of my associations."
+"ACTIVITY_TYPE_LIKE_GROUP";"When someone likes one of my associations."
+"Allow Viewing of Groups?";"Allow Viewing of associations?"
+"GROUP_FORM_ADMIN_LEVEL_VIEW_DESCRIPTION";"Do you want to let users view associations? If set to no, some other settings on this page may not apply."
+"No, do not allow groups to be viewed.";"No, do not allow associations to be viewed."
+"Yes, allow viewing and subscription of groups.";"Yes, allow viewing and subscription of associations."
+"Yes, allow members to view all groups, even private ones.";"Yes, allow members to view all associations, even private ones."
+"Allow Creation of Groups?";"Allow Creation of associations?"
+"GROUP_FORM_ADMIN_LEVEL_CREATE_DESCRIPTION";"Do you want to let users create associations? If set to no, some other settings on this page may not apply. This is useful if you want users to be able to view associations and manage their subscriptions, but only want certain levels to be able to create groups."
+"No, do not allow groups to be created.";"No, do not allow associations to be created."
+"Yes, allow creation of groups.";"Yes, allow creation of associations."
+"Allow Editing of Groups?";"Allow Editing of Associations?"
+"Do you want to let users edit and delete groups?";"Do you want to let users edit and delete associations?"
+"No, do not allow groups to be edited.";"No, do not allow associations to be edited."
+"Yes, allow  members to edit their own groups.";"Yes, allow  members to edit their own associations."
+"Yes, allow members to edit everyone's groups.";"Yes, allow members to edit everyone's associations."
+"GROUP_FORM_ADMIN_LEVEL_AUTHPHOTO_DESCRIPTION";"Your users can choose from any of the options checked below when they decide who can upload photos to their associations. If you do not check any options, settings will default to the last saved configuration. If you select only one option, members of this level will not have a choice."
+"GROUP_FORM_ADMIN_LEVEL_AUTHEVENT_DESCRIPTION";"Your users can choose from any of the options checked below when they decide who can create events in their associations. If you do not check any options, settings will default to the last saved configuration. If you select only one option, members of this level will not have a choice."
+"My Groups";"My associations"
+"Are you sure you want to delete the selected groups?";"Are you sure you want to delete the selected associations?"
+"GROUP_VIEWS_SCRIPTS_ADMINMANAGE_INDEX_DESCRIPTION";"This page lists all of the group entries your users have posted. You can use this page to monitor these associations and delete offensive material if necessary. Entering criteria into the filter fields will help you find specific associations entries. Leaving the filter fields blank will show all the associations entries on your social network."
+"GROUP_VIEWS_SCRIPTS_ADMINSETTINGS_CATEGORIES_DESCRIPTION";"If you want to allow your users to categorize their associations, create the categories below. This feature is useful if you want to list all your users' associations that If you have no categories, your users will not be given the option of assigning a association category."
+"Browse Groups";"Browse associations"
+"Groups Plugin";"Associations Plugin"
+"Manage Groups";"Manage Associations"
+"Allow Deletion of Groups?";"Allow Deletion of Associations?"
+"Do you want to let members delete groups? If set to no, some other settings on this page may not apply.";"Do you want to let members delete associations? If set to no, some other settings on this page may not apply."
+"Yes, allow members to delete their own groups.";"Yes, allow members to delete their own associations."
+"No, do not allow members to delete their groups.";"No, do not allow members to delete their associations."
+"Allow Commenting on Groups?";"Allow Commenting on Associations?"
+"Do you want to let members of this level comment on groups?";"Do you want to let members of this level comment on associations?"
+"Yes, allow members to comment on groups.";"Yes, allow members to comment on associations."
+"No, do not allow members to comment on groups.";"No, do not allow members to comment on associations."
+"Profile Groups";"Profile Associations"
+"ITEM_TYPE_GROUP";"Associations"
+"Everyone's Groups";"Everyone's Associations"
+"You have not joined any groups yet.";"You have not joined any associations yet."
+"There are no groups yet.";"There are no associations yet."
+"Inbox";"Inbox"
+"Sent Messages";"Sent Messages"
+"%s Purity Template";"%s Rentstarz"
+"";""
+"USER_FORM_ADMIN_SIGNUP_TERMS_DESCRIPTION";"Require members to agree to your terms of service?  You can modifying your terms of service by editing the _CORE_TERMS_OF_SERVICE language variable in the application/languages/en/core.csv file."
+"_CORE_TERMS_OF_SERVICE";"Acceptance of the Terms of Use
+
+Rentstarz LLC. (""rentstarz"", ""we"" or ""us"") operates this website and any related smartphone or mobile application (collectively, the ""Website"") such as Rentstarz lease builder and Rentstarz maintenance manager (collectively, the “Services"") offered through the Website. These terms of use are entered into by and between you and Rentstarz. The following terms and conditions, together with any documents they expressly incorporate by reference (collectively, the ""Agreement""), govern your access to and use of the Website and the Services, whether as a guest or a registered user.
+
+
+Please read this Agreement carefully before you start to use the Website. By using the Website or the Services, or by clicking to accept or agree to this Agreement when this option is made available to you. You agree to comply with and be bound by this Agreement and such other policies and procedures as may be incorporated herein of this Agreement. If the individual clicking to accept or agree to this Agreement is doing so on behalf of an entity and registers such entity with this Website, then you (the individual) represent and warrant that you have authority to bind such entity and enter into this Agreement on its behalf, and all further references to ""you"" shall be to such entity. If you do not agree to this Agreement or the Privacy Policy, you must not access or use the Website or the Services.
+
+The Website and the Services are offered and available to users who are 18 years of age or older. By using the Website or the Services, you, the user, represent and warrant that you are of legal age to form a binding contract with Rentstarz and meet all of the eligibility requirements set forth herein. If you do not meet these requirements, you must not access or use the Website or the Services.
+
+Each of Rentstarz service clients may be subject to one or more separate written agreements with Rentstarz or with each other (each, a ""Service Agreement""). This Agreement applies only to use of the Website and the Services and in no way affects the terms and conditions of any Service Agreement.
+
+Changes to our terms
+
+This version of this Agreement became effective on April 30, 2017 and amends, restates and replaces any version effective prior to such date. We reserve the right, in our sole discretion, to modify this Agreement, in whole or in part, at any time, with or without your consent. Notification of any amendment will be posted on the Website and will be effective immediately. You are under an obligation to review the current version of this Agreement and other Rentstarz policies before using the Website or the Services. All amendments are effective immediately when we post them, and apply to all access to and use of the Website and the Services thereafter. Your use of the Website or the Services following any amendment of this Agreement will signify your assent to and acceptance of its revised terms.
+
+
+Release; Indemnification
+
+BY USING THE WEBSITE OR SERVICES, YOU AGREE THAT ANY LEGAL REMEDY OR LIABILITY YOU SEEK TO OBTAIN FOR ACTIONS OR OMISSIONS OF OTHER USERS WILL BE LIMITED TO A CLAIM AGAINST THE PARTICULAR USER OR USERS WHO CAUSED YOU HARM. IN THE EVENT THAT YOU HAVE A DISPUTE WITH ONE OR MORE OTHER USERS OF THE WEBSITE OR SERVICES (INCLUDING, WITHOUT LIMITATION, ANY DISPUTE BETWEEN USERS REGARDING ANY POTENTIAL OR CONSUMMATED TRANSACTION), AND IN CONSIDERATION OF OUR PROVISION OF THE SERVICES, YOU HEREBY AGREE TO RELEASE, REMISE AND FOREVER DISCHARGE RENTSTARZ AND EACH OF ITS AGENTS, DIRECTORS, OFFICERS, EMPLOYEES, AND ALL OTHER RELATED PERSONS OR ENTITIES FROM ANY AND ALL MANNER OF RIGHTS, CLAIMS, COMPLAINTS, DEMANDS, CAUSES OF ACTION, PROCEEDINGS, LIABILITIES, OBLIGATIONS, LEGAL FEES, COSTS, AND DISBURSEMENTS OF ANY NATURE WHATSOEVER, WHETHER KNOWN OR UNKNOWN, WHICH NOW OR HEREAFTER ARISE FROM, RELATE TO, OR ARE CONNECTED WITH SUCH DISPUTE AND/OR YOUR USE OF THE WEBSITE OR SERVICES. IF YOU ARE A CALIFORNIA RESIDENT, YOU WAIVE CALIFORNIA CIVIL CODE SECTION 1542, WHICH SAYS: ""A GENERAL RELEASE DOES NOT EXTEND TO CLAIMS WHICH THE CREDITOR DOES NOT KNOW OR SUSPECT TO EXIST IN HIS FAVOR AT THE TIME OF EXECUTING THE RELEASE, WHICH, IF KNOWN BY HIM MUST HAVE MATERIALLY AFFECTED HIS SETTLEMENT WITH THE DEBTOR.""
+
+YOU AGREE TO INDEMNIFY AND HOLD RENTSTARZ (AND EACH OF OUR OFFICERS, DIRECTORS, AND EMPLOYEES) HARMLESS FROM ANY THIRD-PARTY CLAIM, DEMAND, ACTION, DAMAGE, LOSS, COST OR EXPENSE, INCLUDING WITHOUT LIMITATION REASONABLE ATTORNEYS’ FEES, ARISING OUT OF OR RELATING TO YOUR USE OF THE SERVICES OR ALLEGING FACTS OR CIRCUMSTANCES THAT, IF TRUE, COULD CONSTITUTE YOUR BREACH OF ANY OF THESE TERMS. WE WILL CONTROL ANY SUCH DEFENSE AND RELATED SETTLEMENT AND YOU AGREE TO REASONABLY ASSIST US THEREWITH AT YOUR EXPENSE.
+
+
+"
+"%s 2016 Rentstaz";"%s 2016 Rentstaz"
+"%s 2016 Rentstarz";"%s 2016 Rentstarz"
+"%s 2016 Rentsarz";"%s 2016 Rentsarz"
+"%s Rentstarz";"%s rentstarz"
+"%s rentstarz";"%s rentstarz"
+"%s Rent starz";"%s Rentstarz"
+"I have read and agree to the <a target=""_blank"" href=""%s/help/terms"">terms of service</a>.";"I have read and agree to the <a target=""_blank"" href=""%s/help/terms"">terms of service</a>."
+"Terms of Service";"Terms of Service"
+"You must agree to the terms of service to continue.";"You must agree to the terms of service to continue."
+"Yes, make members agree to your terms of service on signup.";"Yes, make members agree to your terms of service on signup."
+"No, members will not be shown a terms of service checkbox on signup.";"No, members will not be shown a terms of service checkbox on signup."
+"_STORAGE_UPLOAD_DESCRIPTION";"Click ""Add Photos"" to select one or more photos from your computer. After you have selected the photos, they will begin to upload right away. When your upload is finished, click the button below your photo list to save them to your album."
+"Album ";"Gallery ";"Gallery"
+"Album";"Gallerie"
+"Albums";"Galleries"
+"Photo Albums";"Photo Galleries"
+"View All Albums";"View All Gallerie"
+"ADMIN_ACTIVITY_TYPE_ALBUM_PHOTO_NEW";"When a user (subject) uploads a new photo to an gallery (object)."
+"ADMIN_ACTIVITY_TYPE_COMMENT_ALBUM";"When a user (subject) comments on another user's (object) gallery."
+"ADMIN_ACTIVITY_TYPE_COMMENT_ALBUM_PHOTO";"When a user (subject) comments on another user's (object) photos."
+"_ACTIVITY_ACTIONTYPE_ALBUM_PHOTO_NEW";"New photo galleries"
+"_ACTIVITY_ACTIONTYPE_COMMENT_ALBUM";"Comments on your photo Galleries"
+"_ACTIVITY_ACTIONTYPE_COMMENT_ALBUM_PHOTO";"Comments on your photos"
+"ACTIVITY_TYPE_COMMENTED_ALBUM";"When someone comments on an gallery I commented on."
+"ACTIVITY_TYPE_COMMENTED_ALBUM_PHOTO";"When someone comments on a photo I commented on."
+"ACTIVITY_TYPE_COMMENT_ALBUM";"When someone comments on one of my albums."
+"ACTIVITY_TYPE_COMMENT_ALBUM_PHOTO";"When someone comments on one of my photos."
+"ACTIVITY_TYPE_LIKED_ALBUM";"When someone comments on a gallery I liked."
+"ACTIVITY_TYPE_LIKED_ALBUM_PHOTO";"When someone comments on a photo I liked."
+"ACTIVITY_TYPE_LIKE_ALBUM";"When someone likes one of my albums."
+"ACTIVITY_TYPE_LIKE_ALBUM_PHOTO";"When someone likes one of my photos."
+"ACTIVITY_TYPE_ALBUM_PHOTO_NEW";"When a new photo is uploaded."
+"Browse albums by:";"Browse Galleries by:"
+"Nobody has created an album yet.";"Nobody has created a gallery yet."
+"Delete Album";"Delete Gallery"
+"You do not have any albums yet.";"You do not have any Galleries yet."
+"%1$s's Album: %2$s";"%1$s's Gallery: %2$s"
+"Are you sure you want to delete this album?";"Are you sure you want to delete this gallery?"
+"Edit Album Settings";"Edit Gallery Settings"
+"Album Name";"Gallery Name"
+"Please specify an album title";"Please specify an gallery title"
+"Album Description";"Gallery Description"
+"Show this album in search results";"Show this gallery in search results"
+"Who may see this album?";"Who may see this Gallery?"
+"Who may post comments on this album?";"Who may post comments on this Gallery?"
+"Who may tag photos in this album?";"Who may tag photos in this Gallery?"
+"Save Album";"Save Gallery"
+"Album Cover";"Gallery Cover"
+"Choose photos on your computer to add to this album.";"Choose photos on your computer to add to this Gallery."
+"Choose Album";"Choose Gallery"
+"Create A New Album";"Create A New Gallery"
+"Everyone's Albums";"Everyone's Galleries"
+"My Albums";"My Galleries"
+"Browse Albums";"Browse Photos"
+"Search Albums:";"Search Photos"
+"Album Title";"Gallerie Title"
+"How many albums will be shown per page?";"How many Galleries will be shown per page?"
+"View Albums";"View Galleries"
+"Delete Photo Album?";"Delete Photo Gallerie?"
+"ALBUM_VIEWS_SCRIPTS_ADMINMANAGE_DELETE_DESCRIPTION";"Are you sure that you want to delete this photo album? It will not be recoverable after being deleted."
+"ALBUM_FORM_ADMIN_LEVEL_DESCRIPTION";"These settings are applied on a per member level basis. Start by selecting the member level you want to modify, then adjust the settings for that level below."
+"Allow Viewing of Photo Albums?";"Allow Viewing of Photo Galleries?"
+"ALBUM_FORM_ADMIN_LEVEL_VIEW_DESCRIPTION";"Do you want to let users view photo Galleries? If set to no, some other settings on this page may not apply."
+"About us";"
+"
+"copyrights";"copyrights"
+"_EMAIL_NOTIFY_FRIEND_ACCEPTED_SUBJECT";"[sender_title] has approved you as a friend."
+"_EMAIL_NOTIFY_FRIEND_ACCEPTED_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> [sender_title] has approved you as a friend. Please click the following link to sign in:<br> <br> http://[host][object_link]<br> <img src=""http://rentstarz.com/public/admin/footer.png"" alt="""" width=""469"" height=""317"">"
+"_EMAIL_NOTIFY_FRIEND_FOLLOW_SUBJECT";"[sender_title] has started following you."
+"_EMAIL_NOTIFY_FRIEND_FOLLOW_BODYHTML";"[header]<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> [sender_title] has started following you. Please click the following link to view the member:<br> <br> http://[host][object_link]<br> <br> Thanks<strong><br><br></strong>Rentstarz LLC<br>Copyright 2016 Rentstarz.com. All rights reserve<br>147 Prince St, Brooklyn NY 11201<strong><br><br><img src=""http://rentstarz.com/public/admin/footer.png"" alt="""" width=""469"" height=""317""><br></strong>"
+"_EMAIL_NOTIFY_TAGGED_SUBJECT";"You have Been Tagged"
+"_EMAIL_NOTIFY_TAGGED_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> You have been tagged in a [object_type_name]. Please click the following link to view it:<br> <br> http://[host][object_link]<br> <br> Thanks<strong><br><br></strong>Rentstarz LLC<br>Copyright 2016 Rentstarz.com. All rights reserve<br>147 Prince St, Brooklyn NY 11201<strong><br><br><img src=""http://rentstarz.com/public/admin/footer.png"" alt="""" width=""469"" height=""317""><br></strong>"
+"_EMAIL_PAYMENT_SUBSCRIPTION_OVERDUE_SUBJECT";"Your subscription is overdue."
+"_EMAIL_PAYMENT_SUBSCRIPTION_OVERDUE_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> Your subscription is overdue because of a failed or missed payment.<br> <br> [subscription_title]<br> [subscription_description]<br> [subscription_terms]<br> <br> Please follow the link below to renew your subscription.<br> <br> [object_link]<br> <br> Thanks<strong><br><br></strong>Rentstarz LLC<br>Copyright 2016 Rentstarz.com. All rights reserve<br>147 Prince St, Brooklyn NY 11201<strong><br><br><img src=""http://rentstarz.com/public/admin/footer.png"" alt="""" width=""469"" height=""317""><br></strong>"
+"_EMAIL_PAYMENT_SUBSCRIPTION_PENDING_SUBJECT";"Your subscription is pending."
+"_EMAIL_PAYMENT_SUBSCRIPTION_PENDING_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> Thank you for subscribing to Rentstarz! Your subscription is<br> pending, awaiting completion of the transaction. Your membership will be<br> activated soon; we will notify you by email when it is ready.<br> Thank you for your patience.<br> <br> [subscription_title]<br> [subscription_description]<br> [subscription_terms]<br> <br> Thanks<strong><br><br></strong>Rentstarz LLC<br>Copyright 2016 Rentstarz.com. All rights reserve<br>147 Prince St, Brooklyn NY 11201<strong><br><br><img src="" http://rentstarz.com/public/admin/footer.png"" alt="""" width=""469"" height=""317""><br></strong>"
+"_EMAIL_NOTIFY_GROUP_ACCEPTED_SUBJECT";"You have been approved to join the group [object_title]"
+"_EMAIL_NOTIFY_GROUP_ACCEPTED_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> You have been approved to join the group ""[object_title]"". Please click the following link to view it:<br> <br> http://[host][object_link]<br> <br> Thanks<strong><br><br></strong>Rentstarz LLC<br>Copyright 2016 Rentstarz.com. All rights reserve<br>147 Prince St, Brooklyn NY 11201<strong><br><br><img src=""http://rentstarz.com/public/admin/footer.png"" alt="""" width=""469"" height=""317""><br></strong>"
+"_EMAIL_NOTIFY_GROUP_APPROVE_SUBJECT";"[sender_title] has requested to join the group [object_title]"
+"_EMAIL_NOTIFY_GROUP_APPROVE_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> [sender_title] has requested to join the group ""[object_title]"". Please click the following link to view it:<br> <br> http://[host][object_link]<br> <br> Thanks<strong><br><br></strong>Rentstarz LLC<br>Copyright 2016 Rentstarz.com. All rights reserve<br>147 Prince St, Brooklyn NY 11201<strong><br><br><img src="" http://rentstarz.com/public/admin/footer.png"" alt="""" width=""469"" height=""317""><br></strong>"
+"_EMAIL_NOTIFY_GROUP_DISCUSSION_REPLY_SUBJECT";"A member has posted a reply to your topic ""[object_title]"" in the group ""[object_parent_title]"""
+"_EMAIL_NOTIFY_GROUP_DISCUSSION_REPLY_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> [sender_title] has posted a reply to your topic ""[object_title]"" in the group ""[object_parent_title]"":<br> <br> ""[message]""<br> <br> Please click the following link to view it:<br> <br> http://[host][object_link]<br> <br> Thanks<strong><br><br></strong>Rentstarz LLC<br>Copyright 2016 Rentstarz.com. All rights reserve<br>147 Prince St, Brooklyn NY 11201<strong><br><br><img src=""http://rentstarz.com/public/admin/footer.png"" alt="""" width=""469"" height=""317""><br></strong>"
+"_EMAIL_NOTIFY_GROUP_DISCUSSION_RESPONSE_SUBJECT";"A member has posted a reply to the topic ""[object_title]"" you replied to in the group ""[object_parent_title]"""
+"_EMAIL_NOTIFY_GROUP_DISCUSSION_RESPONSE_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> [sender_title] has posted a reply to the topic ""[object_title]"" you replied to in the group ""[object_parent_title]"":<br> <br> ""[message]""<br> <br> Please click the following link to view it:<br> <br> http://[host][object_link]<br> <br> Thanks<strong><br><br></strong>Rentstarz LLC<br>Copyright 2016 Rentstarz.com. All rights reserve<br>147 Prince St, Brooklyn NY 11201<br><br><img src="" http://rentstarz.com/public/admin/footer.png"" alt="""" width=""469"" height=""317""><strong><br></strong>"
+"_EMAIL_NOTIFY_GROUP_INVITE_SUBJECT";"You have been invited to join the group [object_title]"
+"_EMAIL_NOTIFY_GROUP_INVITE_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> You have been invited to join the group ""[object_title]"". Please click the following link to view it:<br> <br> http://[host][object_link]<br> <br> Thanks<strong><br><br></strong>Rentstarz LLC<br>Copyright 2016 Rentstarz.com. All rights reserve<br>147 Prince St, Brooklyn NY 11201<strong><br><br><img src=""http://rentstarz.com/public/admin/footer.png"" alt="""" width=""469"" height=""317""><br></strong>"
+"_EMAIL_NOTIFY_GROUP_PROMOTE_SUBJECT";"You have been promoted to officer in the group [object_title]"
+"_EMAIL_NOTIFY_GROUP_PROMOTE_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> You have been promoted to officer in the group ""[object_title]"". Please click the following link to view it:<br> <br> http://[host][object_link]<br> <br> Thanks<strong><br><br></strong>Rentstarz LLC<br>Copyright 2016 Rentstarz.com. All rights reserve<br>147 Prince St, Brooklyn NY 11201<strong><br><br><img src=""http://rentstarz.com/public/admin/footer.png"" alt="""" width=""469"" height=""317""><br></strong>"
+"_EMAIL_NOTIFY_VIDEO_PROCESSED_SUBJECT";"Your video ""[object_title]"" has finished processing"
+"_EMAIL_NOTIFY_VIDEO_PROCESSED_BODYHTML";"[header]<br> <br> Your video has been processed and is ready to be viewed. Please click the following link to view it:<br> <br> http://[host][object_link]<br> <br> Thanks<strong><br><br></strong>Rentstarz LLC<br>Copyright 2016 Rentstarz.com. All rights reserve<br>147 Prince St, Brooklyn NY 11201<strong><br><br><img src="" http://rentstarz.com/public/admin/footer.png"" alt="""" width=""469"" height=""317""><br></strong>"
+"_EMAIL_NOTIFY_FRIEND_FOLLOW_ACCEPTED_SUBJECT";"[sender_title] has approved your request to follow them."
+"_EMAIL_NOTIFY_FRIEND_FOLLOW_ACCEPTED_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> [sender_title] has approved you to follow them. Please click the following link to sign in:<br> <br> http://[host][object_link]<br> <br> Thanks<strong><br><br></strong>Rentstarz LLC<br>Copyright 2016 Rentstarz.com. All rights reserve<br>147 Prince St, Brooklyn NY 11201<strong><br><br><img src=""http://rentstarz.com/public/admin/footer.png"" alt="""" width=""469"" height=""317""><br></strong>"
+"_EMAIL_NOTIFY_LIKED_COMMENTED_SUBJECT";"[sender_title] commented on a post you like"
+"_EMAIL_NOTIFY_LIKED_COMMENTED_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> [sender_title] has commented on a post you liked. Please click the following link to view it:<br> <br> http://[host][object_link]<br> <br> Thanks<strong><br><br></strong>Rentstarz LLC<br>Copyright 2016 Rentstarz.com. All rights reserve<br>147 Prince St, Brooklyn NY 11201<strong><br><br><img src=""http://rentstarz.com/public/admin/footer.png"" alt="""" width=""469"" height=""317""><br></strong>"
+"_EMAIL_NOTIFY_COMMENTED_COMMENTED_SUBJECT";"[sender_title] also commented on a post you commented on"
+"_EMAIL_NOTIFY_COMMENTED_COMMENTED_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> [sender_title] has also commented on a post you commented on. Please click the following link to view it:<br> <br> http://[host][object_link]<br> <br> [<strong>A Better Way To Rent.<br></strong>Administration<strong><br><br><br></strong>Rentstarz LLC<br>Copyright 2016 Rentstarz.com. All rights reserve &nbsp;&nbsp;<br>147 Prince St, Brooklyn NY 11201&nbsp;<br><img src=""http://rentstarz.com/public/admin/streets2.png"" alt="""" width=""661"" height=""217"">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;"
+"_EMAIL_NOTIFY_FRIEND_FOLLOW_REQUEST_SUBJECT";"[sender_title] has requested to follow you."
+"_EMAIL_NOTIFY_FRIEND_FOLLOW_REQUEST_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> [sender_title] has requested to follow you. Please click the following link to sign in and confirm this request:<br> <br> http://[host][object_link]<br> <br> [<strong>A Better Way To Rent.<br></strong><span style=""font-size: 8pt;"">Administration<strong><br><br><br></strong>Rentstarz LLC</span><br><span style=""font-size: 8pt;"">Copyright 2016 Rentstarz.com. All rights reserve &nbsp;&nbsp;</span><br><span style=""font-size: 8pt;"">147 Prince St, Brooklyn NY 11201&nbsp;</span><br><img src=""http://rentstarz.com/public/admin/streets2.png"" alt="""" width=""661"" height=""217"">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;"
+"_EMAIL_NOTIFY_POST_USER_SUBJECT";"[sender_title] has posted on your profile"
+"_EMAIL_NOTIFY_POST_USER_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> [sender_title] has posted something on your profile. Please click the following link to view it.<br> <br> http://[host][object_link]<br> <br> [<strong>A Better Way To Rent.<br></strong>Administration<strong><br><br><br></strong>Rentstarz LLC<br>Copyright 2016 Rentstarz.com. All rights reserve &nbsp;&nbsp;<br>147 Prince St, Brooklyn NY 11201&nbsp;<br><img src=""http://rentstarz.com/public/admin/streets2.png"" alt="""" width=""661"" height=""217"">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;"
+"_EMAIL_HEADER_SUBJECT";""
+"_EMAIL_HEADER_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""665"" height=""77""><br>&nbsp; &nbsp;<br>&nbsp; &nbsp; &nbsp;Hello [recipient_title],<br><br><br><img src=""http://www.rentstarz.com/public/admin/footer new.png"" alt="""" width=""976"" height=""372"">"
+"_CORE_PRIVACY_STATEMENT";"                                                   Privacy Notice
+
+This privacy notice discloses the privacy practices for (rentstarz.com). This privacy notice applies solely to information collected by this website. It will notify you of the following:
+
+	1	What personally identifiable information is collected from you through the website, how it is used and with whom it may be shared.
+	2	What choices are available to you regarding the use of your data.
+	3	The security procedures in place to protect the misuse of your information.
+	4	How you can correct any inaccuracies in the information.
+
+Registration 
+In order to use this website, a user must first complete the registration form. During registration a user is required to give certain information (such as name and email address). This information is used to contact you about the products/services on our site in which you have expressed interest. At your option, you may also provide demographic information (such as gender or age) about yourself, but it is not required.
+
+Orders 
+We request information from you on our order form. To buy from us, you must provide contact information (like name and address) and financial information (like credit card number, expiration date). This information is used for billing purposes and to fill your orders. If we have trouble processing an order, we'll use this information to contact you.
+
+Cookies 
+We use ""cookies"" on this site. A cookie is a piece of data stored on a site visitor's hard drive to help us improve your access to our site and identify repeat visitors to our site. For instance, when we use a cookie to identify you, you would not have to log in a password more than once, thereby saving time while on our site. Cookies can also enable us to track and target the interests of our users to enhance the experience on our site. Usage of a cookie is in no way linked to any personally identifiable information on our site.
+Some of our business partners may use cookies on our site (for example, advertisers). However, we have no access to or control over these cookies.
+
+Sharing 
+We share aggregated demographic information with our partners and advertisers. This is not linked to any personal information that can identify any individual person.
+And/or: 
+We use a credit card processing company to bill users for services. These companies do not retain, share, store or use personally identifiable information for any secondary purposes beyond filling your order.
+And/or: 
+We partner with another party to provide specific services. When the user signs up for these services, we will share names, or other contact information that is necessary for the third party to provide these services. These parties are not allowed to use personally identifiable information except for the purpose of providing these services.
+
+Links 
+This website contains links to other sites. Please be aware that we are not responsible for the content or privacy practices of such other sites. We encourage our users to be aware when they leave our site and to read the privacy statements of any other site that collects personally identifiable information.
+
+Surveys & Contests 
+From time-to-time our site requests information via surveys or contests. Participation in these surveys or contests is completely voluntary and you may choose whether or not to participate and therefore disclose this information. Information requested may include contact information (such as name and address), and demographic information (such as zip code, age level). Contact information will be used to notify the winners and award prizes. Survey information will be used for purposes of monitoring or improving the use and satisfaction of this site.
+
+
+Information Collection, Use, and Sharing 
+We are the sole owners of the information collected on this site. We only have access to/collect information that you voluntarily give us via email or other direct contact from you. We will not sell or rent this information to anyone.
+We will use your information to respond to you, regarding the reason you contacted us. We will not share your information with any third party outside of our organization, other than as necessary to fulfill your request. Unless you ask us not to, we may contact you via email in the future to tell you about specials, new products or services, or changes to this privacy policy.
+
+Your Access to and Control Over Information 
+You may opt out of any future contacts from us at any time. You can do the following at any time by contacting us via the email address or phone number given on our website:
+		See what data we have about you, if any.
+		Change/correct any data we have about you.
+		Have us delete any data we have about you.
+		Express any concern you have about our use of your data.
+
+Security 
+We take precautions to protect your information. When you submit sensitive information via the website, your information is protected both online and offline.
+Wherever we collect sensitive information (such as credit card data), that information is encrypted and transmitted to us in a secure way. You can verify this by looking for a lock icon in the address bar and looking for ""https"" at the beginning of the address of the Web page. While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only employees who need the information to perform a specific job (for example, billing or customer service) are granted access to personally identifiable information. The computers/servers in which we store personally identifiable information are kept in a secure environment.
+If you feel that we are not abiding by this privacy policy, you should contact us immediately via email admin@renstarz.com."
+"Privacy Notice
+This privacy notice discloses the privacy practices for (rentstarz.com). This privacy notice applies solely to information collected by this website. It will notify you of the following:
+
+	1	What personally identifiable information is collected from you through the website, how it is used and with whom it may be shared.
+	2	What choices are available to you regarding the use of your data.
+	3	The security procedures in place to protect the misuse of your information.
+	4	How you can correct any inaccuracies in the information.
+
+Registration 
+In order to use this website, a user must first complete the registration form. During registration a user is required to give certain information (such as name and email address). This information is used to contact you about the products/services on our site in which you have expressed interest. At your option, you may also provide demographic information (such as gender or age) about yourself, but it is not required.
+
+Orders 
+We request information from you on our order form. To buy from us, you must provide contact information (like name and address) and financial information (like credit card number, expiration date). This information is used for billing purposes and to fill your orders. If we have trouble processing an order, we'll use this information to contact you.
+
+Cookies 
+We use ""cookies"" on this site. A cookie is a piece of data stored on a site visitor's hard drive to help us improve your access to our site and identify repeat visitors to our site. For instance, when we use a cookie to identify you, you would not have to log in a password more than once, thereby saving time while on our site. Cookies can also enable us to track and target the interests of our users to enhance the experience on our site. Usage of a cookie is in no way linked to any personally identifiable information on our site.
+Some of our business partners may use cookies on our site (for example, advertisers). However, we have no access to or control over these cookies.
+
+Sharing 
+We share aggregated demographic information with our partners and advertisers. This is not linked to any personal information that can identify any individual person.
+And/or: 
+We use a credit card processing company to bill users for services. These companies do not retain, share, store or use personally identifiable information for any secondary purposes beyond filling your order.
+And/or: 
+We partner with another party to provide specific services. When the user signs up for these services, we will share names, or other contact information that is necessary for the third party to provide these services. These parties are not allowed to use personally identifiable information except for the purpose of providing these services.
+
+Links 
+This website contains links to other sites. Please be aware that we are not responsible for the content or privacy practices of such other sites. We encourage our users to be aware when they leave our site and to read the privacy statements of any other site that collects personally identifiable information.
+
+Surveys & Contests 
+From time-to-time our site requests information via surveys or contests. Participation in these surveys or contests is completely voluntary and you may choose whether or not to participate and therefore disclose this information. Information requested may include contact information (such as name and address), and demographic information (such as zip code, age level). Contact information will be used to notify the winners and award prizes. Survey information will be used for purposes of monitoring or improving the use and satisfaction of this site.
+
+
+Information Collection, Use, and Sharing 
+We are the sole owners of the information collected on this site. We only have access to/collect information that you voluntarily give us via email or other direct contact from you. We will not sell or rent this information to anyone.
+We will use your information to respond to you, regarding the reason you contacted us. We will not share your information with any third party outside of our organization, other than as necessary to fulfill your request. Unless you ask us not to, we may contact you via email in the future to tell you about specials, new products or services, or changes to this privacy policy.
+
+Your Access to and Control Over Information 
+You may opt out of any future contacts from us at any time. You can do the following at any time by contacting us via the email address or phone number given on our website:
+		See what data we have about you, if any.
+		Change/correct any data we have about you.
+		Have us delete any data we have about you.
+		Express any concern you have about our use of your data.
+
+Security 
+We take precautions to protect your information. When you submit sensitive information via the website, your information is protected both online and offline.
+Wherever we collect sensitive information (such as credit card data), that information is encrypted and transmitted to us in a secure way. You can verify this by looking for a lock icon in the address bar and looking for ""https"" at the beginning of the address of the Web page. While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only employees who need the information to perform a specific job (for example, billing or customer service) are granted access to personally identifiable information. The computers/servers in which we store personally identifiable information are kept in a secure environment.
+If you feel that we are not abiding by this privacy policy, you should contact us immediately via email admin@renstarz.com.";"Privacy Notice
+This privacy notice discloses the privacy practices for (rentstarz.com). This privacy notice applies solely to information collected by this website. It will notify you of the following:
+
+	1	What personally identifiable information is collected from you through the website, how it is used and with whom it may be shared.
+	2	What choices are available to you regarding the use of your data.
+	3	The security procedures in place to protect the misuse of your information.
+	4	How you can correct any inaccuracies in the information.
+
+Registration 
+In order to use this website, a user must first complete the registration form. During registration a user is required to give certain information (such as name and email address). This information is used to contact you about the products/services on our site in which you have expressed interest. At your option, you may also provide demographic information (such as gender or age) about yourself, but it is not required.
+
+Orders 
+We request information from you on our order form. To buy from us, you must provide contact information (like name and address) and financial information (like credit card number, expiration date). This information is used for billing purposes and to fill your orders. If we have trouble processing an order, we'll use this information to contact you.
+
+Cookies 
+We use ""cookies"" on this site. A cookie is a piece of data stored on a site visitor's hard drive to help us improve your access to our site and identify repeat visitors to our site. For instance, when we use a cookie to identify you, you would not have to log in a password more than once, thereby saving time while on our site. Cookies can also enable us to track and target the interests of our users to enhance the experience on our site. Usage of a cookie is in no way linked to any personally identifiable information on our site.
+Some of our business partners may use cookies on our site (for example, advertisers). However, we have no access to or control over these cookies.
+
+Sharing 
+We share aggregated demographic information with our partners and advertisers. This is not linked to any personal information that can identify any individual person.
+And/or: 
+We use a credit card processing company to bill users for services. These companies do not retain, share, store or use personally identifiable information for any secondary purposes beyond filling your order.
+And/or: 
+We partner with another party to provide specific services. When the user signs up for these services, we will share names, or other contact information that is necessary for the third party to provide these services. These parties are not allowed to use personally identifiable information except for the purpose of providing these services.
+
+Links 
+This website contains links to other sites. Please be aware that we are not responsible for the content or privacy practices of such other sites. We encourage our users to be aware when they leave our site and to read the privacy statements of any other site that collects personally identifiable information.
+
+Surveys & Contests 
+From time-to-time our site requests information via surveys or contests. Participation in these surveys or contests is completely voluntary and you may choose whether or not to participate and therefore disclose this information. Information requested may include contact information (such as name and address), and demographic information (such as zip code, age level). Contact information will be used to notify the winners and award prizes. Survey information will be used for purposes of monitoring or improving the use and satisfaction of this site.
+
+
+Information Collection, Use, and Sharing 
+We are the sole owners of the information collected on this site. We only have access to/collect information that you voluntarily give us via email or other direct contact from you. We will not sell or rent this information to anyone.
+We will use your information to respond to you, regarding the reason you contacted us. We will not share your information with any third party outside of our organization, other than as necessary to fulfill your request. Unless you ask us not to, we may contact you via email in the future to tell you about specials, new products or services, or changes to this privacy policy.
+
+Your Access to and Control Over Information 
+You may opt out of any future contacts from us at any time. You can do the following at any time by contacting us via the email address or phone number given on our website:
+		See what data we have about you, if any.
+		Change/correct any data we have about you.
+		Have us delete any data we have about you.
+		Express any concern you have about our use of your data.
+
+Security 
+We take precautions to protect your information. When you submit sensitive information via the website, your information is protected both online and offline.
+Wherever we collect sensitive information (such as credit card data), that information is encrypted and transmitted to us in a secure way. You can verify this by looking for a lock icon in the address bar and looking for ""https"" at the beginning of the address of the Web page. While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only employees who need the information to perform a specific job (for example, billing or customer service) are granted access to personally identifiable information. The computers/servers in which we store personally identifiable information are kept in a secure environment.
+If you feel that we are not abiding by this privacy policy, you should contact us immediately via email admin@renstarz.com."
+"_EMAIL_CORE_CONTACT_SUBJECT";"A member has sent you a message"
+"_EMAIL_CORE_CONTACT_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""673"" height=""83""><br>&nbsp;<br>&nbsp; &nbsp; [sender_title] has sent you a message&nbsp;<br> <br>&nbsp; &nbsp; Email : [sender_email]<br>&nbsp; &nbsp;Message:<br>&nbsp; &nbsp;[message][error_report]<strong><br><br></strong><br><br><br><br>Thanks<strong><br></strong><strong><br><br>[footer]</strong>"
+"_EMAIL_USER_ACCOUNT_APPROVED_SUBJECT";"Your account has been approved."
+"_EMAIL_USER_ACCOUNT_APPROVED_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> Your account has been approved by an administrator. Please click the following link to sign in:<br> <br> http://[host][object_link]<br> <br><strong><br>Thanks<br><br>&nbsp;[footer]<br></strong>"
+"_EMAIL_PAYMENT_SUBSCRIPTION_RECURRENCE_SUBJECT";"Your subscription has been billed."
+"_EMAIL_PAYMENT_SUBSCRIPTION_RECURRENCE_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> Your subscription has been billed. You should receive an email from the<br> payment gateway regarding this charge. Thank you for subscribing to Rentstarz.<br> <br> [subscription_title]<br> [subscription_description]<br> [subscription_terms]<br> <br> You may follow the link below to sign in.<br> <br> [object_link]<br> <br> Thanks<br><br><strong>&nbsp;[footer]<br></strong><strong><br></strong>"
+"_EMAIL_PAYMENT_SUBSCRIPTION_CANCELLED_SUBJECT";"Your subscription has been cancelled."
+"_EMAIL_PAYMENT_SUBSCRIPTION_CANCELLED_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> Your subscription has been cancelled.<br> <br> [subscription_title]<br> [subscription_description]<br> [subscription_terms]<br> <br> Please follow the link below to renew your subscription.<br> <br> [object_link]<br> <br> Thanks<strong><br></strong><strong><br>&nbsp;[footer]<br></strong>"
+"_EMAIL_PAYMENT_SUBSCRIPTION_EXPIRED_SUBJECT";"Your subscription has expired."
+"_EMAIL_PAYMENT_SUBSCRIPTION_EXPIRED_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> Your subscription has expired.<br> <br> [subscription_title]<br> [subscription_description]<br> [subscription_terms]<br> <br> Please follow the link below to renew your subscription.<br> <br> [object_link]<br> <br> Thanks<strong><br></strong><strong>&nbsp;<br>[footer]<br></strong>"
+"_EMAIL_NOTIFY_MESSAGE_NEW_SUBJECT";"You have received a new message from [sender_title]."
+"_EMAIL_NOTIFY_MESSAGE_NEW_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> You have just received a new message from [sender_title]:<br> <br> [object_description]<br> <br> Please click the following link to login and view it:<br> <br> http://[host][object_link]<br> <br> [<strong>Rent Happy.<br></strong>Administration<strong><br><br></strong>&nbsp;[footer]"
+"_EMAIL_NOTIFY_LIKED_SUBJECT";"[sender_title] liked your post"
+"_EMAIL_NOTIFY_LIKED_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> [sender_title] has liked one of your posts. Please click the following link to view it:<br> <br> http://[host][object_link]<br>&nbsp;<br><br><br>[footer]"
+"_EMAIL_HEADER_MEMBER_SUBJECT";""
+"_EMAIL_HEADER_MEMBER_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""674"" height=""78"">&nbsp; &nbsp;&nbsp;<br>&nbsp; &nbsp; Hello [recipient_title],"
+"_EMAIL_INVITE_SUBJECT";"You have received an invitation to join Rentstarz."
+"_EMAIL_INVITE_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You have been invited by [sender_title] to join Rentstrz. To join, please follow the link below:<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; http://[host][object_link]<br>&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ----------------------------------------<br>&nbsp;&nbsp;&nbsp;&nbsp; [message]<br>&nbsp;&nbsp;&nbsp;&nbsp; ----------------------------------------<br> <br>&nbsp; &nbsp;&nbsp; Thanks<strong><br><br></strong>&nbsp;&nbsp;&nbsp;&nbsp; [footer]<strong><br><br><br></strong>"
+"_EMAIL_CORE_VERIFICATION_PASSWORD_SUBJECT";"Rentstarz - Email Verification"
+"_EMAIL_CORE_VERIFICATION_PASSWORD_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""714"" height=""85""><br> <br> <span style=""font-size: 8pt;"">Thank you for joining Rentstarz the social driven rental platform. To verify your email address and continue, please click the following link :</span><br> <br> <a href=""http://[host][object_link]&quot;"">http://[host][object_link]</a><br> <br> Email: [email]<br> Password: [password]<br> <br> Thanks<strong><br><br></strong>[footer]"
+"_EMAIL_CORE_WELCOME_SUBJECT";"Welcome to Rentstarz!"
+"_EMAIL_CORE_WELCOME_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> &nbsp; &nbsp; &nbsp;<br>&nbsp; &nbsp; <br>&nbsp; &nbsp; <span style=""font-size: 8pt;"">&nbsp;Hi [recipient_title] ,</span><br><br><span style=""font-size: 8pt;"">&nbsp; &nbsp; &nbsp;Thank you for joining Rentstarz the Social Driven Rental Platform. Click the following link and enter your information&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;below to login:</span><br> <br><span style=""font-size: 8pt;"">&nbsp; &nbsp; &nbsp;<a href=""http://[host][object_link]"">www.rentstarz.com</a></span><br> <br><span style=""font-size: 8pt;"">&nbsp; &nbsp; &nbsp;Email: [email]</span><br><span style=""font-size: 8pt;"">&nbsp; &nbsp;&nbsp;</span><br><span style=""font-size: 8pt;"">&nbsp; &nbsp; &nbsp;[footer]</span><br> <br><span style=""font-size: 8pt;"">&nbsp; &nbsp; &nbsp;</span><br><br><br><br><br><br><br><br><br><br>&nbsp; &nbsp;&nbsp;<strong><br></strong>"
+"_EMAIL_CORE_WELCOME_PASSWORD_SUBJECT";"Welcome to Rentstarz!"
+"_EMAIL_CORE_WELCOME_PASSWORD_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> <span style=""font-size: 8pt;"">Thank you for joining Rentstarz the social driven rental platform. Click the following link and enter your information below to login:</span><br> <br> <a href=""http://[host][object_link]""><br><br><br><br><br><br><br><br><br>www.rentstarz.com</a><br> <br> Email: [email]<br> Password: [password]<br> <br> Thanks<strong><br><br></strong>[footer]"
+"_EMAIL_NOTIFY_ADMIN_USER_SIGNUP_SUBJECT";"Someone has joined Rentstarz!"
+"_EMAIL_NOTIFY_ADMIN_USER_SIGNUP_BODYHTML";"<br><img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <span style=""font-size: 8pt;"">Congratulations, someone has joined Rentstarz. Welcome the new member to your site:</span><br> <br><span style=""font-size: 8pt;""> [object_title] : http://[host][object_link]</span><br><span style=""font-size: 8pt;""> Signup Date: [date]</span><br><br>Thanks<strong><br><br></strong><strong>[footer]</strong>"
+"_EMAIL_CORE_LOSTPASSWORD_SUBJECT";"Rentstarz- Lost Password"
+"_EMAIL_CORE_LOSTPASSWORD_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> <span style=""font-size: 8pt;"">You have requested to reset your password because you have forgotten your password. If you did not request this, please ignore it. It will expire in 24 hours. To reset your password, please click the following link:</span><br> <br><span style=""font-size: 8pt;""> http://[host][object_link]</span><br> <br><span style=""font-size: 8pt;""><strong>Rent Happy<br></strong>Administrator<strong><br><br></strong></span>
+<div><span style=""font-size: 8pt;"">&nbsp; &nbsp; &nbsp;[footer]</span></div>"
+"_EMAIL_NOTIFY_COMMENTED_SUBJECT";"[sender_title] commented on something you rental"
+"_EMAIL_NOTIFY_COMMENTED_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> A new comment has been posted on one of your rental post by [sender_title]. Please click the following link to view it:<br> <br> http://[host][object_link]<br> <br><br><strong>&nbsp;[footer]<br></strong><br><br><br><br><br><br><br>"
+"_EMAIL_NOTIFY_FRIEND_REQUEST_SUBJECT";"[sender_title] has added you as a friend."
+"_EMAIL_NOTIFY_FRIEND_REQUEST_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> [sender_title] has added you as a friend. Please click the following link to sign in and confirm this friendship request:<br> <br> http://[host][object_link]<br><br><br><br><br>[footer]"
+"_EMAIL_PAYMENT_SUBSCRIPTION_ACTIVE_SUBJECT";"Your subscription is now active."
+"_EMAIL_PAYMENT_SUBSCRIPTION_ACTIVE_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> Thank you for subscribing to our Rentstarz! Your subscription is now active.<br> <br> [subscription_title]<br> [subscription_description]<br> [subscription_terms]<br> <br> You may follow the link below to sign in.<br> <br> [object_link]<br> <br> Thanks<strong><br><br></strong><strong>[footer]</strong>"
+"_EMAIL_NOTIFY_VIDEO_PROCESSED_FAILED_SUBJECT";"Your video ""[object_title]"" has failed to process"
+"_EMAIL_NOTIFY_VIDEO_PROCESSED_FAILED_BODYHTML";"[header]<br> <br> We apologize, but there was a problem processing your video. The message was:<br> ""[message]""<br> <br> Please click the following link to view it:<br> <br> http://[host][message_link]<br> <br> Thanks<strong><br><br></strong><strong>[footer]</strong>"
+"_EMAIL_PAYMENT_SUBSCRIPTION_REFUNDED_SUBJECT";"Your subscription has been refunded."
+"_EMAIL_PAYMENT_SUBSCRIPTION_REFUNDED_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> Your subscription has been refunded and is no longer active.<br> <br> [subscription_title]<br> [subscription_description]<br> [subscription_terms]<br> <br> You may follow the link below to sign in.<br> <br> [object_link]<br> <br> Thanks<strong><br><br></strong><strong>[footer]</strong>"
+"_EMAIL_CORE_VERIFICATION_SUBJECT";"Rentstarz - Email Verification"
+"_EMAIL_CORE_VERIFICATION_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""87"">&nbsp;<br><br><span style=""font-size: 8pt;"">&nbsp; &nbsp; &nbsp; Hi [recipient_title] , </span><br><br><span style=""font-size: 8pt;"">&nbsp; &nbsp; &nbsp; &nbsp;Thank you for joining Rentstarz the social driven rental platform. </span><br><span style=""font-size: 8pt;"">&nbsp; &nbsp; &nbsp; &nbsp;To verify your email address and continue, please click the <br>&nbsp; &nbsp; &nbsp; &nbsp;following link :</span><br><span style=""font-size: 8pt;"">&nbsp; &nbsp; &nbsp; &nbsp;</span><br><span style=""font-size: 8pt;"">&nbsp; &nbsp; &nbsp; <a href=""http://[host][object_link]"">Verify email</a></span><br> <br>&nbsp; &nbsp; &nbsp;Email: [email]<br>[footer]<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br><br>"
+"_EMAIL_INVITE_CODE_SUBJECT";"You have received an invitation to join Rentstarz!"
+"_EMAIL_INVITE_CODE_BODYHTML";"<img src=""http://rentstarz.com/public/admin/companyletterhead.png"" alt="""" width=""663"" height=""78""><br> <br> You have been invited by [sender_title] to join Rentstarz.com. To join, please follow the link below:<br> <br> http://[host][object_link]<br> <br> ----------------------------------------<br> [message]<br> ----------------------------------------<br> <br> Thanks<strong><br><br></strong>[footer]"
+"_EMAIL_FOOTER_MEMBER_SUBJECT";" "
+"_EMAIL_FOOTER_MEMBER_BODYHTML";"<blockquote><span style=""background-color: #ffffff;"">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <br><br><img src=""http://www.rentstarz.com/public/admin/mainfooter.jpg"" alt="""" width=""637"" height=""156""><br><span style=""color: #333333; font-size: 8pt;"">&nbsp;Rentstarz LLC Copyright 2017<br>&nbsp;Rentstarz.com All Rights Reserved<br>&nbsp;1956 Rockaway Parkway <br>&nbsp;Brooklyn, Ny 11236&nbsp;</span><br><br><br><br><br></span></blockquote>"
+"_EMAIL_FOOTER_SUBJECT";"footer"
+"_EMAIL_FOOTER_BODYHTML";"<blockquote><span style=""background-color: #ffffff;"">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <br><br><br><img src=""http://www.rentstarz.com/public/admin/mainfooter.jpg"" alt="""" width=""637"" height=""156""><span style=""color: #333333; font-size: 8pt;""> Rentstarz LLC Copyright 2017&nbsp;<br>Rentstarz.com All Rights Reserved <br>1956 Rockaway Parkway <br>Brooklyn, Ny 11236&nbsp;</span><br><br><br><br><br></span></blockquote>"

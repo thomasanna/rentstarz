@@ -1,0 +1,98 @@
+{
+  "type": "external",
+  "name": "flowplayer",
+  "version": "4.8.10",
+  "revision": "9747",
+  "path": "externals\/flowplayer",
+  "repository": null,
+  "date": "Wed, 20 Jan 2016 06:29:20 +0000",
+  "title": "Flow Player",
+  "description": null,
+  "thumb": null,
+  "developer": null,
+  "authors": [
+    "Webligo Developments"
+  ],
+  "changeLog": {
+    "4.8.10": {
+      "README.txt": "Removed",
+      "flashembed-1.0.1.js": "Removed",
+      "flashembed-1.0.1.pack.js": "Removed",
+      "flowplayer-3.1.5.swf": "Removed",
+      "flowplayer.controls-3.1.5.swf": "Removed",
+      "flowplayer-3.2.13.min.js": "Added",
+      "flowplayer-3.2.18.swf": "Added",
+      "flowplayer.controls-3.2.16.swf": "Added",
+      "manifest.php": "Incremented version"
+    }
+  },
+  "meta": {
+    "date": "Wed, 20 Jan 2016 06:29:20 +0000",
+    "title": "Flow Player",
+    "description": null,
+    "developer": null,
+    "authors": [
+      "Webligo Developments"
+    ],
+    "changeLog": null
+  },
+  "actions": [
+    
+  ],
+  "callback": null,
+  "dependencies": null,
+  "tests": [
+    
+  ],
+  "permissions": [
+    
+  ],
+  "structure": {
+    "externals\/flowplayer": {
+      "type": "directory",
+      "path": "externals\/flowplayer",
+      "structure": [
+        {
+          "path": "manifest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 869,
+          "sha1": "d1333f684371f20e6dd47efc3af875bb0245a565"
+        },
+        {
+          "path": "LICENSE.txt",
+          "dir": false,
+          "file": true,
+          "perms": "0777",
+          "size": 37497,
+          "sha1": "bde9b71a1e133bff47d972a9f4d1dac056200a70"
+        },
+        {
+          "path": "flowplayer-3.2.18.swf",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 129772,
+          "sha1": "3268fba292f50a83ce1e1307f0091eaff99a5191"
+        },
+        {
+          "path": "flowplayer-3.2.13.min.js",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 16279,
+          "sha1": "1e9c02aa29477c2f9bf84263cc4941df60e101f3"
+        },
+        {
+          "path": "flowplayer.controls-3.2.16.swf",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 38270,
+          "sha1": "411adb0dd57a612aefecd714bb4a87b47fb7cb98"
+        }
+      ]
+    }
+  }
+}

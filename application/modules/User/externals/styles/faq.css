@@ -1,0 +1,88 @@
+/*  CSS Document                             */
+/*  Written by Chris Converse for Lynda.com  */
+
+@charset "UTF-8";
+
+body {font-family: "Trebuchet MS"; }
+p { margin: 0px; }
+a { color: #bf572c; }
+a:hover { color: #000; }
+
+.faq_container {
+    padding: 12px;
+    margin-bottom: 68px;
+	
+}
+
+.faq {
+	margin: 0px 15px 1px 15px;
+	padding: 5px 5px 5px 5px;
+	position: relative;
+}
+
+.faq_question { margin: 0px; padding: 0px 0px 5px 0px; display: inline-block; cursor: pointer; font-weight: bold; color: #364347; font-size: 14px; }
+
+.faq_answer_container { height: 0px; overflow: hidden; padding: 0px; color: #bf572c; }
+.faq_answer { margin: 0px; padding: 0px; color: #f58410; font-weight: normal; font-size: 14px; }
+
+/*.faq_body_li{
+    margin: 20px 0px 0px 20px;
+    padding: 0px 0px 5px 0px;
+    float: left;
+}*/
+.faq_left_container {
+    float: left;
+        padding: 12px;
+}
+#global_page_user-index-support .agreement_content {
+    padding: 16px;
+}
+.faq_left_container .active{
+color: #f58410;
+}
+.faq_left_container li{
+    font-weight: bold;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.faq_upgrade_p{
+    margin-top: 30px;
+}
+.faq_upgrade_p p{
+   font-size: 14px;
+}
+.faq_upgrade{
+margin: 15px 15px 1px 15px;
+	padding: 5px 5px 5px 5px;
+}
+.contact_rec .rec{
+    text-align: center;
+    margin: 0 auto;
+    padding: 12px;
+    font-size: 15px;
+    }
+    .contact_rec {
+    padding: 38px;
+
+    text-align: center;
+}
+/*iphone */
+
+@media (max-width: 767px){
+.faq_container {
+    width: auto !important;	
+}
+
+}
+.faq_upgrade_package .package1{
+
+    width: 250px;
+    float: left;
+    margin-left: 12px;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #fff;
+    box-shadow: 2px 2px 7px #888;
+    cursor: pointer;
+    }

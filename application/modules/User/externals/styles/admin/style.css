@@ -1,0 +1,212 @@
+span.qwerty {
+float: left;
+width: 49%;
+font-weight: 500;
+text-align: left;
+margin-right: 10px;
+}
+.menu_bar_2{
+
+border-style: solid;
+width: 100%;
+height: 30px;
+background-color: #f5f5f5;
+margin-bottom: 4px;
+margin-top: 12px;
+}
+.menu_bar_2_menus{
+    padding: 8px 15px;
+    margin-bottom: 21px;
+
+}
+
+.dir_content .dir_li {
+    background-image: url(/application/modules/User/externals/images/folder_new.svg);
+    background-repeat: no-repeat;
+    /* padding: 11px 26px 5px 45px; */
+    padding: 1px 10px 0px 61px;
+    background-position: 3px 3px;
+    height: 40PX;
+    margin-top: 12PX;
+    
+    }
+    
+.dir_content .dir_li .option_links, .dir_content .file_li .option_links {
+    float: right !important;
+} 
+
+.dir_content .file_li {
+    background-image: url(/application/modules/User/externals/images/file.svg);
+    background-repeat: no-repeat;
+    /* padding: 11px 26px 5px 45px; */
+    padding: 1px 10px 0px 61px;
+    background-position: 3px 3px;
+    height: 40PX;
+    margin-top: 12PX;
+}   
+
+  .black_overlay{
+        display: none;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index:1001;
+        -moz-opacity: 0.8;
+        opacity:.80;
+        filter: alpha(opacity=80);
+    }
+    .white_content {
+        display: none;
+        position: fixed;
+        top: 25%;
+        left: 37%;
+        width: 20%;
+        height: auto;
+        padding: 16px;
+        border: 6px solid #7eb6d5;
+        background-color: white;
+        z-index:1002;
+        overflow: auto;
+    }
+.yes_btn,.no_btn {
+width: 91px;
+    margin-right: 12px;
+
+}
+.confirm_btns{
+    margin-top: 18px;
+}
+.confirm_text{
+    margin-top: 19px;
+    font-size: 15px;
+}
+
+.pro_label{
+	float:left !important;
+	/*width:200px;*/
+	  width: 35%;
+
+}
+.folder_name {
+    width: 96%;
+}
+.folder_name_input {
+    width: 100%;
+    margin-bottom: 13px;
+}
+.file_upload_submit_btn{
+border-radius: 3px;
+padding: .5em 1em;
+font-weight: 700;
+border: none;
+background-color: #619dbe;
+border: 1px solid #50809b;
+color: #fff;
+text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+font-family: arial,sans-serif;
+
+}
+.div_attachment_title {
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 19px;
+    font-weight: 500;
+}
+.div_attachment_name {
+    float: left;
+    font-weight: bold;
+    margin-right: 12px;
+}
+.attachment_label {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.popup_title{
+text-align: center;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.chk_shared_users{
+margin-right: 12px;
+}
+#light4.white_content{
+ max-height: 336px;
+   
+}
+.clear{
+clear: both;
+}
+.div_attachment_cancel{
+    text-align: right;
+    margin-top: -26px;
+    cursor:pointer;
+}
+ 
+.div_attachment_cancel img {
+    width: 14px;
+}
+/*#global_page_user-admin-manage-holdingproperty #property_details.active,
+#global_page_user-admin-manage-holdingproperty #property_verification_details.active,
+#global_page_user-admin-manage-holdingproperty #personal_details.active{*/
+#global_page_user-admin-manage-holdingproperty #main_tabs_navigation li a.active{
+color:red;
+}
+.loader {
+
+background: url("../../images/loading-small.gif") no-repeat;
+margin: 0 auto;
+float: none !important;
+width: 100px;
+height: 100px;
+}
+#global_page_user-admin-manage-holdingapplication #about_me.active,
+#global_page_user-admin-manage-holdingapplication #smartmove_rent.active,
+#global_page_user-admin-manage-holdingapplication #residences.active,
+#global_page_user-admin-manage-holdingapplication #occupation.active,
+#global_page_user-admin-manage-holdingapplication #references.active{
+color:red;
+}
+
+#global_page_user-admin-manage-holdingproperty .submit_btn input[type="button"]{
+    margin-top: 12px;
+    border-radius: 3px;
+    padding: .5em 1em;
+    font-weight: 700;
+    border: none;
+    background-color: #619dbe;
+    border: 1px solid #50809b;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+    font-family: arial,sans-serif;
+    }
+#global_page_user-admin-manage-holdingproperty .dis_textarea_span {
+    border-right: 2px solid #cacaca;
+}
+#global_page_user-admin-manage-holdingproperty select {
+    width: 19.5%;
+}
+.layout_core_admin_menu_logo #global_header_logo {
+padding-top: 0px;
+}
+.layout_core_admin_menu_logo #global_header_logo img{
+    max-height: 40px;
+    vertical-align: bottom;
+}
+#global_page_user-admin-manage-addspecialdocuments .dir_rename,
+#global_page_user-admin-manage-addspecialdocuments .file_rename,
+#global_page_user-admin-manage-addspecialdocuments .file_share{
+display:none;
+}
+a:hover{
+    text-decoration: none !important;
+}
+#global_page_user-admin-manage-advertisements #TB_iframeContent {
+width:initial !important;
+}
+#global_page_advancedarticles-admin-settings-addarticle .form-wrapper{
+ padding-top:12px;
+}

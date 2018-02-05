@@ -1,0 +1,1 @@
+UPDATE `engine4_core_menuitems` SET `params` = '{"route":"advancedarticles_general","controller":"articles"}' WHERE `name` = 'advancedarticles_article' AND `module` = 'advancedarticles';

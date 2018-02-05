@@ -1,0 +1,79 @@
+{
+  "type": "widget",
+  "name": "fancymenu",
+  "version": "4.8.9",
+  "revision": null,
+  "path": "application\/widgets\/fancymenu",
+  "repository": null,
+  "date": "Wed, 20 Jan 2016 06:29:20 +0000",
+  "title": "Fancy Menu",
+  "description": "Displays a fancy menu for your site",
+  "thumb": null,
+  "developer": null,
+  "authors": [
+    "Shane Barcinas"
+  ],
+  "changeLog": {
+    "4.8.9": {
+      "Controller.php": "Fixed issue with Failed to load resource: \"externals\/fancymenu\/themes\/light.css\" the server responded with a status of 404 (Not Found)",
+      "index.tpl": "Fixed issue with Failed to load resource: \"externals\/fancymenu\/themes\/light.css\" the server responded with a status of 404 (Not Found)",
+      "manifest.php": "Incremented version and fixed issue with Failed to load resource: \"externals\/fancymenu\/themes\/light.css\" the server responded with a status of 404 (Not Found)"
+    }
+  },
+  "meta": {
+    "date": "Wed, 20 Jan 2016 06:29:20 +0000",
+    "title": "Fancy Menu",
+    "description": "Displays a fancy menu for your site",
+    "developer": null,
+    "authors": [
+      "Shane Barcinas"
+    ],
+    "changeLog": null
+  },
+  "actions": [
+    "install",
+    "upgrade",
+    "refresh",
+    "remove"
+  ],
+  "callback": null,
+  "dependencies": null,
+  "tests": [
+    
+  ],
+  "permissions": [
+    
+  ],
+  "structure": {
+    "application\/widgets\/fancymenu": {
+      "type": "directory",
+      "path": "application\/widgets\/fancymenu",
+      "structure": [
+        {
+          "path": "manifest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 4858,
+          "sha1": "4d28e4f79fc0b560de5cc6fa2d8b5339c1909063"
+        },
+        {
+          "path": "Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1377,
+          "sha1": "f95486a252a934ed48409c1c19e17ce1621ed2cb"
+        },
+        {
+          "path": "index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3838,
+          "sha1": "8281de7d130dcc830f69535ea0c71fee4809c991"
+        }
+      ]
+    }
+  }
+}

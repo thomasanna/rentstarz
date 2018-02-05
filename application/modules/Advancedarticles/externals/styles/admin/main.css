@@ -1,0 +1,149 @@
+table.admin_table tbody .beet td
+{
+  padding: 0px;
+  white-space: normal;
+  height:10px;
+}
+table.admin_table tbody .beet td span
+{
+  padding: 0px;
+  white-space: normal;
+  height:1px;
+}
+/*--------------*/
+
+.setting_fieldset {
+  +rounded;
+  padding: 0 15px;
+  border: 2px solid $theme_border_color;
+}
+.setting_fieldset .description {
+}
+.setting_fieldset .form-element .description {
+  min-width: 200px;
+}
+
+.setting_fieldset .form-wrapper {
+  padding: 10px 0;
+  border: none;
+}
+
+.setting_fieldset .form-label {
+  width: 160px;
+  font-weight: normal;
+}
+
+.setting_fieldset div.form-label label {
+  font-weight: normal;
+}
+
+.setting_fieldset legend {
+  padding: 0 10px;
+}
+
+.form-wrapper fieldset legend{
+  background-color: white;
+  clear: left;
+  display: block;
+  font-weight: bold;
+  margin-top: -9px;
+  padding: 0 14px;
+  width: auto !important;
+}
+#categoryTable tr {
+    background-color: white;
+}
+#categoryTable .between {
+    background-color: #ccc;
+    height:3px !important;
+}
+#summ {
+    border: none;
+    text-align: center;
+    border-bottom: 1px solid $theme_border_color;
+    width: 50px;
+    margin-left: 5px;
+}
+.button_donate {
+    margin-left: 10px;
+    margin-top: -2px;
+    position:absolute;
+    cursor: pointer;
+    background: none;
+    background-image: url(~/application/modules/Advancedarticles/externals/images/donate.gif) !important;
+    width: 92px;
+    height: 26px;
+}
+.price {
+    margin-bottom: 15px;
+}
+/* FormCheck tipbox */
+.fc-tbx .tl{
+	background: url(~/application/modules/Advancedarticles/externals/images/img/tl.png) no-repeat;
+}
+.fc-tbx .t{
+	background: url(~/application/modules/Advancedarticles/externals/images/img/t.png) repeat-x;
+	height: 16px;
+}
+.fc-tbx .tr{
+	background: url(~/application/modules/Advancedarticles/externals/images/img/tr.png) no-repeat;
+}
+.fc-tbx .l{
+	background: url(~/application/modules/Advancedarticles/externals/images/img/l.png) repeat-y;
+	width : 16px;
+}
+.fc-tbx .r{
+	background: url(~/application/modules/Advancedarticles/externals/images/img/r.png) repeat-y;
+	width: 16px;
+}
+.fc-tbx .bl{
+	background: url(~/application/modules/Advancedarticles/externals/images/img/bl.png) no-repeat;
+}
+.fc-tbx .b{
+	background: url(~/application/modules/Advancedarticles/externals/images/img/b.png) no-repeat;
+	height: 25px;
+}
+.fc-tbx .br{
+	background: url(~/application/modules/Advancedarticles/externals/images/img/br.png) no-repeat;
+}
+.fc-tbx .c{
+	background: url(~/application/modules/Advancedarticles/externals/images/img/c.png) repeat;
+}
+.fc-tbx a.close {
+	float: right;
+	background: url(~/application/modules/Advancedarticles/externals/images/img/close.png) no-repeat;
+	position: relative;
+	margin-left: 5px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	cursor: pointer;
+}
+.fc-tbx .err {
+	float: left;
+}
+.fc-tbx p {
+	width : auto;
+	display: block;
+	font-size: 10px;
+	font-family: tahoma, verdana, "sans-serif";
+	margin : 0;
+	padding : 0;
+	border : 0;
+	color : #FFF;
+}
+/* FormCheck validation div */
+
+.fc-error {
+	border : 1px solid #888;
+	margin-top : 5px;
+	background-color : #EAEAEA;
+}
+.fc-error p {
+	margin : 5px;
+	color : #A00;
+}
+
+.icon_add {
+	background: url(~/application/modules/Advancedarticles/externals/images/admin/add.png) no-repeat;
+}

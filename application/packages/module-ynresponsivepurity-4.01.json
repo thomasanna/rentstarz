@@ -1,0 +1,1059 @@
+{
+  "type": "module",
+  "name": "ynresponsivepurity",
+  "version": "4.01",
+  "revision": null,
+  "path": "application\/modules\/Ynresponsivepurity",
+  "repository": null,
+  "date": "Fri, 18 Mar 2016 03:28:38 +0000",
+  "title": "YN - Responsive Purity Template",
+  "description": "Responsive Purity Template",
+  "thumb": null,
+  "developer": null,
+  "authors": [
+    "<a href=\"http:\/\/socialengine.younetco.com\/\" title=\"YouNet Company\" target=\"_blank\">YouNet Company<\/a>"
+  ],
+  "changeLog": null,
+  "meta": {
+    "date": "Fri, 18 Mar 2016 03:28:38 +0000",
+    "title": "YN - Responsive Purity Template",
+    "description": "Responsive Purity Template",
+    "developer": null,
+    "authors": [
+      "<a href=\"http:\/\/socialengine.younetco.com\/\" title=\"YouNet Company\" target=\"_blank\">YouNet Company<\/a>"
+    ],
+    "changeLog": null
+  },
+  "actions": [
+    "install",
+    "upgrade",
+    "refresh",
+    "enable",
+    "disable"
+  ],
+  "callback": {
+    "path": null,
+    "class": "Engine_Package_Installer_Module",
+    "priority": 100
+  },
+  "dependencies": {
+    "module-younet-core": {
+      "type": "module",
+      "name": "younet-core",
+      "guid": "module-younet-core",
+      "minVersion": "4.02p9",
+      "maxVersion": null,
+      "excludeExcept": null
+    },
+    "module-ynresponsive1": {
+      "type": "module",
+      "name": "ynresponsive1",
+      "guid": "module-ynresponsive1",
+      "minVersion": "4.05",
+      "maxVersion": null,
+      "excludeExcept": null
+    }
+  },
+  "tests": [
+    
+  ],
+  "permissions": [
+    
+  ],
+  "structure": {
+    "application\/modules\/Ynresponsivepurity": {
+      "type": "directory",
+      "path": "application\/modules\/Ynresponsivepurity",
+      "structure": [
+        {
+          "path": "Model",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Model\/Slider.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2023,
+          "sha1": "ae568e9f3ee34459d6aa6bc398080e0c01d4be7c"
+        },
+        {
+          "path": "Model\/Welcome.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1293,
+          "sha1": "7a2b003d5d1d782953847ee14cfd4924be034665"
+        },
+        {
+          "path": "Model\/DbTable",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Model\/DbTable\/Welcomes.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 605,
+          "sha1": "218a8923beb0e6a74a077b160df8d6342836225a"
+        },
+        {
+          "path": "Model\/DbTable\/Modules.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 599,
+          "sha1": "67144f67606b379a50eae4fe6763f03d11da0eed"
+        },
+        {
+          "path": "Model\/DbTable\/.htempty",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 0,
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+        },
+        {
+          "path": "Model\/DbTable\/Sliders.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 599,
+          "sha1": "c97b328637fe2334e925a358d008f6561b834df9"
+        },
+        {
+          "path": "Model\/Module.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2988,
+          "sha1": "52e6dd5d26d0c118454693e72100b5fc0d7e02f7"
+        },
+        {
+          "path": "widgets",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/mini-menu",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/mini-menu\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 26574,
+          "sha1": "550e1cfeebec5f77c4d31e7559ea6b4c7e6a4fb6"
+        },
+        {
+          "path": "widgets\/mini-menu\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1071,
+          "sha1": "0a4f41915533714b1cf29569db69ec5ef6f604a4"
+        },
+        {
+          "path": "widgets\/our-module",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/our-module\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2808,
+          "sha1": "7c33118bcbf7d62212199a41ceb29a6ca309bd82"
+        },
+        {
+          "path": "widgets\/our-module\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 932,
+          "sha1": "ff8f5eb89aa29e9ed276ab854c8d290714642a2b"
+        },
+        {
+          "path": "widgets\/slider",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/slider\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3920,
+          "sha1": "4e689b2b7a67b4d91fcd060ea429bec5a7b81697"
+        },
+        {
+          "path": "widgets\/slider\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 773,
+          "sha1": "168877a14aa1d90822d6342081b40f2ba7a98225"
+        },
+        {
+          "path": "widgets\/footer-menu",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/footer-menu\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1883,
+          "sha1": "82e8d4f33b6c1ec2e079a91daf0f9dcc145cbddc"
+        },
+        {
+          "path": "widgets\/footer-menu\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2506,
+          "sha1": "5fbec01f5b0385fe3310204b4999e5ea2b94fe03"
+        },
+        {
+          "path": "widgets\/photo-grid",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/photo-grid\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 782,
+          "sha1": "14e8fe48197caf43a81f54bb29abc976429ee997"
+        },
+        {
+          "path": "widgets\/photo-grid\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2670,
+          "sha1": "dd0247b4692ca0837ac21208c893aaa1c6db8c8f"
+        },
+        {
+          "path": "widgets\/main-menu",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/main-menu\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3684,
+          "sha1": "dd4667884b13d169e841220354f44c9ace6192c1"
+        },
+        {
+          "path": "widgets\/main-menu\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1372,
+          "sha1": "430b06d27eb2dff10aa23015ccb7b9e89b377c34"
+        },
+        {
+          "path": "widgets\/group-grid",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/group-grid\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1338,
+          "sha1": "649c75a453ee53ecb1849db99c6e25f833169026"
+        },
+        {
+          "path": "widgets\/group-grid\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1441,
+          "sha1": "7b387285934fa111a8ccca184cef500382f143f7"
+        },
+        {
+          "path": "widgets\/welcome",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/welcome\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2587,
+          "sha1": "9922569a3cd55a8143da922115942d454ba63576"
+        },
+        {
+          "path": "widgets\/welcome\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 459,
+          "sha1": "0b4fa6b2674c85746aa239e427ad681866b82dd5"
+        },
+        {
+          "path": "widgets\/event-grid",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "widgets\/event-grid\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1690,
+          "sha1": "3056ea10825513ee43d64b9caaa0087f887e7852"
+        },
+        {
+          "path": "widgets\/event-grid\/Controller.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1836,
+          "sha1": "32ef685d04b09c2871be0e697e2159df3e1415d3"
+        },
+        {
+          "path": "controllers",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "controllers\/AdminManageSliderController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 6221,
+          "sha1": "02bb342bf3cf8d8a33e65c41c6645edd44e96830"
+        },
+        {
+          "path": "controllers\/AdminManageModuleController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 6404,
+          "sha1": "89ed08bdd2bafcb68e1fc5cd5e1279ae7dd4221d"
+        },
+        {
+          "path": "controllers\/AdminManageWelcomeController.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 6211,
+          "sha1": "05ab747cbb612b7347c0a724c277af519f139135"
+        },
+        {
+          "path": "Form",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Form\/.htempty",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 0,
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+        },
+        {
+          "path": "Form\/Admin",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Admin\/Module",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Admin\/Module\/Create.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3815,
+          "sha1": "9dcbbb30862d081da4c5da76e6c2b2077066198b"
+        },
+        {
+          "path": "Form\/Admin\/Module\/Edit.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 683,
+          "sha1": "fbea9525a256ae0b91da269fff6f3aa14556f339"
+        },
+        {
+          "path": "Form\/Admin\/Welcome",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Admin\/Welcome\/Create.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 4016,
+          "sha1": "0b13368bdfe94f98cee8d557f3f3af5adaad64a3"
+        },
+        {
+          "path": "Form\/Admin\/Welcome\/Edit.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 454,
+          "sha1": "0befb401d6cd06df20eb2cb4b369d040d061576e"
+        },
+        {
+          "path": "Form\/Admin\/Slider",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Admin\/Slider\/Create.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2716,
+          "sha1": "5b101d0b69e91b054bb4ccae337ab6064243d3f3"
+        },
+        {
+          "path": "Form\/Admin\/Slider\/Edit.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 451,
+          "sha1": "d5934c66ad547be922bb6e4fdbb9838b59d532f5"
+        },
+        {
+          "path": "Form\/Admin\/Widget",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Form\/Admin\/Widget\/PhotosGrids.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 793,
+          "sha1": "875574b564ccbe00d51524a5eaaa71e0267dc108"
+        },
+        {
+          "path": "Form\/Admin\/Widget\/EventsGrids.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 665,
+          "sha1": "dc853ad83953df5140419f79b0e267c368b138cb"
+        },
+        {
+          "path": "Form\/Admin\/Widget\/Slider.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 706,
+          "sha1": "fc4c6e507fcb97b660a3970dd6ec7fa2f5cd3341"
+        },
+        {
+          "path": "Form\/Admin\/Widget\/GroupsGrids.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 601,
+          "sha1": "2c092f687da0648389644b1c3fc70d9931cd2560"
+        },
+        {
+          "path": "externals",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "externals\/scripts",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "externals\/scripts\/.htempty",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 0,
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+        },
+        {
+          "path": "externals\/styles",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "externals\/styles\/main.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 0,
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+        },
+        {
+          "path": "externals\/styles\/admin",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "externals\/styles\/admin\/main.css",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 36,
+          "sha1": "332e54ceedddc9a77150fbc37945986b1fead2b5"
+        },
+        {
+          "path": "externals\/.htaccess",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 147,
+          "sha1": "9f1638a8edbe1c5d28789e017fb35b2f2465f01e"
+        },
+        {
+          "path": "externals\/images",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "externals\/images\/bg-heading.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 14924,
+          "sha1": "cf84d4177f742177fd605a35d2dd6dad62a02836"
+        },
+        {
+          "path": "externals\/images\/rss.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3358,
+          "sha1": "afd6e298514fccd109ee61e9ab5a3c0e754605d6"
+        },
+        {
+          "path": "externals\/images\/clavid_logo_transparent.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1903,
+          "sha1": "72a4f91b75dced3d924cb5bec9fba74db40d92f4"
+        },
+        {
+          "path": "externals\/images\/slider_img1.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 230388,
+          "sha1": "cbd92c9fcf08f90a3403e7c727886c403cd77e32"
+        },
+        {
+          "path": "externals\/images\/linkedin.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3004,
+          "sha1": "84362c2106a279eee6ee6171d5537d323a094115"
+        },
+        {
+          "path": "externals\/images\/logo2.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3793,
+          "sha1": "6f79caacaa382b8b89edc6041a1ececbffe5b4b1"
+        },
+        {
+          "path": "externals\/images\/facebook.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2973,
+          "sha1": "2f6279e40f80e5ef276123299a7f2a3670a27ca2"
+        },
+        {
+          "path": "externals\/images\/.htempty",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 0,
+          "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+        },
+        {
+          "path": "externals\/images\/googleplus.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3261,
+          "sha1": "035294209e6d4e2498b5ee83fa6e010bb0014b6a"
+        },
+        {
+          "path": "externals\/images\/wysihtml5_toolbar_icons.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2119,
+          "sha1": "77ec603413696bfac1016acb824ee32b59f4e811"
+        },
+        {
+          "path": "externals\/images\/module_icon_hover.gif",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1189,
+          "sha1": "37c199ab277d9cbd0b3a2e94c45abf6165d50875"
+        },
+        {
+          "path": "externals\/images\/twitter.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3055,
+          "sha1": "5711936f57867efd6f9af39b886b44c7b8afca1f"
+        },
+        {
+          "path": "externals\/images\/bullet_active.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 234,
+          "sha1": "07c391fc4acffd04842d52ad8ab91a8446d727e7"
+        },
+        {
+          "path": "externals\/images\/welc_pic_3.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 12272,
+          "sha1": "7c5662121c2a25ec9bf97bf9d0a191eef9e8ed09"
+        },
+        {
+          "path": "externals\/images\/no_thumb.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 32744,
+          "sha1": "f3bee6cd68f587fd0784bc12f741d0ccc547fabe"
+        },
+        {
+          "path": "externals\/images\/logo.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 18704,
+          "sha1": "bcbb617e57a31fcca5577af85bc72a924f96a9ee"
+        },
+        {
+          "path": "externals\/images\/slideshow_bg.jpg",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 212325,
+          "sha1": "2e763dd26ca721f590ca9d0028b1bb85bee5d362"
+        },
+        {
+          "path": "externals\/images\/slider_bg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 288922,
+          "sha1": "6b7f84bd4135ad868bf5288629f51491a1eb5993"
+        },
+        {
+          "path": "externals\/images\/module_icon.gif",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1321,
+          "sha1": "fb8be11705155d0df722b85567e811c64a97a485"
+        },
+        {
+          "path": "externals\/images\/bullet_hover.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 232,
+          "sha1": "20edf2f73f92f3d0575645d8b2e2d80cc25ff5ad"
+        },
+        {
+          "path": "externals\/images\/welc_pic_1.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 7224,
+          "sha1": "e8552dabd241415b83c14b1949578c45e9e90f7f"
+        },
+        {
+          "path": "externals\/images\/pintrest.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3116,
+          "sha1": "d02a66fa69e3626c4ca8e77f7aae05a1a40b9b1c"
+        },
+        {
+          "path": "externals\/images\/vimeo.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 3216,
+          "sha1": "78c676724eca044dd8914a609da25eb96ffe873a"
+        },
+        {
+          "path": "externals\/images\/breadcrumbs.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 23104,
+          "sha1": "2742831732ec4f76bcc77e43f8830e3cfe7bce37"
+        },
+        {
+          "path": "externals\/images\/bullet.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 229,
+          "sha1": "84d0fad8b57c0bb22f4a854e46782504ee3f898d"
+        },
+        {
+          "path": "externals\/images\/welc_pic_2.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 6022,
+          "sha1": "0bb1bbadcbcdac342ba1aa0a8b6807237252a85d"
+        },
+        {
+          "path": "externals\/images\/buttonbg.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 110,
+          "sha1": "3b9fdebc28732665c1837230250b8027e17b470d"
+        },
+        {
+          "path": "externals\/images\/launchpad_icon.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1303,
+          "sha1": "56de5181c22440b654ad853b73e8e2e4ddcee088"
+        },
+        {
+          "path": "externals\/images\/bg-text.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 950,
+          "sha1": "d0daa102fb1bb0d8332bb20ac60fc6f9b78ea463"
+        },
+        {
+          "path": "externals\/images\/myspace_social_icon.png",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1297,
+          "sha1": "b25e91d371899cdd271a61a208e35fdf9ada46bc"
+        },
+        {
+          "path": "externals\/images\/tripple_border.gif",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1192,
+          "sha1": "d2134932b7b54c80fd9d06ff281db1fb82d90ff7"
+        },
+        {
+          "path": "settings",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "settings\/my-install.sql",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 222,
+          "sha1": "3bb3c404cbdbc7712fc82cd18fece0f8745684cf"
+        },
+        {
+          "path": "settings\/content.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 5006,
+          "sha1": "57b3e6fee2eb7dfea4d2ec5e1c99aa9d528bb1c1"
+        },
+        {
+          "path": "settings\/manifest.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 1926,
+          "sha1": "43488a33408370bde09dc6e51b97fcbc38deac87"
+        },
+        {
+          "path": "settings\/my.sql",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2942,
+          "sha1": "c575b2a5003d4b239cdfdf5218d7a67ef6b6bd01"
+        },
+        {
+          "path": "Bootstrap.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 2382,
+          "sha1": "c0bbfbb9a63b468995589618ec214ad630c5f12d"
+        },
+        {
+          "path": "Api",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "Api\/Core.php",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 73,
+          "sha1": "407f216c231f59ebcf3d320b12612c4176b12527"
+        },
+        {
+          "path": "views",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-manage-slider",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-manage-slider\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 6088,
+          "sha1": "949fa1bb666cf338276386aede76661d634ac39f"
+        },
+        {
+          "path": "views\/scripts\/admin-manage-slider\/delete.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 839,
+          "sha1": "593f10bffa8bbe6242756c50067c5a3820f9a5f3"
+        },
+        {
+          "path": "views\/scripts\/admin-manage-slider\/create.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 37,
+          "sha1": "7721ea0dfd00864f0b8ca64f0738ed0b033e3668"
+        },
+        {
+          "path": "views\/scripts\/admin-manage-welcome",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-manage-welcome\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 6310,
+          "sha1": "60082889902c6e6f44132ee294176f00ad608dd0"
+        },
+        {
+          "path": "views\/scripts\/admin-manage-welcome\/delete.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 840,
+          "sha1": "be65858eaee0e9bfe70d557b00f51b5310020e0a"
+        },
+        {
+          "path": "views\/scripts\/admin-manage-welcome\/create.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 37,
+          "sha1": "7721ea0dfd00864f0b8ca64f0738ed0b033e3668"
+        },
+        {
+          "path": "views\/scripts\/admin-manage-module",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/admin-manage-module\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 6463,
+          "sha1": "f7ceb1ac9c1a0cca85077170d93d2d9053fbe493"
+        },
+        {
+          "path": "views\/scripts\/admin-manage-module\/delete.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 839,
+          "sha1": "8e2a3e26f3f1166d300a8df35427898696445d9f"
+        },
+        {
+          "path": "views\/scripts\/admin-manage-module\/create.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 37,
+          "sha1": "7721ea0dfd00864f0b8ca64f0738ed0b033e3668"
+        },
+        {
+          "path": "views\/scripts\/index",
+          "dir": true,
+          "file": false,
+          "perms": "0755",
+          "size": 4096,
+          "sha1": null
+        },
+        {
+          "path": "views\/scripts\/index\/index.tpl",
+          "dir": false,
+          "file": true,
+          "perms": "0644",
+          "size": 91,
+          "sha1": "757737bbaf754a13de2fa7bed23c76e0deb3a0da"
+        }
+      ]
+    },
+    "application\/languages\/en\/ynresponsivepurity.csv": {
+      "type": "file",
+      "path": "application\/languages\/en\/ynresponsivepurity.csv",
+      "structure": {
+        "path": "ynresponsivepurity.csv",
+        "dir": false,
+        "file": true,
+        "perms": "0644",
+        "size": 3778,
+        "sha1": "970b4c1f71bcee6dbe03a579ceaa017361b1c242"
+      }
+    }
+  }
+}

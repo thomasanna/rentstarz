@@ -1,0 +1,504 @@
+@include "constants.css";
+@media (min-width: 768px) {
+	#core_menu_mini_menu.slidedown.collapse {
+		display: block !important;
+		height: auto !important;
+	}
+
+    #global_content .layout_page_core_index_index .layout_main .layout_ynresponsiveclean_sliderfull {
+        margin-top: -15px;
+    }
+}
+
+@media (max-width: 767px) {
+
+	#global_page_ynblog-index-manage{
+		.generic_layout_container.layout_main .layout_middle{
+			position: static;
+		}
+	}
+
+	.headline h2
+	{
+		margin-right: 0;
+		white-space: nowrap;
+		width: 55%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		min-height: 35px;
+	}
+
+    /*** fix tinymce ***/
+    .mce-container-body.mce-abs-layout,
+    .mce-container.mce-panel.mce-floatpanel.mce-window.mce-in,
+    .mce-container.mce-panel.mce-floatpanel.mce-window.mce-in > div {
+        max-width: 100%;
+    }
+
+    .mce-widget.mce-btn.mce-first.mce-last.mce-abs-layout-item {
+        right: 10px;
+        left: inherit !important;
+    }
+
+    /*** fix function share video feed ***/
+    .feed_item_attachments .video_thumb_wrapper img,
+    .feed_item_attachments .feed_attachment_album_photo img,
+    .feed_item_attachments .video_object object,
+    .feed_item_attachments .video_object object embed {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+
+    .mce-container-body.mce-stack-layout {
+        overflow: hidden;
+    }
+
+    .layout_core_container_tabs .tabs_alt>ul>li>a {
+        display: block;
+    }
+
+    ul.feed > li {
+        overflow: visible;
+    }
+
+	.headline {
+		padding: 15px;
+		height: 62px;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+
+	.layout_left {
+		float: inherit;
+		width: 100%;
+	}
+
+	.navbar.navbar-default {
+		margin: 0;
+	}
+
+	.navbar-collapse {
+		max-height: none;
+	}
+
+	.navbar-header {
+		padding: 10px 0;
+	}
+
+	.navbar-default .navbar-brand,
+	.navbar-default .navbar-brand:hover {
+		padding: 15px;
+	}
+
+	/***** fix structure *****/
+	.nav.navbar-nav.navbar-right {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.dropdown-menu {
+		border: 0;
+	}
+
+	.navbar-default .navbar-toggle {
+		position: relative;
+		float: right;
+		margin:0;
+		padding: 9px 10px;
+		border: 1px solid #fff;
+		border-radius: 0;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		margin-right:15px;
+		outline:none;
+	}
+
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color: #fff;
+	}
+
+	.navbar-default .navbar-toggle:hover,
+	.navbar-default .navbar-toggle:focus {
+		background-color: $theme_button_background_color_hover !important;
+		border-color: $theme_button_background_color_hover;
+	}
+
+	.navbar-default .navbar-nav .dropdown-menu li a {
+		padding: 6px 30px;
+	}
+
+	/***** fix menu tab *****/
+	div.tabs_alt > ul {
+		display: -webkit-box;
+		-webkit-box-align: center;
+		-webkit-box-pack: justify;
+		width: 100%;
+	}
+
+	div.tabs_alt > ul > li {
+		-webkit-box-flex: 1;
+		display: block;
+		text-align: -webkit-match-parent;
+	}
+
+	div.tabs_alt > ul > li.more_tab {
+		-webkit-box-flex: 0;
+	}
+
+	div.tabs_alt > ul > li > a {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		display: block;
+		text-align: center;
+	}
+
+	div.tabs_alt > ul > li.more_tab > .tab_pulldown_contents a {
+		background: none;
+		margin: -5px;
+		padding: 5px;
+		text-decoration: none;
+	}
+
+	div.tabs_alt > ul > li .tab_pulldown_contents_wrapper {
+		right: 0;
+		margin-top: 32px;
+	}
+
+	/***** fix menu breadcrumb *****/
+	.headline .tabs {
+	float: right;
+	position: relative;
+	z-index: 10;
+	}
+
+	.headline .tabs span.icon-headline {
+		display: block;
+	}
+
+	.tabs .navigation {
+		border-spacing: 0;
+		box-shadow:0 0 15px rgba(0,0,0,.2);
+		-moz-box-shadow:0 0 15px rgba(0,0,0,.2);
+		-webkit-box-shadow:0 0 15px rgba(0,0,0,.2);
+		background-color:#fff;
+		position: absolute;
+		display: none;
+		right: 0;
+		margin-top: 34px;
+		min-width: 150px;
+		z-index: 9;
+		border-radius:8px;
+		overflow:hidden;
+
+		/*box-shadow: 0 2px 4px #eee;
+		-moz-box-shadow: 0 2px 4px #eee;
+		-webkit-box-shadow: 0 2px 4px #eee;*/
+	}
+
+	.tabs .navigation.open {
+		display: block;
+	}
+
+	.tabs .navigation li {
+		line-height: 30px;
+		margin: 0;
+		padding: 0;
+		display: block;
+	}
+
+	.tabs > ul.navigation li > a {
+		color: #555;
+		display: block;
+		line-height: 30px;
+		border-radius: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		margin: 0;
+		padding: 0 15px;
+		text-shadow: none;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.tabs > ul.navigation li > a:hover,
+	.tabs > ul.navigation li.active > a {
+		background-color: #555;
+		color: #fff;
+	}
+
+	.topnav { display: block; }
+	/*body { margin-top: 8px; }*/ /* update to replace module ***/
+	#core_menu_mini_menu { padding: 0; }
+	#core_menu_mini_menu.collapse { display: none; }
+
+	.layout_ynresponsiveclean_mini_menu #core_menu_mini_menu {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background: #585F69;
+	}
+
+	.layout_ynresponsiveclean_mini_menu > div > ul > li
+	{
+		display: inline-block;
+		padding-bottom: 2px;
+	}
+
+	.layout_ynresponsiveclean_mini_menu #core_menu_mini_menu > ul > li a {
+		color: #B7B9B9;
+	}
+
+	.layout_ynresponsiveclean_mini_menu #core_menu_mini_menu > ul > li a.new_update {
+		color: #fff;
+	}
+
+	.layout_right .generic_layout_container.open {
+		margin-right: 0;
+	}
+
+	.ybo_headline h3, .ybo_headline h4 {
+		display: block;
+	}
+
+	.navbar-default .navbar-nav .dropdown-menu {
+		border: 0;
+	}
+
+	div.networks_left, div.networks_right {
+		width: auto;
+		float: none;
+		max-width: 100%;
+		padding: 0;
+	}
+
+	.generic_layout_container.layout_middle {
+		margin-top: 15px;
+	}
+
+	.generic_layout_container.layout_top .layout_middle {
+		margin-top: 0;
+		overflow: visible;
+	}
+
+/*	.quicklinks > ul {
+		max-width: 100%;
+	}*/
+
+	body[id$=-edit] .headline,
+	body[id^=global_page_user-edit-] .headline,
+	body[id^=global_page_advalbum-index-] .headline,
+	body#global_page_advalbum-photo-view .headline,
+	body#global_page_advalbum-album-view .headline {
+		margin-left: -15px;
+		margin-right: -15px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.headline:after {
+		clear: right;
+	}
+
+	.generic_layout_container.nomobile {
+		display: none !important;
+	}
+
+	.layout_user_home_photo > div > a > img {
+		min-width: 0;
+	}
+
+	.global_form_box ul.thumbs.thumbs_nocaptions > li {
+		height: auto;
+	}
+}
+
+/***** responsive *****/
+@media screen and (max-width: 640px ) {
+	ul.forum_topic_posts .forum_topic_posts_info_top_options,
+	div.forum_topic_title {
+		clear: both;
+	}
+
+	div.forum_topic_title {
+		padding-top: .5em;
+	}
+
+	ul.forum_topic_posts .forum_topic_posts_info_top_options {
+		padding-bottom: .5em;
+	}
+
+	.defaultSkin table.mceLayout,
+	#body_parent.mceEditor {
+		max-width: 100% !important;
+	}
+
+	#messages_compose .compose-content {
+		width: 250px;
+		max-width: 100%;
+	}
+
+	#searchform select,
+	#searchform button {
+		margin-top: 10px;
+	}
+
+	.music_playlist,
+	ul.music_browse > li,
+	ul.videos_manage > li,
+	ul.polls_browse > li,
+	ul.groups_browse > li,
+	ul.events_browse > li,
+	ul.albums_manage > li,
+	ul.blogs_browse > li {
+		position: relative;
+	}
+
+	/*.music_playlist .music_playlist_info,
+	ul.music_browse .music_browse_info,
+	ul.videos_manage .video_info,
+	ul.polls_browse .polls_browse_info,
+	ul.groups_browse .groups_info,
+	ul.events_browse .events_info,
+	ul.albums_manage .albums_manage_info,
+	ul.blogs_browse > li .blogs_browse_info {
+		padding-bottom: 30px;
+	}*/
+
+
+	.music_playlist .music_playlist_options,
+	ul.music_browse .music_browse_options,
+	ul.videos_manage .video_options,
+	ul.polls_browse .polls_browse_options,
+	ul.groups_browse .groups_options,
+	ul.events_browse .events_options,
+	ul.albums_manage .albums_manage_options,
+	ul.blogs_browse > li .blogs_browse_options {
+		width: auto;
+		float: none;
+		border: none;
+		margin-left: 0;
+		padding: 0 0 5px;
+		min-height: auto;
+		border-bottom: 1px solid $theme_border_dark_color;
+    	margin-bottom: 10px;
+	}
+
+	.music_playlist .music_playlist_options a,
+	ul.music_browse .music_browse_options a,
+	ul.videos_manage .video_options a,
+	ul.polls_browse .polls_browse_options a,
+	ul.groups_browse .groups_options a,
+	ul.events_browse .events_options a,
+	ul.albums_manage .albums_manage_options > a,
+	ul.blogs_browse > li .blogs_browse_options > a {
+		display: inline-block;
+	}
+
+	/* hide technical btn */
+	.music_playlist_options .icon_music_disableonprofile,
+	.music_playlist_options .icon_music_playonprofile,
+	.music_browse_options .icon_music_disableonprofile,
+	.music_browse_options .icon_music_playonprofile {
+		display: none !important;
+	}
+
+	button.event_calendar {
+		margin-top: 0;
+	}
+
+	.albums_editphotos_info .albums_editphotos_cover {
+		clear: left;
+	}
+
+	#messages_form_reply #compose-menu {
+		display: block;
+	}
+
+
+	/***** music option *****/
+	ul.music_browse .music_browse_info { clear: both; }
+	ul.music_browse .music_browse_options li { display: inline-block; }
+
+	.browsemembers_results div.browsemembers_results_info {
+		clear: right;
+	}
+
+	/*** feed content ***/
+	ul.feed .feed_item_attachments .video_info,
+	ul.feed .feed_attachment_core_link > div > a + div,
+	ul.feed .feed_attachment_event > div > div,
+	ul.feed .feed_attachment_classified > div > div {
+		overflow: visible;
+		float: left;
+	}
+}
+
+@media screen and (max-width: 480px ) {
+	#buttons-label,
+	#submit-label,
+	#watch-label,
+	#blogs_create #search-label,
+	#form-upload #file-label,
+	#form-upload #search-label,
+	#form-upload-music #search-label,
+	#event_create_form #search-label,
+	#event_create_form #auth_invite-label,
+	#event_create_form #approval-label {
+		display: none;
+	}
+
+	ul.albums_editphotos > li .albums_editphotos_photo {
+		float: inherit;
+	}
+
+	ul.albums_manage .albums_manage_info {
+		min-height: 180px;
+	}
+
+	.global_form div.form-label,
+	.global_form div.form-element {
+		text-align: left;
+		float: inherit;
+	}
+
+	.album_options a.buttonlink {
+		display: block;
+		margin-bottom: 3px;
+	}
+
+	ul.message_view .message_view_info {
+		float: left;
+		clear: left;
+	}
+
+	/*** photo avatar thumbnail ***/
+	.layout_user_home_photo > div > a > img,
+	#profile_photo img {
+		min-width: 100%;
+		max-height: none;
+	}
+	/*classifield*/
+	.classifields_editphotos_photo {
+		float: none !important;
+	}
+	ul.classifieds_browse .classifieds_browse_photo {
+		float: none !important;
+		margin-bottom: 10px !important;
+	}
+	ul.classifieds_browse .classifieds_browse_options {
+		padding-left: 0px !important;
+		float: none !important;
+	}
+	ul.classifieds_browse .classifieds_browse_info_blurb {
+		max-height: 90px !important;
+	}
+	fieldset#fieldset-buttons {
+		margin-left: 0px;
+	}
+
+	/*** music ***/
+	.music_player_scrub { width: 100% !important; }
+}

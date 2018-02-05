@@ -1,0 +1,5406 @@
+.post-upload-box #share-main-image {
+width: 166px;
+height: 122px;
+margin: 6px 3px 6px 3px;
+float: left;
+position: relative;
+}
+
+.post-upload-box .share-images ul li {
+width: 58px;
+height: 58px;
+margin: 6px 3px 0 3px;
+float: left;
+position: relative;
+}
+
+.image-upload-profile {
+height: 177px;
+}
+
+#global_page_user-index-editproperty .but_submit {
+color: black;
+margin-top: 8px;
+width: 10% !important;
+max-width: none !important;
+height: 30px;
+min-width: 0;
+background-color: #f58410;
+color: #fff;
+text-transform: uppercase;
+font-weight: 700;
+-webkit-border-radius: 3px;
+
+}
+#global_page_user-index-addproperty #shareupload {
+
+margin-left: 176px;
+    margin-top: -35px;
+    clear: both;
+    margin-bottom: 47px;
+}
+
+
+#global_page_user-index-propertyrequestslist .property_list_content
+{
+   /* padding: 15px;*/
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #e8e8e8;
+    min-height:469px;
+}
+#global_page_user-index-propertydetail .btn_property_detail{
+margin-top: 14px;
+}
+
+html, body {
+height: 100%;
+}
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+background-color: #f9fafc;
+/*background-image: url("/application/modules/User/externals/images/furley_bg.png") ;*/
+}
+.footer, .push {
+height: 4em;
+}
+
+.footer, .push {
+clear: both;
+}
+#global_page_user-signup-index .global_form div.form-wrapper-heading{
+font-weight: bold !important;
+font-size: 14px!important;
+margin-top: 4px!important;
+margin-bottom: 29px !important;
+width: 377px;
+margin: 0 auto;
+}
+
+
+.icon-remove-sign:before {
+content: "\f057";
+font-family: Raleway;
+font-weight: normal;
+font-style: normal;
+display: inline-block;
+text-decoration: inherit;
+float:right;
+}
+#global_page_user-index-propertylist .approve_text{
+/*margin-left: 73% !important;*/
+color: red !important;
+position:relative;
+bottom:18px;
+}
+#global_page_user-edit-photo #Filedata-element .description{
+font-size: 11px;
+}
+
+#global_page_user-signup-index #Filedata-element .description{
+font-size: 11px;
+
+}
+#global_page_user-index-propertydetail .pr_title{
+font-weight: bold;
+font-size: 14px;
+}
+
+#global_page_user-index-propertydetail .image_list{
+
+margin-right: 12px;
+margin-top: 12px;
+margin-bottom: 12px;
+}
+
+#global_page_user-index-propertylist li.pr_list,#global_page_user-index-myproperties li.pr_list,#global_page_user-index-propertydetail li.pr_list{
+    margin-bottom: 1em;
+}
+
+#global_page_user-index-propertylist span.xyz,#global_page_user-index-myproperties span.xyz{
+
+        width: 40%;
+}
+
+#global_page_user-index-propertyrequestslist button.req_approve_btn{
+margin-left: 12px;
+margin-right: 12px;
+}
+#global_page_user-index-propertylist .property_list_content .navigation li,#global_page_user-index-myproperties .property_list_content .navigation li,
+#global_page_user-index-propertyrequestslist .property_list_content .navigation li{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-right: .3em;
+}
+/*#global_page_user-index-propertylist .property_list_content .navigation li.active,
+#global_page_user-index-myproperties .property_list_content .navigation li.active,
+#global_page_user-index-propertyrequestslist .property_list_content .navigation li.active{
+    font-weight: 700;
+    background-color: #616161;
+    color: #fff;
+    border-color: #616161;
+    opacity: 0.9;
+}*/
+/*#global_page_user-index-propertyrequirement  .navigation a,
+#global_page_user-index-requirementlist  .navigation a{
+color: #999 !important;
+
+}*/
+#global_page_user-index-propertyrequirement .property_list_content .navigation li a:hover,
+#global_page_user-index-requirementlist .property_list_content .navigation li a:hover{
+
+color: #999;
+
+}
+#global_page_user-index-propertyrequirement .property_list_content .navigation li,
+#global_page_user-index-requirementlist .property_list_content .navigation li,
+#global_page_user-index-propertyrequirement  .navigation li{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-right: .3em;
+    color: #999;
+    background-color: transparent;
+    font-size: 1em;
+    -webkit-border-radius: 6px;
+    border: 1px solid transparent;
+    padding: .6em .7em;
+}
+#global_page_user-index-tenantpropertyrequestlist .property_requests_content .navigation li.active,
+#global_page_user-index-tenantpropertyapproved .property_requests_content .navigation li.active{
+    color: #f58410;
+    font-weight: 700;
+    opacity: 0.9;
+}
+#global_page_user-index-propertylist .property_list_content .navigation li,
+#global_page_user-index-myproperties .property_list_content .navigation li,
+#global_page_user-index-propertyrequestslist .property_list_content .navigation li,
+#global_page_user-index-tenantpropertyrequestlist .property_requests_content .navigation li,
+#global_page_user-index-tenantpropertyapproved .property_requests_content .navigation li{
+    display: inline-block;
+    color: #999;
+    background-color: transparent;
+    font-size: 1em;
+    -webkit-border-radius: 6px;
+    border: 1px solid transparent;
+    padding: .6em .7em;
+}
+#global_page_user-index-propertylist .property_list_content .navigation li a,
+#global_page_user-index-myproperties .property_list_content .navigation li a,
+#global_page_user-index-propertyrequestslist .property_list_content .navigation li a,
+#global_page_user-index-tenantpropertyrequestlist .property_requests_content .navigation li a,
+#global_page_user-index-tenantpropertyapproved .property_requests_content .navigation li a{
+    display: inline-block;
+    color: #999;
+    background-color: transparent;
+    font-size: 1em;
+    -webkit-border-radius: 6px;
+    border: 1px solid transparent;
+    padding: .6em .7em;
+}
+#global_page_user-index-propertylist .property_list_content .navigation li a:hover ,#global_page_user-index-myproperties .property_list_content .navigation li a:hover ,
+#global_page_user-index-propertyrequestslist .property_list_content .navigation li a:hover,
+#global_page_user-index-tenantpropertyrequestlist .property_requests_content .navigation li a:hover ,
+#global_page_user-index-tenantpropertyapproved .property_requests_content .navigation li a:hover
+ {
+ /*border-color: #999;*/
+ }
+a, a:focus, a:hover, a:active{text-decoration:none !important;}
+
+#global_page_user-index-propertylist .image_cnt,
+#global_page_user-index-myproperties .image_cnt {
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+}
+#global_page_user-index-propertydetail .loader,#global_page_user-index-addproperty .loader,#global_page_user-index-editproperty .loader {
+
+background: url("../images/loading-small.gif") no-repeat;
+margin: 0 auto;
+float: none !important;
+width: 100px;
+height: 100px;
+}
+#global_page_user-index-propertydetail  .profile_image{
+margin-bottom: 12px;
+}
+
+
+#global_page_user-index-addproperty #shareupload {
+    clear: both;
+    margin-bottom: 47px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+#global_page_user-index-propertylist .btn_property_disable,
+#global_page_user-index-propertylist .btn_property_enable{
+
+background-color: #f58410;
+    background-image: none;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 8px 8px;
+    display: inline-block;
+    font-size: 11px;
+    width: 113px;
+}
+
+#global_page_user-index-propertylist .btn_property_disable:hover,
+#global_page_user-index-propertylist .btn_property_enable:hover{
+background-color: #c46a0d;
+}
+
+#global_page_user-edit-documentrequests .document_list{
+
+padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #e8e8e8;
+}
+#global_page_user-edit-documentrequests .document_list li{
+    margin-bottom: 21px;
+    font-size: 13px;
+
+}
+#global_page_user-index-propertydetail .property_rqst_div{
+text-align: center;
+clear: both;
+}
+#global_page_user-index-propertydetail .property_list_content,
+#global_page_user-index-propertymap .property_list_content,
+#global_page_user-index-propertyrequirementmap .property_list_content,
+#global_page_user-index-createapplication .property_list_content,
+#global_page_user-index-createrentalapplication .property_list_content{
+
+    padding: 15px;
+    background: #fff;
+  /*  margin-bottom: 15px;*/
+    margin-bottom: 0px;
+    border: 1px solid #e8e8e8;
+
+}
+#global_page_user-index-propertydetail span.qwerty,
+#global_page_user-profile-index .layout_user_profile_info span.qwerty,
+#global_page_user-index-propertyviewlog span.qwerty,
+#global_page_user-index-propertymap span.qwerty,
+#global_page_user-index-propertyrequirementmap span.qwerty,
+#global_page_user-index-createapplication span.qwerty,
+#global_page_user-index-editapplication span.qwerty{
+    float: left;
+    width: 49%;
+    font-weight: 500;
+    text-align: left;
+    margin-right: 10px;
+}
+#global_page_user-index-propertydetail span.sep,
+#global_page_user-profile-index span.sep,
+#global_page_user-index-propertyviewlog span.sep,
+#global_page_user-index-propertymap span.sep,
+#global_page_user-index-propertyrequirementmap span.sep,
+#global_page_user-index-createapplication span.sep,
+#global_page_user-index-editapplication span.sep{
+
+float: left;
+
+}
+#global_page_user-index-propertydetail span.xyz,
+#global_page_user-index-propertyviewlog span.xyz,
+#global_page_user-index-propertymap span.xyz,
+#global_page_user-index-propertyrequirementmap span.xyz,
+#global_page_user-index-createapplication span.xyz,
+#global_page_user-index-editapplication span.xyz,
+#global_page_user-profile-index span.xyz{
+width: 40%;
+float: left;
+margin-left: 4px;
+}
+#global_page_user-index-addproperty .maincontentdiv{
+    padding: 15px 15px 60px 15px;
+    /*background: #fff;*/
+    margin-bottom: 15px;
+    float: left;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+}
+#global_page_user-index-addproperty .prty_lablel{
+text-align: left;
+    margin-bottom: 6px;
+    font-weight: 700;
+    font-size: 13px;
+    float: none;
+    display: block;
+    padding-left: 0;
+    margin-top: 5px;
+}
+#global_page_user-index-addproperty .but_submit:hover,
+#global_page_user-index-editproperty .but_submit:hover{
+background-color: #c46a0d;
+
+}
+#global_page_user-index-addproperty .prty_field{
+    width: 377px !important;
+    max-width: none !important;
+    min-width: 0;
+
+}
+
+.browsemembers_results_links a.buttonlink{
+    width:113px;
+}
+#global_page_user-index-addproperty .padding_bottom20{
+    /*position: relative;
+    width: 60%;*/
+   /* margin-left: 18%;*/
+
+}
+.layout_ynresponsivepurity_mini_menu .ybo_headline{
+display:none;
+}
+#feed_viewmore_link{
+    background-color: #8dc63f !important;
+    font-weight: 700;
+}
+#feed_viewmore_link:hover{
+    background-color: #8dc63f !important;
+}
+.layout_advancedarticles_listarticle_block .art_table img{
+margin: 5px !important;
+}
+#global_page_advancedarticles-articles-browse .tabs {
+display:none;
+}
+
+#global_page_user-index-addproperty .layout_user_home_photo,
+#global_page_user-index-myproperties .layout_user_home_photo,
+#global_page_user-index-propertyrequestslist .layout_user_home_photo,
+#global_page_user-edit-profile .layout_user_home_photo,
+#global_page_user-edit-photo .layout_user_home_photo,
+#global_page_user-edit-style .layout_user_home_photo,
+#global_page_user-edit-documentrequests .layout_user_home_photo,
+#global_page_user-edit-document .layout_user_home_photo,
+#global_page_activity-notifications-index .layout_user_home_photo,
+#global_page_user-index-document .layout_user_home_photo,
+#global_page_user-index-tenantpropertyrequestlist .layout_user_home_photo,
+#global_page_user-edit-locationpreference .layout_user_home_photo,
+#global_page_user-index-viewapplication .layout_user_home_photo{
+    padding:15px;
+    background:#fff;
+}
+#global_page_user-index-tenantpropertyapproved .layout_user_home_photo,
+#global_page_user-index-tenantpropertyrequestlist .layout_user_home_photo{
+padding:15px !important;
+}
+#global_page_user-index-addproperty br{
+    clear:none;
+}
+
+#global_page_user-index-addproperty .layout_user_home_links,
+#global_page_user-index-myproperties .layout_user_home_links,
+#global_page_user-index-propertyrequestslist .layout_user_home_links,
+#global_page_user-edit-profile .layout_user_home_links,
+#global_page_user-edit-photo .layout_user_home_links,
+#global_page_user-edit-style .layout_user_home_links,
+#global_page_user-edit-documentrequests .layout_user_home_links,
+#global_page_user-edit-document .layout_user_home_links,
+#global_page_activity-notifications-index .layout_user_home_links,
+#global_page_user-index-document .layout_user_home_links,
+#global_page_user-index-tenantpropertyrequestlist .layout_user_home_links,
+#global_page_user-index-tenantpropertyapproved .layout_user_home_links,
+#global_page_user-edit-locationpreference .layout_user_home_links,
+#global_page_user-index-viewapplication .layout_user_home_links,
+#global_page_user-index-createrentalapplication .layout_user_home_links,
+#global_page_user-index-smartmoveapicreatereport .layout_user_home_links{
+    padding:15px;
+    /*background:#fff;*/
+}
+
+#global_page_core-error-requireuser .layout_ynresponsivepurity_main_menu , #global_page_user-auth-login .layout_ynresponsivepurity_main_menu,
+#global_page_user-signup-index .layout_ynresponsivepurity_main_menu{
+display:none;
+}
+#global_page_advancedarticles-articles-view .art_view_photo_block #right{
+text-align: center !important;
+margin-left: 131px !important;
+}
+#global_page_user-edit-profile .template_div .title{
+margin-top: 9px;
+text-align: center;
+font-weight: bold;
+margin-bottom: 4px;
+}
+#global_page_user-edit-profile .template_div{
+    width: 250px;
+    border:1px solid #000;
+    margin-bottom: 9px;
+    border-color: #b2c6cd;
+    padding: 5px;
+    min-height: 120px;
+    margin-left: 19.5%;
+}
+#global_page_user-edit-profile .template_div p{
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+#global_page_advancedarticles-articles-browse .a_comments>ul>li, #global_page_advancedarticles-articles-article .a_comments>ul>li {
+    clear: both;
+    overflow: hidden;
+    padding: 3px 5px 15px 5px;
+}
+#global_page_advancedarticles-articles-browse .a_comments a.a_comments_thumb , #global_page_advancedarticles-articles-article .a_comments a.a_comments_thumb {
+    float: left;
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+#global_page_advancedarticles-articles-browse .a_comments .a_comments_info , #global_page_advancedarticles-articles-article .a_comments .a_comments_info {
+    padding: 0 0 0 6px;
+    overflow: hidden;
+    line-height: 45px;
+}
+#global_page_advancedarticles-articles-browse .a_comments .a_comments_title , #global_page_advancedarticles-articles-article .a_comments .a_comments_title {
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+#global_page_user-index-addproperty #global_content .headline{
+    padding-top:6px;
+}
+
+#global_page_user-index-addproperty .layout_left,
+#global_page_user-profile-index #global_wrapper, #global_page_invite-index-index #global_wrapper,
+#global_page_activity-notifications-index #global_wrapper,
+#global_page_user-index-myproperties .layout_left,
+#global_page_user-index-propertyrequestslist .layout_left,
+#global_page_user-index-tenantpropertyrequestlist .layout_left,
+#global_page_user-index-tenantpropertyapproved .layout_left,
+#global_page_user-index-smartmoveapicreatereport .layout_left{
+    /*margin-top:50px;*/
+    padding-top: 34px;
+}
+
+#global_page_user-index-landlords #global_content .headline h2,
+#global_page_user-index-tenants #global_content .headline h2,
+#global_page_user-index-services #global_content .headline h2,
+#global_page_user-index-browse #global_content .headline h2,
+#global_page_user-index-searchproperties #global_content .headline h2,
+#global_page_advancedarticles-articles-browse #global_content .headline h2{
+    padding-top:5px;
+}
+#global_page_user-index-propertydetail .navigation li,
+#global_page_user-index-propertyviewlog .navigation li,
+#global_page_user-index-propertymap .navigation li{
+
+display: inline-block;
+color: #999;
+background-color: transparent;
+font-size: 1em;
+-webkit-border-radius: 90px;
+border: 1px solid transparent;
+padding: .6em .7em;
+}
+#global_page_user-index-propertydetail .navigation  li a:hover,
+#global_page_user-index-propertyviewlog .navigation  li a:hover,
+#global_page_user-index-propertymap .navigation  li a:hover{
+ border-color: #999;
+
+}
+#global_page_user-index-propertydetail .navigation  li a,
+#global_page_user-index-propertyviewlog .navigation  li a,
+#global_page_user-index-propertymap .navigation  li a{
+border: 1px solid transparent;
+padding: .6em .7em;
+-webkit-border-radius: 90px;
+color: #999;
+
+}
+
+#global_page_user-edit-profile .form-element{
+
+    width: 100% !important;
+}
+#global_page_user-edit-profile .form-element textarea{
+width:250px;
+
+}
+#global_page_user-edit-profile .form-element select#1_4_74-month{
+width: 100px !important;
+}
+#global_page_user-edit-profile .form-element select#1_4_74-day{
+width: 60px !important;
+}
+
+#global_page_user-edit-profile .form-element select#1_4_74-year{
+width: 80px !important;
+}
+#global_page_user-edit-profile .form-element select{
+width:250px !important;
+
+}
+/*.modal-dialog .submit-btn{
+float: left;
+width: 91px;
+margin-right: 12px;
+
+}
+
+.modal-dialog {
+
+left: 30% !important;
+width: 40% !important;
+padding-top: 30px;
+padding-bottom: 30px;
+z-index: 11;
+right: 30%;
+position: absolute;
+}
+.modal-backdrop {
+position: fixed !important;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 10;
+background-color: #000;
+}*/
+.layout_user_home_links .quicklinks .user_home_friends , .layout_user_profile_options #profile_options .user_profile_friends,
+.layout_user_profile_options #profile_options .user_profile_addproperty,
+.layout_user_profile_options #profile_options .user_profile_updates,
+.layout_user_profile_options #profile_options .user_profile_propertyrequirement{
+
+background-size: 19px;
+}
+.layout_user_home_links .quicklinks .user_home_updates,
+.layout_user_home_links .quicklinks .user_home_invite ,
+.layout_user_home_links .quicklinks .user_home_view ,
+.layout_user_home_links .quicklinks .user_index_propertyrequirement {
+
+background-size: 19px;
+}
+.layout_user_home_links .quicklinks .user_home_edit,.layout_user_home_links .quicklinks .user_index_myproperties,
+.layout_user_home_links .quicklinks .user_index_addproperty, .layout_user_profile_options #profile_options .user_profile_invite,
+.layout_user_profile_options #profile_options .user_index_propertylist,
+.layout_user_profile_options #profile_options .user_profile_edit,
+.layout_user_profile_options #profile_options .user_profile_view{
+
+background-size: 19px;
+}
+
+#global_page_user-index-editproperty .maincontentdiv {
+padding: 15px 15px 60px 15px;
+/*background: #fff;*/
+
+}
+#global_page_user-index-editproperty .padding_bottom20 {
+position: relative;
+/*width: 60%;*/
+/*margin-left: 15%;*/
+}
+
+#global_page_user-index-editproperty .prty_field {
+    width: 377px !important;
+    max-width: none !important;
+    min-width: 0;
+}
+
+#global_page_user-index-editproperty .but_submit {
+color: black;
+margin-top: 8px;
+width: 10% !important;
+max-width: none !important;
+height: 30px;
+min-width: 0;
+background-color: #f58410;
+color: #fff;
+text-transform: uppercase;
+font-weight: 700;
+margin-left: 240px;
+}
+
+#global_page_user-profile-index h4 {
+    border-bottom:0px;
+}
+#global_page_invite-index-index #submit,
+#global_page_user-edit-profile #submit{
+margin-top: 8px;
+    max-width: none !important;
+    height: 30px;
+    min-width: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-border-radius: 3px;
+    width: 213px !important;
+
+}
+#global_page_user-auth-login #submit,
+#global_page_core-error-requireuser #submit{
+
+ margin-top: 8px;
+    max-width: none !important;
+    height: 30px;
+    min-width: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-border-radius: 3px;
+    width: 213px !important;
+}
+#global_page_user-signup-index  #submit,
+#global_page_user-signup-index  #done{
+  margin-top: 8px;
+    max-width: none !important;
+    height: 30px;
+    min-width: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-border-radius: 3px;
+    width: 213px !important;
+
+}
+#global_page_user-signup-index  #done{
+margin-left: 94px;
+}
+#global_page_user-signup-index #profile_type,
+#global_page_user-signup-index #services_type{
+min-width: 250px !IMPORTANT;
+}
+
+#global_page_user-signup-index label.required:after, #global_page_user-signup-index label.null:after, #global_page_user-signup-index label.mand:after,
+#global_page_user-edit-profile label.required:after,  #global_page_user-edit-profile label.mand:after
+ {
+    content: "*";
+    color:red;
+    padding-left:3px;
+}
+
+#global_page_user-edit-document #save_document{
+    margin-left: 19.20%;
+}
+/*#global_page_user-edit-profile .generic_layout_container.layout_middle,
+#global_page_user-edit-photo .generic_layout_container.layout_middle,*/
+#global_page_user-edit-style .generic_layout_container.layout_middle,
+#global_page_user-edit-documentrequests .generic_layout_container.layout_middle,
+#global_page_user-edit-document .generic_layout_container.layout_middle,
+#global_page_user-edit-locationpreference .generic_layout_container.layout_middle{
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #e8e8e8
+
+}
+#global_page_user-edit-profile .tabs.navigation-over-list,
+#global_page_user-edit-photo .tabs.navigation-over-list,
+#global_page_user-edit-style .tabs.navigation-over-list,
+#global_page_user-edit-documentrequests .tabs.navigation-over-list,
+#global_page_user-edit-document .tabs.navigation-over-list{
+    margin-left: 36px;
+}
+
+#global_page_user-index-propertyrequestslist .notfound,
+#global_page_user-edit-documentrequests .notfound, #global_page_user-profile-index .layout_user_profile_documents .notfound
+{
+   text-align: center;
+ }
+
+#global_page_core-search-index .layout_core_content{
+    min-height:469px;
+}
+
+#global_page_core-search-index .notfound{
+    margin-top: 11%;
+    margin-left: 41%;
+}
+
+#global_page_user-edit-documentrequests .generic_layout_container.layout_middle{
+    min-height: 469px;
+}
+
+#global_page_user-profile-index .layout_user_profile_documents{
+    min-height: 435px;
+}
+
+#global_page_user-signup-index .global_form select{
+    /*max-width: 100% !important;
+    width: 246px !important;
+    min-width: 250px !IMPORTANT;*/
+
+}
+#global_page_user-signup-index .global_form select.b_mnth,
+#global_page_user-signup-index .global_form select.lanlord_b_mnth,
+#global_page_user-signup-index .global_form select.service_b_mnth{
+      width: 33% !important;
+      min-width: 50px !IMPORTANT;
+
+}
+#global_page_user-signup-index .global_form select.b_day,
+#global_page_user-signup-index .global_form select.lanlord_b_day,
+#global_page_user-signup-index .global_form select.service_b_day{
+      width: 33% !important;
+      min-width: 50px !IMPORTANT;
+
+}
+#global_page_user-signup-index .global_form select.b_year,
+#global_page_user-signup-index .global_form select.lanlord_b_year,
+#global_page_user-signup-index .global_form select.service_b_year{
+      width: 32% !important;
+      min-width: 50px !IMPORTANT;
+}
+
+#global_page_activity-notifications-index div.notifications_layout>div.notifications_rightside {
+    padding-left: 100px;
+}
+  .black_overlay{
+        display: none;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index:1001;
+        -moz-opacity: 0.8;
+        opacity:.80;
+        filter: alpha(opacity=80);
+    }
+
+
+
+    .white_content {
+        display: none;
+        position: fixed;
+        top: 25%;
+        left: 41%;
+        width: 32%;
+        height: auto;
+        /*padding: 16px;*/
+       /* border: 5px solid #f58410;*/
+        background-color: white;
+        z-index:1002;
+        overflow: auto;
+        -webkit-border-radius: 5px;
+    }
+.yes_btn,.no_btn {
+width: 91px !important;
+    margin-right: 12px;
+
+}
+.confirm_btns{
+    margin-top: 39px;
+}
+.confirm_text{
+    margin-top: 19px;
+    font-size: 15px;
+}
+
+.pro_label{
+    float:left !important;
+    width:200px;
+    /*clear: both;*/
+}
+#global_page_advancedarticles-articles-addphoto #form-upload #submit-wrapper{
+display:block;
+}
+#global_page_user-index-editproperty .prty_images_list {
+    float: left;
+    width: 100%;
+    margin-bottom: 14px;
+}
+#global_page_user-index-editproperty .prty_image{
+ float: left;
+ margin-right: 6px;
+ margin-bottom: 7px;
+}
+
+
+.post-upload-box .linkimgbox ul li {
+    float: left;
+    height: 58px;
+    margin: 6px 3px 0;
+    position: relative;
+    width: 58px;
+}
+
+.prty_images_list .linkimgbox ul li {
+    float: left;
+    height: 58px;
+    margin: 6px 3px 0;
+    position: relative;
+    width: 58px;
+}
+
+#global_page_user-index-propertydetail .property_list_content{
+    float:left;
+    width:100%;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+#global_page_user-index-propertydetail .jwplayer.playlist-none{
+    float:left;
+    margin-right:10px;
+}
+
+.video_cnt{
+    padding-left: 10px;
+    position: absolute;
+    top: 112px;
+    right:290px;
+    color:red;
+    font-weight:bold;
+    font-size:16px;
+}
+
+#global_page_user-index-editproperty .jwplayer.playlist-none{
+    float:left;
+    margin-right:10px;
+    width:140px !important;
+    height:140px !important;
+}
+
+#global_page_user-index-editproperty .jwplayer{
+    float:left;
+    margin-right:10px;
+    width:140px !important;
+    height:140px !important;
+}
+
+.icon-remove-sign-video:before {
+    content: "\f057";
+    font-family: Raleway;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    position: absolute;
+    z-index: 9999;
+    right: 90px;
+}
+#global_page_user-index-editproperty  .jwdisplay{position: relative;}
+#global_page_user-index-editproperty .icon-remove-sign-video{position:absolute;padding-left:77px;}
+
+.layout_ynresponsivepurity_mini_menu #global_search_form:after{
+display:none !important;
+}
+.layout_ynresponsivepurity_mini_menu #global_search_form .glyphicon-search{
+    cursor:pointer;
+}
+.layout_ynresponsivepurity_mini_menu #global_search_form input#global_search_field{
+    width: inherit !important;
+}
+
+/***********************document styling******************************/
+/*#global_page_user-edit-document .white_content,
+#global_page_user-index-document .white_content{
+    width: 24%;
+    left: 41%;
+
+   min-height: 241px;
+}*/
+#global_page_user-edit-document .folder_name_input,
+#global_page_user-index-document .folder_name_input{
+    width: 100%;
+    margin-bottom: 13px;
+}
+#global_page_user-edit-document .folder_name,
+#global_page_user-index-document .folder_name{
+    width: 100%;
+}
+#global_page_user-edit-document .menu_bar_1 .new_folder_btn,
+#global_page_user-edit-document .menu_bar_1 .upload_file_btn,
+#global_page_user-index-document .menu_bar_1 .new_folder_btn,
+#global_page_user-index-document .menu_bar_1 .upload_file_btn,
+#global_page_user-index-document .menu_bar_1 .back_file_btn{
+    margin-top: 8px;
+    margin-left: 16px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    float:left;
+}
+#global_page_user-edit-document .menu_bar_1 .new_folder_btn:hover,
+#global_page_user-edit-document .menu_bar_1 .upload_file_btn:hover,
+#global_page_user-index-document .menu_bar_1 .new_folder_btn:hover,
+#global_page_user-index-document .menu_bar_1 .upload_file_btn:hover{
+cursor:pointer;
+opacity: 2.9 !important;
+}
+#global_page_user-edit-document .menu_bar_1,
+#global_page_user-index-document .menu_bar_1,
+#global_page_user-index-documentfile .menu_bar_1{
+    border-style: solid;
+    width: 100%;
+    height: 46px;
+   /* background-color: #f5f5f5;*/
+    margin-bottom: 4px;
+}
+#global_page_user-edit-document .menu_bar_2,
+#global_page_user-index-documentsharedwithme .menu_bar_2,
+#global_page_user-index-document .menu_bar_2,
+.layout_user_profile_documents .menu_bar_2{
+    border-style: solid;
+    width: 100%;
+  /*  height: 30px;*/
+    background-color: #f5f5f5;
+    margin-bottom: 4px;
+    clear: both;
+}
+
+#global_page_user-edit-document .menu_bar_2 .menu_bar_2_menus,
+#global_page_user-index-documentsharedwithme .menu_bar_2 .menu_bar_2_menus,
+#global_page_user-index-document .menu_bar_2 .menu_bar_2_menus{
+padding: 8px 15px;
+margin-bottom: 21px;
+}
+#global_page_user-edit-document .msg,
+#global_page_user-index-document .msg,
+#global_page_user-index-documentsharedwithme .msg{
+    background-image: url(/application/modules/Core/externals/images/notice.png?c=61);
+    background-color: #e9faeb;
+    border: none;
+    background-repeat: no-repeat;
+    padding: 5px 15px 5px 32px;
+    background-position: 8px 5px;
+}
+.dir_content .dir_li{
+ /*background-image: url(/application/modules/User/externals/images/document_folder.svg) ;
+     background-repeat: no-repeat;
+    padding: 1px 10px 0px 61px;
+    background-position: 3px 3px;
+    background-size: 30px;
+    clear: both;*/
+}
+/*.dir_content .file_li{
+    background-image: url(/application/modules/User/externals/images/document_file.svg) ;
+    background-repeat: no-repeat;
+    padding: 1px 10px 0px 61px;
+    background-position: 3px 3px;
+    background-size: 30px;
+}*/
+.dir_content .dir_li .option_links , .dir_content .file_li .option_links {
+
+    float: right !important;
+
+}
+#global_page_user-edit-document .file_upload_submit_btn,
+#global_page_user-index-document .file_upload_submit_btn{
+padding: 6px 10px;
+    font-weight: 700;
+    font-size: 1em;
+    border: none;
+    text-transform: uppercase;
+    background-color: #f58410;
+    color: #fff;
+    font-size: 13px;
+    outline: none;
+    -webkit-border-radius: 3px;
+}
+#global_page_user-edit-document #light3{
+   height: 22%;
+}
+.document_access_span{
+float: right;
+}
+#global_page_user-index-documentsharedwithme .generic_layout_container.layout_middle,
+#global_page_user-index-document .generic_layout_container.layout_middle,
+#global_page_user-index-documentrequests .generic_layout_container.layout_middle,
+#global_page_user-index-documentfile .generic_layout_container.layout_middle{
+    /*padding: 15px;*/
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #e8e8e8;
+    min-height: 535px;
+
+}
+
+#global_page_user-index-documentrequests .document_list_content .navigation li a{
+border: 1px solid #999;
+border-color: #999;
+}
+
+#global_page_user-index-documentsharedwithme .document_list_content .navigation li.active,
+#global_page_user-index-document .document_list_content .navigation li.active,
+#global_page_user-index-documentrequests .document_list_content .navigation li.active,
+#global_page_user-index-specialdocuments .document_list_content .navigation li.active{
+    font-weight: 700;
+    color: #f58410;
+   /* font-weight: 700;*/
+    opacity: 0.9;
+}
+
+#global_page_user-index-documentsharedwithme .document_list_content .navigation li,
+#global_page_user-index-document .document_list_content .navigation li,
+#global_page_user-index-documentrequests .document_list_content .navigation li,
+#global_page_user-index-specialdocuments .document_list_content .navigation li{
+    display: inline-block;
+    font-size: 1em;
+    -webkit-border-radius: 90px;
+    padding: .6em .7em;
+}
+#global_page_user-index-documentsharedwithme .layout_user_home_photo,
+#global_page_user-index-documentrequests .layout_user_home_photo,
+#global_page_user-index-documentfile .layout_user_home_photo{
+    padding:15px;
+    background:#fff;
+}
+#global_page_user-index-documentsharedwithme .layout_user_home_links,
+#global_page_user-index-documentrequests .layout_user_home_links,
+#global_page_user-index-documentfile .layout_user_home_links{
+    padding:15px;
+
+}
+#global_page_user-index-document #save_document{
+    margin-left: 19.20%;
+}
+#global_page_user-index-document  .tabs.navigation-over-list,
+#global_page_user-index-documentrequests .tabs.navigation-over-list{
+    margin-left: 36px;
+}
+#global_page_user-index-document .document_list_content .navigation li a,
+#global_page_user-index-documentrequests .document_list_content .navigation li a,
+#global_page_user-index-documentsharedwithme .document_list_content .navigation li a,
+#global_page_user-index-specialdocuments .document_list_content .navigation li a{
+    display: inline-block;
+    color: #999;
+    background-color: transparent;
+    font-size: 1em;
+    -webkit-border-radius: 90px;
+    border: 1px solid transparent;
+    padding: .6em .7em;
+}
+
+.layout_user_profile_documents .menu_bar_2{
+overflow: hidden;
+margin-bottom: 12px;
+}
+.layout_user_profile_documents .menu_bar_2_menus{
+padding: 6px 15px;
+
+}
+
+.div_attachment_name{
+    float: left;
+    font-weight: bold;
+    margin-right: 12px;
+
+    }
+.div_attachment_title{
+text-align: left;
+margin-bottom: 12px;
+font-size: 19px;
+font-weight: 500;
+float: left;
+font-weight: bold;
+
+    }
+
+.attachment_label {
+ margin-top: 12px;
+ margin-bottom: 12px;
+
+}
+#light1 .cancel_upload{
+
+    padding: 6px 10px;
+    font-weight: 700;
+    border: none;
+    text-transform: uppercase;
+    background-color: #f58410;
+    color: #fff;
+    font-size: 13px;
+    outline: none;
+    width: 70px;
+    margin-left: 76px;
+    margin-top: -30px;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+}
+.document_access_span .waiting_for_reqst_btn{
+  width: 196px;
+  margin: 0px;
+}
+.document_access_span .approved_reqst_btn{
+  width: 196px;
+  margin: 0px;
+}
+.document_access_span .reqst_doc_access_btn{
+  margin: 0px;
+}
+.popup_title{
+text-align: center;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.layout_user_home_links .quicklinks .user_home_documents,
+.layout_user_profile_options #profile_options .user_profile_documents{
+background-size: 20px;
+}
+.chk_shared_users{
+margin-right: 12px;
+float: left;
+}
+#global_page_user-index-documentsharedwithme .dir_content .file_li{
+
+    background-image: url(/application/modules/User/externals/images/documents_sharing.svg);
+    background-repeat: no-repeat;
+    padding: 0px 0px 0px 67px;
+    background-position: 3px 3px;
+    background-size: 47px;
+}
+#global_page_user-index-documentsharedwithme .dir_content .file_li a{
+
+/*vertical-align: middle;*/
+
+}
+.dir_content{
+    margin-top: 22px;
+}
+
+#global_page_user-index-document #light4.white_content{
+ max-height: 466px;
+
+}
+
+#light1 .loader{
+background: url("../images/loading-small.gif") no-repeat;
+margin: 0 auto;
+float: none !important;
+width: 65px;
+height: 62px;
+
+}
+#light .add_folder_loader{
+background: url("../images/loading-small.gif") no-repeat;
+margin: 0 auto;
+float: none !important;
+width: 65px;
+height: 62px;
+
+}
+#global_page_user-index-document .generic_layout_container.layout_left,
+#global_page_user-index-documentsharedwithme .generic_layout_container.layout_left,
+#global_page_user-index-documentrequests .generic_layout_container.layout_left{
+
+margin-top: 8px;
+}
+
+#global_page_user-index-propertydetail #photos.active,
+#global_page_user-index-propertydetail #videos.active{
+/*ackground-color: #f58410;
+color: #FFF;*/
+ position: relative;
+border: 0 none;
+border-bottom: 2px solid #f58410;
+
+}
+
+#global_page_user-index-myproperties #browsemembers_ul .image_tab h3{
+
+border-bottom: none !important;
+}
+.popup_content{
+
+padding: 21px;
+
+}
+.div_attachment_cancel{
+
+text-align: right;
+cursor:pointer;
+
+}
+.pop_up_title{
+background-color: #f8f8f8;
+margin-bottom: -6px;
+border: 1px solid #e8e8e8;
+padding: 15px;
+position: relative;
+z-index: 1;
+}
+.revoke_access_action{
+width: 132px;
+}
+.popup_actionbtns{
+text-align: left;
+margin-top: 41px;
+}
+.popup_content li{
+list-style-type: none;
+
+}
+.popup_content .confirm_btns .cancel{
+width: 134px !important;
+}
+.popup_content .confirm_btns .share_document{
+width: 134px !important;
+margin:-12px;
+}
+
+.popup_content .confirm_btns .rename{
+width: 134px !important;
+}
+.div_attachment_cancel img{
+
+width: 14px;
+
+}
+#global_page_user-index-document #light6.white_content ,
+#global_page_user-index-document #light3.white_content ,
+#global_page_user-index-document #light.white_content ,
+#global_page_user-index-document #light7.white_content ,
+#global_page_user-index-document #light9.white_content {
+min-height: 181px;
+}
+#global_page_user-index-documentrequests .notfound,
+#global_page_user-index-documentsharedwithme .notfound,
+#global_page_user-index-document .notfound,
+#global_page_user-index-specialdocuments .notfound{
+    text-align: center;
+    padding:30px;
+}
+#global_page_user-index-propertydetail .video_list .jwplayer{
+    margin-bottom: 19px;
+    float: left;
+    margin-left: 12px;
+}
+#global_page_user-index-addproperty .content_main_left{
+margin-top: 16px;
+}
+.headline .navigation li a{
+text-transform: uppercase;
+}
+.clear{
+clear: both;
+}
+#global_page_user-index-addproperty .loader{
+
+background: url("../images/loading-small.gif") no-repeat;
+    margin: 0px auto;
+    float: left !important;
+    width: 50px;
+    height: 50px;
+    margin-left: 308px;
+    position: absolute;
+   /* bottom: -14px;*/
+    bottom: -28px;
+}
+#global_page_user-index-addproperty .submit_btn{
+position: absolute !important;
+    bottom: -56px !important;
+    right: 618px !important;
+    float: left !important;
+    width: 100% !important;
+
+}
+#global_page_user-index-addproperty .but_submit{
+
+max-width: none !important;
+    height: 30px;
+    min-width: 0;
+    background-color: #f58410;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-border-radius: 3px;
+
+}
+#global_page_user-index-addproperty .pro_label {
+    float: left !important;
+    width: 320px;
+    font-weight: bold;
+}
+#global_page_user-signup-verify #global_content .error{
+background: none !important;
+border: none !important;
+}
+.layout_middle button{
+text-transform: uppercase;
+margin:12px;
+}
+#global_page_user-index-propertyapprovedrequestslist .layout_middle button{
+margin:0px;
+margin-right: 19px;
+}
+.layout_user_profile_options #profile_options .user_profile_friend,
+.layout_user_profile_options #profile_options .user_profile_block,
+.layout_user_profile_options #profile_options .user_profile_report,
+.layout_user_profile_options #profile_options .user_profile_message{
+background-size: 19px;
+}
+.layout_ynresponsivepurity_mini_menu .user-profile-submenu .core_mini_messages:before{
+content: none;
+}
+.menu_bar_create_folder{
+margin-top: 44px;
+}
+.layout_ynresponsivepurity_mini_menu .user-profile-submenu .core_mini_profile{
+
+background: url("../images/myprofile_dropdown_icon.svg") no-repeat;
+background-size: 19px;
+background-position: 3px 10px;
+padding-left: 26px !important;
+}
+.layout_ynresponsivepurity_mini_menu .user-profile-submenu .core_mini_support{
+
+background: url("../images/information.svg") no-repeat;
+background-size: 19px;
+background-position: 3px 10px;
+padding-left: 26px !important;
+}
+.layout_ynresponsivepurity_mini_menu .user-profile-submenu .core_mini_messages{
+
+background: url("../images/messages_dropdown_icon.svg") no-repeat;
+background-size: 19px;
+background-position: 3px 10px;
+padding-left: 26px !important;
+}
+.layout_ynresponsivepurity_mini_menu .user-profile-submenu .core_mini_settings{
+
+background: url("../images/settings.svg") no-repeat;
+background-size: 19px;
+background-position: 3px 10px;
+padding-left: 26px !important;
+}
+.layout_ynresponsivepurity_mini_menu .user-profile-submenu .core_mini_edit_profile {
+background: url("../images/edit_profile.svg") no-repeat;
+background-size: 19px;
+background-position: 3px 10px;
+padding-left: 26px !important;
+}
+.layout_ynresponsivepurity_mini_menu .user-profile-submenu .core_mini_gallery {
+background: url("../images/gallery.svg") no-repeat;
+background-size: 19px;
+background-position: 3px 10px;
+padding-left: 26px !important;
+}
+.layout_ynresponsivepurity_mini_menu .user-profile-submenu .core_mini_auth{
+
+background: url("../images/log-out_dropdown_icon.svg") no-repeat;
+background-size: 21px;
+background-position: 3px 10px;
+padding-left: 26px !important;
+}
+
+
+/*  for rating      */
+
+
+#global_page_user-index-propertyapprovedrequestslist .layout_user_home_photo,
+#global_page_user-index-rate .layout_user_home_photo,
+#global_page_user-index-ratebyindividualuser .layout_user_home_photo{
+
+    padding: 15px;
+    background: #fff;
+}
+
+
+#global_page_user-index-rate .layout_user_home_links,
+#global_page_user-index-ratebyindividualuser .layout_user_home_links{
+   padding: 15px;
+   background: #fff;
+}
+#global_page_user-index-rate .layout_left{
+   margin-top: 50px;
+}
+#global_page_user-index-propertyapprovedrequestslist .layout_left,
+#global_page_user-index-propertyrequestslist .layout_left{
+   margin-top: 21px;
+}
+
+#global_page_user-index-propertyapprovedrequestslist .property_list_content{
+ /* padding: 15px;*/
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #e8e8e8;
+    min-height: 469px;
+
+}
+ #global_page_user-index-propertyapprovedrequestslist .property_list_content .navigation li{
+
+    display: inline-block;
+    color: #999;
+    background-color: transparent;
+    font-size: 1em;
+    -webkit-border-radius: 6px;
+    border: 1px solid transparent;
+    padding: .6em .7em;
+
+ }
+
+#global_page_user-index-propertyapprovedrequestslist .property_list_content .navigation li a{
+
+
+  display: inline-block;
+    color: #999;
+    background-color: transparent;
+    font-size: 1em;
+    -webkit-border-radius: 6px;
+    border: 1px solid transparent;
+    padding: .6em .7em;
+
+}
+/*
+#global_page_user-index-propertyapprovedrequestslist .property_list_content .navigation li a:hover ,
+#global_page_user-index-propertyrequestslist .property_list_content .navigation li a:hover ,
+#global_page_user-index-myproperties .property_list_content .navigation li a:hover
+ {
+ border-color: #999;
+ }*/
+/*#global_page_user-index-propertyapprovedrequestslist .property_list_content .navigation li.active{
+ font-weight: 700;
+    background-color: #5e6969;
+    color: #fff;
+    border-color: #5e6969;
+
+}*/
+
+#global_page_user-index-propertyapprovedrequestslist .notfound{
+ text-align: center;
+}
+
+#global_page_user-index-propertyapprovedrequestslist .property_rqst_approved_users_li{
+
+    border-style: solid #364347;
+    margin-bottom: 12px;
+    padding-left: 64px;
+    position: relative;
+    top: -44px;
+
+}
+#global_page_user-index-propertyapprovedrequestslist .property_rqst_approved_users_li a{
+border-style: solid #364347;
+margin-bottom: 12px;
+color: #5E6969;
+font-weight: bold;
+
+position:relative;
+
+}
+#global_page_user-index-propertyapproveduserslist #profile_status .complete_btn
+{
+    text-transform: uppercase;
+    margin: 9px 18px;
+}
+#global_page_user-index-propertyapproveduserslist #profile_status
+{
+    height:50px;
+    background-color: #BABABA;
+    margin-bottom: -6px;
+    border: 1px solid #e8e8e8;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+#global_page_user-index-propertyapproveduserslist #profile_status h2
+{
+    margin:8px 0 0 0;
+    padding-left: 8px;
+}
+#global_page_user-index-propertyapproveduserslist .navigation li {
+    display: inline-block;
+    color: #999;
+    background-color: transparent;
+    font-size: 1em;
+    -webkit-border-radius: 90px;
+    border: 1px solid transparent;
+    padding: .6em .7em;
+}
+#global_page_user-index-propertyapproveduserslist .navigation li a {
+    border: 1px solid transparent;
+    padding: .6em .7em;
+    -webkit-border-radius: 90px;
+    color: #999;
+}
+#global_page_user-index-propertyapproveduserslist .navigation li a:hover
+ {
+ border-color: #999;
+ }
+#global_page_user-index-propertyapproveduserslist .property_list_content {
+    padding: 15px;
+    background: #fff;
+    margin-bottom: 15px;
+    border: 1px solid #e8e8e8;
+}
+#global_page_user-index-propertyapproveduserslist .grant_btn_div {
+
+text-align: center;
+margin-top: 20px;
+}
+#global_page_user-index-propertyapproveduserslist span.qwerty{
+
+    float: left;
+    width: 49%;
+    font-weight: 500;
+    text-align: left;
+    margin-right: 10px;
+}
+
+#global_page_user-index-propertyapproveduserslist span.sep{
+
+      float: left;
+
+}
+
+#global_page_user-index-propertyapproveduserslist span.xyz{
+    width: 40%;
+    float: left;
+    margin-left: 4px;
+}
+#global_page_user-index-propertyapproveduserslist .loader{
+
+background: url("../images/loading-small.gif") no-repeat;
+    margin: 0 auto;
+    float: none !important;
+    width: 100px;
+    height: 47px;
+}
+#global_page_user-index-propertydetail .grant_btn_div {
+
+text-align: center;
+margin-top: 20px;
+clear: both;
+}
+#global_page_user-index-propertyapproveduserslist .white_content,
+#global_page_user-index-propertydetail .white_content{
+    width: 26% ;
+    left: 35% !important;
+
+}
+.property_granted_msg{
+float: right;
+color: #08d608;
+
+}
+#global_page_user-index-propertydetail .complete_btn_div {
+
+text-align: center;
+clear: both;
+
+}
+#global_page_user-index-rate .rating_list_content,
+#global_page_user-index-ratebyindividualuser .rating_list_content{
+
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #e8e8e8;
+    min-height: 469px;
+    border: 2px solid #f5f5f5 !important;
+    border-radius: 0px;
+   /* box-shadow: 2px 2px 7px #888;*/
+}
+#global_page_user-index-rate .rating_questions_list {
+
+  margin-top: 12px;
+
+}
+#global_page_user-index-rate .qn_count {
+
+  margin-right: 12px;
+
+}
+#global_page_user-index-rate .rate_qn_div {
+
+      margin-bottom: 12px;
+      margin-top: 19px;
+
+}
+#global_page_user-index-rate #stars-green {
+
+     margin-left: 20px;
+     float:left;
+
+}
+
+.datasSent, .serverResponse {
+margin-top: 20px;
+width: 470px;
+height: 73px;
+border: 1px solid #F0F0F0;
+background-color: #F8F8F8;
+padding: 10px;
+float: left;
+margin-right: 10px
+}
+.datasSent {
+width: 200px;
+position: fixed;
+left: 680px;
+top: 0
+}
+.serverResponse {
+position: fixed;
+left: 680px;
+top: 100px
+}
+.datasSent p, .serverResponse p {
+font-style: italic;
+font-size: 12px
+}
+.exemple {
+margin-top: 15px;
+}
+.clr {
+clear: both
+}
+pre {
+margin: 0;
+padding: 0
+}
+.notice {
+background-color: #F4F4F4;
+color: #666;
+border: 1px solid #CECECE;
+padding: 10px;
+font-weight: bold;
+width: 600px;
+font-size: 12px;
+margin-top: 10px
+}
+
+#global_page_user-index-rate .rating_title,
+#global_page_user-index-ratebyindividualuser .rating_title{
+
+margin-top: 12px;
+font-size: 14px;
+
+}
+#global_page_user-index-rate .submit_rate_btn{
+
+width: 113px;
+margin-left: 19px;
+
+}
+#global_page_user-index-ratebyindividualuser .rating_list{
+
+margin-top: 12px;;
+
+}
+#global_page_user-index-ratebyindividualuser .rate_qn_div{
+
+margin-bottom: 12px;
+
+}
+#global_page_user-index-ratebyindividualuser #stars-green{
+
+margin-bottom: 12px;
+
+}
+#global_page_user-index-ratebyindividualuser .layout_left {
+    margin-top: 50px;
+}
+.pop_up_title.rating_poup_title{
+
+
+height: 50px;
+}
+#global_page_user-index-documentsharedwithme .dir_content .file_li .option_links {
+    margin-top:-29px;
+}
+
+#global_page_user-profile-index ul.profile_friends .profile_friends_options a.buttonlink{
+    padding-left: 27px;
+    width: 40PX;
+}
+
+
+#global_page_user-index-propertydetail .complete_btn{
+
+  margin-top: 14px;
+
+}
+.layout_user_profile_friends .paginator_next {
+
+float:none !important;
+text-align: right;
+display: inherit;
+}
+.layout_user_profile_friends .paginator_previous {
+
+float:none !important;
+text-align: left;
+display: inherit;
+}
+.title_color
+{
+background-color: rgba(153, 153, 153, 0.62);
+padding-top:6px;
+padding-left:8px;
+margin-bottom: 15px;
+padding-left:8px;
+min-height: 43px;
+padding-left: 21px;
+padding-bottom: 8px;
+}
+
+#global_page_user-index-tenantpropertyrequestlist .title_color
+{
+height: 60px;
+}
+.title_color a
+{
+color:#FFF !important;
+font-size:21px;
+}
+#global_page_user-index-addproperty .property_btn
+{
+width:213px !important;margin-left:94%;
+border: none !important;
+background-color: #f58410 !important;
+margin-left: 108%;
+}
+#global_page_user-index-addproperty .property_btn:hover,
+#global_page_user-index-addproperty .property_btn:focus
+{
+border: none !important;
+}
+#global_page_user-index-addproperty .submit_btn
+{
+position: absolute;
+bottom: -29px;right:656px;
+}
+
+/*iphone */
+
+@media (max-width: 767px){
+.activity-post-container {
+height: 115px;
+overflow: inherit !important;
+position: relative;
+}
+#global_page_user-profile-index .activity-post-container {
+height: 0px;
+
+}
+.compose-activator{
+float: none !important;
+}
+.stars_tooltip::before {
+    left: 192px;
+
+}
+#global_page_user-index-addproperty .submit_btn{
+    position: absolute ;
+    bottom: -42px ;
+    right: 618px ;
+    float: left ;
+    width: 27% ;
+    left: 0px;
+    width:100%;
+}
+#global_page_user-index-addproperty .property_btn {
+        margin-left: 0%;
+
+}
+
+#global_page_user-index-myproperties .property_granted_msg{
+position:relative;
+bottom:16px;
+}
+.white_content
+{
+  width:80% !important;
+  margin: 40px 0 0 -106px;
+  z-index:1100;
+
+}
+#global_page_user-index-document .white_content .file_rename,#global_page_user-index-document .white_content .dir_rename{
+position:absolute;
+ top:0px !important;
+}
+
+
+#global_page_user-index-propertyapproveduserslist .white_content
+{
+    position: absolute;
+    width:87% !important;
+    top:50%;
+    height:231 !important;
+}
+
+#global_page_user-index-propertyapproveduserslist .white_content .yes_grant_btn
+{
+position:relative;
+left:60px;
+}
+
+#global_page_user-signup-index .no_btn,#global_page_user-signup-index .yes_btn
+{
+    margin-right: 5px;
+    width:107px !important;
+}
+
+#global_page_user-signup-index .white_content .confirm_text_first ,#global_page_user-signup-index .white_content .confirm_text_second{
+   text-align:center !important;
+ }
+#global_page_user-signup-index .no_btn
+{
+    margin-left: 6px;
+}
+
+ #global_page_user-index-document .white_content {
+ width: 75% !important;
+
+}
+#global_page_user-index-changelocation .generic_layout_container.layout_left,
+#global_page_user-index-addproperty .generic_layout_container.layout_left ,
+#global_page_user-index-document .generic_layout_container.layout_left ,
+#global_page_user-index-documentsharedwithme .generic_layout_container.layout_left,
+#global_page_user-index-documentrequests .generic_layout_container.layout_left,
+#global_page_user-index-myproperties .generic_layout_container.layout_left,
+#global_page_user-index-propertyrequestslist .generic_layout_container.layout_left,
+#global_page_user-index-propertyapprovedrequestslist .generic_layout_container.layout_left,
+#global_page_user-edit-profile .generic_layout_container.layout_left,
+#global_page_user-edit-photo .generic_layout_container.layout_left,
+#global_page_user-edit-locationpreference .generic_layout_container.layout_left,
+#global_page_user-index-tenantpropertyrequestlist .generic_layout_container.layout_left,
+#global_page_user-index-tenantpropertyapproved .generic_layout_container.layout_left,
+#global_page_user-index-propertyrequirement .generic_layout_container.layout_left,
+#global_page_user-index-editrequirement .generic_layout_container.layout_left,
+#global_page_user-index-propertymap .generic_layout_container.layout_left
+{
+display:none;
+}
+#global_page_ynresponsive1-index-dashboard .prefered_location_div {
+color: #999;
+cursor: pointer;
+float: none !important;
+font-size: 15px;
+margin-left: 13px;
+padding-bottom: 35px;
+padding-top: 0 !important;
+
+}
+#global_page_user-index-propertyrequirementmap .property_status{
+color:#999999 !important;
+font-size: 16px;
+}
+.compose-menu {
+    height: 85px;
+}
+#global_page_user-profile-index .compose-menu {
+    height: 0px;
+}
+.prefered_location_div{ display:inherit !important;
+    right:inherit !important;
+
+}
+#global_page_ynresponsive1-index-dashboard .prefered_location_div {
+color: #999;
+cursor: pointer;
+float: none !important;
+font-size: 15px;
+margin-left: 0px;
+padding-bottom: 35px;
+padding-top: 0;
+margin-top: 12px;
+}
+.compose-menu .dropdown {
+position: relative;
+top: 76px !important;
+}
+/*ul.feed>li{padding: 15px 0 10px 0 !important;}*/
+#global_page_user-index-editproperty .padding_bottom20 {
+
+margin-left: 0px;
+}
+
+#global_page_user-index-propertyrequestslist .view_profile
+{
+margin-right: 100px;
+}
+.application_submit_btn,#global_page_user-index-smartmoveapicreaterenterform .createrental_submit_btn,
+.application_submit_btn,#global_page_user-index-smartmoveapiupdaterenterform .createrental_submit_btn,
+#global_page_user-index-smartmoveapicreatereport .examevaluate_submit_btn{
+
+
+margin-left: 0px !important;
+
+}
+.rental_application_done{
+
+margin-left: 0px !important;
+}
+#global_page_ynresponsive1-index-dashboard #compose-menu{
+  width: 110% !important;
+}
+/*#global_page_ynresponsive1-index-dashboard .layout_middle button {
+    margin: 0px;
+ }*/
+
+ #global_page_user-index-myproperties .approve_text
+ {
+    line-height: 28px;
+    bottom:0px;
+ }
+ #global_page_user-index-document #light5 .confirm_btns .revoke_access_btn,
+ #global_page_user-index-document #light5 .confirm_btns button{
+
+    width: 93px !important;
+}
+
+ #global_page_user-index-document #light4 .confirm_btns button,
+ .popup_content .confirm_btns .share_document{
+
+             width: 93px !important;
+ }
+.div_attachment_title{
+
+ font-size: 15px!important;
+
+ }
+
+
+.dir_content .dir_li .option_links, .dir_content .file_li .option_links{
+
+padding-top: 11px;
+}
+hr{
+
+clear:both;
+}
+
+#global_page_user-index-propertyrequestslist .prty_reqsts_btns{
+    margin-top: 0px !important;
+
+}
+
+#global_page_user-index-document #light4 .confirm_btns button{
+
+    margin-left: 12px!important;
+
+}
+#global_page_user-index-document #light4 .confirm_btns{
+margin-top: 18px!important;
+
+}
+#global_page_user-index-document #light4.white_content {
+    max-height: 444px!important;
+}
+#global_page_user-index-editproperty .maincontentdiv {
+    padding: 15px 0px 60px 15px;
+    padding: 15px 15px 60px 15px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #e8e8e8;
+    float: left;
+    width: 100%;
+}
+    .white_content.map_popup{
+
+    top: 1% !important;
+
+    }
+
+    #global_page_user-index-editproperty .prty_lablel {
+            float: left !important;
+            width: 240px;
+            font-weight: bold;
+    }
+
+#global_page_user-index-propertyrequestslist .prty_reqsts_btns {
+    line-height: 2;
+    width: 115%;
+}
+#global_page_ynresponsive1-index-dashboard .layout_activity_feed{
+ position: inherit !important;
+}
+#global_page_ynresponsive1-index-dashboard .prefered_location_img{
+  height: auto !important;
+  }
+
+  #global_page_ynresponsive1-index-dashboard .dropdown-content {
+
+    left: 183px !important;
+    top: 56px !important;
+}
+
+
+  #global_page_user-edit-profile .form-element select {
+    width: 100% !important;
+    max-width: 100%;
+}
+#global_page_user-edit-profile .form-element textarea {
+    width: 100%;
+}
+#global_page_user-edit-profile .template_div {
+   width: 100%;
+   margin-left: 0px;
+}
+#global_page_ynresponsive1-index-dashboard #compose-submit
+{
+    width: 41% !important;
+    margin-right: 11px;
+}
+#global_page_user-index-smartmoveapicreatereport .prty_field {
+width: 100% !important;
+max-width: none !important;
+min-width: 0;
+}
+
+#global_page_user-index-changelocation .map_options .change_location_submit_btn {
+width:40% !important;
+}
+
+#global_page_user-index-propertyrequirementmap .layout_middle button {
+    text-transform: uppercase;
+    margin: 0px;
+    }
+
+#global_page_user-index-editapplication .reference_add_more_div ,
+#global_page_user-index-createrentalapplication .reference_add_more_div ,
+#global_page_user-index-createapplication .reference_add_more_div {
+    cursor: pointer;
+    margin-left: 0px;
+}
+ #global_page_user-index-changelocation .map_options .backtohome {
+width:40% !important;
+}
+.layout_ynresponsivepurity_main_menu .navbar.navbar-default {
+     margin-top: 5px !important;
+}
+#global_page_user-index-scheduler input,
+#global_page_user-index-scheduler select{
+      width: 100% !important;
+}
+#global_page_user-signup-index .pro_field_wrapper #map{
+width: 100% !important;
+height: 379px;
+}
+#global_page_user-index-scheduler .pro_field_wrapper .scheduler_submit_btn{
+    margin-left: 0px !important;
+    }
+    #global_page_user-index-editproperty .but_submit {
+    margin-left: 0px;
+    }
+    .layout_user_image_header .header_img img{
+    width:100% !important;
+    }
+    #global_page_ynresponsive1-index-dashboard .villacount{
+    padding-left: 140px;
+    }
+    .mob_details{
+    margin-right:74%;
+    }
+    #global_page_user-index-tenantpropertyrequestlist .edit_application_div
+    {
+    float:none !important;
+    width: 198px !important;
+    }
+   #global_page_user-index-propertydetail .headline {
+    height: 23px;
+    }
+   #global_page_user-edit-profile .tabs .navigation {
+    margin-top:18px;
+    }
+    #global_page_user-edit-profile #global_content .headline h2 {
+
+    line-height: 60px;
+    }
+    #global_page_user-index-tenants .villa,
+    #global_page_ynresponsive1-index-dashboard .villa{
+    margin-left:44% !important;
+    }
+    #global_page_user-index-myproperties .headline h2 {
+    width: auto !important;
+    }
+#global_page_user-index-propertyrequirement .header-align {
+ float: left;
+}
+#global_page_user-index-propertyapprovedrequestslist .property_rqst_approved_users_li .view_details{
+clear:both;
+}
+#global_page_user-index-tenantpropertyapproved .property_content, #global_page_user-index-tenantpropertyrequestlist .property_content {
+    margin-bottom: 14px;
+}
+#global_page_user-index-editrequirement #map,
+#global_page_user-index-propertyrequirement #map{
+width:100% !important;
+}
+#global_page_user-index-propertyrequirement .template_div ,
+#global_page_user-index-editrequirement .template_div {
+    width: 100% !important;
+}
+#global_page_user-profile-index .pto_uploads {
+    padding: 8px !important;
+}
+#global_page_user-profile-index .add_photo {
+    margin-left: 0px!important;
+}
+#global_page_user-index-tenantpropertyrequestlist .property_title {
+    padding-bottom: 10px;
+}
+}
+ /*end  iphone */
+#global_page_user-index-document #light5 .confirm_btns .revoke_access_btn {
+
+    width: 134px;
+    margin-left: 8px;
+}
+#global_page_user-index-propertyapproveduserslist .tenant_list_title{
+
+font-size: 15px;
+font-weight: bold;
+}
+
+
+.stars_tooltip{
+margin-left: 44px;
+background-color: #fff;
+padding: 5px 23px;
+box-shadow: -4px 0px 19px 2px #ccc;
+color: #f58410;
+
+}
+
+#global_page_user-index-rate .rate_btn_div{
+
+clear: both;
+margin-top: 29px;
+
+}
+#global_page_user-index-propertyrequestslist .prty_reqsts_li {
+padding-top: 12px !important;
+padding-left:10px;
+clear:both
+
+}
+#global_page_user-index-propertyrequestslist .position {
+
+padding-left:64px;
+position:relative;
+top:-44px;
+
+}
+#global_page_user-index-propertyrequestslist .req_reject_btn{
+width: 85px;
+
+}
+#global_page_user-index-propertyrequestslist .prty_reqsts_btns{
+    float: left;
+}
+/*#global_page_user-index-propertyrequestslist .prty_reqsts_btns a img{
+    width:20px;
+}*/
+#global_page_user-index-propertyrequestslist .user_profile{
+    float: left;
+    margin-bottom: 3px;
+}
+#global_page_user-index-propertyrequestslist .user_profile a{
+color: #5E6969;
+font-weight:bold;
+
+}
+/*******************browse members design*****************************/
+
+
+
+#browsemembers_results .results-pane {
+    position: relative;
+}
+#browsemembers_results .results_pane_li {
+    margin: 0 0 30px 0;
+    padding: 0 0 30px 0;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    background: #ffffff;
+}
+#browsemembers_results .scrolling-row-inner {
+
+    position: relative;
+}
+#global_page_user-index-landlords .scrolling-row-inner {
+
+    height: 200px;
+}
+
+#browsemembers_results .vcard {
+    max-height: none;
+    margin: 0;
+    padding: 0 0 4px 0;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+#browsemembers_results .scrolling-row-intro  h2 a img.photo{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    margin: 2px 15px 0 0;
+    max-height: 120px;
+    border-radius: 50%;
+}
+
+#browsemembers_results .scrolling-row-intro  h2 a img.item_photo_user{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    margin: 2px 15px 0 0;
+    height: 111px;
+}
+
+#browsemembers_results .hover-card-parent .url{
+
+   color: #444;
+}
+#global_page_user-index-propertyapproveduserslist input[type="radio"],
+input[type="checkbox"] {
+    margin: 18px 5px 0;
+    line-height: normal
+}
+#browsemembers_results  .scrolling-row-intro h2 span.meta{
+
+    display: block;
+    margin: 5px 0 0 0;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 2;
+    margin: 0 7px 0 0;
+    font-style: normal;
+    color: #777;
+    overflow: hidden;
+
+}
+#browsemembers_results  .scrolling-row-intro h2 a.locality{
+
+    margin: 0 7px 0 0;
+    font-style: normal;
+    color: #777;
+    overflow: hidden;
+}
+#global_page_user-index-landlords .scrolling-row-inner .profile_image img{
+    top: 0;
+    left: 0;
+    width: 75px;
+    margin: 2px 8px 0 0;
+    border-radius: 62px;
+    height: 75px;
+    margin-left: 2px;
+    margin-top: 16px;
+}
+#global_page_user-index-landlords #browsemembers_results .scrolling-row-intro{
+    margin-top: 14px;
+    width: 200px;
+    float: left;
+}
+#global_page_user-index-landlords .browsemembers_results div.browsemembers_viewmore,
+#global_page_user-index-tenants .browsemembers_results div.browsemembers_viewmore,
+#global_page_user-index-browse .browsemembers_results div.browsemembers_viewmore,
+#global_page_user-index-services .browsemembers_results div.browsemembers_viewmore{
+
+     border-top-width: inherit;
+
+}
+
+.dribbble{
+    position: relative;
+    background: #fff;
+    border-radius: 2px;
+    float: left;
+    padding: 10px;
+
+
+}
+.zoom-effect-container {
+    float: left;
+    position: relative;
+    width: 212px;
+    height: 157px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.image-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image-card img {
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.zoom-effect-container:hover .image-card img {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+}
+.property-prompt{
+    margin-top: 12px;
+}
+.property-prompt .property_count{
+    position: relative;
+    top: -12px;
+    width: auto;
+    font-size: 12px;
+    line-height: 1;
+    border-bottom: none;
+    margin-left: 32px;
+    color: #999;
+   }
+.property-prompt .property_label{
+    margin: -3px 0 0 20px;
+    top: -1px;
+    position: relative;
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: lowercase;
+    color: #999;
+}
+#global_page_user-index-landlords .browsemembers_results div.browsemembers_results_links {
+      float: left;
+    }
+#global_page_user-index-tenants .browsemembers_results_links {
+    overflow: hidden;
+    width: 175px;
+    text-align: left;
+    float: left;
+    }
+
+#global_page_user-index-services .browsemembers_results_links {
+    overflow: hidden;
+    text-align: left;
+    float: left;
+    width: 55px;
+    }
+#global_page_user-index-browse .browsemembers_results div.browsemembers_results_links {
+    display: inline-table;
+    position: relative;
+    top: 13px;
+
+    }
+.tenant_bio_container{
+
+float: left;
+    position: relative;
+    width: 500px;
+    padding: 2px 0px 0px 0px;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+.service_company_container{
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+#global_page_user-index-services .service_company_container{
+    top: 3px;
+    position: relative;
+    }
+#global_page_user-index-browse .service_company_container{
+    position: relative;
+    top: 3px;
+}
+#global_page_user-index-landlords #browsemembers_results h3,
+#global_page_user-index-tenants #browsemembers_results h3,
+#global_page_user-index-services #browsemembers_results h3,
+#global_page_user-index-browse #browsemembers_results h3{
+
+    margin: 0 0 29px;
+}
+.property-prompt img{
+     height: 30px;
+}
+#global_page_user-index-landlords #browsemembers_results .scrolling-row-intro h2 a img.item_photo_user{
+
+      height: 123px;
+      width: 127px;
+}
+#global_page_user-index-landlords .zoom-effect-container {
+
+      height: 214px;
+}
+
+
+#global_page_user-index-landlords .profile_image{
+
+      float: left;
+
+}
+
+#global_page_user-index-tenants .profile_image{
+
+
+
+   width: 116px;
+   float: left;
+
+}
+#global_page_user-index-tenants .scrolling-row-intro{
+    margin-top: 14px;
+    float: left;
+    margin-right: 47px;
+    width: 200px;
+    margin-bottom: 13px;
+}
+
+#global_page_user-index-tenants .browsemembers_results_links{
+
+    float: left;
+    width: 55px;
+}
+
+#global_page_user-index-tenants .scrolling-row-inner .profile_image img {
+    top: 0;
+    left: 0;
+    width: 75px;
+    margin: 2px 15px 7px 5px;
+    max-height: 118px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 62px;
+
+}
+#global_page_user-index-services .scrolling-row-inner .profile_image img {
+    top: 0;
+    left: 0;
+    width: 75px;
+    margin: 2px 15px 0 0;
+    max-height: 118px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 62px;
+}
+#global_page_user-index-services .profile_image{
+    margin-left: 7px;
+    margin-right: 12px;
+    float: left;
+    margin-bottom: 12px;
+
+}
+
+#global_page_user-index-services .scrolling-row-intro{
+    margin-top: 14px;
+    float: left;
+    margin-right: 47px;
+    width: 200px;
+}
+
+#global_page_user-index-services .browsemembers_results_links{
+
+    float: left;
+    width: 55px;
+}
+
+#global_page_user-index-browse .profile_image{
+
+    margin-right: 12px;
+    float: left;
+    margin-bottom: 12px;
+
+}
+#global_page_user-index-browse .scrolling-row-inner .profile_image img {
+    top: 0;
+    left: 0;
+    width: 120px;
+    margin: 2px 15px 0 0;
+    max-height: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+#global_page_user-index-browse #browsemembers_results .scrolling-row-intro {
+    width: 200px;
+    float: left;
+    margin-bottom: 14px;
+}
+#global_page_user-index-landlords .browsemembers_results_links {
+    overflow: hidden;
+    width: 55px;
+    text-align: left;
+    float: left;
+}
+
+
+
+/******************* my properties page design changes ***********************/
+#global_page_user-index-myproperties .property_title,
+#global_page_user-index-propertylist .property_title {
+   /* background-color: #BABABA;*/
+    padding-top: 6px;
+    margin-bottom: 15px;
+    padding-left: 21px;
+    padding-bottom: 8px;
+    background-color: #f8f8f8;
+
+}
+#global_page_user-index-myproperties .property_title a,
+#global_page_user-index-propertylist .property_title a
+{   color: #364347 !important;
+    font-size: 20px;
+}
+#global_page_user-index-tenantpropertyrequestlist .property_title a,
+#global_page_user-index-tenantpropertyapproved .property_title a{
+color: #color: #364347 !important;
+font-size: 16px;
+}
+#global_page_user-index-myproperties .property_location,
+#global_page_user-index-propertylist .property_location{
+
+    color: #999 !important;
+
+}
+.property_list_spl{
+        margin-right: 12px;
+
+}
+#global_page_user-index-myproperties span.qwerty,
+#global_page_user-index-propertylist span.qwerty,
+#global_page_user-index-tenantpropertyrequestlist span.qwerty,
+#global_page_user-index-tenantpropertyapproved span.qwerty{
+    float: left;
+    margin-right: 2px;
+    font-size: 15px;
+    line-height: 17px;
+    margin-left: 12px;
+}
+#global_page_user-index-myproperties .property_content ,
+#global_page_user-index-propertylist .property_content {
+
+
+    padding: 17px;
+
+}
+
+#global_page_user-index-myproperties .property_options{
+
+    float: right;
+
+}
+#global_page_user-index-myproperties .property_list ,
+#global_page_user-index-propertylist .property_list {
+    float: left;
+    width: 55%;
+    margin-top: 35px;
+}
+#global_page_user-index-myproperties .image_tab,
+#global_page_user-index-tenantpropertyrequestlist .image_tab{
+    width: 27%;
+    float: left;
+  /*  width: 25%;*/
+}
+#global_page_user-index-myproperties .video_tab{
+    width: 27%;
+    position: relative;
+    float: left;
+ /*   width: 25%;*/
+}
+#global_page_user-index-tenantpropertyrequestlist .video_tab,
+#global_page_user-index-tenantpropertyapproved .video_tab{
+
+    position: relative;
+    float: left;
+    width: 34%;
+}
+#global_page_user-index-myproperties .yes_btn.btn_enable{
+
+     margin-right: 12px;
+}
+
+#global_page_user-index-myproperties .qwerty_label,
+#global_page_user-index-propertylist .qwerty_label,
+#global_page_user-index-tenantpropertyrequestlist .qwerty_label,
+#global_page_user-index-tenantpropertyapproved .qwerty_label{
+
+    color: #999;
+    font-size: 15px;
+
+}
+
+#global_page_user-index-myproperties .image_tab img ,
+#global_page_user-index-propertylist .image_tab img ,
+#global_page_user-index-tenantpropertyrequestlist .property_image img ,
+#global_page_user-index-tenantpropertyapproved .property_image img {
+
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+
+}
+
+#global_page_user-index-myproperties .image_tab img:hover ,
+#global_page_user-index-propertylist .image_tab img:hover ,
+#global_page_user-index-tenantpropertyrequestlist .property_image img:hover,
+#global_page_user-index-tenantpropertyapproved .property_image img:hover{
+
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+
+}
+#global_page_user-index-myproperties .property_granted_msg {
+
+  clear: both;
+  font-weight: bold;
+  font-size: 17px;
+
+}
+
+#global_page_user-index-propertylist .image_tab{
+
+    float: left;
+    width: 27%;
+}
+#global_page_user-index-propertylist .video_tab{
+
+    position: relative;
+    float: left;
+    width:     width: 100%;
+    width: 27%;
+}
+
+#global_page_user-index-propertylist .property_granted_msg {
+
+
+  font-weight: bold;
+  font-size: 17px;
+
+}
+
+
+#global_page_user-index-myproperties .pr_list {
+    padding-top: 12px;
+    clear: both;
+}
+#global_page_user-index-propertylist .pr_list {
+    padding-top: 12px;
+    clear: both;
+}
+
+
+/*******************design changes in all properties page***********************/
+
+
+#global_page_user-index-searchproperties .property_title {
+
+    background-color: #F9F9F9;
+    padding-top: 5px;
+    margin-bottom: 15px;
+    padding-left: 21px;
+    padding-bottom: 12px;
+
+
+}
+#global_page_user-index-searchproperties .property_title a{
+
+    color: #364347 !important;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+#global_page_user-index-searchproperties .browsemembers_results h3
+{
+font-weight: 800;
+}
+#global_page_user-index-searchproperties .property_image,
+#global_page_user-index-tenantpropertyrequestlist .property_image,
+#global_page_user-index-tenantpropertyapproved .property_image{
+
+    float: left;
+    width: 34%;
+
+ }
+
+
+#global_page_user-index-searchproperties .property_wrap_content{
+
+
+        padding: 18px;
+}
+#global_page_user-index-searchproperties .property_owner_data {
+  clear: both;
+}
+#global_page_user-index-searchproperties .property_owner_image ,
+#global_page_user-index-tenantpropertyrequestlist .property_owner_image ,
+#global_page_user-index-tenantpropertyapproved .property_owner_image {
+  float: left;
+  width: 64px;
+  padding-left: 7px;
+}
+#global_page_user-index-searchproperties .property_owner_name ,
+#global_page_user-index-tenantpropertyrequestlist .property_owner_name ,
+#global_page_user-index-tenantpropertyapproved .property_owner_name {
+    float: left;
+    font-weight: 600;
+    font-size: 12px;
+    color: #364347;
+    width: 125px;
+    margin-top: 2px;
+}
+#global_page_user-index-tenantpropertyrequestlist .property_owner_name span,
+#global_page_user-index-tenantpropertyapproved .property_owner_name span{
+    position: absolute;
+}
+
+#global_page_user-index-searchproperties .property_meta{
+    display: block;
+    margin: 5px 0 0 0;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    color: #999;
+}
+#global_page_user-index-searchproperties .property_location {
+
+  color: #999 !important;
+
+}
+#global_page_user-index-searchproperties .qwerty_label{
+
+    color: #999;
+    font-size: 15px;
+
+}
+#global_page_user-index-searchproperties .property_granted_msg {
+
+
+ font-weight: bold;
+ font-size: 17px;
+
+}
+#global_page_user-index-searchproperties .property_video {
+
+    position: relative;
+    float: left;
+    width: 34%;
+
+}
+
+#global_page_user-index-searchproperties .property_image img {
+
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+
+}
+
+#global_page_user-index-searchproperties .property_image img:hover {
+
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+
+}
+#global_page_user-index-landlords .property_images{
+ float:left;
+}
+
+
+
+@media (max-width: 767px){
+
+
+#global_page_user-index-landlords #browsemembers_results .scrolling-row-intro {
+        width: 70%;
+        margin-bottom: 12px;
+}
+
+#global_page_user-index-landlords .zoom-effect-container {
+    height: 214px;
+    margin-bottom: 12px;
+}
+
+#global_page_user-index-browse #browsemembers_results .scrolling-row-intro {
+        width: 70%;
+        margin-bottom: 12px;
+}
+
+#global_page_user-index-browse .zoom-effect-container {
+    height: 214px;
+    margin-bottom: 12px;
+}
+
+#global_page_user-index-browse .profile_image {
+    float: none;
+    margin-bottom: 12px;
+}
+
+#global_page_user-index-searchproperties .property_image{
+
+ float: none;
+ margin-bottom: 9px;
+}
+
+#global_page_user-index-searchproperties .property_details{
+
+
+    margin-top: 12px !important;
+    margin-left: initial !important;
+
+}
+#global_page_user-index-searchproperties .property_granted_msg{
+
+      margin: 16px 0 0 -120px !important;
+}
+#global_page_user-index-searchproperties .property_video{
+
+   float: none;
+   margin-top: 12px;
+
+}
+
+#global_page_user-index-myproperties .image_tab,
+#global_page_user-index-propertylist .image_tab,
+#global_page_user-index-tenantpropertyapproved .property_image,
+#global_page_user-index-tenantpropertyrequestlist .property_image{
+  float: none;
+  margin-bottom: 12px;
+}
+
+#global_page_user-index-myproperties .video_tab,
+#global_page_user-index-propertylist .video_tab,
+#global_page_user-index-tenantpropertyapproved .video_tab,
+#global_page_user-index-tenantpropertyrequestlist .video_tab{
+  float: none;
+  margin-bottom: 12px;
+}
+#global_page_user-index-myproperties .property_list,
+#global_page_user-index-propertylist .property_list
+{
+ float: left;
+ width: 68%;
+}
+
+#global_page_user-index-myproperties .pr_list,
+#global_page_user-index-propertylist .pr_list{
+
+ clear:both;
+
+}
+#global_page_user-index-myproperties .property_granted_msg ,
+#global_page_user-index-propertylist .property_granted_msg {
+      margin: -33px 0 0 2px !important;
+}
+
+ #global_page_user-index-myproperties .yes_btn,
+ #global_page_user-index-myproperties .no_btn{
+       margin-right: 12px;
+       width: 91px !important;
+ }
+ #global_page_user-index-propertylist .created_on{
+       width: 62%;
+ }
+
+ #global_page_user-index-landlords .scrolling-row-inner{
+
+      height: auto;
+ }
+
+ #global_page_user-index-landlords .profile_image{
+
+ float:none;
+ margin-bottom: 12px;
+
+}
+
+#global_page_user-index-tenants .browsemembers_results_links, #global_page_user-index-services .browsemembers_results_links, #global_page_user-index-browse .browsemembers_results_links {
+
+    margin: 0px !important;
+}
+
+#global_page_user-index-landlords .browsemembers_results_links a.buttonlink {
+
+    margin: 0px !important;
+
+}
+
+}
+
+.icon_friendadd {
+
+background: url("../images/Add-Friend.png") no-repeat;
+height: 40px;
+}
+.icon_friendcancel {
+
+background: url("../images/Cancel-Request.png") no-repeat;
+height: 40px;
+}
+.icon_friendremove {
+
+background: url("../images/Remove-Friend.png") no-repeat;
+height: 40px;
+}
+.icon_friendaccept {
+
+background: url("../images/Request.png") no-repeat;
+height: 40px;
+}
+
+#global_page_user-index-landlords .browsemembers_results_links a.buttonlink {
+    width: 55px;
+   /* margin: 77px 0px 0 -202px;
+    position:absolute;*/
+
+}
+#global_page_user-profile-index .layout_user_profile_friends .profile_friends_body{
+
+      float: left;
+
+}
+
+/*******************styles for property feed************************/
+
+.feed_property_status {
+
+  color: #f58410;
+
+}
+.feed_property_name{
+
+    margin-top: 12px;
+    font-size: 19px;
+    font-weight: 600;
+
+}
+.feed_property_name_link{
+
+        color: #364347 !important;
+        margin-left: 12px;
+}
+.feed_property_locality_meta {
+    margin-left: 12px;
+    color: #999;
+}
+ul.feed .feed_item_date>ul>li>span.timestamp {
+ margin-left: 12px;
+}
+.feed_property_image{
+
+    width: 267px;
+    height: 200px;
+
+}
+
+.feed_property_image_div{
+
+    float: left;
+
+}
+.feed_property_details {
+  /*  float: left;
+    margin-left: 275px;
+    clear: both;
+    margin-top: -24px;*/
+    clear: both;
+    top: 17px;
+    position: relative;
+}
+.feed_property_details span.qwerty_label{
+
+    margin-left: 12px;
+    color: #999;
+    font-size: 13px;
+
+}
+#global_page_user-index-propertyrequirement .layout_user_home_photo,
+#global_page_user-index-editrequirement .layout_user_home_photo{
+
+    padding: 15px;
+    background: #fff;
+}
+#global_page_user-index-propertyrequirement .layout_user_home_links,
+#global_page_user-index-editrequirement .layout_user_home_links{
+
+    padding: 15px;
+
+}
+#global_page_user-index-propertyrequirement .maincontentdiv ,
+#global_page_user-index-editrequirement .maincontentdiv {
+    padding: 15px 15px 60px 15px;
+    /*background: #fff;*/
+    border: 1px solid #e8e8e8;
+    float: left;
+    width: 100%;
+    border: 1px solid rgb(250, 250, 250) !important;
+}
+#global_page_user-index-propertyrequirement .prty_field ,
+#global_page_user-index-editrequirement .prty_field {
+    width: 377px ;
+    max-width: none !important;
+    min-width: 0;
+}
+#global_page_user-index-propertyrequirement .pro_label ,
+#global_page_user-index-editrequirement .pro_label {
+    float: left !important;
+    /*width: 350px;*/
+    width: 336px;
+    font-weight: bold;
+}
+
+#global_page_user-index-propertyrequirement .submit_btn,
+#global_page_user-index-editrequirement .submit_btn{
+    text-align: center;
+    clear: both;
+}
+#global_page_user-index-propertyrequirement  .but_submit.property_btn,
+#global_page_user-index-editrequirement  .but_submit.property_btn{
+    max-width: none !important;
+    height: 30px;
+    min-width: 0;
+    background-color: #f58410;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-border-radius: 3px;
+    width: 213px !important;
+
+}
+.feed_property_requirement_image_div{
+
+  float: left;
+  margin-right: 27px;
+
+}
+.feed_property_requirement_details span.qwerty_label{
+
+    margin-left: 12px;
+    color: #999;
+    font-size: 15px;
+
+}
+.feed_propertyrequirement_status {
+
+  color: #f58410;
+
+}
+.feed_property_rentaltype_image {
+float: right;
+}
+.feed_property_requirement_locality{
+
+    color: #999;
+}
+#global_page_user-index-propertyrequirement .loader,
+#global_page_user-index-editrequirement .loader{
+
+background: url("../images/loading-small.gif") no-repeat;
+    margin: 0px auto;
+    float: left !important;
+    width: 50px;
+    height: 50px;
+    margin-left: 200px;
+    position: absolute;
+
+}
+.feed_property_div{
+      padding-top: 17px;
+}
+.feed_property_requirement_div{
+      padding-top: 17px;
+}
+#compose-property-requirement{
+
+margin-left: 4px;
+
+}
+@media (max-width: 767px){
+
+    .feed_property_image_div {
+        margin-bottom: 13px;
+    }
+    .feed_property_requirement_image_div {
+        margin-bottom: 13px;
+    }
+/*  #global_page_ynresponsive1-index-dashboard #global_header {
+        position: relative;
+
+        background-color:#fff;
+        border-bottom:none;
+        z-index: 2;
+    }*/
+}
+@media screen and (max-width:550px) {
+
+/*.generic_layout_container.layout_left{
+z-index:-9!important;
+position:absolute!important;
+
+}
+#global_header{
+z-index:-9!important;
+position:absolute!important;
+
+}*/
+.stars_tooltip::before {
+    left: 192px!important;
+
+}
+
+
+
+#global_page_user-index-propertyapprovedrequestslist .property_rqst_approved_users_li a{
+border-style: solid #364347;
+
+color: #5E6969;
+font-weight: bold;
+position:relative;
+top: 0px;
+padding-left: 0px;
+
+}
+/*#global_page_ynresponsive1-index-dashboard #global_header {
+        position: relative;
+
+        background-color:#fff;
+        border-bottom:none;
+        z-index: 2;
+    }*/
+
+}
+#global_page_user-index-propertydetail .example-image-link img{
+
+    margin-bottom: 21px;
+    margin-right: 14px;
+   /* border: 3px solid #f58410;*/
+
+}
+
+/*#global_page_ynresponsive1-index-dashboard .black_overlay {
+z-index:4500 !important;
+}
+#global_page_ynresponsive1-index-dashboard .white_content  {
+z-index:5000 !important;
+}*/
+
+
+
+    #global_page_user-index-landlords .property-prompt img {
+    height: 30px;
+    margin: -16px 0 0 0;
+}
+
+
+#global_page_user-index-tenants .browsemembers_results_links a.buttonlink,#global_page_user-index-services .browsemembers_results_links a.buttonlink{
+
+height: 70px;
+}
+
+.stars_tooltip::before {
+/*left: 558px;*/
+
+    left: 39.7%;
+    position: fixed;
+
+}
+
+#global_page_user-index-propertydetail .edit_property,
+#global_page_user-index-propertymap .edit_property{
+
+    padding: 0px 5px;
+    cursor: pointer;
+
+}
+#global_page_user-index-propertydetail .delete_property,
+#global_page_user-index-propertymap .delete_property{
+
+    padding: 0px 5px;
+    cursor: pointer;
+
+}
+#global_page_user-index-propertydetail .btn_property_enable,
+#global_page_user-index-propertymap .btn_property_enable,
+#global_page_user-index-propertydetail .btn_property_disable,
+#global_page_user-index-propertymap .btn_property_disable{
+
+    padding: 0px 5px;
+
+}
+
+#global_page_user-index-tenants .orange,#global_page_user-index-services .orange,#global_page_user-index-browse .service_orange{
+    color: #f58410;
+    font-weight: 600;
+    font-size: 17px;
+    float:left;
+
+}
+
+#global_page_user-index-browse .orange{
+    color: #f58410;
+    font-weight: 600;
+    font-size: 17px;
+    float:left;
+}
+#global_page_user-index-browse .browsemembers_results_links{
+    float: left;
+    width: 55px;
+    height: 55px;
+    }
+#global_page_user-index-browse  .property-prompt img {
+    height: 30px;
+    margin: -16px 0 0 0;
+    position: relative;
+    top: -4px;
+
+}
+
+#global_page_user-index-browse .zoom-effect-container {
+
+   height: 214px;
+
+}
+#global_page_user-index-landlords .count {
+
+
+    top: 8px;
+    position: relative;
+
+}
+#global_page_user-index-browse .property-prompt .property_count {
+line-height: 2;
+}
+#global_page_user-index-browse .property-prompt .property_label {
+    margin: -17px 0 0 20px;
+}
+
+#global_page_user-index-propertyrequirement .range_field_from.range_field ,
+#global_page_user-index-editrequirement .range_field_from.range_field {
+margin-right: 6px;
+}
+
+#global_page_user-index-propertyrequirement .range_field ,
+#global_page_user-index-editrequirement .range_field {
+width: 150px;
+min-width: 50px;
+}
+#global_page_user-index-propertyrequirement .range_field_to.range_field ,
+#global_page_user-index-editrequirement .range_field_to.range_field {
+margin-left : 6px;
+}
+#global_page_user-index-propertyrequirement  .range_span_link ,
+#global_page_user-index-editrequirement  .range_span_link {
+    margin-left: 2px;
+    position: relative;
+}
+.feed_property_requirement_locality{
+margin-top: -4px;
+margin-bottom: 7px;
+}
+.btn_property_enable,.btn_property_disable{
+cursor: pointer;
+}
+
+#global_page_user-index-propertyrequirement .prty_field.price_range_from,
+#global_page_user-index-editrequirement .prty_field.price_range_from{
+width: 177px;
+min-width: 50px;
+margin-right: 6px;
+}
+#global_page_user-index-propertyrequirement .price_validation_msg,
+#global_page_user-index-editrequirement .price_validation_msg{
+clear: both;
+
+}
+#global_page_user-profile-index .profile_fields>ul>li>span:first-of-type{
+font-weight:600;
+}
+#global_page_user-profile-index h4>span {
+font-weight:600;
+margin-left: 9px;
+}
+#global_page_user-edit-profile div.form-wrapper-heading>span {
+font-weight:900;
+display: none;
+}
+#global_page_user-index-addproperty .input_type_file button
+{
+cursor:pointer;
+}
+#global_page_user-index-addproperty .post-upload-box #share-main-image #upload-preview{
+height:112px;
+}
+#global_page_user-index-addproperty .post-upload-box #share-main-image{
+margin: 16px 3px 0 3px;
+}
+#global_page_user-index-addproperty .post-upload-box .share-images ul li {
+    width: 47px;
+}
+table.mceLayout, textarea.tinyMCE {
+    width: 100% !important;
+}
+
+.note-desktop {
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+    table.mceLayout, textarea.richEditor {
+       width: 600px !important;
+    }
+
+    .note-desktop {
+        display: block;
+    }
+    .note-mobile {
+        display: none;
+    }
+
+}
+
+
+
+#mceu_13,
+#mceu_27,
+#mceu_21{
+
+display:none;
+}
+
+.dis_textarea_span{
+     float: right;
+     margin-bottom: 12px;
+     /*margin-left: 243px;*/
+     margin-top: 12px;
+    margin-right: 251px;
+
+}
+
+.des_length{
+color: #f58410;
+
+}
+/*iphone*/
+@media (max-width: 767px){
+.mce-container-body.mce-stack-layout {
+    overflow: initial !important;
+
+
+}
+.dis_textarea_span{
+     float: right;
+     margin-bottom: 12px;
+     margin-right: 0px;
+
+}
+
+#global_page_user-index-addproperty .prty_field {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0;
+}
+
+
+#global_page_user-index-propertyrequirement .prty_field, #global_page_user-index-editrequirement .prty_field {
+width: 100%;
+
+}
+.price_input_span{
+
+float:none !important;
+}
+
+#global_page_user-index-propertyrequirement .prty_field.price_range_from, #global_page_user-index-editrequirement .prty_field.price_range_from {
+
+
+width: 100%;
+}
+#global_page_user-index-propertyrequirement .range_field, #global_page_user-index-editrequirement .range_field {
+
+width: 100%;
+}
+
+#global_page_user-index-propertyrequirement .range_field_to.range_field, #global_page_user-index-editrequirement .range_field_to.range_field {
+margin-left: 0px;
+}
+.price_range_input_span{
+
+float:none !important;
+}
+#global_page_user-index-propertyrequirement .submit_btn, #global_page_user-index-editrequirement .submit_btn {
+margin-left: 0px;
+}
+.range_span_link img{
+
+margin-top: 13px;
+}
+#global_page_user-index-document #light5 .confirm_btns .revoke_access_btn {
+  margin-right: -8px;
+}
+#global_page_user-index-myproperties .white_content ,
+#global_page_ynresponsive1-index-dashboard .white_content {
+    width: 80% !important;
+    }
+
+
+
+    #pac-input{
+
+        width: 54% !important;
+        min-width: 30% !important;
+    }
+
+
+
+#global_page_user-index-createapplication .prty_field ,
+#global_page_user-index-editapplication .prty_field {
+
+width: 100% !important;
+}
+
+#global_page_user-index-viewapplication .pro_label {
+width: 134px;
+}
+#global_page_user-index-viewapplication .prty_value {
+width: 100px;
+}
+#global_page_user-index-editproperty .prty_images_list {
+width: 300px;
+}
+#global_page_user-index-editproperty .prty_field {
+
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0;
+}
+#global_page_user-index-propertyrequestslist .prty_reqsts_btns a {
+    margin-left: 0px;
+}
+#global_page_user-index-propertyrequestslist .prty_reqsts_btns {
+margin-left: 0px;
+}
+/*#global_page_user-index-propertyrequestslist .req_reject_btn img {
+margin-left: 18px;
+}
+*/
+.feed_property_details {
+    float: left;
+    margin-left: 12px;
+    clear: both;
+    margin-top: 12px;
+}
+
+}
+
+/*end iphone*/
+
+#description_ifr #tinymce {
+
+    font-family: Raleway!important;
+    font-size: 13px !important;
+}
+.edit_des_span{
+    float: none;
+    margin-bottom: 12px;
+    margin-left: 0px;
+    margin-top: 46px;
+    margin-right: 0px;
+ }
+#global_page_user-index-propertyapproveduserslist .property_granted_msg
+{
+    top: -80px;
+    position: relative;
+}
+
+/* Ipad Portrait */
+@media only screen
+  and (min-width: 768px)
+  and (max-width: 1024px)
+
+{
+.activity-post-container{
+    position: relative;
+    height: 115px !important;
+    overflow: inherit !important;
+}15px
+#global_page_user-profile-index .activity-post-container{
+
+    height: 0px !important;
+    min-height: 12px;
+
+}
+.white_content {
+    width: 350px !important;
+    max-width: 100% !important;
+    left: 28% !important;
+}
+.compose-menu .dropdown {
+    position: relative;
+}
+
+    #global_page_user-index-searchproperties .property_image {
+        float: none !important;
+        margin-bottom: 12px;
+    }
+    #global_page_user-index-searchproperties .property_video
+    {
+     float: none !important;
+     margin-bottom: 12px;
+    }
+
+
+    #global_page_user-index-searchproperties .property_details {
+        width: auto!important;
+        margin-top: 12px!important;
+        margin-left: 21px !important;
+    }
+
+    #global_page_user-index-landlords .property_images {
+            margin-top: 16px;
+            width: 100%;
+    }
+    #global_page_user-index-propertylist .image_tab{
+   width: 37%;
+   margin-bottom:12px;
+    }
+      #global_page_user-index-propertylist .property_list{
+    width: 25%;
+    }
+   #global_page_user-index-propertylist .video_tab{
+    width: 30%;
+    /*margin: 0 50px 0px 5px;*/
+    margin-bottom: 12px;
+    margin-left: 12px;
+   }
+   #global_page_user-index-propertylist .image_tab img {
+
+    padding: 0 0 0 12px;
+}
+
+    #global_page_user-index-addproperty .dis_textarea_span{
+         margin-right: 0px !important;
+    }
+    #global_page_user-index-addproperty .submit_btn{
+
+        right: 0px !important;
+    }
+    #global_page_user-index-addproperty .property_btn {
+   margin-left: 33% !important;
+    }
+
+.feed .feed_item_attachments img {
+
+    padding: 0 0px 5px 25px;
+}
+#global_page_ynresponsive1-index-dashboard .feed_property_details {
+    top: 17px;
+    position: relative;
+    margin-left: -26px;
+}
+#global_page_ynresponsive1-index-dashboard .feed_property_requirement_details .property_list_spl {
+ width: 50%;
+}
+#global_page_ynresponsive1-index-dashboard .property_list_spl {
+    position: relative;
+    top: 10px;
+  /*  width: 50%;*/
+}
+#global_page_user-profile-index .property_list_spl
+{
+margin-top:12px;
+clear: both;
+}
+
+#global_page_user-index-services .company_div, #global_page_user-index-browse .company_div  {
+
+     clear:both;
+
+}
+
+
+.yes_btn, .no_btn {
+    width: 85px !important;
+
+}
+
+#global_page_user-index-myproperties .image_tab {
+    width: auto;
+    margin-bottom: 12px;
+    margin-right: 12px;
+}
+#global_page_user-index-propertylist .property_list {
+    float: left;
+    /*width: 70%;*/
+}
+#global_page_user-index-myproperties .video_tab {
+    width: auto;
+    margin-bottom: 12px;
+    margin-right: 12px;
+}
+ .white_content.map_popup{
+
+   width: 500px !important;
+   left: 20% !important;
+   top: 25% !important;
+
+ }
+#global_page_user-index-editproperty #pac-input {
+    width: 206px!important;
+    min-width: 100px !important;
+}
+
+/*
+#global_page_user-edit-profile .template_div {
+margin-left: 0px;
+}*/
+#global_page_user-index-browse .property_images{
+width: 100% ;
+}
+#global_page_user-index-propertyrequirement .range_span_link{
+    top: 2px;
+    }
+/*#global_page_user-index-propertyrequirement .price_valid .price_input_span{
+    clear: both;
+}*/
+
+#global_page_user-index-createapplication .pro_label ,
+#global_page_user-index-editapplication .pro_label ,
+#global_page_user-index-createrentalapplication .pro_label {
+/*15px;*/
+    width: 100%;
+}
+/*#global_page_user-edit-profile .template_div {
+margin-left: 168px;
+
+}*/
+#global_page_user-index-changelocation .generic_layout_container.layout_left,
+#global_page_user-index-addproperty .generic_layout_container.layout_left ,
+#global_page_user-index-document .generic_layout_container.layout_left ,
+#global_page_user-index-documentsharedwithme .generic_layout_container.layout_left,
+#global_page_user-index-documentrequests .generic_layout_container.layout_left,
+#global_page_user-index-myproperties .generic_layout_container.layout_left,
+#global_page_user-index-propertyrequestslist .generic_layout_container.layout_left,
+#global_page_user-index-propertyapprovedrequestslist .generic_layout_container.layout_left,
+#global_page_user-edit-profile .generic_layout_container.layout_left,
+#global_page_user-edit-photo .generic_layout_container.layout_left,
+#global_page_user-edit-locationpreference .generic_layout_container.layout_left,
+#global_page_user-index-tenantpropertyrequestlist .generic_layout_container.layout_left,
+#global_page_user-index-tenantpropertyapproved .generic_layout_container.layout_left,
+#global_page_user-index-propertyrequirement .generic_layout_container.layout_left,
+#global_page_user-index-editrequirement .generic_layout_container.layout_left,
+#global_page_user-index-propertymap .generic_layout_container.layout_left
+{
+display:none;
+}
+
+#global_page_user-index-myproperties .property_granted_msg {
+    margin: -47px 0 0 2px !important;
+}
+#global_page_user-index-searchproperties .property_video {
+    margin-left: 12px;
+    float:none;
+    margin-right: 307px;
+    margin-bottom: 12px;
+    }
+#global_page_ynresponsive1-index-dashboard #compose-property-requirement {
+
+    width: 100%;
+}
+#global_page_ynresponsive1-index-dashboard .prefered_location_div {
+color: #999;
+cursor: pointer;
+
+font-size: 15px;
+margin-left: 20px;
+padding-bottom: 16px;
+padding-top: 11pxd !important;
+}
+#global_page_user-index-propertyrequirementmap .property_status{
+color:#999999 !important;
+font-size: 16px;
+}
+
+.compose-menu {
+    height: 85px !important ;
+}
+#global_page_user-profile-index .compose-menu {
+    height: 0px !important ;
+}
+.prefered_location_div
+{   /*display:inherit !important;*/
+    right:inherit !important;
+    bottom:0px;
+    }
+
+/*.feed_item_attachments*/
+.feed_property_requirement_image_div{
+  margin-bottom: 12px !important;
+
+}
+#global_page_user-index-editproperty .prty_images_list {
+width: 300px;
+}
+
+.application_submit_btn,#global_page_user-index-smartmoveapicreaterenterform .createrental_submit_btn,
+.application_submit_btn,#global_page_user-index-smartmoveapiupdaterenterform .createrental_submit_btn,
+#global_page_user-index-smartmoveapicreatereport .examevaluate_submit_btn{
+
+margin-left: 0px !important;
+
+}
+.rental_application_done{
+
+margin-left: 0px !important;
+}
+
+#global_page_user-index-tenantpropertyrequestlist .property_image,
+#global_page_user-index-tenantpropertyapproved .property_image{
+
+    width: auto;
+    margin-bottom: 12px;
+    margin-right: 12px;
+    float:left;
+}
+#global_page_user-index-tenantpropertyrequestlist .video_tab,
+#global_page_user-index-tenantpropertyapproved .video_tab{
+
+    width: auto;
+    margin-bottom: 12px;
+    margin-right: 86px;
+}
+#global_page_user-index-tenantpropertyrequestlist  .property_list,
+#global_page_user-index-tenantpropertyapproved  .property_list{
+
+    float: left;
+    width: 48%;
+
+}
+#global_page_ynresponsive1-index-dashboard .prefered_location_img{
+  height: auto !important;
+  }
+
+#global_page_ynresponsive1-index-dashboard .dropdown-content {
+
+    left: 200px !important;
+    top: 68px !important;
+}
+#global_page_ynresponsive1-index-dashboard #compose-submit
+{
+width:33% !important;
+}
+
+#global_page_user-index-document #light5 .confirm_btns .revoke_access_btn {
+    width: auto;
+    /*margin-left: 18px;*/
+    }
+#global_page_user-index-editapplication .reference_add_more_div ,
+#global_page_user-index-createrentalapplication .reference_add_more_div ,
+#global_page_user-index-createapplication .reference_add_more_div {
+    cursor: pointer;
+    margin-left: 0px;
+}
+
+
+#global_page_user-index-reportpayment .pro_label {
+
+    width: 100%;
+
+}
+
+ #global_page_user-index-changelocation .map_options .backtohome {
+width:30% !important;
+}
+
+/*.feed_preference_main_div .feed_preference_div {
+    margin-bottom: 28px;
+}*/
+#global_page_user-index-tenantpropertyrequestlist .property_owner_name,
+#global_page_user-index-tenantpropertyapproved .property_owner_name {
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+    }
+#global_page_user-index-propertyrequirement .header-align{
+width: 600px !important;
+}
+
+.navbar_header_middile_menus .menu_core_main:hover:after,
+.navbar_header_middile_menus .menu_core_main:hover:before,
+.navbar_header_middile_menus .find_menu:hover:before,
+.navbar_header_middile_menus .find_menu:hover:after {
+
+    border-color: #ffffff !important;
+    }
+#global_page_user-index-editrequirement #map,
+#global_page_user-index-propertyrequirement #map{
+width:100%;
+}
+#global_content
+{ padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+#global_page_user-index-editrequirement #map,
+#global_page_user-index-propertyrequirement #map{
+    width: 95.5% !important;
+
+}
+#global_page_user-index-propertyrequirement #requirement_price,
+#global_page_user-index-editrequirement .requirement_price {
+width: 348px;
+}
+
+.layout_ynresponsivepurity_mini_menu .user-profile {
+display: none !important;
+}
+
+}
+
+/* End Ipad Portrait */
+
+#global_page_user-index-tenants .bio_div{
+
+float:left;
+
+}
+#global_page_user-index-services .company_div{
+
+float:left;
+}
+#global_page_user-index-browse .property_images{
+
+float:left;
+
+}
+#global_page_user-index-browse .bio_div{
+
+float: left;
+
+}
+#global_page_user-index-browse .company_div {
+float: left;
+}
+#mceu_9, #mceu_10{
+display:none;
+}
+.mce-btn-group:not(:first-child) {
+    border-left: 1px solid #d9d9d9;
+    padding-left: 21px !important;
+    margin-left: 13px !important;
+}
+#global_page_user-index-propertyapprovedrequestslist .title_color a ,#global_page_user-index-propertyrequestslist .title_color a{
+
+    font-size: 20px;
+    font-weight: bold;
+}
+#global_page_user-index-document .confirm_btns .layout_middle button {
+       margin: 10px;
+}
+#global_page_user-index-document .popup_content .confirm_btns .share_document{
+width: 99px !important;
+margin:-8px;
+}
+
+#global_page_user-index-propertydetail .delete_property img{
+cursor:pointer;
+}
+
+#global_page_user-index-propertyviewlog .property_viewlog_content{
+
+    float: left;
+    width: 100%;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #e8e8e8;
+}
+#global_page_user-index-propertyviewlog .user_profile{
+
+   margin-right: 13px;
+
+}
+#global_page_user-index-propertylist a.view_count,
+#global_page_user-index-myproperties a.view_count,
+#global_page_user-index-searchproperties a.view_count{
+
+font-size: 13px;
+
+}
+#global_page_user-index-propertydetail .property_status,
+#global_page_user-index-propertymap .property_status{
+ float: left;
+}
+#mceu_30{
+    display: none;
+}
+.notification_type_message_new .timestamp-update{
+
+  margin-left: 8px;
+}
+#global_page_user-index-propertydetail .property_status a,
+#global_page_user-index-propertymap .property_status a{
+color:#999999 !important;
+}
+#global_page_user-index-propertydetail .property_status a:hover{
+color:#93A4AA !important;
+}
+#global_page_user-index-addproperty .post-upload-box #share-main-image {
+    background-size: cover !important;
+    width: 47px;
+    height: 58px;
+}
+#global_page_user-index-editproperty .post-upload-box #share-main-image{
+    background-size: cover !important;
+    width: 58px;
+    height: 58px;
+    margin: 6px 3px 0 3px;
+}
+
+#global_page_user-index-addproperty #share-main-image{
+    width: 47px;
+    height: 58px;
+    background-size: cover !important;
+
+    }
+
+ #global_page_user-index-tenantpropertyrequestlist .property_title a ,
+ #global_page_user-index-tenantpropertyapproved .property_title a {
+
+    font-weight: bold;
+}
+
+
+
+    #ynadvmenu_messages_content .ynadvmenu_postIcon .timestamp{
+      margin-left: 12px;
+    }
+    #global_page_user-index-propertydetail .edit_property img,
+    #global_page_user-index-propertydetail .btn_property_disable img,
+    #global_page_user-index-propertydetail .btn_property_enable img{
+        width: 26px;
+    height: 26px;
+    }
+   #map {
+        height: 200px;
+        margin-bottom: 17px;
+      }
+      .controls {
+        margin-top: 10px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      #pac-input {
+        background-color: #fff;
+        font-family: Raleway;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 300px;
+      }
+
+      #pac-input:focus {
+        border-color: #4d90fe;
+      }
+
+      .pac-container {
+        font-family: Raleway;
+      }
+
+      #type-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        padding: 5px 11px 0px 11px;
+      }
+
+      #type-selector label {
+        font-family: Raleway;
+        font-size: 13px;
+        font-weight: 300;
+      }
+      #target {
+        width: 345px;
+      }
+       #locationField, #controls {
+        position: relative;
+        width: 480px;
+      }
+      #autocomplete {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 99%;
+      }
+      .label {
+        text-align: right;
+        font-weight: bold;
+        width: 100px;
+        color: #303030;
+      }
+      #address {
+        border: 1px solid #000090;
+        background-color: #f0f0ff;
+        width: 480px;
+        padding-right: 2px;
+      }
+      #address td {
+        font-size: 10pt;
+      }
+      .field {
+        width: 99%;
+      }
+      .slimField {
+        width: 80px;
+      }
+      .wideField {
+        width: 200px;
+      }
+      #locationField {
+        height: 20px;
+        margin-bottom: 2px;
+      }
+#global_page_user-index-editproperty .pro_label{
+
+  float:none !important;
+
+}
+.white_content.map_popup{
+    top: 8%;
+    left: 33%;
+    width: 39%;
+}
+.location_icon{
+
+cursor:pointer;
+
+}
+#global_page_user-edit-locationpreference .but_submit{
+
+    max-width: none !important;
+    height: 30px;
+    min-width: 0;
+    background-color: #f58410;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-border-radius: 3px;
+    width: 213px !important;
+
+}
+
+#global_page_user-edit-locationpreference .but_submit:hover{
+    background-color: #c46a0d;
+}
+
+#global_page_ynresponsive1-index-dashboard #compose-property-requirement{
+    float: left;
+}
+#global_page_ynresponsive1-index-dashboard .prefered_location_div {
+    margin-right: 15px;
+    font-size: 15px;
+    color: #999;
+    right: 1px;
+    float: left;
+    padding: 11px 0px 0px 12px;
+}
+
+/*.dropdown:hover .dropdown-content {
+    display: block;
+}*/
+
+
+#global_page_ynresponsive1-index-dashboard .dropdown-content p:hover {background-color: #f1f1f1}
+#global_page_ynresponsive1-index-dashboard .dropdown-content p {
+    color: black;
+    padding: 6px 9px;
+    text-decoration: none;
+    display: block;
+}
+
+#global_page_ynresponsive1-index-dashboard .pac-container{
+    z-index: 99999;
+
+}
+#light2 .set_location{
+
+ max-width: none !important;
+    height: 30px;
+    min-width: 0;
+    background-color: #f58410;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-border-radius: 3px;
+    width: 213px !important;
+    margin-top: 12px;
+
+
+}
+#light2 .set_location:hover{
+    background-color: #c46a0d;
+}
+.change_location , .reset_to_usa{
+
+  cursor:pointer;
+}
+
+#global_page_ynresponsive1-index-dashboard .layout_user_list_online>div {
+border:none;
+}
+.generic_layout_container.layout_user_home_photo>div:before {
+display:none !important;
+
+    }
+.layout_user_home_photo.generic_layout_container h3 a{
+
+    color: #fff;
+    cursor:pointer;
+
+}
+#global_page_ynresponsive1-index-dashboard .prefered_location{
+  margin-left: 7px;
+  float: left;
+  margin-right: 5px;
+
+}
+#global_page_ynresponsive1-index-dashboard .prefered_location_img{
+  height: 30px;
+  float: left;
+  width: 15px;
+
+}
+#global_page_user-index-addproperty .dis_textarea_span{
+
+    float: none;
+    margin-bottom: 12px;
+    margin-left: 0px;
+    margin-top: 46px;
+    margin-right: 0px;
+
+    }
+#global_page_ynresponsive1-index-dashboard #compose-menu{
+  width: 100%;
+    float: left;
+}
+
+
+#global_page_ynresponsive1-index-dashboard .layout_activity_feed{
+      position: relative !important;
+}
+
+#global_page_user-index-changelocation .layout_user_home_photo{
+    padding: 15px;
+    background: #fff;
+}
+#global_page_user-index-changelocation .layout_user_home_links{
+    padding: 15px;
+    background: #fff;
+    }
+#global_page_user-index-changelocation .map_container{
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #e8e8e8;
+}
+#global_page_user-index-changelocation .popup_location_label,
+.map_location_div .popup_location_label,
+.map_location_div_location .popup_location_label{
+    font-weight: bold;
+    margin-bottom: 12px;
+
+    }
+#global_page_user-index-changelocation .change_location_submit_btn{
+    max-width: none !important;
+    height: 30px;
+    min-width: 0;
+    background-color: #f58410;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-border-radius: 3px;
+    width: 213px !important;
+
+    }
+/*::-webkit-input-placeholder {
+   font-weight: bold;
+}*/
+@media screen and (max-width:550px) {
+
+.layout_activity_feed .activity-post-container{ min-height:100px;}
+
+
+#global_page_user-index-createapplication .prty_field ,
+#global_page_user-index-editapplication .prty_field ,
+#global_page_user-index-createrentalapplication .prty_field ,
+#global_page_user-index-smartmoveapicreaterenterform .prty_field ,
+#global_page_user-index-smartmoveapiupdaterenterform .prty_field {
+
+width: 95% !important;
+}
+
+#global_page_user-index-createapplication .pro_label ,
+#global_page_user-index-editapplication .pro_label ,
+#global_page_user-index-createrentalapplication .pro_label {
+
+    width: 100%;
+}
+#global_page_user-profile-index .layout_activity_feed .activity-post-container {
+    min-height: 12px;
+}
+
+}
+
+#global_page_user-index-createapplication #main_tabs .active,
+#global_page_user-index-editapplication #main_tabs .active,
+#global_page_user-index-createrentalapplication #main_tabs .active,
+#global_page_user-index-viewapplication #main_tabs .active,
+#global_page_user-index-smartmoveapicreaterenterform #main_tabs .active,
+#global_page_user-index-smartmoveapiupdaterenterform #main_tabs .active{
+
+border-bottom: 2px solid #f58410;
+}
+#global_page_user-index-createapplication #main_tabs a,
+#global_page_user-index-editapplication #main_tabs a,
+#global_page_user-index-createrentalapplication #main_tabs a,
+#global_page_user-index-viewapplication #main_tabs a,
+#global_page_user-index-smartmoveapicreaterenterform #main_tabs a,
+#global_page_user-index-smartmoveapiupdaterenterform #main_tabs a{
+
+border-bottom: 2px solid #fff;
+}
+
+
+#global_page_user-index-createapplication .field_title,
+#global_page_user-index-editapplication .field_title,
+#global_page_user-index-createrentalapplication .field_title{
+    font-weight: bold;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+#global_page_user-index-createapplication .radio_label,
+#global_page_user-index-editapplication .radio_label,
+#global_page_user-index-createrentalapplication .radio_label{
+
+    float: left;
+    clear: none;
+    display: block;
+    padding: 2px 1em 0 0;
+}
+#global_page_user-index-createapplication .pro_field_wrapper ,
+#global_page_user-index-editapplication .pro_field_wrapper ,
+#global_page_user-index-createrentalapplication .pro_field_wrapper {
+
+     margin-top: 12px;
+}
+
+#global_page_user-index-createapplication .prty_field ,
+#global_page_user-index-editapplication .prty_field ,
+#global_page_user-index-createrentalapplication .prty_field ,
+#global_page_user-index-smartmoveapicreaterenterform .prty_field ,
+#global_page_user-index-smartmoveapiupdaterenterform .prty_field {
+
+width: 377px;
+max-width: none !important;
+min-width: 0;
+}
+#global_page_user-index-viewapplication #application_content
+{
+
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #e8e8e8;
+    min-height: 469px;
+
+}
+
+#global_page_user-index-viewapplication .appication_sub_title{
+
+  font-weight: bold;
+  margin-bottom: 12px;
+  margin-top: 29px;
+}
+
+#global_page_user-index-tenantpropertyrequestlist .edit_application_div a{
+
+    font-size: 14px;
+}
+
+#pac-input{
+border:1px solid;
+}
+#global_page_user-edit-locationpreference .loader, #light2 .map_options .loader,
+#global_page_user-index-changelocation .loader{
+
+background: url("../images/loading-small.gif") no-repeat;
+    margin: 0 auto;
+    float: none !important;
+    width: 100px;
+    height: 47px;
+}
+
+#global_page_user-edit-locationpreference .pro_label {
+    float: left !important;
+    width: 90%;
+    font-weight: bold;
+    width: 90%;
+    margin-bottom: 12px;
+    margin-right: -10px
+}
+#global_page_user-edit-locationpreference .popup_location_label{
+
+font-weight: bold;
+}
+
+#light2 .prefered_loc_chk_div,#global_page_user-edit-locationpreference .prty_lablel,
+#global_page_user-index-changelocation .prefered_loc_chk_div,
+#global_page_user-index-changelocation .pro_field_wrapper,
+#light2.map_popup  .pro_field_wrapper,
+#locationPreferenceDeviceModal  .pro_field_wrapper{
+
+  line-height: 27px;
+  font-weight: bold;
+
+}
+#light2 .prefered_loc_chk, #global_page_user-edit-locationpreference #location,
+#global_page_user-index-changelocation #location,
+#global_page_user-index-changelocation .prefered_loc_chk,
+#light2 #location,
+#light2 #set_to_usa,
+#locationPreferenceDeviceModal #set_to_usa,
+#global_page_user-index-changelocation #set_to_usa_1{
+
+ width:30px;
+ height:20px;
+
+}
+
+#global_page_user-index-createapplication .loader,
+#global_page_user-index-editapplication .loader,
+#global_page_user-index-createrentalapplication .loader,
+#global_page_user-index-smartmoveapicreaterenterform .loader,
+#global_page_user-index-smartmoveapiupdaterenterform .loader,
+#global_page_user-index-smartmoveapicreatereport .loader{
+
+
+background: url("../images/loading-small.gif") no-repeat;
+    margin: 0 auto;
+    float: none !important;
+    width: 100px;
+    height: 47px;
+}
+.layout_middle button.application_submit_btn{
+
+margin-left: 200px ;
+
+}
+.layout_middle button.rental_application_done{
+/*width: 106px;*/
+margin-left: 200px ;
+}
+#global_page_ynresponsive1-index-dashboard .div_attachment_title a,
+#global_page_user-index-myproperties .div_attachment_title a,
+#global_page_user-index-searchproperties .div_attachment_title a,
+#global_page_user-index-tenantpropertyrequestlist .div_attachment_title a,
+#global_page_user-index-tenantpropertyapproved .div_attachment_title a,
+#global_page_user-index-propertylist .div_attachment_title a{
+    color:grey;
+    }
+#global_page_user-index-viewapplication .prty_value{
+
+  float: left;
+}
+#global_page_user-index-viewapplication .pro_field_wrapper {
+margin-top: 12px;
+}
+
+.edit_application_div{
+     text-align: right;
+     margin-right: 5px;
+}
+#global_page_user-index-addproperty .dis_textarea_span button,
+#global_page_user-index-editproperty .mce-container-body button {
+    background: none !important;
+}
+
+
+
+#global_page_user-index-createapplication .layout_left,
+#global_page_user-index-propertyapproveduserslist .layout_left,
+#global_page_user-index-propertyviewlog .layout_left,
+#global_page_user-index-viewapplication .layout_left,
+#global_page_user-index-createrentalapplication .layout_left{
+    margin-top:50px;
+}
+
+
+.layout_ynresponsivepurity_mini_menu .user-profile {
+cursor: pointer;
+float: right !important;
+}
+
+#global_page_user-edit-profile .layout_middle button,
+#global_page_user-auth-login .layout_middle button,
+#global_page_user-auth-forgot .layout_middle button,
+#global_page_user-signup-index .layout_middle button,
+#global_page_user-edit-photo .layout_middle button,
+#user_form_login  button{
+
+margin:0px !important;
+
+}
+#global_page_user-signup-index .confirm_btns .yes_btn,
+#global_page_user-signup-index .confirm_btns .no_btn{
+
+margin-right: 12px !important;
+}
+
+#global_page_user-index-document .ul_list a,
+#global_page_user-index-specialdocuments .ul_list a{
+    color: #5E6969;
+}
+#global_page_user-index-document .ul_list a:hover{
+    color: #f58410;
+}
+#global_page_user-index-documentsharedwithme .file_li a{
+  color: #5E6969;
+}
+#global_page_user-index-documentsharedwithme .file_li a:hover{
+    color: #f58410;
+}
+
+/*#global_page_ynresponsive1-index-dashboard #global_header {
+    z-index: 0;
+    }*/
+#global_page_user-index-editproperty .prty_lablel {
+    float: left !important;
+    width: 320px;
+    font-weight: bold;
+}
+#global_page_user-index-editproperty #description_ifr{
+
+height: 156px !important;
+
+}
+/*#global_wrapper{z-index: inherit !important;}*/
+/*#global_page_user-index-smartmoveapicreaterenterform .layout_middle,
+#global_page_user-index-smartmoveapiupdaterenterform .layout_middle{
+
+
+    padding: 15px;
+    background: #fff;
+    margin-bottom: 15px;
+    border: 1px solid #e8e8e8;
+}*/
+
+#global_page_user-index-smartmoveapicreaterenterform .layout_left ,
+#global_page_user-index-smartmoveapiupdaterenterform .layout_left {
+    margin-top: 50px;
+}
+#global_page_user-index-smartmoveapicreaterenterform button.cretaterental_submit_btn ,
+#global_page_user-index-smartmoveapiupdaterenterform button.cretaterental_submit_btn {
+    margin-left: 200px;
+
+    }
+
+#global_page_ynresponsive1-index-dashboard .dropdown-content {
+
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 51;
+    left: 186px;
+    top: 112px;
+}
+
+/* .dropdown {
+    position: absolute !important;
+    display: inline-block;
+}*/
+#global_page_ynresponsive1-index-dashboard #compose-submit
+{
+width:17%;
+
+}
+
+
+/*
+@media (min-width: 768px)
+.navbar-default .navbar-nav>li>a {
+    border-radius: 50px;
+    line-height: 34px;
+    padding: 0 9px;
+    margin: 0 2px;
+}
+.navbar-default .navbar-nav>li>a {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    background: none;
+    color: #fff;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #777;
+}
+.navbar .nav li a {
+    -webkit-transition: color 0.4s ease-in-out 0s;
+    -moz-transition: color 0.4s ease-in-out 0s;
+    -o-transition: color 0.4s ease-in-out 0s;
+    transition: color 0.4s ease-in-out 0s;
+    -webkit-transition: background 0.4s ease-in-out 0s;
+    -moz-transition: background 0.4s ease-in-out 0s;
+    -o-transition: background 0.4s ease-in-out 0s;
+    transition: background 0.4s ease-in-out 0s;
+}
+.navbar-default .navbar-nav li a {
+    color: #fff !important;
+    border-radius: 0px!important;
+}
+@media (min-width: 768px)
+.navbar-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+a:link, a:visited {
+    color: #f58410;
+    text-decoration: none;
+}
+a, a:focus, a:hover, a:active {
+    outline: 0;
+}
+a {
+    text-decoration: none;
+}
+a, button {
+    color: #f58410;
+}
+a, a:focus, a:hover, a:active {
+    text-decoration: none !important;
+}
+* {
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-style: solid;
+    border-width: 0;
+    border-color: #efefef;
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    text-decoration: underline;
+    cursor: auto;
+}
+Inherited from li
+user agent stylesheet
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+Inherited from ul.nav.navbar-nav
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+ul {
+    list-style-type: none;
+}
+user agent stylesheet
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+Inherited from div.collapse.navbar-collapse.navbar-ex8-collapse
+div, td {
+    color: #364347;
+    text-align: left;
+}
+Inherited from div.generic_layout_container.layout_ynresponsivepurity_main_menu
+div, td {
+    color: #364347;
+    text-align: left;
+}
+Inherited from div.generic_layout_container.layout_main
+.layout_page_header .layout_main {
+    text-align: right;
+    margin: 0 auto;
+}
+div, td {
+    color: #364347;
+    text-align: left;
+}
+Inherited from div.layout_page_header
+div, td {
+    color: #364347;
+    text-align: left;
+}
+Inherited from div#global_header
+div, td {
+    color: #364347;
+    text-align: left;
+}
+Inherited from div.wrapper
+div, td {
+    color: #364347;
+    text-align: left;
+}*/
+
+body {
+    background-color: #eee !important;
+    /*font-family: 'Open Sans',sans-serif !important;*/
+    font-family: Raleway !important;
+    font-size: 13px !important;
+    position: relative !important;
+    min-height: 100% !important;
+    line-height: 1.428571429 !important;
+    }
+
+#global_page_user-index-viewapplication  #application_content .back_btn{
+    padding: 6px 10px;
+    font-weight: 700;
+    font-size: 1em;
+    border: none;
+    text-transform: uppercase;
+    background-color: #616161;
+    color: #fff;
+    font-size: 13px;
+    outline: none;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+        -webkit-border-radius: 3px;
+
+    }
+
+#global_page_user-index-viewapplication .table-responsive{
+    margin-top: 12px;
+}
+#global_page_user-index-viewapplication span.application_sub_title {
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+#global_page_user-index-smartmoveapicreatereport .exam_content_div {
+
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #e8e8e8;
+    min-height: 469px;
+
+}
+#global_page_user-index-tenantpropertyapproved .process_application{
+    float: left;
+    margin-top: 13px;
+}
+#global_page_user-index-tenantpropertyapproved .process_application a{
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+}
+#global_page_user-index-smartmoveapicreatereport .prty_field {
+width: 377px ;
+max-width: none ;
+min-width: 0;
+}
+#global_page_user-index-smartmoveapicreatereport .pro_label {
+    float: left ;
+    width: 300px;
+}
+#global_page_user-index-smartmoveapicreatereport .examevaluate_submit_btn{
+    margin-left: 300px;
+}
+#global_page_user-index-viewapplication .application_btns_div{
+padding: 13px 0px;
+}
+#global_page_user-index-tenantpropertyrequestlist .edit_application_div
+{
+    float: left;
+    width: 132px;
+    padding-top: 20px;
+
+}
+#global_page_user-index-tenantpropertyrequestlist .edit_application_div button
+{
+margin: 0px;
+
+}
+
+
+.reference_add_more_div{
+cursor:pointer;
+}
+#global_page_user-edit-profile .global_form div.form-element p.description {
+display:none;
+}
+.layout_user_profile_options .cometchat_chatwith
+{
+    padding: 6px !important;
+    position: initial !important;
+    display: none;
+}
+.cometchat_chatwith {
+    padding: 6px !important;
+    display: none;
+    }
+.loader {
+
+background: url("../images/loading-small.gif") no-repeat;
+margin: 0 auto;
+float: none !important;
+    width: 63px;
+    height: 48px;
+}
+#global_page_user-index-propertyapprovedrequestslist .user_profile {
+    width: 50%;
+    float: left;
+}
+
+#global_page_user-index-reportpayment .layout_user_home_links,
+#global_page_user-index-report .layout_user_home_links{
+   padding: 15px;
+
+}
+#global_page_user-index-reportpayment .layout_left,
+#global_page_user-index-report .layout_left{
+   margin-top: 50px;
+}
+#global_page_user-index-report #application_content{
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #e8e8e8;
+}
+#global_page_user-index-reportpayment .submit{
+    background-color: #616161 !important;
+    padding: 6px 10px;
+    font-weight: 700;
+    border: none;
+    color: #fff;
+    outline: none;
+    text-transform: uppercase;
+    -webkit-appearance: button;
+
+}
+#global_page_user-index-reportpayment .prty_field {
+    width: 326px;
+    max-width: none !important;
+    min-width: 50px;
+    }
+
+
+
+
+.dropdown-find:hover {
+display: block !important;
+}
+.dropdown-find {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    min-width: 12%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+
+.dropdown-find a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+#find-dropbox{
+    margin-left: 77px;
+
+}
+
+#global_page_user-index-requirementlist .requirement_image_div{
+
+    float: left;
+    margin-right: 27px;
+    margin-bottom: 12px;
+}
+#global_page_ynresponsive1-index-dashboard .delete_tipicon{
+color: slategrey;
+cursor: pointer;
+}
+
+.layout_ynresponsivepurity_footer_menu .container{
+    height: auto !important;
+}
+#global_page_user-index-scheduler .scheduler_container,
+#global_page_user-index-scheduledmeetings .scheduler_container,
+#global_page_user-index-meetingrequests .scheduler_container,
+#global_page_user-index-joinedmeetings .scheduler_container{
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #e8e8e8;
+    min-height: 469px;
+
+}
+#global_page_user-index-scheduler .scheduler_container .navigation li ,
+#global_page_user-index-scheduledmeetings .scheduler_container .navigation li ,
+#global_page_user-index-meetingrequests .scheduler_container .navigation li ,
+#global_page_user-index-joinedmeetings .scheduler_container .navigation li {
+    display: inline-block;
+    color: #999;
+    background-color: transparent;
+    font-size: 1em;
+    -webkit-border-radius: 6px;
+    border: 1px solid transparent;
+    padding: .6em .7em;
+}
+
+#global_page_user-index-scheduler .scheduler_container .navigation li.active ,
+#global_page_user-index-scheduledmeetings .scheduler_container .navigation li.active ,
+#global_page_user-index-meetingrequests .scheduler_container .navigation li.active ,
+#global_page_user-index-joinedmeetings .scheduler_container .navigation li.active {
+    font-weight: 700;
+    background-color: #616161;
+    color: #fff;
+    border-color: #616161;
+}
+ #global_page_user-index-scheduler .scheduler_container .navigation li a ,
+ #global_page_user-index-scheduledmeetings .scheduler_container .navigation li a ,
+ #global_page_user-index-meetingrequests .scheduler_container .navigation li a ,
+ #global_page_user-index-joinedmeetings .scheduler_container .navigation li a {
+    display: inline-block;
+    color: #999;
+    background-color: transparent;
+    font-size: 1em;
+    -webkit-border-radius: 6px;
+    border: 1px solid transparent;
+    padding: .6em .7em;
+}
+#global_page_user-index-scheduler .scheduler_container .navigation li a:hover ,
+#global_page_user-index-scheduledmeetings .scheduler_container .navigation li a:hover ,
+#global_page_user-index-meetingrequests .scheduler_container .navigation li a:hover ,
+#global_page_user-index-joinedmeetings .scheduler_container .navigation li a:hover {
+    border-color: #999;
+}
+/*#global_page_user-index-scheduledmeetings .user_image,
+#global_page_user-index-meetingrequests .user_image,*/
+#global_page_user-index-joinedmeetings .user_image{
+    float:left;
+    margin-right: 12px;
+}
+#global_page_user-index-scheduledmeetings .username,
+#global_page_user-index-meetingrequests .username,
+#global_page_user-index-joinedmeetings .username{
+    color: #5E6969;
+    font-weight: bold;
+}
+/*#global_page_user-index-scheduledmeetings .scheduled_date,*/
+/*#global_page_user-index-meetingrequests .scheduled_date,*/
+#global_page_user-index-joinedmeetings .scheduled_date{
+    color: #777;
+    width: 50%;
+    float: left;
+}
+/*#global_page_user-index-meetingrequests  .scheduler_options{
+   float: right;
+}*/
+#global_page_user-index-scheduler input,
+#global_page_user-index-scheduler select{
+      width: 377px;
+}
+#global_page_user-index-scheduler .scheduler_submit_btn{
+  /*  margin-left: 200px !important;*/
+    margin:0px;
+    width: 134px;
+}
+#global_page_ynresponsive1-index-dashboard .layout_middle .layout_user_home_tip .ybo_headline{
+display: none !important;
+}
+#global_page_ynresponsive1-index-dashboard .layout_middle .layout_user_home_tip{
+background:#F9F9F9;
+border:none ;
+padding:0px ;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+/*.doc_image
+{
+ background-repeat: no-repeat;
+ display:block;
+ background-size: contain;
+ float: right !important;
+ width: 50px !important;
+ margin-right: 24px;
+ }*/
+.layout_user_home_links .verified_link{
+background-size: 19px;
+}
+
+#global_page_ynresponsive1-index-dashboard .col-md-4 .scout{
+margin-left: 7px;
+width: 61px;
+}
+#global_page_ynresponsive1-index-dashboard #global_wrapper{
+   padding-top: 0px !important;
+   /*background-image: url("/application/modules/User/externals/images/furley_bg.png") ;*/
+}
+#global_page_user-signup-index .location_text_span{
+    width: 168px;
+    font-weight: 700;
+    padding: 4px 15px 0 2px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    float: left;
+    clear: left;
+    color: inherit;
+
+}
+#global_page_user-index-myproperties #global_wrapper ,
+#global_page_user-index-propertyrequestslist #global_wrapper ,
+#global_page_user-index-propertyapprovedrequestslist #global_wrapper ,
+#global_page_user-index-addproperty #global_wrapper ,
+#global_page_user-index-scheduler #global_wrapper ,
+#global_page_user-index-scheduledmeetings #global_wrapper ,
+#global_page_user-index-meetingrequests #global_wrapper ,
+#global_page_user-index-joinedmeetings #global_wrapper
+{
+/*background-image: url("/application/modules/User/externals/images/furley_bg.png") ;*/
+}
+/*#global_page_user-signup-index #locationcheck-wrapper label,
+#global_page_user-signup-index #terms-wrapper label{
+float: left;
+}*/
+
+.layout_activity_feed .property_list_spl{
+float: left;
+}
+/*my screen resolution*/
+@media only screen
+  and (min-width: 768px)
+  and (max-width: 1400px)
+
+{
+   #global_content{
+   /* max-width: 990px !important;  */
+    max-width:828px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    }
+    #global_page_ynresponsive1-index-dashboard #global_content.subheader_global_content {
+    max-width: 1000px !important;
+   }
+
+   .layout_user_image_header .layout_user_browse_menu .headline {
+    margin: 0 auto;
+    max-width: 744px !important;
+   }
+   #global_page_user-index-searchproperties .property_image, #global_page_user-index-tenantpropertyrequestlist .property_image, #global_page_user-index-tenantpropertyapproved .property_image {
+   padding-left: 12px;
+    width: 40% !important;
+   }
+   #global_page_user-index-searchproperties .property_details {
+    margin-left: 21px;
+    }
+   #global_page_album-index-browse .headline .tabs,
+   #global_page_album-index-upload .headline .tabs,
+   #global_page_album-index-manage .headline .tabs {
+    margin-left: 78px;
+    margin-bottom: 12px;
+    }
+    .layout_user_image_header .layout_album_browse_menu .back_icon {
+    margin-right: 27px;
+    }
+    .layout_user_image_header .header_img{
+
+    max-width: 1020px !important;
+    }
+
+    .layout_user_image_header .header_img img{
+
+    width: 1020px !important;
+    }
+    .main_menu_div {
+    max-width: 1020px !important;
+    }
+   .layout_ynresponsivepurity_mini_menu .statitics_bar {
+    margin-right: 16% !important;
+    }
+   #global_page_ynresponsive1-index-dashboard .layout_ynresponsivepurity_mini_menu .feed_preference_div_inner {
+    display: inline-flex;
+    }
+#global_page_user-index-myproperties .image_tab ,
+#global_page_user-index-myproperties .video_tab ,
+#global_page_user-index-propertylist .image_tab ,
+#global_page_user-index-propertylist .video_tab {
+    width: auto;
+    margin-bottom: 12px;
+    margin-right: 12px;
+}
+}
+
+#light2.map_popup .map_options {
+margin-top: 12px;
+}
+#global_page_ynresponsive1-index-dashboard .tip_content
+{
+background: skyblue;
+text-align: center;
+height: 34px;
+padding-top: 8px;
+}
+#global_page_ynresponsive1-index-dashboard .feedtip,
+#global_page_user-index-tenants #displayname-label,
+#global_page_user-index-landlords #displayname-label,
+#global_page_user-index-tenants #displayname,
+#global_page_user-index-landlords #displayname{
+
+display:none;
+}
+.layout_user_image_header .header_img{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin: 0 auto;
+    max-width: 1020px;
+    padding-top: 12px;
+}
+
+
+.layout_activity_feed .service_feed {
+padding-top: 2px !important;
+}
+
+.pro_field_wrapper .map_size{
+margin-top: 13px;
+width: 50%;
+height: 389px;
+}
+.layout_ynresponsivepurity_mini_menu #ynadvmenu_myapplications ,
+#global_page_user-edit-photo #thumbnail-controller a{
+display:none;
+
+}
+#global_page_user-edit-photo div.preview-thumbnail {
+border:none;
+}
+#global_page_user-index-tenantpropertyapproved .property_title{
+float:left;
+padding-left: 22px;
+}
+#global_page_user-index-tenantpropertyrequestlist .property_title{
+float:left;
+padding-left: 22px;
+}
+#global_page_user-index-tenantpropertyapproved .property_content {
+    float:left;
+}
+#global_page_user-index-tenantpropertyrequestlist .property_content   {
+    float:left;
+}
+#global_page_user-index-tenantpropertyapproved .property_location{
+    float:left;
+    width: 250px;
+}
+#global_page_user-index-tenantpropertyrequestlist .property_location{
+    float:left;
+}
+#global_page_user-index-tenantpropertyapproved .view_application img{
+margin-right: 12px;
+}
+#global_page_user-index-tenantpropertyrequestlist .view_application img{
+margin-right: 12px;
+float:left;
+}
+
+#global_page_album-index-browse .tabs > ul li.active>a,
+#global_page_album-index-manage .tabs > ul li.active>a,
+#global_page_album-index-upload .tabs > ul li.active>a{
+    color: #f58410;
+    font-weight: 700;
+    opacity: 0.9;
+    background-color: transparent;
+    border: none;
+    }
+
+.tabs>ul>li>a:hover {
+    border-color: transparent !important;
+}
+#global_page_ynresponsive1-index-dashboard .roomappartmenthouselocation{
+      margin-top: 8px;
+      float: left;
+      margin-left: 30px;
+}
+#global_page_ynresponsive1-index-dashboard .voucher{
+/*float:left;
+margin-left: 80px;*/
+/*margin-right: 130px;*/
+}
+#global_page_ynresponsive1-index-dashboard .voucher_location{
+float: left;
+
+}
+#global_page_ynresponsive1-index-dashboard .iconimage img{
+margin-left:12px;
+margin-left: 23px;
+width: 42px;
+margin-bottom: -18px;
+
+}
+#global_page_user-index-createrentalapplication .mandatory,
+#global_page_user-index-editapplication .mandatory{
+color:red;font-size: 20px;vertical-align: middle;
+}
+#global_page_user-profile-index .profile_fields .tip{
+display:none;
+}
+#global_page_user-profile-index .add_photo{
+margin-left: 12px ;
+}
+#global_page_user-profile-index .ul_list{
+margin-left: 5px ;
+}
+
+#global_page_user-index-myproperties .property_list_spl,
+#global_page_user-index-propertylist .property_list_spl{
+
+ float:left;
+
+}
+#global_page_user-index-searchproperties .property_owner_name{
+
+ width:auto !important;
+}
+#global_page_user-profile-index .dir_content {
+     margin-top: -7px;
+}
+#global_page_user-index-tenants .villa,
+#global_page_ynresponsive1-index-dashboard .villa{
+float:left;
+margin-left:34%;
+}
+#global_page_ynresponsive1-index-dashboard .iconimage.room img {
+width:32px !important;
+margin-left: 60px;
+}
+#global_page_user-index-smartmoveapiupdaterenterform .header-align,
+#global_page_user-index-smartmoveapicreaterenterform  .header-align{
+width: 360px;
+margin: 0 auto;
+}
+
+.feedpreferenceunit_filtering{
+margin-top:8px;
+cursor: pointer;
+}
+#preferenceModal .modal-body{
+    overflow-y: auto;
+    max-height: 445px;
+}
+
+#matchesModal .modal-body{
+    overflow-y: auto;
+    max-height: 445px;
+}
+#roomModal .modal-body{
+    overflow-y: auto;
+    max-height: 445px;
+}
+#fcraModal .modal-body{
+    overflow-y: auto;
+    max-height: 445px;
+}
+#global_page_user-index-propertyapprovedrequestslist input[type="radio"], input[type="checkbox"] {
+    margin-bottom: -7px;
+    margin-left: 8px;
+}
+#global_page_user-index-propertyapprovedrequestslist hr{
+clear:both;
+}
+.layout_ynresponsivepurity_mini_menu .ynadvmenu_notification {
+    position: static !important;
+    }
+#global_page_user-index-tenantpropertyapproved #global_wrapper .headline ,
+#global_page_user-index-createrentalapplication .headline ,
+#global_page_user-index-creditbackground .headline {
+display:none
+}
+
+#global_page_user-index-document .layout_page_footer {
+
+    z-index: 0;
+}
+#navbar_header_middile_menus .nav .open>a,
+#navbar_header_middile_menus .nav .open>a:hover,
+#navbar_header_middile_menus .nav .open>a:focus {
+    background-color: #eee;
+    border-color: #fff;
+}
+#global_page_user-index-propertyrequirement .layout_user_image_header .layout_user_browse_menu .back_icon {
+display:none;
+}
+
+#global_page_user-index-addproperty #map,
+#global_page_user-index-editproperty #map{
+margin-top: 13px;
+}
+#global_page_user-index-addproperty .mce-tinymce.mce-container.mce-panel ,
+#global_page_user-index-editproperty .mce-tinymce.mce-container.mce-panel {
+    clear: both;
+}
+#global_page_user-signup-index #SignupForm #thumbnail-controller {
+    display: none;
+}
+#global_page_user-index-propertyrequirement .template_div,
+#global_page_user-index-editrequirement .template_div {
+    width: 377px;
+    margin-bottom: 9px;
+    padding: 5px;
+    min-height: 120px;
+}
+#global_page_user-profile-index .pto_uploads{
+padding: 18px;
+}
+#global_page_user-index-addproperty .modal-dialog button.close ,
+#global_page_user-index-editproperty .modal-dialog button.close {
+font-size: 24px;
+}
+.signup_umage_upload_loader{
+background: url("../images/loading-small.gif") no-repeat;
+margin: 0 auto;
+float: none !important;
+width: 50px;
+height: 50px;
+}
+#global_page_user-index-tenantpropertyrequestlist .view_application:hover,
+#global_page_user-index-tenantpropertyapproved .view_application:hover{
+color: #f58410;
+}
+#global_page_user-index-propertyrequestslist .prty_reqsts_btns .view_app  a:hover{
+color:#f58410 ;
+}
+#global_page_user-index-propertyrequestslist .prty_reqsts_btns .view_app  a{
+color:#333 ;
+}
+#global_page_user-index-myproperties .property_list_content .navigation li a:hover,
+#global_page_user-index-tenantpropertyrequestlist .property_requests_content .navigation li a:hover,
+#global_page_user-index-tenantpropertyapproved .property_requests_content .navigation li a:hover{
+color:#f58410 ;
+}
+#global_page_user-index-propertyapprovedrequestslist .modal-footer button ,
+#global_page_user-index-propertydetail .modal-footer button ,
+#DeletecommentModal .modal-footer button ,
+#introModal .modal-footer button {
+    background-color: #f58410 !important;
+}
+#global_page_user-index-propertyapprovedrequestslist .title_color {
+    overflow: hidden;
+}
+#global_page_ynresponsive1-index-dashboard  .layout_user_advertisement{
+    padding: 12px;
+    background: transparent;
+    margin-top: 20px;
+    }
+ .layout_user_advertisement .ybo_headline1{
+    padding-top: 12px;
+    text-align: center;
+    }
+    .layout_user_advertisement .ybo_headline{
+    display:none;
+    } 
+#global_page_ynresponsive1-index-dashboard .layout_right > .generic_layout_container{
+border:none;
+}
+
+ .layout_right .generic_layout_container .adv{
+text-align:center;
+padding-bottom:12px;
+margin-top:12px;
+margin-top: 12px;
+}

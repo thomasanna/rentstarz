@@ -1,0 +1,84 @@
+@include "constants.css";
+
+/***** fix simple site *****/
+.generic_layout_container.layout_main:before,
+.generic_layout_container.layout_main:after {
+  display: table;
+  content: " ";
+}
+
+.generic_layout_container.layout_main:after {
+  clear: both;
+}
+
+/*****************************/
+/******** mobile view ********/
+/*****************************/
+#global_content,
+#core_menu_mini_menu > ul,
+.navbar.navbar-default {
+	margin: 0;
+	max-width: none;
+}
+
+#global_content_simple .headline,
+#global_content .headline {
+	border-bottom: 1px solid #eee;
+}
+
+/*****************************/
+/******** tablet view ********/
+/*****************************/
+@media (min-width: 768px) and (max-width: 991px) {
+
+	#global_content,
+	#core_menu_mini_menu > ul,
+	.navbar.navbar-default,
+	.layout_page_footer .container,
+	.layout_ynresponsivepurity_mini_menu,
+	.layout_advmenusystem_advanced_footer_menu{
+		padding-left:15px;
+		padding-right:15px;
+		margin: 0 auto;
+	}
+}
+
+
+
+/*****************************/
+/******* desktop view ********/
+/*****************************/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+	#global_content,
+	#core_menu_mini_menu > ul
+	.navbar.navbar-default,
+	.layout_page_footer .container,
+	.layout_ynresponsivepurity_mini_menu,
+	.layout_page_footer .layout_advmenusystem_advanced_footer_menu{
+		padding-left:15px;
+		padding-right:15px;
+		margin: 0 auto;
+		max-width: $theme_layout_max_width;
+	}
+}
+
+
+
+/*****************************/
+/***** wide desktop view *****/
+/*****************************/
+@media (min-width: 1200px) {
+
+	#global_content,
+	#core_menu_mini_menu > ul,
+	.navbar.navbar-default,
+	.layout_page_footer .container,
+	.layout_ynresponsivepurity_mini_menu,
+	.layout_page_footer .layout_advmenusystem_advanced_footer_menu{
+		padding-left:15px;
+		padding-right:15px;
+		margin: 0 auto;
+		max-width: $theme_layout_max_width;
+	}
+}

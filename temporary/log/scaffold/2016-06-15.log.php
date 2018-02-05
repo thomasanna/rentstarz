@@ -1,0 +1,7 @@
+2016-06-15 11:44:58 +00:00 --- Error: Missing image - /application/themes/ynresponsivepurity-orange/images/bg-heading.png / /home/suitecon/public_html/application/themes/ynresponsivepurity-orange/images/bg-heading.png
+2016-06-15 11:45:08 +00:00 --- Error: Missing image - /application/themes/ynresponsivepurity-orange/images/bg-heading.png / /home/suitecon/public_html/application/themes/ynresponsivepurity-orange/images/bg-heading.png
+2016-06-15 11:45:29 +00:00 --- Error: Missing image - /application/themes/ynresponsivepurity-orange/images/bg-heading.png / /home/suitecon/public_html/application/themes/ynresponsivepurity-orange/images/bg-heading.png
+2016-06-15 11:45:34 +00:00 --- Error: Missing image - /application/themes/ynresponsivepurity-orange/images/bg-heading.png / /home/suitecon/public_html/application/themes/ynresponsivepurity-orange/images/bg-heading.png
+2016-06-15 12:12:07 +00:00 --- Error: Missing image - /application/themes/ynresponsivepurity-orange/images/bg-heading.png / /home/suitecon/public_html/application/themes/ynresponsivepurity-orange/images/bg-heading.png
+2016-06-15 12:12:12 +00:00 --- Error: Missing image - /application/themes/ynresponsivepurity-orange/images/bg-heading.png / /home/suitecon/public_html/application/themes/ynresponsivepurity-orange/images/bg-heading.png
+2016-06-15 12:12:15 +00:00 --- Error: Missing image - /application/themes/ynresponsivepurity-orange/images/bg-heading.png / /home/suitecon/public_html/application/themes/ynresponsivepurity-orange/images/bg-heading.png

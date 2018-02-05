@@ -1,0 +1,29 @@
+
+.led-green {
+
+    border: 1px solid #fff;
+    margin: auto;
+    width: 13px;
+    height: 13px;
+    background-color: #34AC19;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 55px 1px, inset #4fbd36 0 -4px 9px, #34AC19 0 2px 42px;
+    position: relative;
+    top: 48px;
+    margin-left: 36px;
+}
+
+#global_page_user-index-searchproperties .led-green {
+    display:block;
+    border: 1px solid #fff;
+    margin: auto;
+    width: 13px;
+    height: 13px;
+    background-color: #34AC19;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 55px 1px, inset #4fbd36 0 -4px 9px, #34AC19 0 2px 42px;
+    position: relative;
+    top: 35px;
+    margin-left: -22px;
+}
+

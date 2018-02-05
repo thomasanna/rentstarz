@@ -1,0 +1,74 @@
+@media (max-width: 767px) {
+    .generic_layout_container.layout_main .layout_middle {
+        position: relative;
+        z-index: 0;
+    }    
+}
+
+/* ACTIVITY FEED */
+.swiff-uploader-box
+{
+	display: none!important;
+}
+
+/* VIDEO */
+div.video_view .video_embed object, 
+div.video_view .video_embed object embed
+{
+	height: auto!important;
+    max-height: 340px;
+}
+
+@media screen and (max-width: 640px) {
+    div.video_view .video_embed object, 
+    div.video_view .video_embed object embed {
+        height: 240px !important;  
+    }   
+}
+
+/*** fix over screen smoothbox ***/
+#TB_window {
+    position: fixed;
+    top: 5% !important;
+    max-height: 90% !important;
+    max-width: 100% !important;
+	overflow:auto;
+	-webkit-overflow-scrolling:touch;
+
+}
+
+@media (max-width: 480px) {
+    #TB_window {
+        top: 10% !important;
+        max-height: 85% !important;
+        width: 90% !important;
+        left: 5% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }       
+}
+
+#TB_ajaxContent,
+iframe#TB_iframeContent {
+    max-height: 100% !important;
+    max-width: 100% !important;
+    
+    -webkit-overflow-scrolling: touch !important;
+    overflow-y: auto !important;
+}
+
+body.ynsmoothbox_open {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*** add smoothbox ***/
+body.ynsmoothbox_content {
+
+    -webkit-overflow-scrolling: touch !important;
+    overflow-y: auto !important;
+}

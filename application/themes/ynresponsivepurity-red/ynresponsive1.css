@@ -1,0 +1,2 @@
+@include "constants.css";
+@scan "application/modules" "externals/styles/ynresponsive1.css" "Ynresponsive1";
