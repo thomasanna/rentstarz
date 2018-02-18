@@ -424,14 +424,16 @@ var viewer_identity='<?php echo $viwer_id; ?>';
            <!-- smartmoveapi questions-->          
             
             <div class="smartmoveapiquestions_ans_div" style="display:none">
-			<br>
+			<br><br>
+			<div style="text-align:center;font-size:16px;">Please Answer to all questions</div>
+			<br><br>
             <ul>
 				<?php //$qids = array();?>
             <?php foreach($this->qans as $qdata):?>
             <?php $qIds = $qIds.','.$qdata['QuestionId']; ?>
             <div class="pro_field_wrapper">
             <li qid="<?php echo $qdata['QuestionId']?>">
-            <div><?php echo $qdata['QuestionText'];?></div> 
+            <div style="font-weight:600"><?php echo $qdata['QuestionText'];?></div> 
             <br>
              <?php //print_r($qdata['Options']); exit;?>
             <ul>
@@ -451,6 +453,7 @@ var viewer_identity='<?php echo $viwer_id; ?>';
             
             </ul>
             <input type="button" value="Submit" class="submit_questions">
+            <div class="loader submit_questions_loader"></div>
             </div>
             <!-- smartmoveapi questions-->
       
@@ -464,7 +467,7 @@ var viewer_identity='<?php echo $viwer_id; ?>';
              <div style="text-align:center; font-size:16px; ">Send verification link to a renter to get started</div>
              
               <br>
-              <div class="screen_renters_subdiv_msg">Someone is already registered with this email</div> 
+              <div class="screen_renters_subdiv_msg"></div> 
               <br><br>
              <div class="pro_field_wrapper">
                    <input name="renter_email" type="text" maxlength="65" placeholder="Renter's email" id="renter_email" class="prty_field input-box" autofocus><span style="color:red;font-weight: bolder;">*</span></span> 
@@ -755,8 +758,8 @@ jQuery('body').on('click', '.submit_report', function(event){
 	
     jQuery('body').on('click', '.invite_renter_backgroundcheck', function(event){
 		
-		   jQuery('.screen_renters_subdiv_loader').css('display','block');
-		   jQuery('.invite_renter_backgroundcheck').css('display','none');
+		   jQuery('.screen_renters_subdiv_loader').show();
+		   jQuery('.invite_renter_backgroundcheck').hide();
 
         	var pid       = jQuery('.pid').val();
         	var smartmovePid     = jQuery('.smartmovePid').val();
@@ -777,22 +780,25 @@ jQuery('body').on('click', '.submit_report', function(event){
 							if(result.status == true){
                              jQuery('.screen_renters_subdiv_msg').html('Your invitation has been successfully sent');
                              jQuery('.renter_email').val('');
+                             jQuery('.screen_renters_subdiv_loader').hide();
+		                     jQuery('.invite_renter_backgroundcheck').show();
+		                        
 							}
 							else{
-								jQuery('.screen_renters_subdiv_loader').css('display','none');
-		                        jQuery('.invite_renter_backgroundcheck').css('display','block');
+								jQuery('.screen_renters_subdiv_loader').hide();
+		                        jQuery('.invite_renter_backgroundcheck').show();
 		                        jQuery('.screen_renters_subdiv_msg').html('Someone is already registered with this mail id');
-
 							}
 									
 				},
 				error: function(e){ }  
-			   });
-	    
+			   });   
 				
 			}
 			else{
 				alert("please eneter all fields");
+				jQuery('.screen_renters_subdiv_loader').hide();
+		        jQuery('.invite_renter_backgroundcheck').show();
 				
 			}
         	
@@ -867,7 +873,7 @@ jQuery('.application_btn').on('click', function() {
 });
 initAutocomplete1();
 
-jQuery("#LandlordState123").change(function() {alert(1);
+jQuery("#LandlordState123").change(function() {
 
     var url = '<?php echo $this->baseUrl(); ?>' + '/user/index/getcitywithstateabbreviations';
     var state_abbr = jQuery('#LandlordState123').val();
@@ -1174,6 +1180,8 @@ jQuery('.btn_submit').on(handleClick, function() {
 
 jQuery('.submit_questions').on(handleClick, function() {
 	
+	jQuery(".submit_questions_loader").css("display", "block");
+    jQuery('.submit_questions').css('display','none');
 	
 	var oData       = new Object();	
     var property_name   = oData.property_name =jQuery.trim(jQuery("#property_name").val());
@@ -1231,31 +1239,30 @@ jQuery('.submit_questions').on(handleClick, function() {
                         data : oData,
                             success: function (returndata) {
                             if(returndata.status==true) {
-                                 jQuery(".loader").css("display", "none"); 
-                                 jQuery('.property_div').css('display','none');
+                                 jQuery(".submit_questions_loader").css("display", "none"); 
+                                 jQuery('.submit_questions').css('display','none');
 		                         jQuery('.smartmoveapiquestions_ans_div').css('display','none');		
                                  jQuery(".screen_renters_div").css("display", "block"); 
                                  jQuery('.smartmovePid').val(returndata.smartmovePid);
-                                 jQuery('.pid').val(returndata.pid);
-                                 
-                                 
-                                                                                                               
+                                 jQuery('.pid').val(returndata.pid);                                
                                  alert('Your property has been succesfully added');                             
                                       
                                 // location.href = '<?php echo $this->baseUrl(); ?>' + '/admin/user/manage/transunion';    a               
                             }
                             else{
                                 console.log(returndata.errors);
-                                jQuery(".loader").css("display", "none");
-                                jQuery('.but_submit').css('display','block');
+                                jQuery(".submit_questions_loader").css("display", "none");
+                                jQuery('.submit_questions').css('display','block');
                             }
                             },
                             error: function(e){
-                           jQuery(".loader").css("display", "none");
-                           jQuery('.but_submit').css('display','block');  }
+                                jQuery(".submit_questions_loader").css("display", "none");
+                                jQuery('.submit_questions').css('display','block');  }
                         });			
 		}
 		else{
+	    jQuery(".submit_questions_loader").css("display", "none");
+        jQuery('.submit_questions').css('display','block');		
 		alert("Answer to all questions");
 	} 
 

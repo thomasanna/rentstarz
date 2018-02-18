@@ -2151,8 +2151,8 @@ jQuery( "#LandlordState" ).change(function() {
                    error: function(e){   }
                 });
 });
-//Stripe.setPublishableKey('<?php echo $this->params['public_live_key']; ?>');
-Stripe.setPublishableKey('<?php echo $this->params['public_test_key']; ?>');
+Stripe.setPublishableKey('<?php echo $this->params['public_live_key']; ?>');
+//Stripe.setPublishableKey('<?php echo $this->params['public_test_key']; ?>');
 var form = jQuery('#payment-form');
 form.submit(function(event) {
  event.preventDefault();

@@ -4,7 +4,8 @@
 #global_page_user-profile-index #application_details.active{
     color: #f58410;
 }
-#global_page_user-profile-index .property_btn{
+#global_page_user-profile-index .property_btn,
+#global_page_user-profile-index .submit_questions{
 
     width: 134px;
     padding: 6px 10px;

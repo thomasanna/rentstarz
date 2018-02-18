@@ -192,6 +192,31 @@ var viewer_identity='<?php echo $viwer_id; ?>';
 </div>
 <div class="boxout_text" >Complete your Transunion background check. You will be allowed to send your report to five landlords per day for thirty days. Your credit score will 
 not be affected.</div>
+<!--confirmInvitedforBackgroundModal modal-->
+
+<div class="modal fade" id="confirmInvitedforBackgroundModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-title" id="exampleModalLabel">Confirm</span>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+			<?php if($this->isInvitedForBackgroundReport == 1){
+				echo $this->confirmMsg;
+			}?>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-primary yes_btn yes_confirmInvitedforBackgroundModal" data-dismiss="modal">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--end confirmInvitedforBackgroundModal modal-->
+
 <script type="text/javascript">
 jQuery('.createrental_submit_btn').on('click',function(){
  var viewer_id = '<?php echo $viewer->getIdentity();?>';
@@ -564,4 +589,8 @@ jQuery('.aboutme_next_btn').on('click',function(){
 jQuery('.residence_next_btn').on('click',function(){
     jQuery('#office').trigger( 'click' );
 });
+var isInvitedForBackgroundReport  = '<?php echo $this->isInvitedForBackgroundReport;?>';
+if(isInvitedForBackgroundReport == 1){
+	jQuery("#confirmInvitedforBackgroundModal").modal('show');   					   
+}
 </script>

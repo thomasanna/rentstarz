@@ -235,8 +235,8 @@ var viewer_identity='<?php echo $viwer_id; ?>';
     }
     });
 
-//Stripe.setPublishableKey('<?php echo $this->params['public_live_key']; ?>');
-Stripe.setPublishableKey('<?php echo $this->params['public_test_key']; ?>');
+Stripe.setPublishableKey('<?php echo $this->params['public_live_key']; ?>');
+//Stripe.setPublishableKey('<?php echo $this->params['public_test_key']; ?>');
 
 var form = jQuery('#reportpayment-form');
 form.submit(function(event) {
