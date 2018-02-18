@@ -7655,8 +7655,7 @@ function smartmoveapicreaterenterformAction(){
 				$landlordUser = Engine_Api::_()->user()->getUser($InvitedrentersbackgroundreportData->landlord_id);
 						  
 				$isInvitedForBackgroundReport  = 1;
-				$confirmMsg  = "You are about to undergo Transunion credit and background review.
-				 This report will be sent to." $landlordUser->displayname."when it is completed";
+				$confirmMsg  = "You are about to undergo Transunion credit and background review. This report will be sent to." .$landlordUser->displayname."when it is completed";
 			}
 		   else{
 			   $isInvitedForBackgroundReport  = 1;
