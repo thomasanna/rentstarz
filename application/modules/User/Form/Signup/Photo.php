@@ -81,7 +81,7 @@ class User_Form_Signup_Photo extends Engine_Form
     }
 
     // Element: skip  
-    if( $settings->getSetting('user.signup.photo', 0) == 0 ) {
+   /* if( $settings->getSetting('user.signup.photo', 0) == 0 ) {
       $this->addElement('Cancel', 'skip-link', array(
         'label' => 'skip',
         'prependText' => ' or ',
@@ -92,6 +92,6 @@ class User_Form_Signup_Photo extends Engine_Form
           'ViewHelper',
         ),
       ));
-    }
+    }*/
   }
 }

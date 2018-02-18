@@ -53,6 +53,7 @@
     <script>jQuery.noConflict();</script>
     <link href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/style.css" rel="stylesheet" type="text/css">
     <link href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/theme_style.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/newstyles.css" rel="stylesheet" type="text/css">
     <link href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/jquery.dialogbox.css" rel="stylesheet" type="text/css">
     <link href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/lightbox.min.css" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/png" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/rentstarz_favicon.png" />

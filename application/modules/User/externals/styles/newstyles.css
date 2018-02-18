@@ -1,0 +1,26 @@
+#global_page_user-profile-index #property_details.active,
+#global_page_user-profile-index #personal_details.active,
+#global_page_user-profile-index #property_verification_details.active,
+#global_page_user-profile-index #application_details.active{
+    color: #f58410;
+}
+#global_page_user-profile-index .property_btn{
+
+    width: 134px;
+    padding: 6px 10px;
+    font-weight: 700;
+    font-size: 1em;
+    border: none;
+    text-transform: uppercase;
+    background-color: #f58410;
+    color: #fff;
+    outline: none;
+    -webkit-border-radius: 3px;
+}
+.screen_renters_subdiv{
+ text-align:center;
+ margin-top:32px;
+}
+.screen_renters_div .pro_field_wrapper{
+ text-align:center;
+}

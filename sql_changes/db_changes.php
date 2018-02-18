@@ -1323,7 +1323,22 @@ $sql['1.1.2.212']   = "CREATE TABLE IF NOT EXISTS `engine4_cardholder_details` (
                     ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 " ;	
 $sql['1.1.2.213']   = "INSERT INTO `engine4_activity_notificationtypes` (`type`, `module`, `body`, `is_request`, `handler`, `default`) VALUES ('comment_notification_to_renter', 'user', 'landlord  has replied to your comment on property.', '0', '', '1');";
 $sql['1.1.2.214']   = "INSERT INTO `engine4_activity_notificationtypes` (`type`, `module`, `body`, `is_request`, `handler`, `default`) VALUES ('comment_notification_to_pOwner', 'user', 'Renter has commented on your property.', '0', '', '1');";
-                    
+$sql['1.1.2.215']   = "INSERT  INTO `engine4_core_settings` (`name`, `value`) VALUES
+						('user.enableMessagingForAllRenters', '1'); ";	  
+$sql['1.1.2.216']    = "INSERT INTO `engine4_activity_notificationtypes` (`type`, `module`, `body`, `is_request`, `handler`, `default`) VALUES ('invite_renter_to_property', 'user', '{item:\$subject} has been invited to property .', '0', '', '1');";
+
+$sql['1.1.2.217']   = "CREATE TABLE `engine4_invitedrenters_backgroundreport` (
+					  `id` int(11) NOT NULL,
+					  `smartmovePid` int(11) NOT NULL,
+					  `pid` int(11) NOT NULL,
+					  `landlord_id` int(11) NOT NULL,
+					  `renter_id` int(11) NOT NULL,
+					  `renter_email` varchar(50) NOT NULL,
+					  `backgroundReport` int(11) NOT NULL,
+					  `created_at` varchar(20) NOT NULL,
+					  PRIMARY KEY (`id`)
+					) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;";
+										
 ?>
 
 

@@ -22,13 +22,6 @@ $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($subject);
       $this->view->profiletype = $profile_type_id = $optionId->value; 
       $subjectProfileType = $profile_type_id;
     }
-
-
-
-
-
-
-
 ?>
 <script>
 var member_creation_date = '<?php echo  $this->timestamp($subject->creation_date);?>';

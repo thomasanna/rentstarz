@@ -62,6 +62,58 @@ public function indexAction()  {
                         ->where('user.search=?' , 1) 
                         ->where('user.user_id=?' , $subject->getIdentity()); 
                         
+                        
+                        
+        $propertyTable      =  Engine_Api::_()->getDbtable('propertylist', 'user');
+        $propertyimageTable =  Engine_Api::_()->getDbtable('propertyimages', 'user');
+        
+        $propertySelect   =   $propertyTable->select()
+                        ->setIntegrityCheck(false)
+                        ->from(array('plist'=>'engine4_property_list',))
+                        ->where('plist.property_owner_id=?' , $subject->getIdentity())
+                        ->where('plist.enable=?' , 1)
+                        ->where('plist.landlord_enable=?' , 1)
+                        ->where('plist.granted=?' , 0)                        
+                        ->group('plist.id')
+                        ->order('plist.id DESC');
+        
+        //echo $propertySelect;exit;
+        $propertyData                 = $propertyTable->fetchAll($propertySelect);
+        $this->view->propertyData     = $propertyData;  
+        
+        $smartmoveapiquestions_table      =  Engine_Api::_()->getDbtable('smartmoveapiquestions', 'user');
+				$smartmoveapiquestionAnswer_table =  Engine_Api::_()->getDbtable('Smartmoveapiquestionanswers', 'user');
+			    $smartmoveQuestions_select   =   $smartmoveapiquestions_table->select()
+                        ->setIntegrityCheck(false)
+                        ->from(array('question'=>'engine4_smartmoveapi_questions',));
+                       // ->joinLeft(array('answer'=>'engine4_smartmoveapi_questionanswers',),'question.qid=answer.qid',array());
+                $smartmoveQuestionsData=$smartmoveapiquestions_table->fetchAll($smartmoveQuestions_select);
+                $resultData                       =  array();
+        $questionData                     =  array();
+
+         foreach($smartmoveQuestionsData as $question){
+
+            $tmpAnswerInfo      =   array();
+            $questionData[0]['QuestionId']          = $question->qid;
+            $questionData[0]['QuestionText']        = $question->qtext;
+            $smartmoveapiquestionAnswerData         = $smartmoveapiquestionAnswer_table->fetchAll($smartmoveapiquestionAnswer_table->select()->where('qid = ?', $question->qid));
+
+            foreach($smartmoveapiquestionAnswerData as $answer){
+                        $answerInfo =   array(
+                                            'AnswerText'=>$answer->answer_text,
+                                            'AnswerDescription'=> $answer->answer_description
+                                            );
+                        $tmpAnswerInfo[]    =   $answerInfo;
+            }
+            //$questionData[0]['SelectedAnswer']      = $question->selected_answer;
+            $questionData[0]['Options']             = $tmpAnswerInfo;
+            $resultData = array_merge($resultData,$questionData);
+        }
+        
+        $this->view->qans = $resultData;
+     // echo "<pre>"; print_r($resultData);exit;
+				                      
+                        
 					}
 	
 	if($this->view->profile_type_id == 1)	{	// tenant				

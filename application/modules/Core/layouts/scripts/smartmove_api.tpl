@@ -34,6 +34,7 @@
     <link rel="icon" type="image/png" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/rentstarz_favicon.png" />
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/blitzer/jquery-ui.css" type="text/css" />
     <link href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/newstyles.css" rel="stylesheet" type="text/css">
 
    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
    <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/online.css" type="text/css">

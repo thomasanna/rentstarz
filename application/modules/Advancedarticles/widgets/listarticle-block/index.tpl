@@ -32,6 +32,29 @@ var viewer_identity='<?php echo $viwer_id; ?>';
     </div>
 <?php return; endif; ?>
  <?php $space = ''; foreach( $this->paginator as $item ): ?> 
+ <?php
+ $feedBody   = substr(strip_tags($item->description),0,1000) . '...';
+ $feedBody   = trim(preg_replace('/[\r\n]+/', ' ',$feedBody));
+ $feedBody   = str_replace('"', "'", $feedBody);
+ $feedBody   = str_replace("'", "\'", $feedBody);
+ $tagtext    = $item->getTitle();
+ $detailUrl  = $item->getHref();
+
+ $type               =   '';
+ $safeName           =   ( $type ? str_replace('.', '_', $type) : 'main' );
+ $src                =   $item->getPhotoUrl($type);
+ 
+ $src = substr($src, 0, strpos($src, "?"));
+
+ if($src):
+ $src                =   $src;
+ else:
+ $src                =   '/application/modules/Advancedarticles/externals/images/no_art_icon.jpg';
+ endif;
+ $feed_image =      $src; 
+ ?>
+ 
+ 
  <div class="article_li"> 
  <div class="article_image"> 
     <?php
@@ -79,6 +102,13 @@ var viewer_identity='<?php echo $viwer_id; ?>';
 	<div class="comment_div comment_div_<?php echo $item->artarticle_id;?>">	
 	<a href="javascript:void(0)" class="comment_article comment_article_<?php echo $item->artarticle_id;?>"  article_id="<?php echo $item->artarticle_id;?>">Comments</a>
     <span class="comment_count comment_count_<?php echo $item->artarticle_id;?>"><?php echo count($articlecommentData);?></span>    
+	</div>
+	<input type="hidden" class="feedBody_<?php echo $item->artarticle_id;?>" value= "<?php echo $feedBody; ?>">
+	<div class="fbsharediv"  onClick="fbShare('<?php echo  $item->artarticle_id; ?>','<?php echo $tagtext ?>','<?php echo $feed_image; ?>','<?php echo $detailUrl; ?>')">
+	<i class="fa fa-facebook-square"  style="color: #3b5998;"> </i><span style="color: #f58410;margin-left: 4px;">Share</span>
+	</div>	
+	<div class="fbsharediv"  onClick="twitterShare('<?php echo $item->artarticle_id; ?>','<?php echo $tagtext ?>','<?php echo $feed_image; ?>','<?php echo $detailUrl; ?>')">
+	<i class="fa fa-twitter" style="color: #00aced;"></i><span style="color: #f58410;margin-left: 4px;">Share</span>
 	</div>	
 	</div>	
 	</div>	
@@ -90,7 +120,7 @@ var viewer_identity='<?php echo $viwer_id; ?>';
 	</div>
  </div>
  <?php  $space = 'space';  endforeach;?>
-
+<div id="fb-root"></div>
 <script type="text/javascript">
 	jQuery('body').on('click', '.like_article', function(event){		
 		var article_id =parseInt(jQuery(this).attr('article_id'));		
@@ -242,6 +272,109 @@ var viewer_identity='<?php echo $viwer_id; ?>';
 
 
 </script>
+
+<script type="text/javascript">
+
+
+   // this loads the Facebook API
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    window.fbAsyncInit = function () {
+        var appId = '317350178671936';
+        FB.init({
+            appId: appId,
+            status : true, // check login status
+			cookie : true, // enable cookies to allow the server to access the session
+			xfbml : true, // parse XFBML
+            version: 'v2.11'
+        });
+    };
+
+    // FB Share with custom OG data.
+
+
+function fbShare(id,tagText,shareImage,detailedurl){
+
+            var shareBody = jQuery('.feedBody_'+id).val();
+            
+            var image = 'http://rentstarz.com'+shareImage;	
+	        var url   = 'http://rentstarz.com'+detailedurl; 
+
+                // Dynamically gather and set the FB share data. 
+                var FBDesc      = shareBody;
+                var FBTitle     = tagText;
+                var FBLink      = url;
+                var FBPic       = image;
+
+                // Open FB share popup
+                FB.ui({
+                    method: 'share_open_graph',
+                    action_type: 'og.shares',
+                    action_properties: JSON.stringify({
+                        object: {
+                            'og:url': FBLink,
+                            'og:title': FBTitle,
+                            'og:description': FBDesc,
+                            'og:image': FBPic
+                        }
+                    })
+                },
+                function (response) {
+                // Action after response
+                })
+      }
+
+
+function twitterShare(id,tagText,shareImage,detailedurl){
+	
+
+    var redirectUrl;
+    var image = 'http://rentstarz.com'+shareImage;
+
+	var url = 'http://rentstarz.com'+detailedurl;
+	redirectUrl = url.replace('&','%26');
+    // Get the fact text
+   // var factText = $('#fact').text();
+    var factText = tagText;
+    
+    // Convert to string
+    var factStr = factText.toString();
+    
+    // Fact length
+    var factLen = factText.length;
+    
+    // Formats "facts" that are too long... remove if not needed
+    if (factLen > 103) { // max chacters allowed
+        // trim, and allow space for '...'"
+        var trimFact = factStr.substring(0, 70);
+        var trimFact = trimFact.trim(); //<-- ensures the last character isnt ' '
+        factStr = trimFact + "...";
+    }
+    // Update the link
+    var linkRef = " https://twitter.com/share?text= " + factStr +"&url="+ redirectUrl +"&hashtags=rentstarz, article";
+    window.open(linkRef, 'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0')
+    
+    jQuery('#factLink').attr('href', linkRef);
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
 
 <?php /*<table class='art_table' id="art_table" width="100%">
   <thead>

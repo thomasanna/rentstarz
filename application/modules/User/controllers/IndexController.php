@@ -7034,7 +7034,7 @@ public function propertyapprovedrequestslistAction() {
         if(!empty($smartmoveapiApplicationData)){
             $email         =  $smartmoveapiApplicationData->Applicants;
             $applicationId =  $smartmoveapiApplicationData->SmartmoveApplicationId;
-            $viewHelperObj = $this->view->getHelper('SmartmoveApi');
+            $viewHelperObj = $this->view->getHelper('SmartmoveApi125');
             $response      = $viewHelperObj->getApplicationStatus($email,$applicationId);
             if ($response === false)
             {
@@ -7242,7 +7242,7 @@ public function propertyapprovedrequestslistAction() {
                 );
                 //echo print_r($params); exit;
             $params=json_encode($params);
-            $viewHelperObj  = $this->view->getHelper('SmartmoveApi');
+            $viewHelperObj  = $this->view->getHelper('SmartmoveApi125');
             $servertime     = $viewHelperObj->getServertime();
             $partnerId      = 408;
             $SecurityKey    ='Hs3+FsK/Sh/MyLvGIW3TtsMtkTc1C9mJd11EFeHt1LNOpjT4+pLl/BSpChyK/w/nHDZU+IwAosgfrk4jcRQnEg==';
@@ -7641,6 +7641,27 @@ function smartmoveapicreaterenterformAction(){
         //get birthdate
         $birthdateData = $fieldsTable->fetchRow($fieldsTable->select()->where('item_id = ?', $viewer_id)->where('field_id = ?', 6));
 
+        
+         /* check the renter invited for background*/
+                      
+			$InvitedrentersbackgroundreportTable = Engine_Api::_()->getDbtable('Invitedrentersbackgroundreport', 'user');
+		    $InvitedrentersbackgroundreportData      = $InvitedrentersbackgroundreportTable->fetchRow($InvitedrentersbackgroundreportTable->select()
+										  ->where('renter_email  = ?', $viewer->email)
+										  ->where('renter_id  = ?', $viewer_id)
+										  ->where('backgroundReport  = ?', 0)                                  
+										  );
+										  
+			if(count($InvitedrentersbackgroundreportData)>0){
+				$landlordUser = Engine_Api::_()->user()->getUser($InvitedrentersbackgroundreportData->landlord_id);
+						  
+				$isInvitedForBackgroundReport  = 1;
+				$confirmMsg  = "You are about to undergo Transunion credit and background review.
+				 This report will be sent to." $landlordUser->displayname."when it is completed";
+			}
+		   else{
+			   $isInvitedForBackgroundReport  = 1;
+			}
+							
         $this->view->birthdateData =$birthdateData;
     }
 
@@ -7691,7 +7712,7 @@ function smartmoveapicreaterentersaveAction(){
         );
 
         $params                           = json_encode($params);
-        $viewHelperObj                    = $this->view->getHelper('SmartmoveApi');
+        $viewHelperObj                    = $this->view->getHelper('SmartmoveApi125');
         $response                         = $viewHelperObj->createrenter($params);
 
         if ($response === false)
@@ -7743,7 +7764,26 @@ function smartmoveapicreaterentersaveAction(){
                        $propertyData         =  $propertyTable->fetchRow($propertyTable->select()->where('property_type = ?', 'holding_property'));
 
                      $smartmoveapiProperty_table    =  Engine_Api::_()->getDbtable('Smartmoveapiproperty', 'user');
-                     $smartmoveapiPropertyData      = $smartmoveapiProperty_table->fetchRow($smartmoveapiProperty_table->select()->where('Pid  = ?', $propertyData->id));
+
+                      /* check the renter invited for background*/
+                      
+                     $InvitedrentersbackgroundreportTable = Engine_Api::_()->getDbtable('Invitedrentersbackgroundreport', 'user');
+                     $InvitedrentersbackgroundreportData      = $InvitedrentersbackgroundreportTable->fetchRow($InvitedrentersbackgroundreportTable->select()
+                                  ->where('renter_email  = ?', $viewer->email)
+                                  ->where('renter_id  = ?', $viewer_id)
+                                  ->where('backgroundReport  = ?', 0)                                  
+                                  );
+                      if(count($InvitedrentersbackgroundreportData)>0){
+						  
+                       $smartmoveapiPropertyData      = $smartmoveapiProperty_table->fetchRow($smartmoveapiProperty_table->select()
+                          ->where('SmartmovePropertyId  = ?', $InvitedrentersbackgroundreportData->smartmovePid));	                         
+                        $application_type = 'invited_property_application';  					  					  
+					  }
+					  else{
+			          $smartmoveapiPropertyData      = $smartmoveapiProperty_table->fetchRow($smartmoveapiProperty_table->select()->where('Pid  = ?', $propertyData->id));
+					  $application_type = 'holding_application';
+					  }
+
 
                             $params = array(
                             'PropertyId'        => $smartmoveapiPropertyData->SmartmovePropertyId,
@@ -7755,6 +7795,9 @@ function smartmoveapicreaterentersaveAction(){
                             'ProductBundle'     => $smartmoveapiPropertyData->ProductBundle,
                             'Applicants'        => array($viewer->email),
                             );
+                            
+                        // $res =   $viewHelperObj->getProperty($smartmoveapiPropertyData->SmartmovePropertyId);
+                         // echo "<pre>"; print_r($res); exit;
                       $params   =   json_encode($params);
                       $response                         = $viewHelperObj->createapplication($params);
                       if ($response === false)
@@ -7770,7 +7813,7 @@ function smartmoveapicreaterentersaveAction(){
                                 $SmartmoveApplicationTableId =  $smartmoveapiApplication_table->insert(array(
                                             'rental_application_id'            => '',
                                             'SmartmovePropertyId'              => $smartmoveapiPropertyData->SmartmovePropertyId,
-                                            'application_type'                 => 'holding_application',
+                                            'application_type'                 => $application_type,
                                             'SmartmoveApplicationId'           => $data['ApplicationId'],
                                             'UnitNumber'                       => $data['UnitNumber'],
                                             'Deposit'                          => $data['Deposit'],
@@ -7802,8 +7845,10 @@ function smartmoveapicreaterentersaveAction(){
                                                 $smartmoveapiApplicationData -> ApplicationStatus      = $data['ApplicationStatus'];
                                                 $smartmoveapiApplicationData -> IdmaVerificationStatus = $data['IdmaVerificationStatus'];
                                                 $smartmoveapiApplicationData -> updated_at             = date('Y-m-d');
-                                                $smartmoveapiApplicationData -> save();
+                                                $smartmoveapiApplicationData -> save();                                             
+                                                
                                                 $aResult['status'] = true;
+                                                
                                            }
                                            else{
                                                 $aResult['status'] = false;
@@ -7815,7 +7860,7 @@ function smartmoveapicreaterentersaveAction(){
                                     $aResult['status'] = false;
                                     $aResult['errors'] = $data['Errors'];
                                 }
-                }
+               }
             }
             else{
                   $aResult['status'] = false;
@@ -7937,7 +7982,7 @@ function smartmoveapicreaterentersaveAction(){
 
         $params=json_encode($params); //print_r($params);
 
-        $viewHelperObj = $this->view->getHelper('SmartmoveApi');
+        $viewHelperObj = $this->view->getHelper('SmartmoveApi125');
         $response      = $viewHelperObj->updaterenter($params);
 
 
@@ -8077,7 +8122,7 @@ function smartmoveapicreaterentersaveAction(){
         $SmartmoveApplicationId =   $smartmoveapiApplicationData->SmartmoveApplicationId;
 
 
-        $viewHelperObj          =   $this->view->getHelper('SmartmoveApi');
+        $viewHelperObj          =   $this->view->getHelper('SmartmoveApi125');
         $Email                  =   $viewer->email;
         $ApplicationStatusResponse = $viewHelperObj->getApplicationStatus($Email,$SmartmoveApplicationId);
         $ApplicationStatusResponse = json_decode($ApplicationStatusResponse, true);
@@ -8160,7 +8205,7 @@ function smartmoveapicreaterentersaveAction(){
                         'AssetValue'                        => $AssetValue,
                         'FcraAgreementAccepted'             => true
                         );
-                    $viewHelperObj = $this->view->getHelper('SmartmoveApi');
+                    $viewHelperObj = $this->view->getHelper('SmartmoveApi125');
                     $params        = json_encode($params);
                     $response      = $viewHelperObj->ExamRetrieve($params);
                     //print_r($response);exit("22");
@@ -8231,7 +8276,7 @@ function smartmoveapicreaterentersaveAction(){
         if($profile_type_id != 1){ //if not tenant
             return $this->_forward('notfound');
         }
-        $viewHelperObj     = $this->view->getHelper('SmartmoveApi');
+        $viewHelperObj     = $this->view->getHelper('SmartmoveApi125');
         $aResult           = array();
         $answerIds         = $aData['answer_ids'];
         $answerIds         = explode(',',$aData['answer_ids']); //print_r($answerIds); exit;
@@ -8409,7 +8454,7 @@ function smartmoveapicreaterentersaveAction(){
         $this->_helper->layout->setLayout('smartmove_api');
         $viewer_id   =   Engine_Api::_()->user()->getViewer()->getIdentity();
         $smartmoveApplicationId                 =  $this->_getParam('id');
-        $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi');
+        $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi125');
         $PaymentpackageTable                    =  Engine_Api::_()->getDbtable('Paymentpackage', 'user');
         $StripeSettingsTable                    =  Engine_Api::_()->getDbtable('Stripesettings', 'user');
         $StripeSettingsData                     =  $StripeSettingsTable->fetchRow($StripeSettingsTable->select()->where('id = ?', 1));
@@ -8438,7 +8483,7 @@ function smartmoveapicreaterentersaveAction(){
         $this->view->payment_duration                         = $payment_duration;
         $stripefiles     = $viewHelperObj->getStripeFiles(); // smartmove api exam evaluate
         $params = array(
-            "testmode"   => "off",
+            "testmode"   => "on",
             "private_live_key" => "sk_live_bcnF3vdwkx2Q405aOq7POiep",
             "public_live_key"  => "pk_live_evBvNtpwiJlCwieyHNPKsQLO",
             "private_test_key" => "sk_test_K2gnuPgv5SH1P3lkvw86TJIQ",
@@ -8605,7 +8650,7 @@ function smartmoveapicreaterentersaveAction(){
          $ApplicantStatus = $applicant['ApplicantStatus'];
         endforeach;
         if($ApplicantStatus =='ReportsRequested'){
-            $viewHelperObj       = $this->view->getHelper('SmartmoveApi');
+            $viewHelperObj       = $this->view->getHelper('SmartmoveApi125');
             $applicationResponse = $viewHelperObj->getApplication($SmartmoveapireportData -> SmartmoveApplicationId);
 
                             if ($applicationResponse === false)
@@ -10434,7 +10479,7 @@ public function filterfeedbypetstypeAction(){
             return $this->_forward('notfound');
         }
 
-        $viewHelperObj   = $this->view->getHelper('SmartmoveApi');
+        $viewHelperObj   = $this->view->getHelper('SmartmoveApi125');
         $stripefiles     = $viewHelperObj->getStripeFiles(); // smartmove api exam evaluate
       $params = array(
             "testmode"   => "off",
@@ -10758,7 +10803,7 @@ public function filterfeedbypetstypeAction(){
         $smartmoveapiRenters_table           =  Engine_Api::_()->getDbtable('Smartmoveapirenters', 'user');
         $PaymentpackageTable                 =  Engine_Api::_()->getDbtable('Paymentpackage', 'user');
         $SmartmoveapireportTable             =  Engine_Api::_()->getDbtable('Smartmoveapireport', 'user');
-        $viewHelperObj                       = $this->view->getHelper('SmartmoveApi');
+        $viewHelperObj                       = $this->view->getHelper('SmartmoveApi125');
         $smartmoveapiRentersData             = $smartmoveapiRenters_table->fetchRow($smartmoveapiRenters_table->select()->where('tenant_id   = ?', $viewer_id));
         $this->view->smartmoveapiRentersData = $smartmoveapiRentersData;
         $smartmoveapiApplication_table       =  Engine_Api::_()->getDbtable('Smartmoveapiapplication', 'user');
@@ -10826,6 +10871,18 @@ public function filterfeedbypetstypeAction(){
                                     'created_at'              =>  date('Y-m-d'),
                                     'updated_at'              =>  date('Y-m-d')
                                     ));
+                                    
+                               $InvitedrentersbackgroundreportTable = Engine_Api::_()->getDbtable('Invitedrentersbackgroundreport', 'user');
+                               $InvitedrentersbackgroundreportData      = $InvitedrentersbackgroundreportTable->fetchRow($InvitedrentersbackgroundreportTable->select()
+                                  ->where('renter_email  = ?', $viewer->email)
+                                  ->where('renter_id  = ?', $viewer_id)
+                                  ->where('backgroundReport  = ?', 0)                                  
+                                  );
+							if(count($InvitedrentersbackgroundreportData)>0){
+								$InvitedrentersbackgroundreportData->backgroundReport = 1;
+								$InvitedrentersbackgroundreportData->save();
+					        }
+					
                             }
                         }
                         else{ 
@@ -11947,7 +12004,7 @@ public function filterfeedbypetstypeAction(){
 
             if($package == 'landlord_pro_package'){  $packageRate = $settings->user_landlordProPrice; }
             if($package == 'management_gold_package'){  $packageRate = $settings->user_managementGoldPrice; }
-            $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi');
+            $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi125');
             $stripefiles     = $viewHelperObj->getStripeFiles();
            $params = array(
             "testmode"   => "on",
@@ -12330,7 +12387,7 @@ public function filterfeedbypetstypeAction(){
 
 
 
-            $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi');
+            $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi125');
             $stripefiles     = $viewHelperObj->getStripeFiles(); // smartmove api exam evaluate
            $params = array(
             "testmode"   => "off",
@@ -13498,7 +13555,7 @@ public function filterfeedbypetstypeAction(){
 						 $settings = Engine_Api::_()->getApi('settings', 'core');
 						 if($userPackagesData->package_type == 'landlord_pro_package'){  $packageRate = $settings->user_landlordProPrice; }
 						 if($userPackagesData->package_type == 'management_gold_package'){  $packageRate = $settings->user_managementGoldPrice; }
-						 $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi');
+						 $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi125');
 						 $stripefiles     = $viewHelperObj->getStripeFiles();		
 						 
 						 
@@ -13780,6 +13837,329 @@ public function filterfeedbypetstypeAction(){
         }
 		echo json_encode($aResult);                                
    }
+  public function savepropertyforbackgroundreportAction(){ 
+	  
+	  
+	    $this->_helper->viewRenderer->setNoRender(true);
+        $this->_helper->layout->disableLayout();
+        $aData     = $this->_request->getPost();
+        
+        $viewHelperObj                    =  $this->view->getHelper('SmartmoveApi125');        
+        $Questions        = $viewHelperObj -> getPropertyQuestionAnsArray($aData['q1Ans'],$aData['q2Ans'],$aData['q3Ans'],$aData['q4Ans'],$aData['q5Ans']);
+       // echo "<pre>"; print_r($Questions); exit;
+
+        if($aData){
+        $user_id   = Engine_Api::_()->user()->getViewer()->getIdentity();
+        $viewer    = Engine_Api::_()->user()->getViewer();
+        
+        $aResult   = array();
+        date_default_timezone_set($viewer->timezone);
+        $propertyTable          =  Engine_Api::_()->getDbtable('propertylist', 'user');
+        $propertyimageTable     =  Engine_Api::_()->getDbtable('propertyimages', 'user');
+        $propertycountrtyTable  =  Engine_Api::_()->getDbtable('propertycountry', 'user');
+        $propertystateTable     =  Engine_Api::_()->getDbtable('propertystate', 'user');
+        $propertycityable       =  Engine_Api::_()->getDbtable('propertycity', 'user');
+        try{
+			    $propertycountryData = $propertycountrtyTable->fetchRow($propertycountrtyTable->select()->where('prty_country = ?', $aData['prty_country']));
+                if(count($propertycountryData) == 0){
+                    $propertycountryid  =   $propertycountrtyTable->insert(array(
+                    'prty_country'  => $aData['prty_country']
+                    ));
+                }
+                else{
+                    $propertycountryid =  $propertycountryData->country_id;
+                }
+                
+                $propertystateDataSelect = $propertystateTable->select()
+                    ->where('country_id = ?', $propertycountryid)
+                    ->where('prty_state = ?', $aData['prty_state']);
+                    
+                $propertystateData = $propertystateTable->fetchRow($propertystateDataSelect);
+                if(count($propertystateData) == 0){
+                    $propertystateid =   $propertystateTable->insert(array(
+                    'country_id'  => $propertycountryid,
+                    'prty_state'  => $aData['prty_state']
+                    ));
+                }
+                else{
+                    $propertystateid =  $propertystateData->state_id;
+                }
+                $propertycityDataSelect = $propertycityable->select()
+                    ->where('country_id = ?', $propertycountryid)
+                    ->where('state_id = ?',   $propertystateid)
+                    ->where('prty_city = ?',  $aData['prty_city']);
+
+                $propertycityData = $propertycityable->fetchRow($propertycityDataSelect);
+                if(count($propertycityData) == 0){
+                    $propertycityid=   $propertycityable->insert(array(
+                    'country_id'  => $propertycountryid,
+                    'state_id'    => $propertystateid,
+                    'prty_city'   => $aData['prty_city'],
+                    'zipcode'     => $aData['prty_zipcode'],
+                    'latitude'    => $aData['prty_latitude'],
+                    'longitude'   => $aData['prty_longitude']
+                    ));
+                    
+                }
+                else{
+                    $propertycityid =  $propertycityData->city_id;
+                }
+                 $propertyid=   $propertyTable->insert(array(
+                    'property_owner_id'       => $user_id,
+                    'property_type'           => 'property_for_backgroundreport',
+                    'property_name'           => $aData['property_name'],
+                    'prty_country_id'         => $propertycountryid,
+                    'prty_state_id'           => $propertystateid,
+                    'prty_city_id'            => $propertycityid,
+                    'prty_county'             => $aData['prty_county'],
+                    'prty_neighborhood'       => $aData['prty_neighborhood'],
+                    'zip'                     => $aData['prty_zipcode'],
+                    'rental_type'             => '',
+                    'description'             => '',
+                    'price'                   => '',
+                    'vouchers'                => '',
+                    'wheelchair_accessible'   => '',
+                    'months_of_deposits'      => '',
+                    'property_manager'        => '',
+                    'provide_parking'         => '',
+                    'no_of_rooms'             => '',
+                    'housing_type'            => '',
+                    'has_pets'                => '',
+                    'pets_type'               => '',
+                    'landlord_enable'         => 1,
+                    'enable'                  => 1,
+                    'created_at'              => date('Y-m-d H:i:s'),
+                ));
+			
+			    /********************smartmove api call create property start**************/
+			    
+			    $smartmoveapiquestions_table      =  Engine_Api::_()->getDbtable('smartmoveapiquestions', 'user');
+				$smartmoveapiquestionAnswer_table =  Engine_Api::_()->getDbtable('Smartmoveapiquestionanswers', 'user');
+				$viewHelperObj                    =  $this->view->getHelper('SmartmoveApi125');
+			    $smartmoveQuestions_select   =   $smartmoveapiquestions_table->select()
+                        ->setIntegrityCheck(false)
+                        ->from(array('question'=>'engine4_smartmoveapi_questions',))
+                        ->joinLeft(array('answer'=>'engine4_smartmoveapi_questionanswers',),'question.qid=answer.qid',array());
+                $smartmoveQuestionsData=$smartmoveapiquestions_table->fetchAll($smartmoveQuestions_select);
+				$PropertyIdentifier     = $propertyid."_".$aData['property_name'];
+				$Name                   = $aData['property_name'];
+				$UnitNumber             = $aData['UnitNumber'];
+				$displayname            = explode(" ",$viewer->displayname);
+				$FirstName              = $displayname[0];
+				$LastName               = $aData['LandlordLastName'];
+				$Street                 = $aData['Street'];
+				$City                   = $aData['prty_city'];
+				$StateArray             = $viewHelperObj->getState();
+				$State                  = array_search($aData['prty_state'],$StateArray);
+				$Zip                    = $aData['prty_zipcode'];
+				$Phone                  = $aData['Phone'];
+				$PhoneExtension         = $aData['PhoneExtension'];
+				$Classification         = $aData['Classification'];
+				$IR                     = $aData['IR'];        
+			    $IncludeMedicalCollections       = $aData['IncludeMedicalCollections'];
+				$IncludeForeclosures             = $aData['IncludeForeclosures'];
+				$DeclineForOpenBankruptcies      = $aData['DeclineForOpenBankruptcies'];
+				$OpenBankruptcyWindow            = $aData['OpenBankruptcyWindow'];
+				$IsFcraAgreementAccepted         = $aData['IsFcraAgreementAccepted'];
+				$LandlordStreetAddressLineOne         = $aData['LandlordStreetAddressLineOne'];
+				$LandlordStreetAddressLineTwo         = $aData['LandlordStreetAddressLineTwo'];
+				$LandlordState                        = $aData['LandlordState'];
+				$LandlordCity                         = $aData['LandlordCity'];
+				$LandlordZip                          = $aData['LandlordZip'];
+				$LandlordPhoneNumber                  = $aData['LandlordPhoneNumber'];
+				$LandlordEmail                        = $aData['LandlordEmail'];
+				$LandlordData = array(
+				'FirstName'                   => $FirstName,
+				'LastName'                    => $LastName,
+				'StreetAddressLineOne'        => $LandlordStreetAddressLineOne,
+				'StreetAddressLineTwo'        => $LandlordStreetAddressLineTwo,
+				'State'                       => $LandlordState,
+				'City'                        => $LandlordCity,
+				'Zip'                         => $LandlordZip,
+				'PhoneNumber'                 => $LandlordPhoneNumber,
+				'Email'                       => $LandlordEmail
+				);
+				$LandlordDataJson = json_encode($LandlordData);
+				
+				
+				$params = array(
+				'PropertyIdentifier' => $PropertyIdentifier,
+				'OrganizationName'   => '',
+				'OrganizationId'     => '',
+				'Active'             => 'true',
+				'Name'               => $Name,
+				'UnitNumber'         => $UnitNumber,
+				'Street'             => $Street,
+				'State'              => $State,
+				'City'               => $City,
+				'Zip'                => $Zip,
+				'Phone'              => $Phone,
+				'PhoneExtension'     => $PhoneExtension,
+				'Questions'          => $Questions,
+				'Landlord'           => $LandlordData,
+				'Classification'     => $Classification,
+				'IR'                 => $IR,
+				'IncludeMedicalCollections'  => $IncludeMedicalCollections,
+				'IncludeForeclosures'        => $IncludeForeclosures,
+				'DeclineForOpenBankruptcies' => $DeclineForOpenBankruptcies,
+				'OpenBankruptcyWindow'       => $OpenBankruptcyWindow,
+				'IsFcraAgreementAccepted'    => $IsFcraAgreementAccepted
+				);
+				$params          = json_encode($params);		
+			    $response      = $viewHelperObj->createproperty($params);
+			    $data          = json_decode($response, true); 
+			    if ($response === false)
+               {
+				$aResult['status'] = false;
+				$aResult['errors'] = curl_error($crl);
+               }
+               else{
+				if(empty($data['Errors'])){
+				$smartmoveapiProperty_table =  Engine_Api::_()->getDbtable('Smartmoveapiproperty', 'user');
+				$smartmoveapiProperty_table->insert(array(
+							'Pid'                        => $propertyid,
+							'SmartmovePropertyId'        => $data['PropertyId'],
+							'PropertyIdentifier'         => $data['PropertyIdentifier'],
+							'OrganizationName'           => $data['OrganizationName'],
+							'OrganizationId'             => $data['OrganizationId'],
+							'Active'                     => $data['Active'],
+							'Name'                       => $data['Name'],
+							'FirstName'                  => $FirstName,
+							'LastName'                   => $LastName,
+							'Street'                     => $data['Street'],
+							'City'                       => $data['City'],
+							'State'                      => $data['State'],
+							'Zip'                        => $data['Zip'],
+							'Phone'                      => $data['Phone'],
+							'PhoneExtension'             => $data['PhoneExtension'],
+							'Classification'             => $data['Classification'],
+							'IR'                         => $data['IR'],
+							'IncludeMedicalCollections'  => $data['IncludeMedicalCollections'],
+							'IncludeForeclosures'        => $data['IncludeForeclosures'],
+							'DeclineForOpenBankruptcies' => $data['DeclineForOpenBankruptcies'],
+							'OpenBankruptcyWindow'       => $data['OpenBankruptcyWindow'],
+							'IsFcraAgreementAccepted'    => $data['IsFcraAgreementAccepted'],
+							'UnitNumber'                 => $data['UnitNumber'],
+							'landlordData'               => $LandlordDataJson,
+							'Deposit'                    => $aData['Deposit'],
+							'Rent'                       => $aData['Rent'],
+							'LeaseTermInMonths'          => $aData['LeaseTermInMonths'],
+							'LandlordPays'               => $aData['LandlordPays'],
+							'ProductBundle'              => $aData['ProductBundle'],
+							'created_at'                 => date('Y-m-d'),
+							'updated_at'                 => date('Y-m-d')
+							));
+							
+							$aResult['status'] = true;
+							$aResult['smartmovePid'] = $data['PropertyId'];
+							$aResult['pid'] = $propertyid;
+						}
+						else{
+							$aResult['status'] = false;
+							$aResult['errors'] = $data['Errors'];
+						}
+              }
+
+			    
+			    
+		}catch (Exception $e) {exit($e->getMessage());
+                                $aResult['status'] = false;
+                            }
+        
+	      }
+        
+        echo json_encode($aResult);
+
+        
+	   }
+	   
+	   public function inviterentertobackgroundcheckAction(){
+		   
+		$this->_helper->viewRenderer->setNoRender(true);
+        $this->_helper->layout->disableLayout(); $aData = $this->_request->getPost();
+        $viewer     = Engine_Api::_()->user()->getViewer();
+        date_default_timezone_set($viewer->timezone);
+        $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
+        $aResult=array();
+        $aData = $this->_request->getPost();
+        $pid = $aData['pid'];
+        $renter_email = $aData['renter_email'];
+        $smartmovePid = $aData['smartmovePid'];
+        $userTable = Engine_Api::_()->getDbtable('users', 'user');
+        $InvitedrentersbackgroundreportTable = Engine_Api::_()->getDbtable('Invitedrentersbackgroundreport', 'user');
+        $userData  =  $userTable->fetchRow($userTable->select()->where('email = ?', $renter_email));
+        
+        if(empty($userData)){
+			
+			$InvitedrentersbackgroundreportTable->insert(array(
+							'pid'                        => $pid,
+							'smartmovePid'        =>       $smartmovePid	,
+							'landlord_id'         => $viewer_id,
+							'renter_id'         => 0,
+							'renter_email'         => $renter_email,
+							'backgroundReport'         => 0,
+							'created_at'                 => date('Y-m-d')
+				));
+				
+				$from_email           =  Engine_Api::_()->getApi('settings', 'core')->core_mail_from;
+               $bodyTextContent      =  '';
+                             if (file_exists("emailtemplates/common_email.html")) {
+                                    $htmlExist  = true;
+                                    $file       = fopen("emailtemplates/common_email.html", "r");
+                                    while(!feof($file))
+                                    {
+                                        $bodyTextContent .= fgets($file);
+                                    }
+                                    fclose($file);
+                                }
+                                if($htmlExist){
+                                      $resciverName   = '';
+                                      $content        = '{content}'; 
+                                      $mainContent    = '';                                     
+                                      $mainContent    =  $mainContent.$viewer->displayname. 'requesting you to conduct a transunion background review for his apartment rental '; 
+                                      $mainContent    =  $mainContent.'Please click the link below to verify your email and ';
+                                      $mainContent    =  $mainContent.'continue with the review ';
+                                      $mainContent    =  $mainContent.'For this, please register on <a href="'.$_SERVER['HTTP_HOST'].'">Rentstarz</a>'; 
+                        
+                                     
+                                      $bodyTextTemplate = '';
+                                      $bodyHtmlTemplate = $bodyTextContent;
+                                    foreach( $rParams as $var => $val ) {
+                                          $raw = trim($var, '[]');
+                                          $var = '[' . $var . ']';
+                                          if( !$val ) {
+                                            $val = $var;
+                                          }
+                                          // Fix nbsp
+                                          $val = str_replace('&amp;nbsp;', ' ', $val);
+                                          $val = str_replace('&nbsp;', ' ', $val);
+                                          // Replace
+
+                                         $bodyTextTemplate = str_replace($var, $val, $bodyTextTemplate);
+                                         $bodyHtmlTemplate = str_replace($var, $val, $bodyHtmlTemplate);
+                                    }
+                                    $bodyTextTemplate = strip_tags($bodyTextTemplate);
+                                    $bodyHtmlTemplate = str_replace($resciverName, $resciverData->displayname, $bodyHtmlTemplate);
+                                    $bodyHtmlTemplate = str_replace($content, $mainContent, $bodyHtmlTemplate);
+                                }
+                                    $subject = "Invited you for create bacground report";
+                                    $header  = "From: ".'Rentstarz'." <".$from_email.">\r\n";
+                                    $header .= "MIME-Version: 1.0\r\n";
+                                    $header .= 'Content-type: text/html; charset=iso-8859-1' ."\"\r\n\r\n";
+                                    mail($renter_email, $subject, $bodyHtmlTemplate, $header);
+				
+				
+						$aResult['status'] = true;
+
+		}
+		
+		else{
+			$aResult['status'] = false;
+			$aResult['error'] = "Already registered user";
+		}
+
+                echo json_encode($aResult); 
+     }  
   
         
 }

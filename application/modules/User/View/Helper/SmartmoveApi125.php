@@ -124,7 +124,6 @@ class User_View_Helper_SmartmoveApi125 extends Zend_View_Helper_Abstract
         curl_setopt($ch, CURLOPT_HEADER, 0);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         return $response = curl_exec($ch);
-
 	}
 	    public function AcceptApplicationRenterStatus($email,$applicationId){
 
@@ -259,6 +258,29 @@ class User_View_Helper_SmartmoveApi125 extends Zend_View_Helper_Abstract
         return $response = curl_exec($ch);
 
         }
+    public function getProperty($Id){
+
+        $servertime     = $this->getServertime();
+        $servertime     = $this->getServertime();
+		$partnerId      = 125;
+        $SecurityKey    ='3dEf7KJDZNiw7HlrCrBqsu/2Ywgd8QPAodIXhqsclm3mTrma+cLK/gheqmey92j94zf9jUQQG5vTZfRY9zyvdA==';
+        $securityToken  = $this->GetSignature($partnerId, $SecurityKey, $servertime);
+        $header         = array();
+        $header[]       = 'Content-type: application/json';
+        $header[]       = 'Authorization: smartmovepartner partnerId="'.$partnerId.'",serverTime="'.$servertime.'",securityToken="'.$securityToken.'"';
+        $posturl        = "https://smlegacygateway-integration.mysmartmove.com/LandlordApi/v2/Application/$applicationId";
+        $posturl  = "https://smlegacygateway-integration.mysmartmove.com/LandlordApi/v2/Property/$Id";
+
+        $ch             = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $posturl);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+        curl_setopt($ch, CURLOPT_HEADER, 1);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        return $response = curl_exec($ch);
+
+        }
         public function updaterenter($params){
 		$servertime     = $this->getServertime();
 		$partnerId      = 125;
@@ -304,6 +326,55 @@ class User_View_Helper_SmartmoveApi125 extends Zend_View_Helper_Abstract
 		return $response;
 		
 	}
+	public function getPropertyQuestionAnsArray($q1Ans,$q2Ans,$q3Ans,$q4Ans,$q5Ans){
+
+        $smartmoveapiquestions_table      =  Engine_Api::_()->getDbtable('smartmoveapiquestions', 'user');
+        $smartmoveapiquestionAnswer_table =  Engine_Api::_()->getDbtable('Smartmoveapiquestionanswers', 'user');
+        $smartmoveQuestionsData           =  $smartmoveapiquestions_table->fetchAll($smartmoveapiquestions_table->select());
+        $resultData                       =  array();
+        $questionData                     =  array();
+        
+        $i =1;
+
+        foreach($smartmoveQuestionsData as $question){
+			if($question->qid == 1){
+			$arrQans = explode("_",$q1Ans);	
+			}
+			if($question->qid == 2){
+			$arrQans = explode("_",$q2Ans);	
+			}
+			if($question->qid == 3){
+			$arrQans = explode("_",$q3Ans);	
+			}
+			if($question->qid == 4){
+			$arrQans = explode("_",$q4Ans);	
+			}
+			if($question->qid == 5){
+			$arrQans = explode("_",$q5Ans);	
+			}
+            //print_r($arrQans);
+//exit;
+            $tmpAnswerInfo      =   array();
+            $questionData[0]['QuestionId']          = $question->qid;
+            $questionData[0]['QuestionText']        = $question->qtext;
+            $smartmoveapiquestionAnswerData         = $smartmoveapiquestionAnswer_table->fetchAll($smartmoveapiquestionAnswer_table->select()->where('qid = ?', $question->qid));
+
+            foreach($smartmoveapiquestionAnswerData as $answer){
+                        $answerInfo =   array(
+                                            'AnswerText'=>$answer->answer_text,
+                                            'AnswerDescription'=> $answer->answer_description
+                                            );
+                        $tmpAnswerInfo[]    =   $answerInfo;
+            }
+            $questionData[0]['SelectedAnswer']      = $arrQans[1];
+            $questionData[0]['Options']             = $tmpAnswerInfo;
+            $resultData = array_merge($resultData,$questionData);
+            $i++;
+        }
+        //echo "<pre>"; print_r($resultData); exit;
+        return $resultData;
+    }
+
 	public function getStripeFiles(){
             //dirname($_SERVER['SCRIPT_FILENAME']).'/filemanager/'
             //echo dirname($_SERVER['SCRIPT_FILENAME']); exit;

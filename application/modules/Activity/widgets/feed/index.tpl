@@ -12,9 +12,9 @@
  $status    		=   'false';
  $popup_status 		=	'large_popUp';
 ?>
-<script src="/application/modules/User/externals/scripts/lightbox-plus-jquery.min.js"></script>
- <link href="/application/modules/User/externals/styles/lightbox.min.css" rel="stylesheet" type="text/css">
-<script src="/application/modules/User/externals/scripts/message_notififaction.js"></script>
+<script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/lightbox-plus-jquery.min.js"></script>
+ <link href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/lightbox.min.css" rel="stylesheet" type="text/css">
+<script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/message_notififaction.js"></script>
 <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/jRating.jquery.js"></script>
 <!--<script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/dropdown.js"></script>
 <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/dropdown.css"> -->
@@ -24,7 +24,7 @@ var filtermode = '<?php echo $this->filtermode;?>';
 <?php
 // member type
     $viewer = Engine_Api::_()->user()->getViewer();
-    date_default_timezone_set($viewer->timezone);
+    date_default_timezone_set('EST');
     $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
     if( !empty($fieldsByAlias['profile_type']) )
     {
@@ -73,7 +73,7 @@ else{ $checkprofilefeedtype = '';}
     $userHelperObj  = $this->getHelper('User');
     $memberPackage  = $userHelperObj->getmemberpackage($viewer->getIdentity());
     $package_type   = $memberPackage ->package_type;
-    $scoutCount     = $userHelperObj->getscoutcount($viewer->getIdentity());
+    $scoutCount     = $userHelperObj->getscoutcount($viewer->getIdentity()); 
     $settings       = Engine_Api::_()->getApi('settings', 'core');
     $user_premiumLevelProvision       = $settings->user_premiumLevelProvision; 
     $user_basicPropertyLimit          = $settings->user_basicPropertyLimit;  
@@ -517,7 +517,7 @@ jQuery(document).on('click','.preference_unit',function(event){
 <!-- map popup ------>
 <div id="light2" class="white_content map_popup select_prefernce_location_popup">
 <div class="pop_up_title"><div class="div_attachment_title"><a href="<?php echo $this->baseUrl().'/location' ?>" target="_blank">View Full Map</a></div>
-<div class="div_attachment_cancel"><img src="/application/modules/User/externals/images/GREYcancel.png"></div></div>
+<div class="div_attachment_cancel"><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/GREYcancel.png"></div></div>
 <div class="popup_content">
 <div class="message" style="color:red"></div>
 <div class="map_location_div">
@@ -679,7 +679,7 @@ jQuery( ".reset_to_usa" ).click(function() {
 jQuery( ".location_dropdown_submenu" ).click(function() {jQuery( '.location_dropdown_menu' ).css( 'display','block' );});
 jQuery( ".location_dropdown_menu" ).mouseout(function() {jQuery( ".location_dropdown_menu" ).css( 'display','none' );});
 </script>
-
+<input type="hidden" id="sPage" value="1"/>
 <!-- Renter home feed-->
 
 <?php if($checkhomefeedtype == 'tenantfeed' || $checkprofilefeedtype == 'landlordfeed'):?>
@@ -720,7 +720,7 @@ jQuery( ".location_dropdown_menu" ).mouseout(function() {jQuery( ".location_drop
 		<?php $UserData = $userTable->fetchRow($userTable->select()->where('user_id = ?', $data['property_owner_id'])); ?>
 		<?php if(!empty($UserData)):?>
 		<?php
-                $profileNoPicInfo   =   $viewHelperObj->getNoPhoto($UserData);
+              //  $profileNoPicInfo   =   $viewHelperObj->getNoPhoto($UserData);
                 $type               =   'thumb.icon';
                 $safeName           =   ( $type ? str_replace('.', '_', $type) : 'main' );
                 $src                =   $UserData->getPhotoUrl($type);
@@ -758,9 +758,9 @@ jQuery( ".location_dropdown_menu" ).mouseout(function() {jQuery( ".location_drop
 						 <?php endif;?>
 					   
 						<?php if($dev_type == 1): // mobile?>
-						<a href="<?php echo $this->baseUrl().'/property/map/'.$data['id'] ?>" target="_blank"><img src= "/application/modules/User/externals/images/LOCATION.png" style="margin-top: -4px;"></a>
+						<a href="<?php echo $this->baseUrl().'/property/map/'.$data['id'] ?>" target="_blank"><img src= "<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/LOCATION.png" style="margin-top: -4px;"></a>
 						<?php else:?>
-						<span class="location_icon" data-city= "<?php echo $data['prty_city'];?>" data-id ="<?php echo $data['id'];?>" data-type= "<?php echo 'property';?>" data-lat=<?php echo $data['latitude'];?> data-lng= <?php echo $data['longitude'];?>><img src= "/application/modules/User/externals/images/LOCATION.png" style="margin-top: -4px;"></span>
+						<span class="location_icon" data-city= "<?php echo $data['prty_city'];?>" data-id ="<?php echo $data['id'];?>" data-type= "<?php echo 'property';?>" data-lat=<?php echo $data['latitude'];?> data-lng= <?php echo $data['longitude'];?>><img src= "<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/LOCATION.png" style="margin-top: -4px;"></span>
 						<?php endif;?>
 						<?php endif;?>				 
 					</div>		 
@@ -781,28 +781,33 @@ jQuery( ".location_dropdown_menu" ).mouseout(function() {jQuery( ".location_drop
 								<?php 
 								$description  = strip_tags($data['description']);
 								if(strlen($description)<=300){echo $description;}
-								else{$y=substr($description,0,300) . '...'; echo $y;}
+								else{$description=substr($description,0,300) . '...'; echo $description;}
+								$feedBody =  str_replace("'"," ",$description);
+								$feedBody = str_replace(","," ",$feedBody);
+								$tagtext    = $data['property_name'];
+								$feed_image = '/'.$propertyImageData->image;
+								$detailUrl  = '/property/'.$data['id'];
 								?>
 							</div>
 							</div>
 						<div class="feed_property_details row" style="margin-bottom: 27px;margin-left: 0px;">
-							<div class="property_list_spl housing_type"><span class="qwerty"><img src="/application/modules/User/externals/images/apartments.svg"></span>  <span class="qwerty_label"><?php echo $data['housing_type'];?></span></div>
-							<div class="property_list_spl price"><span class="qwerty"><img src="/application/modules/User/externals/images/price.png"></span><span class="qwerty_label"> <?php echo $data['price'];?></span></div>
-							<div class="property_list_spl bedroom"><span class="qwerty"><img src="/application/modules/User/externals/images/bedroom.png"></span><span class="qwerty_label"> <?php echo $data['no_of_rooms'];?> Bedroom</span></div>
+							<div class="property_list_spl housing_type"><span class="qwerty"><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/apartments.svg"></span>  <span class="qwerty_label"><?php echo $data['housing_type'];?></span></div>
+							<div class="property_list_spl price"><span class="qwerty"><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/price.png"></span><span class="qwerty_label"> <?php echo $data['price'];?></span></div>
+							<div class="property_list_spl bedroom"><span class="qwerty"><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/bedroom.png"></span><span class="qwerty_label"> <?php echo $data['no_of_rooms'];?> Bedroom</span></div>
 							<div class="property_list_spl pets"><span class="qwerty">
 								<?php if($data['has_pets'] == 'No'):?>
-								<img src="/application/modules/User/externals/images/nopet.png"></span><span class="qwerty_label"> No </span>
+								<img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/nopet.png"></span><span class="qwerty_label"> No </span>
 								<?php else:?>
 								<?php if($data['pets_type']== 'Dogs'):?>
-								<img src="/application/modules/User/externals/images/dog.svg"></span><span class="qwerty_label"> Dog </span>
+								<img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/dog.svg"></span><span class="qwerty_label"> Dog </span>
 								<?php elseif($data['pets_type'] == 'Cats'):?>
-								<img src="/application/modules/User/externals/images/cat.svg"></span><span class="qwerty_label"> Cat </span>
+								<img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/cat.svg"></span><span class="qwerty_label"> Cat </span>
 								<?php elseif($data['pets_type'] == 'Cats & Dogs'):?>
-								<img src="/application/modules/User/externals/images/catndog.png"></span><span class="qwerty_label"> Cats & Dogs </span>
+								<img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/catndog.png"></span><span class="qwerty_label"> Cats & Dogs </span>
 								<?php elseif($data['pets_type'] == 'Birds'):?>
-								<img src="/application/modules/User/externals/images/bird.svg"></span><span class="qwerty_label"> Birds </span>
+								<img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/bird.svg"></span><span class="qwerty_label"> Birds </span>
 								<?php elseif($data['pets_type'] == 'Small pets'):?>
-								<img src="/application/modules/User/externals/images/tortoise.svg"></span><span class="qwerty_label"> Small pets </span>
+								<img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/tortoise.svg"></span><span class="qwerty_label"> Small pets </span>
 								<?php endif;?>
 								<?php endif;?>
 							</div>
@@ -835,7 +840,21 @@ jQuery( ".location_dropdown_menu" ).mouseout(function() {jQuery( ".location_drop
 										<a href="javascript:void(0)" >&nbsp;&nbsp;Message</a>
 								 <?php endif; ?>
 							 </li>	
-							<li> <a href="javascript:void(0)" class="feed_comment" action_id="<?php echo $data['id']; ?>" >&nbsp;&nbsp;Comment</a></li>
+							<li> <a href="javascript:void(0)" class="feed_comment" action_id="<?php echo $data['id']; ?>" >&nbsp;&nbsp;Comment&nbsp;&nbsp;</a></li>
+							<li>
+							<input type="hidden" class="feedbody_<?php echo $data['id'];?> " value="<?php echo $feedBody?>">
+							<div class="fbsharediv"  
+							onClick="fbShare('<?php echo  $data['id']; ?>','<?php echo $tagtext ?>','<?php echo $feed_image; ?>','<?php echo $detailUrl; ?>')"
+							>
+							<i class="fa fa-facebook-square"  style="color: #3b5998;"> </i><span style="color: #f58410;margin-left: 4px;">Share</span>
+							</div>
+							</li>
+							<li>
+							<div class="fbsharediv"  onClick="twitterShare('<?php echo $data['id']; ?>','<?php echo $tagtext ?>','<?php echo $feed_image; ?>','<?php echo $detailUrl; ?>')">
+							<i class="fa fa-twitter" style="color: #00aced;"></i><span style="color: #f58410;margin-left: 4px;">Share</span>
+							</div>	
+
+							</li>
 							
 			<?php 
 			/*$meetingSchedulerTable   =  Engine_Api::_()->getDbtable('meetingscheduler', 'user'); 
@@ -928,10 +947,15 @@ jQuery( ".location_dropdown_menu" ).mouseout(function() {jQuery( ".location_drop
 			 </div>
 		</li>
 		<?php endif;?>
+		<?php if($licount >= 10): break; endif;?>
 		<?php  endforeach; ?>
 	</ul>
 
 </div>	
+<?php if(count($this->propertyListData) > 10):?>
+ <div class="holder_div_inn renterFeedlLoadmore loadmore"> <a href="javascript:void(0);">Load More +</a> </div>
+<?php endif;?>
+
 <?php endif;?>
 <?php endif;?>
 
@@ -973,14 +997,14 @@ $propertyReqResultData = $this->propertyReqResultData;
      </ul>
      <?php endif; */?>
 
-    <ul>
+    <ul id="results-pane_ul">
     <?php
         $viewHelperObj      =   $this->getHelper('ItemPhoto');
         foreach($propertyReqResultData as $result):
            $licount =  $licount + 1;
                 $user = $userTable->fetchRow($userTable->select()->where('user_id = ?', $result['userId']));
            if(!empty($user)) :    
-                $profileNoPicInfo   =   $viewHelperObj->getNoPhoto($user);
+              //  $profileNoPicInfo   =   $viewHelperObj->getNoPhoto($user);
                 $type               =   'thumb.icon';
                 $safeName           =   ( $type ? str_replace('.', '_', $type) : 'main' );
                 $src                =   $user->getPhotoUrl($type);
@@ -1014,9 +1038,9 @@ $propertyReqResultData = $this->propertyReqResultData;
 			<span class="feed_location">     
           	<?php if($result['prty_country'] !=''):?>
 	        <?php if($dev_type == 1): // mobile?>
-			<a href="<?php echo $this->baseUrl().'/property/requirement/map/'.$data->id ?>" target="_blank"><img src= "/application/modules/User/externals/images/LOCATION.png" style="margin-top: -4px;"></a>
+			<a href="<?php echo $this->baseUrl().'/property/requirement/map/'.$data->id ?>" target="_blank"><img src= "<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/LOCATION.png" style="margin-top: -4px;"></a>
 			<?php else:?>
-			<span class="location_icon" style="height: 30px;width: 15px;" data-city= "<?php echo $result['prty_city'];?>"  data-id ="<?php echo  $result['reqId'];?>"  data-lat=<?php echo $result['latitude'];?> data-lng= <?php echo $result['longitude'];?>><img src= "/application/modules/User/externals/images/LOCATION.png" style="margin-top: -4px;"></span>
+			<span class="location_icon" style="height: 30px;width: 15px;" data-city= "<?php echo $result['prty_city'];?>"  data-id ="<?php echo  $result['reqId'];?>"  data-lat=<?php echo $result['latitude'];?> data-lng= <?php echo $result['longitude'];?>><img src= "<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/LOCATION.png" style="margin-top: -4px;"></span>
 			<?php endif;?>
 			<span>	
 			<?php  //echo $result['prty_country']." , ".$result['prty_state']." , ".$result['prty_city'] ;?>	
@@ -1097,7 +1121,10 @@ $propertyReqResultData = $this->propertyReqResultData;
                 <?php else:?>
                 <div class="not_rated">Not Rated</div>
                 <?php endif;?>
-                 </div>              
+                 </div> 
+                 <div class="invite_btn_div">
+                 <a href="javascript:void(0)" class="invitetopropery" rId = "<?php echo $result['userId'];?>" property-count="<?php echo $userHelperObj->getpropertycount($viewer->getIdentity())?>">Invite</a>
+                 </div>             
                  </div>
                  <div class="col-md-7 col-sm-8 col-xs-12">
                      <?php echo substr($result['description'],0,200) . '...';?>
@@ -1114,37 +1141,37 @@ $propertyReqResultData = $this->propertyReqResultData;
                     <?php if($dev_type== 1):?>
                     
                    <?php if($result['no_of_rooms']!="Room"): ?>
-                    <div class="voucher1" ><img src="/application/modules/User/externals/images/feed_bedroom_orange.png" width="22px" height="22px"><h5 style="line-height: 0.8;float: right;padding-left: 7px;"><?php  echo  $result['no_of_rooms'] ;?></h5></div>
+                    <div class="voucher1" ><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/feed_bedroom_orange.png" width="22px" height="22px"><h5 style="line-height: 0.8;float: right;padding-left: 7px;"><?php  echo  $result['no_of_rooms'] ;?></h5></div>
                    <?php endif; ?>
-                    <div class="voucher1" ><img src="/application/modules/User/externals/images/dollar-symbol.svg" width="22px" height="22px"> <h5 style="line-height: 0.8;float: right;"><?php  echo  $result['budget'] ; if($result['budget_range_to']!='0'): echo " - ".$result['budget_range_to'];endif;?> </h5></div>
-                    <div class="voucher1" title="<?php  echo  $result['housing_type'] ;?>" style="margin-right: 3px;" ><img src="/application/modules/User/externals/images/orangeapartments.svg" width="22px" height="22px"> </div>
+                    <div class="voucher1" ><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/dollar-symbol.svg" width="22px" height="22px"> <h5 style="line-height: 0.8;float: right;"><?php  echo  $result['budget'] ; if($result['budget_range_to']!='0'): echo " - ".$result['budget_range_to'];endif;?> </h5></div>
+                    <div class="voucher1" title="<?php  echo  $result['housing_type'] ;?>" style="margin-right: 3px;" ><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/orangeapartments.svg" width="22px" height="22px"> </div>
                    
                     
                     <?php if($result['pets_allowed']=='Yes'): ?>
                     
 						  <?php if($result['pets_type']== 'Dogs'):?>                     
-							<div class="voucher1" title="Dogs"><img src="/application/modules/User/externals/images/dog.png" width="22px" height="22px"></div>
+							<div class="voucher1" title="Dogs"><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/dog.png" width="22px" height="22px"></div>
 						 <?php elseif($result['pets_type'] == 'Cats'):?>
-							 <div class="voucher1" title="Cats"><img src="/application/modules/User/externals/images/cat.png" width="22px" height="22px"></div>
+							 <div class="voucher1" title="Cats"><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/cat.png" width="22px" height="22px"></div>
 						 <?php elseif($result['pets_type'] == 'Cats & Dogs'):?>
-							  <div class="voucher1" title="Cats & Dogs"><img src="/application/modules/User/externals/images/Layer-18.png" width="22px" height="22px"></div>
+							  <div class="voucher1" title="Cats & Dogs"><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/Layer-18.png" width="22px" height="22px"></div>
 						 <?php elseif($result['pets_type'] == 'Birds'):?>
-							   <div class="voucher1" title="Birds"><img src="/application/modules/User/externals/images/bird.png" width="22px" height="22px"></div>
+							   <div class="voucher1" title="Birds"><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/bird.png" width="22px" height="22px"></div>
 						 <?php elseif($result['pets_type'] == 'Small pets'):?> 
-							  <div class="voucher1" title="Small pets"><img src="/application/modules/User/externals/images/tortoise.svg" width="22px" height="22px"></div> 
+							  <div class="voucher1" title="Small pets"><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/tortoise.svg" width="22px" height="22px"></div> 
 						 <?php endif; ?>
 						
                     <?php endif; ?>
                     
                     
                     <?php if($result['vouchers']=='Yes'): ?>
-                    <div class="voucher1 voucher_image" style="float:left;"><img src="/application/modules/User/externals/images/vochericon.jpg" width="22px" height="22px"></div>
+                    <div class="voucher1 voucher_image" style="float:left;"><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/vochericon.jpg" width="22px" height="22px"></div>
                     <?php endif; ?>
                     <?php if($result['wheelchair']=='Yes'): ?>
-                    <div class="voucher1" ><img src="/application/modules/User/externals/images/wheelchair.svg" width="27px" height="22px"></div>
+                    <div class="voucher1" ><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/wheelchair.svg" width="27px" height="22px"></div>
                     <?php endif;   ?>
                     <?php  if($result['parking']=='Yes'): ?>
-                    <div class="voucher1" ><img src="/application/modules/User/externals/images/parking-sign.svg" width="27px" height="22px"></div>
+                    <div class="voucher1" ><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/parking-sign.svg" width="27px" height="22px"></div>
                     <?php endif; ?>
                     
                     
@@ -1157,35 +1184,35 @@ $propertyReqResultData = $this->propertyReqResultData;
                  <?php if($dev_type== 2):?>
                      <div class="feed_filter_count_icons dev2">           
                     <?php if($result['no_of_rooms']!="Room"): ?>
-                    <span class="voucher1 bedroom" ><img src="/application/modules/User/externals/images/feed_bedroom_orange.png" width="22px" height="22px"><span style="line-height: 0.8;padding-left: 7px;"><?php  echo  $result['no_of_rooms'] ;?></span></span>
+                    <span class="voucher1 bedroom" ><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/feed_bedroom_orange.png" width="22px" height="22px"><span style="line-height: 0.8;padding-left: 7px;"><?php  echo  $result['no_of_rooms'] ;?></span></span>
                     <?php endif; ?>
-                    <span class="voucher1 price" ><img src="/application/modules/User/externals/images/dollar-symbol.svg" width="22px" height="22px"> <span style="line-height: 0.8;"><?php  echo  $result['budget'] ; if($result['budget_range_to']!='0'): echo " - ".$result['budget_range_to'];endif;?></span></span>
-                    <span class="voucher1 housing_type" title="<?php  echo  $result['housing_type'] ;?>" ><img src="/application/modules/User/externals/images/orangeapartments.svg" width="22px" height="22px"></span>
+                    <span class="voucher1 price" ><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/dollar-symbol.svg" width="22px" height="22px"> <span style="line-height: 0.8;"><?php  echo  $result['budget'] ; if($result['budget_range_to']!='0'): echo " - ".$result['budget_range_to'];endif;?></span></span>
+                    <span class="voucher1 housing_type" title="<?php  echo  $result['housing_type'] ;?>" ><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/orangeapartments.svg" width="22px" height="22px"></span>
 
 
                    <?php if($result['pets_allowed']=='Yes'): ?>
                         <?php if($result['pets_type']== 'Dogs'):?>                     
-							<span class="voucher1 pets" title="Dogs"><img src="/application/modules/User/externals/images/dog.png" width="22px" height="22px"></span>
+							<span class="voucher1 pets" title="Dogs"><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/dog.png" width="22px" height="22px"></span>
 						 <?php elseif($result['pets_type'] == 'Cats'):?>
-							 <span class="voucher1 pets" title="Cats"><img src="/application/modules/User/externals/images/cat.png" width="22px" height="22px"></span>
+							 <span class="voucher1 pets" title="Cats"><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/cat.png" width="22px" height="22px"></span>
 						 <?php elseif($result['pets_type'] == 'Cats & Dogs'):?>
-							  <span class="voucher1 pets" title="Cats & Dogs"><img src="/application/modules/User/externals/images/Layer-18.png" width="22px" height="22px"></span>
+							  <span class="voucher1 pets" title="Cats & Dogs"><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/Layer-18.png" width="22px" height="22px"></span>
 						 <?php elseif($result['pets_type'] == 'Birds'):?>
-							   <span class="voucher1 pets" title="Birds"><img src="/application/modules/User/externals/images/bird.png" width="22px" height="22px"></span>
+							   <span class="voucher1 pets" title="Birds"><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/bird.png" width="22px" height="22px"></span>
 						 <?php elseif($result['pets_type'] == 'Small pets'):?> 
-							  <span class="voucher1 pets" title="Small pets"><img src="/application/modules/User/externals/images/tortoise.png" width="22px" height="22px"></span> 
+							  <span class="voucher1 pets" title="Small pets"><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/tortoise.png" width="22px" height="22px"></span> 
 						 <?php endif; ?>
                     <?php endif; ?>
 
 
                     <?php if($result['vouchers']=='Yes'): ?>
-                    <span class="voucher1 vouchers" ><img src="/application/modules/User/externals/images/vochericon.jpg" width="22px" height="22px"></span>
+                    <span class="voucher1 vouchers" ><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/vochericon.jpg" width="22px" height="22px"></span>
                     <?php endif; ?>
                     <?php if($result['wheelchair']=='Yes'): ?>
-                    <span class="voucher1 wheelchair" ><img src="/application/modules/User/externals/images/wheelchair.svg" width="27px" height="22px"></span>
+                    <span class="voucher1 wheelchair" ><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/wheelchair.svg" width="27px" height="22px"></span>
                     <?php endif;   ?>
                       <?php  if($result['parking']=='Yes'): ?>
-                    <span class="voucher1 parking" ><img src="/application/modules/User/externals/images/parking-sign.svg" width="27px" height="22px"></span>
+                    <span class="voucher1 parking" ><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/parking-sign.svg" width="27px" height="22px"></span>
                     <?php endif; ?>
                    
                     </div>
@@ -1205,11 +1232,15 @@ $propertyReqResultData = $this->propertyReqResultData;
      </div>
      </li>
      <?php endif;?>
+     <?php if($licount >= 10): break; endif;?>
   <?php   endforeach;   ?>
    </ul>
 
   </div>
-    <?php endif;?>
+  <?php if(count($this->propertyReqResultData) > 10):?>
+ <div class="holder_div_inn landlordFeedlLoadmore loadmore"> <a href="javascript:void(0);">Load More +</a> </div>
+<?php endif;?>
+<?php endif;?>
 <?php endif;?>
 
 <!-- End landlord homefeed-->
@@ -1234,7 +1265,7 @@ $propertyReqResultData = $this->propertyReqResultData;
 
 <!-- map popup ------>
 <div id="light1" class="white_content map_popup">
-<div class="pop_up_title"><div class="div_attachment_title"></div><div class="div_attachment_cancel"><img src="/application/modules/User/externals/images/GREYcancel.png"></div></div>
+<div class="pop_up_title"><div class="div_attachment_title"></div><div class="div_attachment_cancel"><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/GREYcancel.png"></div></div>
 <div class="popup_content">
 <div class="map_div">
 </div>
@@ -1242,7 +1273,7 @@ $propertyReqResultData = $this->propertyReqResultData;
 </div>
 
 <div id="light3" class="white_content">
-<div class="pop_up_title rating_poup_title"><div class="div_attachment_title">Preferred Location</div><div class="div_attachment_cancel"><img src="/application/modules/User/externals/images/GREYcancel.png"></div></div>
+<div class="pop_up_title rating_poup_title"><div class="div_attachment_title">Preferred Location</div><div class="div_attachment_cancel"><img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/GREYcancel.png"></div></div>
 <div class="popup_content">
 <?php if($profile_type == 4):?>
 <div class="confirm_text">Choose your preferred location to see renters requirement feed from that location. You can anytime change from edit profile</div>
@@ -1257,7 +1288,8 @@ $propertyReqResultData = $this->propertyReqResultData;
 </div>
 <!-- end map popup ------>
 <div id="fade" class="black_overlay"></div>
-
+<div id="fb-root"></div>
+ <div id="stantard-dialogBox" style="font-size:30px"></div>
 <script>
     var profile_type = '<?php echo  $profile_type; ?>';
     var prefered_location = '<?php echo $this->viewer()->prefered_location ;?>';
@@ -1733,4 +1765,183 @@ jQuery('body').on('click', '.meetingrequest', function(event){
     jQuery( ".results_pane_li:first .feed_filter_count_icons.dev2" ).attr("data-scrollto","tooltip");
     jQuery( ".results_pane_li:first .feed_filter_count_icons.dev2" ).attr("data-intro"," The icons provides you quick information on the feed. Such as parking, rent subsidies pets, and desired rent price, bedroom amount and type of rental desired.");
  }
+ 
+ jQuery( ".renterFeedlLoadmore" ).click(function() {
+	
+	        var oData       = new Object();
+			var total_count='<?php echo count($this->propertyListData);?>'; 
+	        var listperpage=10;
+	        var totalpages = Math.ceil(total_count/listperpage); 
+			var licontent=(jQuery("#activity-feed .activity_item_li") .children()).length;
+			
+			if(totalpages >  jQuery('#sPage').val()){
+
+						var noRecordsprecent = parseInt(jQuery("#activity-feed .activity_item_li").length); 
+						var sBaseUrl         = '<?php echo $this->baseUrl(); ?>';
+						var sUrl             = sBaseUrl + '/user/index/renterfeedajax/offset/'+noRecordsprecent+'/limit/'+listperpage;	
+						pagecount            = parseInt(jQuery('#sPage').val()) + 1;
+						jQuery('#sPage').val(pagecount);						
+						jQuery.ajax({
+							async:false,
+							url:sUrl,
+							data : oData,
+							type: "POST",
+							dataType: 'json',
+							success:function(data) {
+							var html   = jQuery(data.html);								
+								jQuery("#activity-feed").append(html);
+								if(totalpages == jQuery('#sPage').val()){				
+									jQuery( ".loadmore" ).hide();
+								}
+								
+							}
+						});
+
+				if(licontent==0)
+				{
+				
+				}
+			}
+
+		});
+ jQuery( ".landlordFeedlLoadmore" ).click(function() {
+
+	        var oData       = new Object();
+			var total_count='<?php echo count($this->propertyReqResultData);?>'; 
+	        var listperpage=10;
+	        var totalpages = Math.ceil(total_count/listperpage); 
+			var licontent=(jQuery("#results-pane_ul .results_pane_li") .children()).length;
+			
+			if(totalpages >  jQuery('#sPage').val()){
+
+						var noRecordsprecent = parseInt(jQuery("#results-pane_ul .results_pane_li").length); 
+						var sBaseUrl         = '<?php echo $this->baseUrl(); ?>';
+						var sUrl             = sBaseUrl + '/user/index/landlordfeedajax/offset/'+noRecordsprecent+'/limit/'+listperpage;
+						pagecount            = parseInt(jQuery('#sPage').val()) + 1;
+						jQuery('#sPage').val(pagecount);						
+						jQuery.ajax({
+							async:false,
+							url:sUrl,
+							data : oData,
+							type: "POST",
+							dataType: 'json',
+							success:function(data) {
+							var html   = jQuery(data.html);								
+								jQuery("#results-pane_ul").append(html);
+								if(totalpages == jQuery('#sPage').val()){				
+									jQuery( ".loadmore" ).hide();
+								}
+								
+							}
+						});
+
+				if(licontent==0)
+				{
+				
+				}
+			}
+
+		});
+
+  // this loads the Facebook API
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    window.fbAsyncInit = function () {
+        var appId = '317350178671936';
+        FB.init({
+            appId: appId,
+            status : true, // check login status
+			cookie : true, // enable cookies to allow the server to access the session
+			xfbml : true, // parse XFBML
+            version: 'v2.11'
+        });
+    };
+
+    // FB Share with custom OG data.
+
+
+function fbShare(id,tagText,shareImage,detailedurl){
+
+            var shareBody = jQuery('.feedbody_'+id).val(); 
+            var image = 'http://rentstarz.com'+shareImage;	
+	        var url   = 'http://rentstarz.com'+detailedurl; 
+
+                // Dynamically gather and set the FB share data. 
+                var FBDesc      = shareBody;
+                var FBTitle     = tagText;
+                var FBLink      = url;
+                var FBPic       = image;
+
+                // Open FB share popup
+                FB.ui({
+                    method: 'share_open_graph',
+                    action_type: 'og.shares',
+                    action_properties: JSON.stringify({
+                        object: {
+                            'og:url': FBLink,
+                            'og:title': FBTitle,
+                            'og:description': FBDesc,
+                            'og:image': FBPic
+                        }
+                    })
+                },
+                function (response) {
+                // Action after response
+                })
+      }
+
+function twitterShare(id,tagText,shareImage,detailedurl){
+	
+
+    var redirectUrl;
+    var image = 'http://rentstarz.com'+shareImage;
+
+	var url = 'http://rentstarz.com'+detailedurl;
+	redirectUrl = url.replace('&','%26');
+    // Get the fact text
+   // var factText = $('#fact').text();
+    var factText = tagText;
+    
+    // Convert to string
+    var factStr = factText.toString();
+    
+    // Fact length
+    var factLen = factText.length;
+    
+    // Formats "facts" that are too long... remove if not needed
+    if (factLen > 103) { // max chacters allowed
+        // trim, and allow space for '...'"
+        var trimFact = factStr.substring(0, 70);
+        var trimFact = trimFact.trim(); //<-- ensures the last character isnt ' '
+        factStr = trimFact + "...";
+    }
+    // Update the link
+    var linkRef = " https://twitter.com/share?text= " + factStr +"&url="+ redirectUrl +"&hashtags=rentstarz , property";
+    window.open(linkRef, 'mywin','left=20,top=20,width=500,height=500,toolbar=1,resizable=0')
+    
+    jQuery('#factLink').attr('href', linkRef);
+
+}	
+		
+		
+jQuery( ".invitetopropery" ).click(function() {
+	var propertCount  =jQuery(this).attr('property-count');		 
+	var renterId      =jQuery(this).attr('rId');		 
+	if(propertCount == 0){
+	  jQuery('#stantard-dialogBox').dialogBox({
+										autoHide: true,
+										time: 3000,
+										content: 'There is no property to invite, create one now and invite the renter',
+      });
+	}
+	else{	
+		location.href = '<?php echo $this->baseUrl(); ?>' + '/invitetoproperty?name='+renterId;
+	}
+});
 </script>

@@ -198,7 +198,6 @@ var viewer_identity='<?php echo $viwer_id; ?>';
      ls.parentNode.insertBefore(cid, ls.nextSibling);
      }());
 </script>
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 
 <script type="text/javascript">
 
@@ -236,8 +235,9 @@ var viewer_identity='<?php echo $viwer_id; ?>';
     }
     });
 
+//Stripe.setPublishableKey('<?php echo $this->params['public_live_key']; ?>');
+Stripe.setPublishableKey('<?php echo $this->params['public_test_key']; ?>');
 
-Stripe.setPublishableKey('<?php echo $this->params['public_live_key']; ?>');
 var form = jQuery('#reportpayment-form');
 form.submit(function(event) {
 

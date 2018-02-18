@@ -22,6 +22,7 @@ class Activity_Widget_FeedController extends Engine_Content_Widget_Abstract
   {
     // Don't render this if not authorized
     $viewer = Engine_Api::_()->user()->getViewer();
+    date_default_timezone_set('EST');
     if ($viewer -> getIdentity()){
        $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
             if( !empty($fieldsByAlias['profile_type']) )

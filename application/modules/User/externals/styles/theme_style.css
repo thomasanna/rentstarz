@@ -3358,7 +3358,8 @@ line-height: 35px !important;
 .menu_core_main:active ,
 .find_menu:active ,
 .find_menu:hover {
-letter-spacing: 2px;
+/*letter-spacing: 2px;*/
+text-decoration: underline !important;
 background-color:#fff !important;
 box-sizing: inherit;
 -webkit-transition-property: all;
@@ -3744,7 +3745,18 @@ color: #f58410 !important;
     margin-right: 12px;
 }
 .layout_advancedarticles_listarticle_block .comment_div {
-    float: right;
+    float: left;
+    margin-right: 12px;
+}
+#global_page_ynresponsive1-index-dashboard .fbsharediv {
+    float: left;
+    cursor:pointer;
+    margin-right: 5px;
+}
+.layout_advancedarticles_listarticle_block .fbsharediv  {
+    float: left;
+    cursor:pointer;
+    margin-right: 12px;
 }
 .layout_advancedarticles_listarticle_block .unlike_article ,
 .layout_advancedarticles_listarticle_block .like_article {
@@ -4592,7 +4604,8 @@ box-shadow: 2px 2px 7px #888 !important;
     color: #364347;
     cursor:pointer;
 }
-.renterFeedlLoadmore a:link{
+.renterFeedlLoadmore a:link,
+.landlordFeedlLoadmore a:hover{
 color: #364347 !important;
 }
 .FeedlLoadmoreloader{
@@ -5255,14 +5268,38 @@ clear:both;
 #global_page_user-index-editrequirement #requirement_price {
     width: 348px;
 }
-@media only screen and (max-width: 1400px) and (min-width: 768px)
+/*@media only screen and (max-width: 1400px) and (min-width: 768px)
+{
+#global_page_user-index-memberpackagepayment .package_content {
+    float: left;
+   
+}
+#global_page_user-index-memberpackagepayment .payment_content_div {
+    float: left; 
+}
+#global_page_user-index-memberpackagepayment .payment_content_div,
+ #global_page_user-index-reportpayment .payment_content_div{
+    padding: 12px;
+    margin: 0 auto;
+    text-align: center;
+    width: 768px;
+
+}
+}*/
+@media only screen
+  and (min-width: 768px)
+  and (max-width: 1024px)
+
 {
 #global_page_user-index-memberpackagepayment .package_content {
     float: none;
-    clear: both;
+   
 }
-#global_page_user-index-memberpackagepayment .payment_content_div {
-    float: none; 
+}
+@media screen and (min-width:980px) and (max-width: 1200px){
+#global_page_user-index-memberpackagepayment .package_content {
+    float: none;
+    clear: both;
 }
 }
 #global_page_user-edit-managesubscription .package1{
@@ -5295,4 +5332,38 @@ margin-bottom: 12px;
      background: none;
      border: none;
 
+}
+#global_page_user-index-invitetoproperty .global_content{
+      padding: 12px;
+} 
+#global_page_user-index-invitetoproperty .property_list_content{
+    border-radius: 0px;
+    border: 1px solid #e8e8e8!important;
+    background: #fff;
+    padding: 12px;
+} 
+#global_page_user-index-invitetoproperty .but_submit{
+    max-width: none !important;
+    height: 30px;
+    min-width: 0;
+    background-color: #f58410;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-border-radius: 3px;
+    width: 100px !important;
+} 
+.percentbar { background:#CCCCCC; border:1px solid #666666; height:10px; }
+.percentbar div { background: #28B8C0; height: 8px; }
+
+.invite_renter_backgroundcheck {
+    max-width: none !important;
+    height: 30px;
+    min-width: 0;
+    background-color: #f58410;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    width:98px;
+    -webkit-border-radius: 3px;
 }

@@ -329,6 +329,26 @@ class User_AuthController extends Core_Controller_Action_Standard
         $uri = base64_decode(substr($uri, 3));
         if($viewer->verified==1)
         {
+			
+			$fieldsByAlias   = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
+             if( !empty($fieldsByAlias['profile_type']) ){
+              $optionId        = $fieldsByAlias['profile_type']->getValue($viewer);
+              $profile_type_id = $optionId->value;
+           }
+           if($profile_type_id == 1){
+			   
+			   $userTable = Engine_Api::_()->getDbtable('users', 'user');
+               $InvitedrentersbackgroundreportTable = Engine_Api::_()->getDbtable('Invitedrentersbackgroundreport', 'user');
+               $userData  =  $InvitedrentersbackgroundreportTable->fetchRow($InvitedrentersbackgroundreportTable->select()->where('renter_email = ?', $viewer->email));
+               if(!empty($userData)){
+				   $userData->renter_id = $viewer->getIdentity();
+				   $userData->save();
+				   if($userData->backgroundReport == 0){
+					  $this->_helper->redirector->gotoRoute(array(), 'credit_background', true);
+				   }
+			   }
+		   }
+        
           $this->_helper->redirector->gotoRoute(array(), 'dashboard_general', true);
         }
 	}

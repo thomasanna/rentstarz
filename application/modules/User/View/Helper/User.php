@@ -195,6 +195,30 @@ class User_View_Helper_User extends Zend_View_Helper_Abstract
 	 
 	
 	}
+	
+	function getProgileComplete($id){
+		
+		  $fieldsValueTable = Engine_Api::_()->fields()->getTable('user', 'values');
+	      $fieldsValueTableName = $fieldsValueTable->info('name');
+
+          $fieldsValueTableSelect = $fieldsValueTable->select()
+	                                             ->where('item_id = ?', $id);
+	                                           
+	      $fieldsValueTableData = $fieldsValueTable->fetchAll($fieldsValueTableSelect);
+          $totalFields = count($fieldsValueTableData);
+          $allTotalFields  = $totalFields+3; // including email,name,photo
+          
+          $fieldsValuedTableSelect = $fieldsValueTable->select()
+	                                             ->where('item_id = ?', $id)
+	                                             ->where('value != ?', '');
+	                                           
+	      $fieldsValuedTableData = $fieldsValueTable->fetchAll($fieldsValuedTableSelect);
+	      
+	      $totalFieldsValued =   count($fieldsValuedTableData); 
+	      
+	      return $totalPercentage   = round(($totalFieldsValued*100)/$allTotalFields);
+	      
+	}
 
 	
 }

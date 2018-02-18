@@ -1,5 +1,7 @@
 <?php
  $subject = Engine_Api::_()->core()->getSubject();
+ $displayname  = $subject->displayname;
+ $displaynameArray =explode(' ',$displayname);
  $viewer = Engine_Api::_()->user()->getViewer();
  $viewHelperObj      =   $this->getHelper('ItemPhoto');
  $profile_menus = Engine_Api::_()
@@ -169,10 +171,21 @@ var viewer_identity='<?php echo $viwer_id; ?>';
             <?php endif;?>
              <?php if($this->profile_type_id == 4):?>
                <p><a href="/properties/<?php echo $subject->getIdentity() ?>" class="buttonlink properties" style="font-size: 13px; background-size: 21px;padding-left: 39px;background-image: url(application/modules/User/externals/images/my_properties.svg)">Properties</a></p>
-
+               <p class="screen_renter_link" style="cursor:pointer"><i class="fa fa-briefcase fa-fw newprofile-margin-right newprofile-large newprofile-text-teal" ></i>Screen Renters</p>
+  
              <?php endif;?>
           <hr>
           <br>
+          <?php
+          $userHelperObj  = $this->getHelper('User');
+          $profileCompletePercentage = $userHelperObj->getProgileComplete($subject->getIdentity());    
+          $scale = 1.0;
+          ?>
+          <div class="percentbar" style="width:<?php echo round(100 * $scale); ?>px;">
+	      <div style="width:<?php echo round($profileCompletePercentage * $scale); ?>px;"></div>
+          </div>
+          Profile complete: <?php echo $profileCompletePercentage; ?>%
+
         </div>
       </div><br>
     <!-- End Left Column -->
@@ -183,6 +196,8 @@ var viewer_identity='<?php echo $viwer_id; ?>';
         <!--<h2 class="newprofile-text-grey newprofile-padding-16"><i class="fa fa-suitcase fa-fw newprofile-margin-right newprofile-xxlarge newprofile-text-teal"></i>Work Experience</h2>-->
         <div class="newprofile-container">
           <h5 class="newprofile-opacity"><b></b></h5>
+          
+          <div class="profile_fields_div" style="display:block">  <!-- profile_fields_div start-->
           <div class="tabs_alt tabs_parent " style="display:block">
           <ul id="main_tabs">
             <li class="tab_541 tab_layout_user_profile_fields active"><a href="javascript:void(0);">Info</a></li>
@@ -192,12 +207,273 @@ var viewer_identity='<?php echo $viwer_id; ?>';
              <li class="tab_layout_manage_subscription"><a href="manage/subscription">Manage Subscription</a></li>
              <?php endif;?>           
             <?php endif;?>
-           <!-- <li class="tab_540 tab_layout_activity_feed "><a href="javascript:void(0);">Updates</a></li>   -->
           </ul>
           </div>
           <div class="profile_fields">
           <h2><i class="fa fa-certificate fa-fw newprofile-margin-right newprofile-xxlarge newprofile-text-teal"></i>Info</h2>
           <?php echo $this->content()->renderWidget('user.profile-fields'); ?>
+          </div>
+          </div> <!-- profile_fields_div end-->
+          
+          <div class="property_div" style="display:none">  <!-- start property_div-->
+          
+         <div class="holding+property_create_form">
+
+<article class="padding_top_bottom20">
+   <div class="maincontentdiv">
+      <div class="generic_layout_container layout_core_container_tabs">
+	  
+         <div class="propertytabs_alt propertytabs_parent tabs">
+            <ul id="main_tabs_navigation">
+               <li><a id="property_details" href="javascript:void(0);" class="active">PROPERTY DETAILS</a></li>
+               <li><a id="property_verification_details" href="javascript:void(0);">PROPERTY VERIFICATION DETAILS</a></li>
+               <li><a id="application_details" href="javascript:void(0);">APPLICATION DETAILS</a></li>
+               <li><a id="personal_details" href="javascript:void(0);">PERSONAL DETAILS</a></li>
+              
+            </ul>
+         </div>
+      
+      
+      <article class="content_main_left">
+         <div class="padding_bottom20" style="position: relative;">
+            <div class="message" style='color:red;padding-bottom: 12px;'>All fields are mandatory</div>
+         <div>
+      </div>
+      
+      <div class="property_details_div"> <!--property_details_div start -->
+
+      <form id="property_entry_form" enctype="multipart/form-data">
+                  <div class="pro_field_wrapper"><span class="prty_lablel pro_label">Property Name <span style="color:red;font-weight: bolder;">*</span></span>    <input name="property_name" type="text" maxlength="65" placeholder="Property Name" id="property_name" class="prty_field input-box" value="<?php echo  $this->PropertyData->property_name?>"  autofocus></div>
+                  <br>
+                  <div class="pro_field_wrapper"><span class="prty_lablel pro_label">UnitNumber <span style="color:red;font-weight: bolder;">*</span></span>    <input name="UnitNumber" type="text" maxlength="50" placeholder="UnitNumber" id="UnitNumber" class="prty_field input-box" ></div>
+                  <br>
+                  <div class="pro_field_wrapper"><span class="prty_lablel pro_label">Street Address <span style="color:red;font-weight: bolder;">*</span></span>    <input name="Street" type="text" maxlength="65" placeholder="Street" id="Street" class="prty_field input-box" ></div>
+                  <br>
+                  <div class="pro_field_wrapper"><span class="prty_lablel pro_label">Phone<span style="color:red;font-weight: bolder;">*</span> </span>    <input name="Phone" type="text" maxlength="15" placeholder="Phone" id="Phone" class="prty_field input-box" ></div>
+                  <br>
+                  <div class="pro_field_wrapper"><span class="prty_lablel pro_label">Phone Extension <span style="color:red;font-weight: bolder;">*</span></span>    <input name="PhoneExtension" type="text" maxlength="6" placeholder="Phone Extension" id="PhoneExtension" class="prty_field input-box" ></div>
+                  <br>
+		          <div class="pro_field_wrapper">
+         <div class="prty_lablel pro_label">Location<span style="color:red;font-weight: bolder;">*</span> </div>
+        <input id="autocomplete1" class="new_property_autocomplete prty_field input-box" placeholder="Enter Location" type="text">
+        <input type="hidden" class="new_property_street" id="street_number" ></input>
+        <input type="hidden" class="new_propert_route" id="route"></input>
+        <input type="hidden" class="new_property_neighborhood" id="neighborhood" ></input>
+        <input type="hidden" class="new_property_city" id="locality"></input>
+        <input type="hidden" class="new_property_sublocality_level_1 county" id="sublocality_level_1"></input>
+        <input type="hidden" class="new_property_state" id="administrative_area_level_1">
+        <input type="hidden" class="new_property_zip" id="postal_code">
+        <input type="hidden" class="new_property_country" id="country">
+        <input type="hidden" class="new_property_latitude" id="latitude">
+        <input type="hidden" class="new_property_longitude" id="longitude">
+        </div> <br>    
+                  
+                  <div class="loader" style="display:none;"></div>
+                  <div class="padding_top_bottom submit_btn " >
+                     <input class="property_details_btn property_btn" type="button" value="Continue" name="">
+                  </div>
+            </form>
+            </div> <!-- property_details_div end -->
+            
+            
+            <div class="property_verification_div" style="display:none">
+               <!--property_verification_div start -->
+               <div class="pro_field_wrapper">
+                  <div class="prty_lablel pro_label">Classification<span style="color:red;font-weight: bolder;">*</span></div>
+                  <select name="Classification" id="Classification"  class="prty_field input-box">
+                     <option value="Conventional">Conventional</option>
+                     <option value="Subsidized">Subsidized</option>
+                  </select>
+               </div>
+               <br>
+               <div class="pro_field_wrapper"><span class="prty_lablel pro_label">Income To Rent<span style="color:red;font-weight: bolder;">*</span> </span>    <input name="IR" type="text" maxlength="65" placeholder="IR" id="IR" class="prty_field input-box"></div>
+               <br>
+               <div class="pro_field_wrapper">
+                  <div class="prty_lablel pro_label">Include Medical Collections<span style="color:red;font-weight: bolder;">*</span></div>
+                  <select name="IncludeMedicalCollections" id="IncludeMedicalCollections"  class="prty_field input-box">
+                     <option value="true">Yes</option>
+                     <option value="false">No</option>
+                  </select>
+               </div>
+               <br>
+               <div class="pro_field_wrapper">
+                  <div class="prty_lablel pro_label">Include Fore closures<span style="color:red;font-weight: bolder;">*</span></div>
+                  <select name="IncludeForeclosures" id="IncludeForeclosures"  class="prty_field input-box">
+                     <option value="true">Yes</option>
+                     <option value="false">No</option>
+                  </select>
+               </div>
+               <br>
+               <div class="pro_field_wrapper">
+                  <div class="prty_lablel pro_label">Decline For Open Bankruptcies<span style="color:red;font-weight: bolder;">*</span></div>
+                  <select name="DeclineForOpenBankruptcies" id="DeclineForOpenBankruptcies"  class="prty_field input-box">
+                     <option value="true">Yes</option>
+                     <option value="false">No</option>
+                  </select>
+               </div>
+               <br>
+               <div class="pro_field_wrapper"><span class="prty_lablel pro_label">Open Bankruptcy Window <span style="color:red;font-weight: bolder;">*</span></span>    <input name="OpenBankruptcyWindow" type="text" maxlength="65" placeholder="6-120" id="OpenBankruptcyWindow" class="prty_field input-box" ></div>
+               <br>
+               <div class="pro_field_wrapper fcra">
+                  <div class="prty_lablel pro_label"><a href="javascript:void(0)" target="_blank">Fcra Agreement Accepted<span style="color:red;font-weight: bolder;">*</span></a></div>
+                  <select name="IsFcraAgreementAccepted" id="IsFcraAgreementAccepted"  class="prty_field input-box">
+                     <option value="true">Yes</option>
+                     <option value="false">No</option>
+                  </select>
+               </div>
+               <br>
+               <div class="loader" style="display:none;"></div>
+               <div class="padding_top_bottom submit_btn " >
+                  <input class="property_verification_btn property_btn" type="button" value="Continue" name="">
+               </div>
+               <div class="loader" style="display:none;"></div>
+            </div>
+            <!--property_verification_div end -->
+            
+            
+            <!--aplication div start -->
+            <div class="application_div" style="display:none">
+               
+               <div class="pro_field_wrapper">
+				 <span class="prty_lablel pro_label">Deposit <span style="color:red">*</span></span>    
+				 <input name="Deposit" type="text" maxlength="10" placeholder="Deposit" id="Deposit" class="prty_field input-box">
+			  </div>
+               <br>
+				 <div class="pro_field_wrapper">
+						 <span class="prty_lablel pro_label">Rent <span style="color:red">*</span></span> </span>    
+						 <input name="Rent" type="text" maxlength="10" placeholder="Rent" id="Rent" class="prty_field input-box">
+			    </div>              
+				 <br>
+              <div class="pro_field_wrapper">
+				 <span class="prty_lablel pro_label">Lease Term In Months <span style="color:red">*</span></span> </span>    
+				 <input name="LeaseTermInMonths" type="text" maxlength="2" placeholder="6-12" id="LeaseTermInMonths" class="prty_field input-box" >
+			  </div>
+               <br>
+                <div class="pro_field_wrapper">
+				 <span class="prty_lablel pro_label">Landlord Pays </span>    
+				 <select name="LandlordPays" id="LandlordPays"  class="prty_field input-box">
+					<option value="true">Yes</option>
+					<option value="false">No</option>
+				 </select>
+			  </div>
+               <br>
+                <div class="pro_field_wrapper">
+				 <span class="prty_lablel pro_label">Product Bundle </span>  
+				 <select name="ProductBundle" id="ProductBundle"  class="prty_field input-box">
+					<option value="PackageCore">PackageCore</option>
+					<option value="PackageCorePlusEviction">PackageCorePlusEviction</option>
+				 </select>
+			  </div>
+               <br>
+               <div class="loader" style="display:none;"></div>
+               <div class="padding_top_bottom submit_btn " >
+                  <input class="application_btn property_btn" type="button" value="Continue" name="">
+               </div>
+               <div class="loader" style="display:none;"></div>
+            </div>
+            <!--aplication div end -->
+            <div class="personal_details_div" style="display:none">
+               <!--personal_details_div start -->
+               <div class="pro_field_wrapper"><span class="prty_lablel pro_label">First Name <span style="color:red;font-weight: bolder;">*</span></span>    <input name="LandlordFirstName" type="text" maxlength="65" placeholder="" id="LandlordFirstName" class="prty_field input-box" value="<?php echo $displaynameArray[0]?>" readonly></div>
+               <br>
+               <div class="pro_field_wrapper"><span class="prty_lablel pro_label">Last Name<span style="color:red;font-weight: bolder;">*</span> </span>    <input name="LandlordLastName" type="text" maxlength="65" placeholder="" id="LandlordLastName" class="prty_field input-box"  value="<?php echo $displaynameArray[1]?>" ></div>
+               <br>
+               <div class="pro_field_wrapper"><span class="prty_lablel pro_label">Street Address Line One<span style="color:red;font-weight: bolder;">*</span> </span>    <input name="LandlordStreetAddressLineOne" type="text" maxlength="65" placeholder="" id="LandlordStreetAddressLineOne" class="prty_field input-box" ></div>
+               <br>
+               <div class="pro_field_wrapper"><span class="prty_lablel pro_label">Street Address Line Two</span>    <input name="LandlordStreetAddressLineTwo" type="text" maxlength="65" placeholder="" id="LandlordStreetAddressLineTwo" class="prty_field input-box" ></div>
+               <br>
+               <div class="pro_field_wrapper">
+                  <span class="prty_lablel pro_label">State <span style="color:red;font-weight: bolder;">*</span><span style="color:red"></span></span>
+                  <select name="LandlordState" id="LandlordState123"  class="prty_field input-box">
+                     <option value="">Select</option>
+                     <?php foreach($StateArray as $key =>$value):?>
+                     <option value="<?php echo $key;?>"><?php echo $value;?></option>
+                     <?php endforeach;?>
+                  </select>
+               </div>
+               <br>
+               <div class="pro_field_wrapper">
+                  <span class="prty_lablel pro_label">City <span style="color:red;font-weight: bolder;">*</span><span style="color:red"></span></span>
+                  <select name="LandlordCity" id="LandlordCity123"  class="prty_field input-box" maxlength="50">
+                     <option value="">Select</option>
+                     
+                  </select>
+               </div>
+               <br>
+               <div class="pro_field_wrapper"><span class="prty_lablel pro_label">Zip<span style="color:red;font-weight: bolder;">*</span></span>    <input name="LandlordZip" type="text" maxlength="5" placeholder="" id="LandlordZip" class="prty_field input-box" ></div>
+               <br>
+               <div class="pro_field_wrapper"><span class="prty_lablel pro_label">PhoneNumber<span style="color:red;font-weight: bolder;">*</span></span>    <input name="LandlordPhoneNumber" type="text" maxlength="15" placeholder="" id="LandlordPhoneNumber" class="prty_field input-box" ></div>
+               <br>
+               <div class="pro_field_wrapper"><span class="prty_lablel pro_label">Email<span style="color:red;font-weight: bolder;">*</span></span>    <input name="LandlordEmail" type="text" maxlength="65" placeholder="" id="LandlordEmail" class="prty_field input-box" value="<?php echo $viewer->email;?>" readonly></div>
+               <br>
+               <div class="loader property_btn_loader" style="display:none;"></div>
+               <div class="padding_top_bottom submit_btn " >
+                  <input class="btn_submit property_btn" type="button" value="Submit" name="">
+               </div>
+              
+            </div>
+            
+            <!--personal_details_div end -->      
+      </article>
+      </div>
+      </article>
+      </div>
+          </div>  <!-- end property_div-->
+          
+          
+           <!-- smartmoveapi questions-->          
+            
+            <div class="smartmoveapiquestions_ans_div" style="display:none">
+			<br>
+            <ul>
+				<?php //$qids = array();?>
+            <?php foreach($this->qans as $qdata):?>
+            <?php $qIds = $qIds.','.$qdata['QuestionId']; ?>
+            <div class="pro_field_wrapper">
+            <li qid="<?php echo $qdata['QuestionId']?>">
+            <div><?php echo $qdata['QuestionText'];?></div> 
+            <br>
+             <?php //print_r($qdata['Options']); exit;?>
+            <ul>
+                <?php foreach($qdata['Options'] as $ans): ?>
+                <li>    
+				<input type="radio" name="question_<?php echo $qdata['QuestionId'];?>" value="<?php echo $qdata['QuestionId']."_".$ans['AnswerText'];?>">
+                <?php echo $ans['AnswerDescription'];?>
+                </li>
+                <br>
+                <?php endforeach;?>
+            </ul>
+            </li>
+            <br>
+            </div>
+            
+            <?php endforeach;?>
+            
+            </ul>
+            <input type="button" value="Submit" class="submit_questions">
+            </div>
+            <!-- smartmoveapi questions-->
+      
+
+
+          <div class="screen_renters_div" style="display:none">
+			  <input type="hidden" value="" class="smartmovePid">
+			  <input type="hidden" value="" class="pid">
+          
+            <div class="screen_renters_subdiv">
+             <div style="text-align:center; font-size:16px; ">Send verification link to a renter to get started</div>
+             
+              <br>
+              <div class="screen_renters_subdiv_msg">Someone is already registered with this email</div> 
+              <br><br>
+             <div class="pro_field_wrapper">
+                   <input name="renter_email" type="text" maxlength="65" placeholder="Renter's email" id="renter_email" class="prty_field input-box" autofocus><span style="color:red;font-weight: bolder;">*</span></span> 
+             </div><br>
+             <div class="pro_field_wrapper">
+              <input class="invite_renter_backgroundcheck property_btn" type="button" value="SEND" name="">
+              <div class="loader screen_renters_subdiv_loader" style="display:none;"></div>
+            </div>          
+            </div>          
           </div>
 
          <!-- <div class="profile_activity_feed" style="display:none">
@@ -471,5 +747,518 @@ jQuery('body').on('click', '.submit_report', function(event){
 	    
 	});
 	
+	jQuery('body').on('click', '.screen_renter_link', function(event){
+		
+		jQuery('.profile_fields_div').css('display','none');
+		jQuery('.property_div').css('display','block');
+	});
+	
+    jQuery('body').on('click', '.invite_renter_backgroundcheck', function(event){
+		
+		   jQuery('.screen_renters_subdiv_loader').css('display','block');
+		   jQuery('.invite_renter_backgroundcheck').css('display','none');
 
+        	var pid       = jQuery('.pid').val();
+        	var smartmovePid     = jQuery('.smartmovePid').val();
+        	var renter_email     = jQuery('#renter_email').val();
+        	if(pid != '' && renter_email != '' && smartmovePid !==''){
+			var oData       = new Object();		
+	        oData.pid           = pid;
+	        oData.renter_email         = renter_email;
+	        oData.smartmovePid         = smartmovePid;
+
+	        var url                    = '<?php echo $this->baseUrl().'/user/index/inviterentertobackgroundcheck'?>';		
+			jQuery.ajax({
+				url:  url,
+				data: oData,						
+				dataType: 'json',
+				type: 'POST',
+				success: function (result) { console.log(result);
+							if(result.status == true){
+                             jQuery('.screen_renters_subdiv_msg').html('Your invitation has been successfully sent');
+                             jQuery('.renter_email').val('');
+							}
+							else{
+								jQuery('.screen_renters_subdiv_loader').css('display','none');
+		                        jQuery('.invite_renter_backgroundcheck').css('display','block');
+		                        jQuery('.screen_renters_subdiv_msg').html('Someone is already registered with this mail id');
+
+							}
+									
+				},
+				error: function(e){ }  
+			   });
+	    
+				
+			}
+			else{
+				alert("please eneter all fields");
+				
+			}
+        	
+
+    });
+    
+    jQuery('#property_details').on('click', function() {
+
+    jQuery('#property_details').addClass('active');
+    jQuery('#property_verification_details').removeClass('active');
+    jQuery('#personal_details').removeClass('active');
+    jQuery('#application_details').removeClass('active');
+    jQuery('.property_verification_div').css('display', 'none');
+    jQuery('.property_details_div').css('display', 'block');
+    jQuery('.personal_details_div').css('display', 'none');
+    jQuery('.application_div').css('display', 'none');
+
+});
+jQuery('#application_details').on('click', function() {
+
+    jQuery('#application_details').addClass('active');
+    jQuery('#property_verification_details').removeClass('active');
+    jQuery('#property_details').removeClass('active');
+    jQuery('#personal_details').removeClass('active');
+    jQuery('.application_div').css('display', 'block');
+    jQuery('.property_verification_div').css('display', 'none');
+    jQuery('.property_details_div').css('display', 'none');
+    jQuery('.personal_details_div').css('display', 'none');
+    jQuery('.loader').css('display', 'none');
+
+});
+jQuery('#property_verification_details').on('click', function() {
+
+    jQuery('#property_verification_details').addClass('active');
+    jQuery('#property_details').removeClass('active');
+    jQuery('#personal_details').removeClass('active');
+    jQuery('#application_details').removeClass('active');
+    jQuery('.property_verification_div').css('display', 'block');
+    jQuery('.property_details_div').css('display', 'none');
+    jQuery('.personal_details_div').css('display', 'none');
+    jQuery('.loader').css('display', 'none');
+    jQuery('.application_div').css('display', 'none');
+
+});
+jQuery('#personal_details').on('click', function() {
+
+    jQuery('#personal_details').addClass('active');
+    jQuery('#property_details').removeClass('active');
+    jQuery('#property_verification_details').removeClass('active');
+    jQuery('#application_details').removeClass('active');
+    jQuery('.property_verification_div').css('display', 'none');
+    jQuery('.property_details_div').css('display', 'none');
+    jQuery('.personal_details_div').css('display', 'block');
+    jQuery('.loader').css('display', 'none');
+    jQuery('.application_div').css('display', 'none');
+
+});
+jQuery('.property_details_btn').on('click', function() {
+    jQuery('.loader').css('display', 'block');
+
+    jQuery('#property_verification_details').trigger('click');
+});
+jQuery('.property_verification_btn').on('click', function() {
+    jQuery('.loader').css('display', 'block');
+
+    jQuery('#application_details').trigger('click');
+});
+jQuery('.application_btn').on('click', function() {
+    jQuery('.loader').css('display', 'block');
+
+    jQuery('#personal_details').trigger('click');
+});
+initAutocomplete1();
+
+jQuery("#LandlordState123").change(function() {alert(1);
+
+    var url = '<?php echo $this->baseUrl(); ?>' + '/user/index/getcitywithstateabbreviations';
+    var state_abbr = jQuery('#LandlordState123').val();
+    jQuery('#LandlordCity123').html('<option value="Loading">Loading...</option>');
+
+    jQuery.ajax({
+        url: url,
+        data: "state_abbr=" + state_abbr,
+        dataType: 'json',
+        type: 'POST',
+        success: function(data) {
+           var i=1;
+                    jQuery.each(data, function (i, item) {
+                    jQuery('#LandlordCity123').append(jQuery('<option>', {
+                        value: item.city,
+                        text : item.city
+                    }));
+                    i=i+1;
+						if(i==data.length){
+							jQuery("#LandlordCity123 option[value='Loading']").remove();
+							jQuery('#LandlordCity123').prepend('<option selected>Select City</option>');
+						}
+                });
+        },
+        error: function(e) {}
+    });
+});
+var handleClick= 'ontouchstart' in document.documentElement ? 'touchstart': 'click';
+
+
+jQuery('.btn_submit').on(handleClick, function() {
+	jQuery('.btn_submit').css('display','none');
+	jQuery('.property_btn_loader').css('display','block');
+	
+	var error       =  false;
+    var oData       = new Object();
+    var property_name   = oData.property_name =jQuery.trim(jQuery("#property_name").val());
+    var prty_country     = oData.prty_country =jQuery.trim(jQuery("#country").val());
+    var prty_state       = oData.prty_state =jQuery.trim(jQuery("#administrative_area_level_1").val());
+    var prty_city        = oData.prty_city =jQuery.trim(jQuery("#locality").val());
+    if(prty_city == ''){
+         var prty_city     = oData.prty_city =jQuery.trim(jQuery("#sublocality_level_1").val());
+    }
+    var prty_county     =  oData.prty_county =jQuery.trim(jQuery("#sublocality_level_1").val());   
+    var prty_neighborhood     =  oData.prty_neighborhood =jQuery.trim(jQuery("#neighborhood").val());
+    var prty_street_address    = oData.prty_street_address =jQuery.trim(jQuery("#street_number").val());   
+    
+    var prty_zipcode    = oData.prty_zipcode =jQuery.trim(jQuery(".new_property_zip").val());  
+
+    var prty_latitude    = oData.prty_latitude =jQuery.trim(jQuery("#latitude").val());
+    var prty_longitude    = oData.prty_longitude =jQuery.trim(jQuery("#longitude").val());   
+    var UnitNumber              = oData.UnitNumber =jQuery.trim(jQuery("#UnitNumber").val());
+    var Street                  = oData.Street =jQuery.trim(jQuery("#Street").val());
+    var Phone                   = oData.Phone =jQuery.trim(jQuery("#Phone").val());
+    var PhoneExtension          = oData.PhoneExtension =jQuery.trim(jQuery("#PhoneExtension").val());
+    var Classification          = oData.Classification =jQuery.trim(jQuery("#Classification").val());
+    var IR                      = oData.IR =jQuery.trim(jQuery("#IR").val());
+    var IncludeMedicalCollections     = oData.IncludeMedicalCollections =jQuery.trim(jQuery("#IncludeMedicalCollections").val());
+    var DeclineForOpenBankruptcies    = oData.DeclineForOpenBankruptcies =jQuery.trim(jQuery("#DeclineForOpenBankruptcies").val());
+    var OpenBankruptcyWindow          = oData.OpenBankruptcyWindow =jQuery.trim(jQuery("#OpenBankruptcyWindow").val());
+    var IsFcraAgreementAccepted       = oData.IsFcraAgreementAccepted =jQuery.trim(jQuery("#IsFcraAgreementAccepted").val());
+    var IncludeForeclosures           = oData.IncludeForeclosures =jQuery.trim(jQuery("#IncludeForeclosures").val());
+    var LandlordStreetAddressLineOne           = oData.LandlordStreetAddressLineOne =jQuery.trim(jQuery("#LandlordStreetAddressLineOne").val());
+    var LandlordStreetAddressLineTwo           = oData.LandlordStreetAddressLineTwo =jQuery.trim(jQuery("#LandlordStreetAddressLineTwo").val());
+    var LandlordState                          = oData.LandlordState =jQuery.trim(jQuery("#LandlordState123").val());
+    var LandlordCity                           = oData.LandlordCity =jQuery.trim(jQuery("#LandlordCity123").val());
+    var LandlordZip                            = oData.LandlordZip =jQuery.trim(jQuery("#LandlordZip").val());
+    var LandlordPhoneNumber                    = oData.LandlordPhoneNumber =jQuery.trim(jQuery("#LandlordPhoneNumber").val());
+    var LandlordEmail                          = oData.LandlordEmail =jQuery.trim(jQuery("#LandlordEmail").val());
+    var LandlordLastName                       = oData.LandlordLastName=jQuery.trim(jQuery("#LandlordLastName").val());
+
+	var Deposit                = oData.Deposit      =  jQuery.trim(jQuery("#Deposit").val()); 
+	var Rent                   = oData.Rent         =  jQuery.trim(jQuery("#Rent").val());  
+	var LeaseTermInMonths      = oData.LeaseTermInMonths =   jQuery.trim(jQuery("#LeaseTermInMonths").val());  
+	var LandlordPays           = oData.LandlordPays      =   jQuery.trim(jQuery("#LandlordPays").val());  
+	var ProductBundle          = oData.ProductBundle     =   jQuery.trim(jQuery("#ProductBundle").val());
+    
+    
+    var is_validated = true;   
+    if(property_name =='' || prty_country =='' || prty_state =='' || prty_city =='' ||  UnitNumber =='' || Street =='' || Phone =='' || 
+    PhoneExtension =='' || Classification =='' || IR =='' || IncludeMedicalCollections =='' || 
+    IncludeForeclosures =='' || DeclineForOpenBankruptcies =='' ||  OpenBankruptcyWindow =='' || IsFcraAgreementAccepted =='' || 
+    LandlordStreetAddressLineOne == '' || LandlordState =='' || LandlordCity =='' ||  LandlordZip =='' || LandlordPhoneNumber =='' ||
+    Deposit == '' || Rent == ''|| LeaseTermInMonths == ''|| LandlordPays == ''|| ProductBundle == ''  ){
+    
+    if(property_name =='')     { jQuery('#property_name').css('border-color','#e62828');                            }       
+    if(UnitNumber =='')               {     jQuery('#UnitNumber').css('border-color','#e62828');                    }
+    if(Street =='')                   {     jQuery('#Street').css('border-color','#e62828');                        }
+    if(Phone =='')                    {     jQuery('#Phone').css('border-color','#e62828');                         }
+    if(PhoneExtension =='')           {     jQuery('#PhoneExtension').css('border-color','#e62828');                }
+    if(prty_country =='')             {     jQuery('.new_property_autocomplete').css('border-color','#e62828');                       }
+    if(prty_state =='')               {     jQuery('.new_property_autocomplete').css('border-color','#e62828');   }
+    if(prty_city =='')                {     jQuery('.new_property_autocomplete').css('border-color','#e62828');                      }
+    if(Classification =='')           {     jQuery('#Classification').css('border-color','#e62828');                }
+    if(IR =='')                       {     jQuery('#IR').css('border-color','#e62828');                            }
+    if(IncludeMedicalCollections ==''){    jQuery('#IncludeMedicalCollections').css('border-color','#e62828');      }
+    if(IncludeForeclosures =='')      {     jQuery('#IncludeForeclosures').css('border-color','#e62828');           }
+    if(DeclineForOpenBankruptcies ==''){     jQuery('#DeclineForOpenBankruptcies').css('border-color','#e62828');   }
+    if(OpenBankruptcyWindow =='')      {     jQuery('#OpenBankruptcyWindow').css('border-color','#e62828');         }
+    if(IsFcraAgreementAccepted =='')   {     jQuery('#IsFcraAgreementAccepted').css('border-color','#e62828');            }
+    if(LandlordStreetAddressLineOne =='')   {     jQuery('#LandlordStreetAddressLineOne').css('border-color','#e62828');  }
+    if(LandlordState =='')                  {     jQuery('#LandlordState123').css('border-color','#e62828');                  }
+    if(LandlordCity =='')                   {     jQuery('#LandlordCity123').css('border-color','#e62828');                  }
+    if(LandlordZip =='')                    {     jQuery('#LandlordZip').css('border-color','#e62828');                   }
+    if(LandlordPhoneNumber =='')            {     jQuery('#LandlordPhoneNumber').css('border-color','#e62828');           }
+    if(Deposit =='')                        {     jQuery('#Deposit').css('border-color','#e62828');                     }
+    if(Rent =='')                           {     jQuery('#Rent').css('border-color','#e62828');                        }
+    if(LeaseTermInMonths =='')              {     jQuery('#LeaseTermInMonths').css('border-color','#e62828');           }
+    if(LandlordPays =='')                   {     jQuery('#LandlordPays').css('border-color','#e62828');                }
+    if(ProductBundle =='')                  {     jQuery('#ProductBundle').css('border-color','#e62828');               }
+    
+    
+    if(property_name == '' ||  UnitNumber == ''|| Street == ''
+     || Phone == ''|| PhoneExtension == ''|| prty_country == ''|| prty_state == ''|| prty_city == ''){
+		jQuery('#property_details').trigger( 'click' );		 
+	 }
+    else if(Classification == '' || IR == ''|| IncludeMedicalCollections == ''|| IncludeForeclosures == ''|| DeclineForOpenBankruptcies == ''|| 
+    OpenBankruptcyWindow == ''|| IsFcraAgreementAccepted == '' ){
+		jQuery('#property_verification_details').trigger( 'click' );		 
+	 }
+    else if(LandlordStreetAddressLineOne == '' || LandlordState == ''|| LandlordCity == ''|| LandlordZip == ''|| LandlordPhoneNumber == '' ){
+		jQuery('#personal_details').trigger( 'click' );		 
+	 }
+    else if(Deposit == '' || Rent == ''|| LeaseTermInMonths == ''|| LandlordPays == ''|| ProductBundle == '' ){
+		jQuery('#application_details').trigger( 'click' );		 
+	 }
+
+		 jQuery('.message').html('Please fill all fields');
+		 is_validated = false; 
+		 jQuery('.btn_submit').css('display','block');
+	     jQuery('.property_btn_loader').css('display','none');
+	
+	}
+	else{
+		 is_validated = true;		
+	} 
+	
+      //Zip validation     
+    if(is_validated ==  true){		
+		if(prty_zipcode != ''){
+			jQuery(".message").text('');
+		    if(/([0-9]{5})+$/.test(prty_zipcode)) {
+			 jQuery(".property_zipcode").css('border-color','b2c6cd');
+             is_validated =true;
+			}
+			else {
+			 jQuery(".message").text('Zipcode should have exact 5 numeric values');
+			 jQuery(".property_zipcode").css('border-color','dd1616');
+			 jQuery('#property_details').trigger( 'click' );
+			 is_validated =false;
+			}
+		}
+    }
+     if(is_validated ==  true){		
+		if(LandlordZip != ''){
+        jQuery(".message").text('');
+         if(/([0-9]{5})+$/.test(LandlordZip)) {
+         jQuery("#LandlordZip").css('border-color','b2c6cd');
+         is_validated =true;
+        }
+        else {
+          jQuery(".message").text('Zipcode should have exact 5 numeric values');
+          jQuery("#LandlordZip").css('border-color','dd1616');
+          jQuery('#personal_details').trigger( 'click' );
+          is_validated =false;
+        }
+      }
+	}
+	if(is_validated ==  true){		
+		if(OpenBankruptcyWindow !=''){
+			OpenBankruptcyWindow = parseInt(OpenBankruptcyWindow);
+			if((parseInt(OpenBankruptcyWindow) >=6)&&(parseInt(OpenBankruptcyWindow)<=120)){
+				jQuery("#OpenBankruptcyWindow").css('border-color','b2c6cd');
+				is_validated =true;
+			}
+			else{
+				 is_validated =false;
+				 jQuery(".message").text('Open Bankruptcy Window Value must be between 6 and 120');
+				 jQuery("#OpenBankruptcyWindow").css('border-color','dd1616');
+				 jQuery('#property_verification_details').trigger( 'click' );
+			}
+		}
+    }
+    if(is_validated ==  true){	
+		if(Phone != ''){
+		jQuery(".message").text('');
+		if(/([0-9]{10,15})+$/.test(Phone)) {
+			 jQuery("#Phone").css('border-color','b2c6cd');
+			 is_validated =true;
+			}
+			else {
+			 jQuery(".message").text('Phone can only contain numbers and must be between 10 and 15 characters in length');
+			 jQuery("#Phone").css('border-color','dd1616');
+			 jQuery('#property_details').trigger( 'click' );
+			 is_validated =false;
+			}
+		}
+    }
+    if(is_validated ==  true){	
+		if(LandlordPhoneNumber != ''){
+			jQuery(".message").text('');
+		if(/([0-9]{10,15})+$/.test(LandlordPhoneNumber)) {
+			 jQuery("#LandlordPhoneNumber").css('border-color','b2c6cd');
+             is_validated =true; 
+			}
+			else {
+			 jQuery(".message").text('Phone can only contain numbers and must be between 10 and 15 characters in length');
+			 jQuery("#LandlordPhoneNumber").css('border-color','dd1616');
+			 jQuery('#personal_details').trigger( 'click' );
+			 is_validated =false;alert(5);
+			}
+		}
+    }
+     if(is_validated ==  true){	
+		if(LandlordStreetAddressLineOne != ''){
+        jQuery(".message").text('');
+        if(/^(?=.*[0-9 ])(?=.*[a-zA-Z])([a-zA-Z0-9\s]+)$/.test(LandlordStreetAddressLineOne)) {
+         jQuery("#LandlordStreetAddressLineOne").css('border-color','b2c6cd');
+         is_validated =true; 
+        }
+        else {
+         jQuery(".message").text('The Street Address field must contain at least one number and a letter');
+         jQuery('#personal_details').trigger( 'click' );
+         jQuery("#LandlordStreetAddressLineOne").css('border-color','dd1616');
+         is_validated =false;
+        }
+      }		
+	}
+	 if(is_validated ==  true){
+		if(Street != ''){
+        jQuery(".message").text('');
+        if(/^(?=.*[0-9 ])(?=.*[a-zA-Z])([a-zA-Z0-9\s]+)$/.test(Street)) {
+		 is_validated =true; 
+         jQuery("#Street").css('border-color','b2c6cd');
+        }
+        else {
+         jQuery(".message").text('The Street Address field must contain at least one number and a letter');
+         jQuery("#Street").css('border-color','dd1616');
+         jQuery('#property_details').trigger( 'click' );
+         is_validated =false;
+        }
+      }
+	}
+	if(is_validated ==  true){
+		if(LandlordStreetAddressLineTwo !=''){
+        jQuery(".message").text('');
+                if(/^(?=.*[0-9 ])(?=.*[a-zA-Z])([a-zA-Z0-9\s]+)$/.test(LandlordStreetAddressLineTwo) == false){
+                    jQuery(".message").text('The Street Address field must contain at least one number and a letter');
+                    jQuery('#personal_details').trigger( 'click' );
+                    jQuery("#LandlordStreetAddressLineTwo").css('border-color','dd1616');
+                    var is_validated =false;
+                }
+                else{
+					jQuery("#LandlordStreetAddressLineTwo").css('border-color','b2c6cd');
+				}
+            }
+	}
+	if(is_validated ==  true){
+		if(LandlordLastName !=''){
+        jQuery(".message").text('');
+        if(LandlordLastName.length>=2 && LandlordLastName.length<=50) {
+        jQuery("#LandlordLastName").css('border-color','b2c6cd');
+        is_validated =true;
+        }
+        else {
+         jQuery(".message").text('The field LastName can only contain letters and must be between 2 and 50 characters in length.');
+         jQuery('#personal_details').trigger( 'click' );
+         jQuery("#LandlordLastName").css('border-color','dd1616');
+         is_validated =false;
+        }
+      }		
+	}
+	if(is_validated == true){
+	    if(prty_country =='' || prty_state =='' || prty_city ==''){
+            jQuery('.message').text('Location field should have country , state and city');
+            jQuery('#property_details').trigger( 'click' );
+            jQuery("#pac-input").css('border-color','dd1616');
+            is_validated = false;
+            }
+            else{
+				jQuery("#pac-input").css('border-color','b2c6cd');
+			}
+	}
+	if(is_validated == true){
+	  if(prty_zipcode == ''){	 
+		 jQuery('.message').text('Please enter zipcode');
+		 jQuery('#property_details').trigger( 'click' );
+		 jQuery(".new_property_autocomplete").css('border-color','dd1616');
+		 is_validated = false; 
+	  }
+    } 
+    if(is_validated == true){ 
+		
+		jQuery('.property_div').css('display','none');
+		jQuery('.smartmoveapiquestions_ans_div').css('display','block');
+		
+	}	
+	else{
+		jQuery('.btn_submit').css('display','block');
+	    jQuery('.property_btn_loader').css('display','none');
+	
+	}
+});
+
+jQuery('.submit_questions').on(handleClick, function() {
+	
+	
+	var oData       = new Object();	
+    var property_name   = oData.property_name =jQuery.trim(jQuery("#property_name").val());
+    var prty_country     = oData.prty_country =jQuery.trim(jQuery("#country").val());
+    var prty_state       = oData.prty_state =jQuery.trim(jQuery("#administrative_area_level_1").val());
+    var prty_city        = oData.prty_city =jQuery.trim(jQuery("#locality").val());
+    if(prty_city == ''){
+         var prty_city     = oData.prty_city =jQuery.trim(jQuery("#sublocality_level_1").val());
+    }
+    var prty_county     =  oData.prty_county =jQuery.trim(jQuery("#sublocality_level_1").val());   
+    var prty_neighborhood     =  oData.prty_neighborhood =jQuery.trim(jQuery("#neighborhood").val());
+    var prty_street_address    = oData.prty_street_address =jQuery.trim(jQuery("#street_number").val());      
+    var prty_zipcode    = oData.prty_zipcode =jQuery.trim(jQuery(".new_property_zip").val());  
+    var prty_latitude    = oData.prty_latitude =jQuery.trim(jQuery("#latitude").val());
+    var prty_longitude    = oData.prty_longitude =jQuery.trim(jQuery("#longitude").val());   
+    var UnitNumber              = oData.UnitNumber =jQuery.trim(jQuery("#UnitNumber").val());
+    var Street                  = oData.Street =jQuery.trim(jQuery("#Street").val());
+    var Phone                   = oData.Phone =jQuery.trim(jQuery("#Phone").val());
+    var PhoneExtension          = oData.PhoneExtension =jQuery.trim(jQuery("#PhoneExtension").val());
+    var Classification          = oData.Classification =jQuery.trim(jQuery("#Classification").val());
+    var IR                      = oData.IR =jQuery.trim(jQuery("#IR").val());
+    var IncludeMedicalCollections     = oData.IncludeMedicalCollections =jQuery.trim(jQuery("#IncludeMedicalCollections").val());
+    var DeclineForOpenBankruptcies    = oData.DeclineForOpenBankruptcies =jQuery.trim(jQuery("#DeclineForOpenBankruptcies").val());
+    var OpenBankruptcyWindow          = oData.OpenBankruptcyWindow =jQuery.trim(jQuery("#OpenBankruptcyWindow").val());
+    var IsFcraAgreementAccepted       = oData.IsFcraAgreementAccepted =jQuery.trim(jQuery("#IsFcraAgreementAccepted").val());
+    var IncludeForeclosures           = oData.IncludeForeclosures =jQuery.trim(jQuery("#IncludeForeclosures").val());
+    var LandlordStreetAddressLineOne           = oData.LandlordStreetAddressLineOne =jQuery.trim(jQuery("#LandlordStreetAddressLineOne").val());
+    var LandlordStreetAddressLineTwo           = oData.LandlordStreetAddressLineTwo =jQuery.trim(jQuery("#LandlordStreetAddressLineTwo").val());
+    var LandlordState                          = oData.LandlordState =jQuery.trim(jQuery("#LandlordState123").val());
+    var LandlordCity                           = oData.LandlordCity =jQuery.trim(jQuery("#LandlordCity123").val());
+    var LandlordZip                            = oData.LandlordZip =jQuery.trim(jQuery("#LandlordZip").val());
+    var LandlordPhoneNumber                    = oData.LandlordPhoneNumber =jQuery.trim(jQuery("#LandlordPhoneNumber").val());
+    var LandlordEmail                          = oData.LandlordEmail =jQuery.trim(jQuery("#LandlordEmail").val());
+    var LandlordLastName                       = oData.LandlordLastName=jQuery.trim(jQuery("#LandlordLastName").val());
+
+	var Deposit                = oData.Deposit      =  jQuery.trim(jQuery("#Deposit").val()); 
+	var Rent                   = oData.Rent         =  jQuery.trim(jQuery("#Rent").val());  
+	var LeaseTermInMonths      = oData.LeaseTermInMonths =   jQuery.trim(jQuery("#LeaseTermInMonths").val());  
+	var LandlordPays           = oData.LandlordPays      =   jQuery.trim(jQuery("#LandlordPays").val());  
+	var ProductBundle          = oData.ProductBundle     =   jQuery.trim(jQuery("#ProductBundle").val());
+    		
+	    var q1Ans =   oData.q1Ans  =  jQuery("input:radio[name='question_1']:checked").val();
+		var q2Ans =   oData.q2Ans = jQuery("input:radio[name='question_2']:checked").val();
+		var q3Ans =   oData.q3Ans  = jQuery("input:radio[name='question_3']:checked").val();
+		var q4Ans =   oData.q4Ans  = jQuery("input:radio[name='question_4']:checked").val();
+		var q5Ans =   oData.q5Ans  = jQuery("input:radio[name='question_5']:checked").val();
+		
+		
+		if(q1Ans == '' || q2Ans == '' || q3Ans == '' || q4Ans == '' || q5Ans ){          
+		var formURL    = '<?php echo $this->baseUrl(); ?>' + '/user/index/savepropertyforbackgroundreport';	    
+	    jQuery.ajax({
+                        url : formURL,
+                        type: "POST",
+                        dataType: 'json',
+                        data : oData,
+                            success: function (returndata) {
+                            if(returndata.status==true) {
+                                 jQuery(".loader").css("display", "none"); 
+                                 jQuery('.property_div').css('display','none');
+		                         jQuery('.smartmoveapiquestions_ans_div').css('display','none');		
+                                 jQuery(".screen_renters_div").css("display", "block"); 
+                                 jQuery('.smartmovePid').val(returndata.smartmovePid);
+                                 jQuery('.pid').val(returndata.pid);
+                                 
+                                 
+                                                                                                               
+                                 alert('Your property has been succesfully added');                             
+                                      
+                                // location.href = '<?php echo $this->baseUrl(); ?>' + '/admin/user/manage/transunion';    a               
+                            }
+                            else{
+                                console.log(returndata.errors);
+                                jQuery(".loader").css("display", "none");
+                                jQuery('.but_submit').css('display','block');
+                            }
+                            },
+                            error: function(e){
+                           jQuery(".loader").css("display", "none");
+                           jQuery('.but_submit').css('display','block');  }
+                        });			
+		}
+		else{
+		alert("Answer to all questions");
+	} 
+
+	
+});
 </script>

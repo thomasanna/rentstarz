@@ -63,6 +63,55 @@ class User_View_Helper_SmartmoveApi extends Zend_View_Helper_Abstract
         return $resultData;
     }
 
+    public function getPropertyQuestionAnsArray($q1Ans,$q2Ans,$q3Ans,$q4Ans,$q5Ans){
+
+        $smartmoveapiquestions_table      =  Engine_Api::_()->getDbtable('smartmoveapiquestions', 'user');
+        $smartmoveapiquestionAnswer_table =  Engine_Api::_()->getDbtable('Smartmoveapiquestionanswers', 'user');
+        $smartmoveQuestionsData           =  $smartmoveapiquestions_table->fetchAll($smartmoveapiquestions_table->select());
+        $resultData                       =  array();
+        $questionData                     =  array();
+        
+        $i =1;
+
+        foreach($smartmoveQuestionsData as $question){
+			if($question->qid == 1){
+			$arrQans = explode("_",$q1Ans);	
+			}
+			if($question->qid == 2){
+			$arrQans = explode("_",$q2Ans);	
+			}
+			if($question->qid == 3){
+			$arrQans = explode("_",$q3Ans);	
+			}
+			if($question->qid == 4){
+			$arrQans = explode("_",$q4Ans);	
+			}
+			if($question->qid == 5){
+			$arrQans = explode("_",$q5Ans);	
+			}
+            //print_r($arrQans);
+//exit;
+            $tmpAnswerInfo      =   array();
+            $questionData[0]['QuestionId']          = $question->qid;
+            $questionData[0]['QuestionText']        = $question->qtext;
+            $smartmoveapiquestionAnswerData         = $smartmoveapiquestionAnswer_table->fetchAll($smartmoveapiquestionAnswer_table->select()->where('qid = ?', $question->qid));
+
+            foreach($smartmoveapiquestionAnswerData as $answer){
+                        $answerInfo =   array(
+                                            'AnswerText'=>$answer->answer_text,
+                                            'AnswerDescription'=> $answer->answer_description
+                                            );
+                        $tmpAnswerInfo[]    =   $answerInfo;
+            }
+            $questionData[0]['SelectedAnswer']      = $arrQans[1];
+            $questionData[0]['Options']             = $tmpAnswerInfo;
+            $resultData = array_merge($resultData,$questionData);
+            $i++;
+        }
+        //echo "<pre>"; print_r($resultData); exit;
+        return $resultData;
+    }
+
     public function getApplicationStatus($email,$applicationId){
         $servertime     = $this->getServertime();
         $partnerId      = 408;
