@@ -214,7 +214,7 @@ class User_View_Helper_User extends Zend_View_Helper_Abstract
 	                                           
 	      $fieldsValuedTableData = $fieldsValueTable->fetchAll($fieldsValuedTableSelect);
 	      
-	      $totalFieldsValued =   count($fieldsValuedTableData); 
+	      $totalFieldsValued =   count($fieldsValuedTableData)+3; 
 	      
 	      return $totalPercentage   = round(($totalFieldsValued*100)/$allTotalFields);
 	      
