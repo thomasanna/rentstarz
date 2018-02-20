@@ -653,5 +653,14 @@ return array(
 
 		)
 	 ),
+    'shared_reports' => array(
+		'route' => 'reports/shared',
+		'defaults' => array(
+		'module' => 'user',
+		'controller' => 'index',
+		'action' => 'sharedreports'
+
+		)
+	 ),
   )
 ); ?>

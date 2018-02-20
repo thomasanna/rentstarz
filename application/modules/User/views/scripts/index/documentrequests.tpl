@@ -68,6 +68,9 @@ endif;  ?>
       <?php if(($package_type !='' &&  $profile_type_id == 4 ) || ($user_premiumLevelProvision == 1 &&  $profile_type_id == 4)):?>
     '<li><a href="/documents/special">Special documents</a></li>'+
     <?php endif;?>
+    <?php if($profile_type_id == 4):?>
+    '<li><a href="/reports/shared">Reports</a></li>'+
+    <?php endif;?>
     '</ul>'+
     '</ul>'+
     
@@ -81,6 +84,9 @@ jQuery('.sub_header_dropdown').html(
                    ' <option  value="documents/sharedwithme">Documents shared with me</option>'+
                    ' <option  selected value="documents/requests">Document requests</option>'+
                    ' <option value="documents/special">Special documents</option>'+
+                    <?php if($profile_type_id == 4):?>
+                   ' <option value="reports/shared">Reports</option>'+
+                   <?php endif;?>
                    ' </select>'
 );
 

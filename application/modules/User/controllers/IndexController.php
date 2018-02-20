@@ -10864,7 +10864,7 @@ public function filterfeedbypetstypeAction(){
                                 $duration                      = $settings->user_backgroundReportExpiry;
                                 $days                          = "+".$duration." days";
                                 $expiry_date                   = date('d-m-Y', strtotime($days));
-                                $SmartmoveapireportTable->insert(array(
+                                $SmartmoveapireportDataId =$SmartmoveapireportTable->insert(array(
                                     'SmartmoveApplicationId'  => $smartmoveapiApplicationData->SmartmoveApplicationId,
                                     'RenterId'                => $viewer_id,
                                     'reportResponse'          => $applicationResponse,
@@ -10884,6 +10884,42 @@ public function filterfeedbypetstypeAction(){
 							if(count($InvitedrentersbackgroundreportData)>0){
 								$InvitedrentersbackgroundreportData->backgroundReport = 1;
 								$InvitedrentersbackgroundreportData->save();
+								// update report share table
+								$ReportshareTable                      = Engine_Api::_()->getDbtable('Reportshare', 'user');
+								
+								  $ReportshareTableId                =  $ReportshareTable->insert(array(
+				                      	'report_shared_by'         => $viewer_id,
+				                    	'report_shared_with'       => $InvitedrentersbackgroundreportData->landlord_id,
+				                     	'report_id'                => $SmartmoveapireportDataId,
+				                    	'status'                   => 'Active',
+				                    	'created_at'               => date('Y-m-d'),
+				                    	'updated_at'               => date('Y-m-d')
+				               	));
+					// update report request table
+				     $SmartmoveapireportTable       =  Engine_Api::_()->getDbtable('Smartmoveapireport', 'user');
+                     $settings                      = Engine_Api::_()->getApi('settings', 'core');
+                     $duration        = $settings->user_backgroundReportExpiry;
+                     $days            = "+".$duration." days";
+                     $expiry_date     = date('d-m-Y', strtotime($days));
+                     $Reportrequest_table        = Engine_Api::_()->getDbtable('Reportrequest', 'user');
+
+                     $ReportrequestId =   $Reportrequest_table->insert(array(
+		                'renter_id'               => $viewer_id,
+		                'landlord_id'             => $InvitedrentersbackgroundreportData->landlord_id,
+		                'status'                  => 'Shared',
+		                'expiry_date'             => $expiry_date,
+		                'requested_date'          => date('Y-m-d H:i:s'),
+		                'created_at'              =>  date('Y-m-d'),
+		                'updated_at'              =>  date('Y-m-d')
+		                ));
+                 // send notification
+                 
+               
+                $userTable               = Engine_Api::_()->getDbtable('users', 'user');
+                $report_shared_with_data = Engine_Api::_()->user()->getUser($InvitedrentersbackgroundreportData->landlord_id);
+                Engine_Api::_()->getDbtable('notifications', 'activity')
+                        ->addNotification($report_shared_with_data, $viewer, $report_shared_with_data, 'share_report',array(
+                      'label' => $viewer_id,'user_id' => $viewer_id));
 					        }
 					
                             }
@@ -12010,7 +12046,7 @@ public function filterfeedbypetstypeAction(){
             $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi');
             $stripefiles     = $viewHelperObj->getStripeFiles();
            $params = array(
-            "testmode"   => "on",
+            "testmode"   => "off",
             "private_live_key" => "sk_live_bcnF3vdwkx2Q405aOq7POiep",
             "public_live_key"  => "pk_live_evBvNtpwiJlCwieyHNPKsQLO",
             "private_test_key" => "sk_test_K2gnuPgv5SH1P3lkvw86TJIQ",
@@ -14162,7 +14198,35 @@ public function filterfeedbypetstypeAction(){
 		}
 
                 echo json_encode($aResult); 
-     }  
+     } 
+     
+     public function sharedreportsAction(){
+		 
+		 if( !$this->_helper->requireUser()->isValid() ) {
+          return;
+        }
+        $this->_helper->viewRenderer->setNoRender(false);
+        $this->_helper->layout->setLayout('common_layout');
+        $viewer     =  Engine_Api::_()->user()->getViewer();
+        date_default_timezone_set($viewer->timezone);
+        $viewer_id  =  Engine_Api::_()->user()->getViewer()->getIdentity();
+        $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
+        if( !empty($fieldsByAlias['profile_type']) ){
+              $optionId        = $fieldsByAlias['profile_type']->getValue($viewer);
+              $profile_type_id = $optionId->value;
+        }
+        if($profile_type_id != 4){ //if not landlord
+            return $this->_forward('notfound');
+        }
+		 
+		 
+		 $ReportshareTable           = Engine_Api::_()->getDbtable('Reportshare', 'user');           
+           
+         $this->view->ReportshareData            = $ReportshareTable->fetchAll($ReportshareTable->select()
+                                                      ->where('report_shared_with    = ?', $viewer_id)
+                                                                                       ->where('status  = ?', 'Active'));
+            
+       } 
   
         
 }
