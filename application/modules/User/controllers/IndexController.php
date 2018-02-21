@@ -14152,12 +14152,12 @@ public function filterfeedbypetstypeAction(){
                                     fclose($file);
                                 }
                                 if($htmlExist){
-                                      $resciverName   = '';
+                                      $resciverName   = '{resciver_name}';
                                       $content        = '{content}'; 
                                       $mainContent    = '';                                     
-                                      $mainContent    =  $mainContent.$viewer->displayname. 'requesting you to conduct a transunion background review for his apartment rental '; 
-                                      $mainContent    =  $mainContent.'Please click the link below to verify your email and ';
-                                      $mainContent    =  $mainContent.'continue with the review ';
+                                      $mainContent    =  $mainContent.$viewer->displayname. ' requesting you to conduct a transunion background review <br>'; 
+                                      $mainContent    =  $mainContent.'for his apartment rental.Please click the link below to verify your email and <br>';
+                                      $mainContent    =  $mainContent.'continue with the review <br>';
                                       $mainContent    =  $mainContent.'For this, please register on <a href="'.$_SERVER['HTTP_HOST'].'">Rentstarz</a>'; 
                         
                                      
@@ -14178,7 +14178,7 @@ public function filterfeedbypetstypeAction(){
                                          $bodyHtmlTemplate = str_replace($var, $val, $bodyHtmlTemplate);
                                     }
                                     $bodyTextTemplate = strip_tags($bodyTextTemplate);
-                                    $bodyHtmlTemplate = str_replace($resciverName, $resciverData->displayname, $bodyHtmlTemplate);
+                                    $bodyHtmlTemplate = str_replace($resciverName, $userData->displayname, $bodyHtmlTemplate);
                                     $bodyHtmlTemplate = str_replace($content, $mainContent, $bodyHtmlTemplate);
                                 }
                                     $subject = "Invited you for create bacground report";
@@ -14227,6 +14227,43 @@ public function filterfeedbypetstypeAction(){
                                                                                        ->where('status  = ?', 'Active'));
             
        } 
+       public function invitetopropertyAction(){
+	
+	if( !$this->_helper->requireUser()->isValid() ) {
+          return;
+        }
+        $this->_helper->viewRenderer->setNoRender(false);
+        $this->_helper->layout->setLayout('common_layout');
+        $viewer             = Engine_Api::_()->user()->getViewer();
+        date_default_timezone_set('EST');
+        $viewer_id          = Engine_Api::_()->user()->getViewer()->getIdentity();
+        
+        $renterId = $this->_getParam('name', ''); 
+        $userTable              =  Engine_Api::_()->getDbtable('users', 'user');
+
+        $UserData = $userTable->fetchRow($userTable->select()->where('user_id = ?', $renterId));
+        
+        if(!empty($UserData)){
+        
+        $this->view->renterData = $UserData;
+        $propertyTable =  Engine_Api::_()->getDbtable('propertylist', 'user');
+        $propertySelect   =   $propertyTable->select()
+                        ->setIntegrityCheck(false)
+                        ->from(array('plist'=>'engine4_property_list',))
+                        ->joinLeft(array('user'=>'engine4_users',),'plist.property_owner_id=user.user_id',array('displayname'))
+                        ->where('plist.property_owner_id=?' , $viewer_id)
+                        ->where('(plist.enable = ?', 1)
+                        ->orWhere('user.bg_verified  = ?)', 1)
+                        ->where('plist.landlord_enable=?' , 1)
+                        ->group('plist.id')
+                        ->order('plist.id DESC');
+        $this->view->propertyData = $propertyData  =  $propertyTable->fetchAll($propertySelect);
+	  }
+	  else{
+		  return $this->_forward('notfound');
+	  }
+	}    
+	
   
         
 }
