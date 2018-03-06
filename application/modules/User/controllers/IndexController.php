@@ -2144,8 +2144,8 @@ public function tenantsAction() {
                         ->group('plist.id')
                         ->order('plist.id DESC');
         }
-        //echo $propertySelect;exit;
         $propertyData                 = $propertyTable->fetchAll($propertySelect);
+        //echo "<pre>"; print_r($propertyData); exit;
         $this->view->propertyData     = $propertyData;
         $this->view->metaTitle        = 'My properties';
 
@@ -7034,7 +7034,7 @@ public function propertyapprovedrequestslistAction() {
         if(!empty($smartmoveapiApplicationData)){
             $email         =  $smartmoveapiApplicationData->Applicants;
             $applicationId =  $smartmoveapiApplicationData->SmartmoveApplicationId;
-            $viewHelperObj = $this->view->getHelper('SmartmoveApi');
+            $viewHelperObj = $this->view->getHelper('SmartmoveApi125');
             $response      = $viewHelperObj->getApplicationStatus($email,$applicationId);
             if ($response === false)
             {
@@ -7242,7 +7242,7 @@ public function propertyapprovedrequestslistAction() {
                 );
                 //echo print_r($params); exit;
             $params=json_encode($params);
-            $viewHelperObj  = $this->view->getHelper('SmartmoveApi');
+            $viewHelperObj  = $this->view->getHelper('SmartmoveApi125');
             $servertime     = $viewHelperObj->getServertime();
             $partnerId      = 408;
             $SecurityKey    ='Hs3+FsK/Sh/MyLvGIW3TtsMtkTc1C9mJd11EFeHt1LNOpjT4+pLl/BSpChyK/w/nHDZU+IwAosgfrk4jcRQnEg==';
@@ -7712,7 +7712,7 @@ function smartmoveapicreaterentersaveAction(){
         );
 
         $params                           = json_encode($params);
-        $viewHelperObj                    = $this->view->getHelper('SmartmoveApi');
+        $viewHelperObj                    = $this->view->getHelper('SmartmoveApi125');
         $response                         = $viewHelperObj->createrenter($params);
 
         if ($response === false)
@@ -7982,7 +7982,7 @@ function smartmoveapicreaterentersaveAction(){
 
         $params=json_encode($params); //print_r($params);
 
-        $viewHelperObj = $this->view->getHelper('SmartmoveApi');
+        $viewHelperObj = $this->view->getHelper('SmartmoveApi125');
         $response      = $viewHelperObj->updaterenter($params);
 
 
@@ -8122,7 +8122,7 @@ function smartmoveapicreaterentersaveAction(){
         $SmartmoveApplicationId =   $smartmoveapiApplicationData->SmartmoveApplicationId;
 
 
-        $viewHelperObj          =   $this->view->getHelper('SmartmoveApi');
+        $viewHelperObj          =   $this->view->getHelper('SmartmoveApi125');
         $Email                  =   $viewer->email;
         $ApplicationStatusResponse = $viewHelperObj->getApplicationStatus($Email,$SmartmoveApplicationId);
         $ApplicationStatusResponse = json_decode($ApplicationStatusResponse, true);
@@ -8205,7 +8205,7 @@ function smartmoveapicreaterentersaveAction(){
                         'AssetValue'                        => $AssetValue,
                         'FcraAgreementAccepted'             => true
                         );
-                    $viewHelperObj = $this->view->getHelper('SmartmoveApi');
+                    $viewHelperObj = $this->view->getHelper('SmartmoveApi125');
                     $params        = json_encode($params);
                     $response      = $viewHelperObj->ExamRetrieve($params);
                     //print_r($response);exit("22");
@@ -8276,7 +8276,7 @@ function smartmoveapicreaterentersaveAction(){
         if($profile_type_id != 1){ //if not tenant
             return $this->_forward('notfound');
         }
-        $viewHelperObj     = $this->view->getHelper('SmartmoveApi');
+        $viewHelperObj     = $this->view->getHelper('SmartmoveApi125');
         $aResult           = array();
         $answerIds         = $aData['answer_ids'];
         $answerIds         = explode(',',$aData['answer_ids']); //print_r($answerIds); exit;
@@ -8454,7 +8454,7 @@ function smartmoveapicreaterentersaveAction(){
         $this->_helper->layout->setLayout('smartmove_api');
         $viewer_id   =   Engine_Api::_()->user()->getViewer()->getIdentity();
         $smartmoveApplicationId                 =  $this->_getParam('id');
-        $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi');
+        $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi125');
         $PaymentpackageTable                    =  Engine_Api::_()->getDbtable('Paymentpackage', 'user');
         $StripeSettingsTable                    =  Engine_Api::_()->getDbtable('Stripesettings', 'user');
         $StripeSettingsData                     =  $StripeSettingsTable->fetchRow($StripeSettingsTable->select()->where('id = ?', 1));
@@ -8650,7 +8650,7 @@ function smartmoveapicreaterentersaveAction(){
          $ApplicantStatus = $applicant['ApplicantStatus'];
         endforeach;
         if($ApplicantStatus =='ReportsRequested'){
-            $viewHelperObj       = $this->view->getHelper('SmartmoveApi');
+            $viewHelperObj       = $this->view->getHelper('SmartmoveApi125');
             $applicationResponse = $viewHelperObj->getApplication($SmartmoveapireportData -> SmartmoveApplicationId);
 
                             if ($applicationResponse === false)
@@ -10479,7 +10479,7 @@ public function filterfeedbypetstypeAction(){
             return $this->_forward('notfound');
         }
 
-        $viewHelperObj   = $this->view->getHelper('SmartmoveApi');
+        $viewHelperObj   = $this->view->getHelper('SmartmoveApi125');
         $stripefiles     = $viewHelperObj->getStripeFiles(); // smartmove api exam evaluate
       $params = array(
             "testmode"   => "off",
@@ -10803,7 +10803,7 @@ public function filterfeedbypetstypeAction(){
         $smartmoveapiRenters_table           =  Engine_Api::_()->getDbtable('Smartmoveapirenters', 'user');
         $PaymentpackageTable                 =  Engine_Api::_()->getDbtable('Paymentpackage', 'user');
         $SmartmoveapireportTable             =  Engine_Api::_()->getDbtable('Smartmoveapireport', 'user');
-        $viewHelperObj                       = $this->view->getHelper('SmartmoveApi');
+        $viewHelperObj                       = $this->view->getHelper('SmartmoveApi125');
         $smartmoveapiRentersData             = $smartmoveapiRenters_table->fetchRow($smartmoveapiRenters_table->select()->where('tenant_id   = ?', $viewer_id));
         if(count($smartmoveapiRentersData) == 0){
 			  return $this->_helper->redirector->gotoRoute(array(), 'smartmoveapi_createrenter', true);
@@ -11996,7 +11996,7 @@ public function filterfeedbypetstypeAction(){
         $CardholderdetailsTable =  Engine_Api::_()->getDbtable('Cardholderdetails', 'user');
 	    $this->view->CardholderdetailsData  =  $CardholderdetailsTable->fetchRow($CardholderdetailsTable->select()->where('userId = ?',  $viewer_id));
 
-        /*$viewHelperObj                          =  $this->view->getHelper('SmartmoveApi');
+        /*$viewHelperObj                          =  $this->view->getHelper('SmartmoveApi125');
         $stripefiles     = $viewHelperObj->getStripeFiles(); // smartmove api exam evaluate
         $params = array(
             "testmode"   => "on",
@@ -12043,7 +12043,7 @@ public function filterfeedbypetstypeAction(){
 
             if($package == 'landlord_pro_package'){  $packageRate = $settings->user_landlordProPrice; }
             if($package == 'management_gold_package'){  $packageRate = $settings->user_managementGoldPrice; }
-            $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi');
+            $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi125');
             $stripefiles     = $viewHelperObj->getStripeFiles();
            $params = array(
             "testmode"   => "off",
@@ -12426,7 +12426,7 @@ public function filterfeedbypetstypeAction(){
 
 
 
-            $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi');
+            $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi125');
             $stripefiles     = $viewHelperObj->getStripeFiles(); // smartmove api exam evaluate
            $params = array(
             "testmode"   => "off",
@@ -13594,7 +13594,7 @@ public function filterfeedbypetstypeAction(){
 						 $settings = Engine_Api::_()->getApi('settings', 'core');
 						 if($userPackagesData->package_type == 'landlord_pro_package'){  $packageRate = $settings->user_landlordProPrice; }
 						 if($userPackagesData->package_type == 'management_gold_package'){  $packageRate = $settings->user_managementGoldPrice; }
-						 $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi');
+						 $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi125');
 						 $stripefiles     = $viewHelperObj->getStripeFiles();		
 						 
 						 
@@ -13883,7 +13883,7 @@ public function filterfeedbypetstypeAction(){
         $this->_helper->layout->disableLayout();
         $aData     = $this->_request->getPost();
         
-        $viewHelperObj                    =  $this->view->getHelper('SmartmoveApi');        
+        $viewHelperObj                    =  $this->view->getHelper('SmartmoveApi125');        
         $Questions        = $viewHelperObj -> getPropertyQuestionAnsArray($aData['q1Ans'],$aData['q2Ans'],$aData['q3Ans'],$aData['q4Ans'],$aData['q5Ans']);
        // echo "<pre>"; print_r($Questions); exit;
 
@@ -13974,7 +13974,7 @@ public function filterfeedbypetstypeAction(){
 			    
 			    $smartmoveapiquestions_table      =  Engine_Api::_()->getDbtable('smartmoveapiquestions', 'user');
 				$smartmoveapiquestionAnswer_table =  Engine_Api::_()->getDbtable('Smartmoveapiquestionanswers', 'user');
-				$viewHelperObj                    =  $this->view->getHelper('SmartmoveApi');
+				$viewHelperObj                    =  $this->view->getHelper('SmartmoveApi125');
 			    $smartmoveQuestions_select   =   $smartmoveapiquestions_table->select()
                         ->setIntegrityCheck(false)
                         ->from(array('question'=>'engine4_smartmoveapi_questions',))
@@ -14263,10 +14263,405 @@ public function filterfeedbypetstypeAction(){
 		  return $this->_forward('notfound');
 	  }
 	}    
+	public function saverentertaskAction(){
+		if( !$this->_helper->requireUser()->isValid() ) {
+          return;
+        }
+
+        $viewer     = Engine_Api::_()->user()->getViewer();
+        date_default_timezone_set("EST");
+        $this->_helper->viewRenderer->setNoRender(true);
+        $this->_helper->layout->disableLayout();
+        if( $this->getRequest()->isPost()){
+            $aData           = $this->_request->getPost();
+            $task_info       = $aData['task_info'];
+            $renter_id       = $viewer->getIdentity();
+            $landlord_id     = $aData['yourlandlord'];
+            $random_filename = $this->random_string(8);
+            $dir             = dirname($_SERVER['SCRIPT_FILENAME']).'/public/images/tasks/'.$viewer->getIdentity();
+                            if(!is_dir($dir)){
+                                mkdir($dir,0777,true);
+                            }
+            $target_file     = $dir .'/'. basename($_FILES["fileUpload"]["name"]);
+            $imageFileType   = pathinfo($target_file,PATHINFO_EXTENSION);
+            $random_filename =  $random_filename.'.'.$imageFileType;
+
+                $target_file   = $dir .'/'. $random_filename;
+                if (move_uploaded_file($_FILES["fileUpload"]["tmp_name"], $target_file)) {
+                    $TasksTable     = Engine_Api::_()->getDbtable('Tasks', 'user');
+                    $TasksTableId   = $TasksTable->insert(array(
+                      'task_created_by'         => $viewer->getIdentity(),
+                      'task_created_to'     => $landlord_id,
+                      'task_info'           => $task_info,
+                      'status'              => "pending",
+                      'location'            => $aData['task_location'],
+                      'image'               => 'public/images/tasks/'.$viewer->getIdentity().'/'.$random_filename,
+                      'created_at'          => date('Y-m-d H:i:s'),
+
+                    ));
+                    
+                    // mail to landlord
+                    
+                    	$from_email           =  Engine_Api::_()->getApi('settings', 'core')->core_mail_from;
+                        $bodyTextContent      =  '';
+                             if (file_exists("emailtemplates/common_email.html")) {
+                                    $htmlExist  = true;
+                                    $file       = fopen("emailtemplates/common_email.html", "r");
+                                    while(!feof($file))
+                                    {
+                                        $bodyTextContent .= fgets($file);
+                                    }
+                                    fclose($file);
+                                }
+                                if($htmlExist){
+									  $landlordData   =  Engine_Api::_()->user()->getUser($landlord_id);
+
+                                      $resciverName   = '{resciver_name}';
+                                      $content        = '{content}'; 
+                                      $mainContent    = '';                                     
+                                      $mainContent    =  $mainContent.'The renter '.$viewer->displayname. ' has sent a task for maintenance. <br>'; 
+                                      $mainContent    =  $mainContent.'Please review  <br>';
+                                      $mainContent    =  $mainContent.'For this, please login <a href="'.$_SERVER['HTTP_HOST'].'">Rentstarz</a>'; 
+                        
+                                     
+                                      $bodyTextTemplate = '';
+                                      $bodyHtmlTemplate = $bodyTextContent;
+                                    foreach( $rParams as $var => $val ) {
+                                          $raw = trim($var, '[]');
+                                          $var = '[' . $var . ']';
+                                          if( !$val ) {
+                                            $val = $var;
+                                          }
+                                          // Fix nbsp
+                                          $val = str_replace('&amp;nbsp;', ' ', $val);
+                                          $val = str_replace('&nbsp;', ' ', $val);
+                                          // Replace
+
+                                         $bodyTextTemplate = str_replace($var, $val, $bodyTextTemplate);
+                                         $bodyHtmlTemplate = str_replace($var, $val, $bodyHtmlTemplate);
+                                    }
+                                    $bodyTextTemplate = strip_tags($bodyTextTemplate);
+                                    $bodyHtmlTemplate = str_replace($resciverName, $landlordData->displayname, $bodyHtmlTemplate);
+                                    $bodyHtmlTemplate = str_replace($content, $mainContent, $bodyHtmlTemplate);
+                                }
+                                    $subject = "Task for maintenace";
+                                    $header  = "From: ".'Rentstarz'." <".$from_email.">\r\n";
+                                    $header .= "MIME-Version: 1.0\r\n";
+                                    $header .= 'Content-type: text/html; charset=iso-8859-1' ."\"\r\n\r\n";
+                                    mail($landlordData->email, $subject, $bodyHtmlTemplate, $header);
+			
+            
+           $aResult['status']                      = true;
+           }
+           else {
+                 $aResult['status'] = false;
+                }
+          
+            echo json_encode($aResult);
+         }
+		
+	}
 	
-  
-        
+	public function assigntoagentAction(){
+		if( !$this->_helper->requireUser()->isValid() ) {
+          return;
+        }
+
+        $viewer     = Engine_Api::_()->user()->getViewer();
+        date_default_timezone_set("EST");
+        $this->_helper->viewRenderer->setNoRender(true);
+        $this->_helper->layout->disableLayout();
+        if( $this->getRequest()->isPost()){
+            $aData           = $this->_request->getPost();
+            $agentid         = $aData['agentid'];
+            $taskid          = $aData['taskid'];
+            $TasksTable      = Engine_Api::_()->getDbtable('Tasks', 'user');
+            $taskData = $TasksTable->fetchRow($TasksTable->select()
+                      ->where('id = ?', $aData['taskid']));
+            $taskData ->servicer_id =  $aData['agentid']; 
+            $taskData->save();       
+
+            
+            // mail to repair agent
+                         $repairagentData   =  Engine_Api::_()->user()->getUser($aData['agentid']);
+
+                                
+                    	$from_email           =  Engine_Api::_()->getApi('settings', 'core')->core_mail_from;
+                        $bodyTextContent      =  '';
+                             if (file_exists("emailtemplates/common_email.html")) {
+                                    $htmlExist  = true;
+                                    $file       = fopen("emailtemplates/common_email.html", "r");
+                                    while(!feof($file))
+                                    {
+                                        $bodyTextContent .= fgets($file);
+                                    }
+                                    fclose($file);
+                                }
+                                if($htmlExist){
+									  $landlordData   =  Engine_Api::_()->user()->getUser($landlord_id);
+
+                                      $resciverName   = '{resciver_name}';
+                                      $content        = '{content}'; 
+                                      $mainContent    = '';                                     
+                                      $mainContent    =  $mainContent.'The landlord '.$viewer->displayname. ' has sent a task for maintenance. <br>'; 
+                                      $mainContent    =  $mainContent.'Please review and schedule your availability. <br>';
+                                      $mainContent    =  $mainContent.'For this, please login <a href="'.$_SERVER['HTTP_HOST'].'">Rentstarz</a>'; 
+                        
+                                     
+                                      $bodyTextTemplate = '';
+                                      $bodyHtmlTemplate = $bodyTextContent;
+                                    foreach( $rParams as $var => $val ) {
+                                          $raw = trim($var, '[]');
+                                          $var = '[' . $var . ']';
+                                          if( !$val ) {
+                                            $val = $var;
+                                          }
+                                          // Fix nbsp
+                                          $val = str_replace('&amp;nbsp;', ' ', $val);
+                                          $val = str_replace('&nbsp;', ' ', $val);
+                                          // Replace
+
+                                         $bodyTextTemplate = str_replace($var, $val, $bodyTextTemplate);
+                                         $bodyHtmlTemplate = str_replace($var, $val, $bodyHtmlTemplate);
+                                    }
+                                    $bodyTextTemplate = strip_tags($bodyTextTemplate);
+                                    $bodyHtmlTemplate = str_replace($resciverName, $repairagentData->displayname, $bodyHtmlTemplate);
+                                    $bodyHtmlTemplate = str_replace($content, $mainContent, $bodyHtmlTemplate);
+                                }
+                                    $subject = "Task for maintenace";
+                                    $header  = "From: ".'Rentstarz'." <".$from_email.">\r\n";
+                                    $header .= "MIME-Version: 1.0\r\n";
+                                    $header .= 'Content-type: text/html; charset=iso-8859-1' ."\"\r\n\r\n";
+                                    mail($repairagentData->email, $subject, $bodyHtmlTemplate, $header);	
+                      
+           $aResult['status']                      = true;
+        }
+    else{
+		  $aResult['status']                      = false;
+	}
+    echo json_encode($aResult);        
 }
 
+	public function gettaskbyidAction(){
+		if( !$this->_helper->requireUser()->isValid() ) {
+          return;
+        }
 
+        $viewer     = Engine_Api::_()->user()->getViewer();
+        date_default_timezone_set("EST");
+        $this->_helper->viewRenderer->setNoRender(true);
+        $this->_helper->layout->disableLayout();
+        if( $this->getRequest()->isPost()){
+            $aData           = $this->_request->getPost();
+            $taskid         = $aData['taskid'];
+            $TasksTable     = Engine_Api::_()->getDbtable('Tasks', 'user');
+ 
+            $taskSelect = $TasksTable->select()
+                                ->setIntegrityCheck(false)
+                                ->from(array('tasks'=>'engine4_tasks',))
+                        ->joinLeft(array('users'=>'engine4_users',),'users.user_id=tasks.task_created_by',array('user_id as renter_id','displayname as renter_name','email as renter_email'))
+                        ->where('tasks.id = ?', $taskid);
+           $taskData = $TasksTable->fetchAll($taskSelect);
+           $content ='';
+           foreach($taskData as $data){
+			   $landlordData   =  Engine_Api::_()->user()->getUser($data['task_created_to']);
+			   if($data['servicer_id'] !=''){
+			   $repairagent   =  Engine_Api::_()->user()->getUser($data['servicer_id']);
+			   $repairagentName = $repairagent->displayname;
+		       }
+		       else{$repairagentName ='';
+			   }
 
+			   $content = $content.'<div class="row">';
+			   $content = $content.'<div class="col-md-3 col-sm-3 col-xs-12 task_head">Task</div>';
+			   $content = $content.'<div class="col-md-3 col-sm-3 col-xs-12">'.$data['task_info'].'</div>';
+			   $content = $content.'</div><br>';
+			   $content = $content.'<div class="row">';
+			   $content = $content.'<div class="col-md-3 col-sm-3 col-xs-12 task_head">Location</div>';
+			   $content = $content.'<div class="col-md-3 col-sm-3 col-xs-12">'.$data['location'].'</div>';
+			   $content = $content.'</div><br>';
+			   $content = $content.'<div class="row">';
+			   $content = $content.'<div class="col-md-3 col-sm-3 col-xs-12 task_head">Tenant</div>';
+			   $content = $content.'<div class="col-md-3 col-sm-3 col-xs-12">'.$data['renter_name'].'</div>';
+			   $content = $content.'</div><br>';
+			   $content = $content.'<div class="row">';
+			   $content = $content.'<div class="col-md-3 col-sm-3 col-xs-12 task_head">Landlord</div>';
+			   $content = $content.'<div class="col-md-3 col-sm-3 col-xs-12">'.$landlordData->displayname.'</div>';
+			   $content = $content.'</div><br>';
+			   $content = $content.'<div class="row">';
+			   $content = $content.'<div class="col-md-3 col-sm-3 col-xs-12 task_head">Repair Agent</div>';
+			   $content = $content.'<div class="col-md-3 col-sm-3 col-xs-12">'.$repairagentName.'</div>';
+			   $content = $content.'</div><br>';
+			   $content = $content.'<div class="row">';
+			   $content = $content.'<div class="col-md-3 col-sm-3 col-xs-12 task_head">Status</div>';
+			   $content = $content.'<div class="col-md-3 col-sm-3 col-xs-12">'.$data['status'].'</div>';
+			   $content = $content.'</div><br>';
+			   $content = $content.'<div class="row">';
+			   $content = $content.'<div class="col-md-3 col-sm-3 col-xs-12 task_head">Expense</div>';
+			   $content = $content.'<div class="col-md-3 col-sm-3 col-xs-12">'.$data['expense'].'</div>';
+			   $content = $content.'</div><br>';
+			   $content = $content.'<div class="row">';
+			   $content = $content.'<div class="col-md-3 col-sm-3 col-xs-12 task_head">Scheduled Date</div>';
+			   $content = $content.'<div class="col-md-3 col-sm-3 col-xs-12">'.$data['scheduled_date'].'</div>';
+			   $content = $content.'</div><br>';		   
+			  			   
+		   }
+
+            echo json_encode($content);
+ 
+        }
+		
+	}
+	public function gettaskAction(){
+		if( !$this->_helper->requireUser()->isValid() ) {
+          return;
+        }
+
+        $viewer     = Engine_Api::_()->user()->getViewer();
+        date_default_timezone_set("EST");
+        $this->_helper->viewRenderer->setNoRender(true);
+        $this->_helper->layout->disableLayout();
+        if( $this->getRequest()->isPost()){
+            $aData           = $this->_request->getPost();
+            $taskid         = $aData['taskid'];
+            $TasksTable     = Engine_Api::_()->getDbtable('Tasks', 'user');
+ 
+            $taskSelect = $TasksTable->select()
+                                ->setIntegrityCheck(false)
+                                ->from(array('tasks'=>'engine4_tasks',))
+                        ->joinLeft(array('users'=>'engine4_users',),'users.user_id=tasks.task_created_by',array('user_id as renter_id','displayname as renter_name','email as renter_email'))
+                        ->where('tasks.id = ?', $taskid);
+           $taskData = $TasksTable->fetchRow($taskSelect);
+           $response['scheduled_date'] = $taskData['scheduled_date'];
+           $response['expense'] = $taskData['expense'];
+           $response['status'] = $taskData['status'];
+           $response['taskid'] = $taskData['id'];
+           echo json_encode($response);
+
+          }
+
+    }
+	public function updatetaskAction(){
+		if( !$this->_helper->requireUser()->isValid() ) {
+          return;
+        }
+
+        $viewer     = Engine_Api::_()->user()->getViewer();
+        date_default_timezone_set("EST");
+        $this->_helper->viewRenderer->setNoRender(true);
+        $this->_helper->layout->disableLayout();
+        if( $this->getRequest()->isPost()){
+            $aData           = $this->_request->getPost();
+            $taskid         = $aData['taskid'];
+            $TasksTable     = Engine_Api::_()->getDbtable('Tasks', 'user');
+ 
+            $taskData = $TasksTable->fetchRow($TasksTable->select()
+                      ->where('id = ?', $aData['taskid']));
+            $taskData->scheduled_date =  $aData['scheduled_date'];        
+            $taskData->expense =  $aData['expense'];        
+            $taskData->status =  $aData['status'];
+            $taskData->save();     
+            
+             $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
+        if( !empty($fieldsByAlias['profile_type']) ){
+              $optionId        = $fieldsByAlias['profile_type']->getValue($viewer);
+              $profile_type_id = $optionId->value;
+        }
+        
+        if($profile_type_id == 34){
+	         $mainContent    = '';   
+	         $mainContent = $mainContent.'The repair agent '.$viewer->displayname. ' has scheduled task for land'; 
+	         $renter   =  Engine_Api::_()->user()->getUser($taskData->task_created_by);
+	         $landlord   =  Engine_Api::_()->user()->getUser($taskData->task_created_to);
+             $mailid1 = $landlord->email;
+             $mailid2 = $renter->email;
+                  
+		}
+    
+        if($profile_type_id == 4){
+	         $mainContent    = '';   
+	         $mainContent = $mainContent.'The landlord '.$viewer->displayname. ' has scheduled task for land';
+	         
+	         $repairagentData   =  Engine_Api::_()->user()->getUser($taskData->servicer_id);
+	         $renter   =  Engine_Api::_()->user()->getUser($taskData->task_created_by);
+	         if(count($repairagentData)> 0){
+	         $mailid1 = $repairagentData->email;}
+	         $mailid2 = $renter->email;
+                               
+		}
+        if($profile_type_id == 1){
+	         $mainContent    = '';   
+	         $mainContent = $mainContent.'The Renter '.$viewer->displayname. ' has updated task for land';  
+	         $repairagentData   =  Engine_Api::_()->user()->getUser($taskData->servicer_id);
+	         $landlord   =  Engine_Api::_()->user()->getUser($taskData->task_created_to);
+	         if(count($repairagentData)> 0){
+	         $mailid1 = $repairagentData->email;}
+	         else{$mailid1 ='';}
+	         $mailid2 = $landlord->email;                             
+		}
+    
+            
+             // mail to repair agent
+
+                                
+                    	$from_email           =  Engine_Api::_()->getApi('settings', 'core')->core_mail_from;
+                        $bodyTextContent      =  '';
+                             if (file_exists("emailtemplates/common_email.html")) {
+                                    $htmlExist  = true;
+                                    $file       = fopen("emailtemplates/common_email.html", "r");
+                                    while(!feof($file))
+                                    {
+                                        $bodyTextContent .= fgets($file);
+                                    }
+                                    fclose($file);
+                                }
+                                if($htmlExist){
+									  $landlordData   =  Engine_Api::_()->user()->getUser($landlord_id);
+
+                                      $resciverName   = '{resciver_name}';
+                                      $content        = '{content}'; 
+                                      $mainContent    =  $mainContent.'Please review. <br>';
+                                      $mainContent    =  $mainContent.'For this, please login <a href="'.$_SERVER['HTTP_HOST'].'">Rentstarz</a>'; 
+                        
+                                     
+                                      $bodyTextTemplate = '';
+                                      $bodyHtmlTemplate = $bodyTextContent;
+                                    foreach( $rParams as $var => $val ) {
+                                          $raw = trim($var, '[]');
+                                          $var = '[' . $var . ']';
+                                          if( !$val ) {
+                                            $val = $var;
+                                          }
+                                          // Fix nbsp
+                                          $val = str_replace('&amp;nbsp;', ' ', $val);
+                                          $val = str_replace('&nbsp;', ' ', $val);
+                                          // Replace
+
+                                         $bodyTextTemplate = str_replace($var, $val, $bodyTextTemplate);
+                                         $bodyHtmlTemplate = str_replace($var, $val, $bodyHtmlTemplate);
+                                    }
+                                    $bodyTextTemplate = strip_tags($bodyTextTemplate);
+                                    $bodyHtmlTemplate = str_replace($resciverName, '', $bodyHtmlTemplate);
+                                    $bodyHtmlTemplate = str_replace($content, $mainContent, $bodyHtmlTemplate);
+                                }
+                                    $subject = "Task for maintenace";
+                                    $header  = "From: ".'Rentstarz'." <".$from_email.">\r\n";
+                                    $header .= "MIME-Version: 1.0\r\n";
+                                    $header .= 'Content-type: text/html; charset=iso-8859-1' ."\"\r\n\r\n";
+                                    if($mailid1 != ''){
+                                    mail($mailid1, $subject, $bodyHtmlTemplate, $header);
+								    }	
+                                    if($mailid2 != ''){
+                                    mail($mailid2, $subject, $bodyHtmlTemplate, $header);
+								    }	
+              
+            $response['status']= true;
+          }
+          else{
+			              $response['status']= false;
+
+		  }
+         echo json_encode($response);
+
+    }
+}

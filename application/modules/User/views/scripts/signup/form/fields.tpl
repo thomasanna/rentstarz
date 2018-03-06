@@ -577,6 +577,12 @@ jQuery("#1_1_15").keyup(function(){		//Annual Income validation in teanant
 		jQuery("#1_4_17").attr("placeholder", "First Name  *");
 		jQuery("#1_4_18").attr("placeholder", "Last Name  *");
 		jQuery("#1_4_34").attr("placeholder", "Zip code  *");
+		// repair agent
+		jQuery("#1_34_83").attr("placeholder", "First Name  *");
+		jQuery("#1_34_84").attr("placeholder", "Last Name  *");
+		jQuery("#1_34_89").attr("placeholder", "Zipcode  *");
+		jQuery("#1_34_90").attr("placeholder", "Phonenumber  *");
+		jQuery("#1_34_93").attr("placeholder", "Employment  *");
 		
 		
 	});

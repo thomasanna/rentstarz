@@ -390,4 +390,46 @@ return array(
       'no-subject',
     ),
   ),
+   array(
+    'title' => 'Renter Task',
+    'description' => 'Renter task management',
+    'category' => 'User',
+    'type' => 'widget',
+    'name' => 'user.renter-task',
+    'isPaginated' => true,
+    'defaultParams' => array(
+      'title' => 'Renter task management',
+    ),
+    'requirements' => array(
+      'no-subject',
+    ),
+    ),
+   array(
+    'title' => 'Landlord Task',
+    'description' => 'Landlord task management',
+    'category' => 'User',
+    'type' => 'widget',
+    'name' => 'user.landlord-task',
+    'isPaginated' => true,
+    'defaultParams' => array(
+      'title' => 'Landlord task management',
+    ),
+    'requirements' => array(
+      'no-subject',
+    ),
+  ),
+   array(
+    'title' => 'Repairagent Task',
+    'description' => 'Repairagent task management',
+    'category' => 'User',
+    'type' => 'widget',
+    'name' => 'user.repairagent-task',
+    'isPaginated' => true,
+    'defaultParams' => array(
+      'title' => 'Repairagent task management',
+    ),
+    'requirements' => array(
+      'no-subject',
+    ),
+  ),
 ) ?>

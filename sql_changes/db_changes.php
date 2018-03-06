@@ -1338,6 +1338,24 @@ $sql['1.1.2.217']   = "CREATE TABLE `engine4_invitedrenters_backgroundreport` (
 					  `created_at` varchar(20) NOT NULL,
 					  PRIMARY KEY (`id`)
 					) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;";
+					
+$sql['1.1.2.218']   = "CREATE TABLE `engine4_tasks` (
+						`id` int(11) NOT NULL,
+						`task_created_by` int(11) NOT NULL,
+						`task_created_to` int(11) NOT NULL,
+						`task_info` text NOT NULL,
+						`image` varchar(1000) NOT NULL,
+						`video` varchar(1000) NOT NULL,
+						`scheduled_date` varchar(50) NOT NULL,
+						`status` varchar(50) NOT NULL,
+						`notes` text NOT NULL,
+						`servicer_id` int(11) NOT NULL,
+						`expense` varchar(50) NOT NULL,
+						`location` varchar(500) NOT NULL,
+						`created_at` varchar(50) NOT NULL,
+						PRIMARY KEY (`id`)
+						) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+						";
 										
 ?>
 

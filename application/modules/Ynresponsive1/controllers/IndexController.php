@@ -6,6 +6,16 @@ class Ynresponsive1_IndexController extends Core_Controller_Action_Standard
    if( !Engine_Api::_()->user()->getViewer()->getIdentity() ) {
       return $this->_helper->redirector->gotoRoute(array(), 'default', true);
      }
+     $viewer = Engine_Api::_() -> user() -> getViewer();
+
+     $fieldsByAlias   = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
+             if( !empty($fieldsByAlias['profile_type']) ){
+              $optionId        = $fieldsByAlias['profile_type']->getValue($viewer);
+              $profile_type_id = $optionId->value;
+           }
+     if($profile_type_id == 34){		
+		             return $this->_forward('notfound');
+	 }      
      $this->view->metaTitle     = 'Member Home Page';
     // Render
     $this->_helper->content

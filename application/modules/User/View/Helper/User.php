@@ -220,5 +220,33 @@ class User_View_Helper_User extends Zend_View_Helper_Abstract
 	      
 	}
 
-	
+	function getYourLandlords($renterId){
+		
+		$propertyGrantedTable =  Engine_Api::_()->getDbtable('propertygranted', 'user');
+        $propertyGranted_select = $propertyGrantedTable->select()
+                                ->setIntegrityCheck(false)
+                                ->from(array('pgranted'=>'engine4_property_granted',))
+                        ->joinLeft(array('users'=>'engine4_users',),'users.user_id=pgranted.landlord_id',array('user_id as landlord_id','displayname as landlord_name','email as landlord_email'))
+                        ->where('tenant_id = ?', $renterId)
+                        ->where('granted = ?', 1)
+                        ->where('pgranted.status = ?', 1);
+        $result = $propertyGrantedTable->fetchAll($propertyGranted_select);
+        
+        return $result;
+        
+	}
+	function getMaintenanceLog($landlordId){
+		
+		 $TasksTable     = Engine_Api::_()->getDbtable('Tasks', 'user');
+         $task_select = $TasksTable->select()
+                                ->setIntegrityCheck(false)
+                                ->from(array('tasks'=>'engine4_tasks',))
+                        ->joinLeft(array('users'=>'engine4_users',),'users.user_id=tasks.task_created_by',array('user_id as renter_id','displayname as renter_name','email as renter_email'))
+                        ->where('tasks.status = ?', 'scheduled')
+                        ->where('tasks.task_created_to = ?', $landlordId);
+        $result = $TasksTable->fetchAll($task_select);
+
+        return $result;
+        
+	}
 }

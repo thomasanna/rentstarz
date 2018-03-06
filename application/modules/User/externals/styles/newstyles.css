@@ -25,3 +25,26 @@
 .screen_renters_div .pro_field_wrapper{
  text-align:center;
 }
+#image-holder{
+  width: 120px;
+    min-height: 120px;
+    max-height: auto;
+    margin: 3px;
+    padding: 3px;
+}
+
+#image-holder img {
+    max-width: 100%;
+    height: auto;
+}
+.landlord_image_holder{
+    width: 200px;
+    min-height: 200px;
+    margin: 0 auto;
+}
+.landlord_image_holder img{
+    width: 200px;
+}
+.task_head{
+font-weight: 600;
+}

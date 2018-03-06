@@ -82,6 +82,9 @@ var viewer_identity='<?php echo $viwer_id; ?>';
           <?php if($this->profile_type_id == 6):?>
           Services
           <?php endif;?>
+          <?php if($this->profile_type_id == 34):?>
+          Repair Agent
+          <?php endif;?>
           </p>
           <p><i class="fa fa-home fa-fw newprofile-margin-right newprofile-large newprofile-text-teal"></i><?php echo $this->userselectData->state?>, <?php echo $this->userselectData->city?></p>
         <?php if($this->profile_type_id == 1 && $this->creditscoreData->creditscore_view_status==1): ?>
@@ -134,18 +137,7 @@ var viewer_identity='<?php echo $viwer_id; ?>';
                 <?php if( $this->is_blocked == 1):?>
                 <p><a href="javascript:void(0);" class="buttonlink unblockmember" style="padding-left: 39px;background-image: url(application/modules/User/externals/images/block.png)"  data-toggle="modal" data-target="#unblockmemberModal">Unblock Member</a></p>
                 <?php endif;?> 
-          <?php /* foreach( $profile_menus as $link ): ?>
-
-                        <?php if($link->getLabel() =='Block Member'):?>
-                        <p class="profile_menus">
-                          <?php echo $this->htmlLink($link->getHref(), $this->translate($link->getLabel()), array(
-                            'class' => 'buttonlink' . ( $link->getClass() ? ' ' . $link->getClass() : '' ),
-                            'style' => 'background-image: url('.$link->get('icon').');',
-                            'target' => $link->get('target'),
-                          )) ?>
-                        </p>
-                        <?php endif;?>
-                        <?php endforeach; */?>
+         
                              <?php
                                 $profileNoPicInfo   =   $viewHelperObj->getNoPhoto($this->subject());
                                 $type               =   'thumb.icon';
@@ -174,6 +166,16 @@ var viewer_identity='<?php echo $viwer_id; ?>';
                <p class="screen_renter_link" style="cursor:pointer"><i class="fa fa-briefcase fa-fw newprofile-margin-right newprofile-large newprofile-text-teal" ></i>Screen Renters</p>
   
              <?php endif;?>
+             <?php if($this->profile_type_id == 1 && ($subject->getIdentity() == $viewer -> getIdentity())):?>
+             <p class="renter_task" style="cursor:pointer"><i class="fa fa-briefcase fa-fw newprofile-margin-right newprofile-large newprofile-text-teal" ></i>Task</p>
+             <?php endif;?>
+
+             <?php if($this->profile_type_id == 4 && ($subject->getIdentity() == $viewer -> getIdentity())):?>
+             <p class="landlord_task" style="cursor:pointer"><i class="fa fa-briefcase fa-fw newprofile-margin-right newprofile-large newprofile-text-teal" ></i>Task</p>
+             <?php endif;?>
+             <?php if($this->profile_type_id == 34 && ($subject->getIdentity() == $viewer -> getIdentity())):?>
+             <p class="repairagent_task" style="cursor:pointer"><i class="fa fa-briefcase fa-fw newprofile-margin-right newprofile-large newprofile-text-teal" ></i>Task</p>
+             <?php endif;?>
           <hr>
           <br>
           <?php
@@ -192,7 +194,7 @@ var viewer_identity='<?php echo $viwer_id; ?>';
     </div>
     <!-- Right Column -->
     <div class="newprofile-twothird">
-      <div class="newprofile-container newprofile-card-2 newprofile-white newprofile-margin-bottom">
+      <div class="newprofile-container newprofile-card-2 newprofile-white newprofile-margin-bottom newprofile-container-profilefields">
         <!--<h2 class="newprofile-text-grey newprofile-padding-16"><i class="fa fa-suitcase fa-fw newprofile-margin-right newprofile-xxlarge newprofile-text-teal"></i>Work Experience</h2>-->
         <div class="newprofile-container">
           <h5 class="newprofile-opacity"><b></b></h5>
@@ -215,7 +217,8 @@ var viewer_identity='<?php echo $viwer_id; ?>';
           </div>
           </div> <!-- profile_fields_div end-->
           
-          <div class="property_div" style="display:none">  <!-- start property_div-->
+          
+                   <div class="property_div" style="display:none">  <!-- start property_div-->
           
          <div class="holding+property_create_form">
 
@@ -478,15 +481,51 @@ var viewer_identity='<?php echo $viwer_id; ?>';
             </div>          
             </div>          
           </div>
-
-         <!-- <div class="profile_activity_feed" style="display:none">
-          <h2 class="newprofile-text-grey newprofile-padding-16"><i class="fa fa-certificate fa-fw newprofile-margin-right newprofile-xxlarge newprofile-text-teal"></i>Updates</h2>
-          <?php //echo $this->content()->renderWidget('activity.feed'); ?>
-          </div>-->
             <hr>
         </div>
         </div>
-         <div class="newprofile-container newprofile-card-2 newprofile-white" style="margin-top: 15px;">
+        
+       <?php if($this->profile_type_id == 1 && ($subject->getIdentity() == $viewer -> getIdentity())):?>
+
+         <div class="newprofile-container newprofile-card-2 newprofile-white newprofile-container-rentertask" style="margin-top: 15px;display:none;">
+        <div class="newprofile-container">
+          <h5 class="newprofile-opacity"><b></b></h5>
+          <h2 class="newprofile-padding-16"><i class="fa fa-certificate fa-fw newprofile-margin-right newprofile-xxlarge newprofile-text-teal"></i>Tasks</h2>
+          <p></p>
+          <?php echo $this->content()->renderWidget('user.renter-task'); ?>
+          <hr style="clear: both;">
+        </div>
+      </div>
+      <?php endif;?>
+      
+       <?php if($this->profile_type_id == 4 && ($subject->getIdentity() == $viewer -> getIdentity())):?>
+
+         <div class="newprofile-container newprofile-card-2 newprofile-white newprofile-container-landlordtask" style="margin-top: 15px;display:none;">
+        <div class="newprofile-container">
+          <h5 class="newprofile-opacity"><b></b></h5>
+          <h2 class="newprofile-padding-16"><i class="fa fa-certificate fa-fw newprofile-margin-right newprofile-xxlarge newprofile-text-teal"></i>Tasks</h2>
+          <p></p>
+          <?php echo $this->content()->renderWidget('user.landlord-task'); ?>
+          <hr style="clear: both;">
+        </div>
+      </div>
+      <?php endif;?>
+      
+       <?php if($this->profile_type_id == 34 && ($subject->getIdentity() == $viewer -> getIdentity())):?>
+
+         <div class="newprofile-container newprofile-card-2 newprofile-white newprofile-container-repairagenttask" style="margin-top: 15px;display:none;">
+        <div class="newprofile-container">
+          <h5 class="newprofile-opacity"><b></b></h5>
+          <h2 class="newprofile-padding-16"><i class="fa fa-certificate fa-fw newprofile-margin-right newprofile-xxlarge newprofile-text-teal"></i>Tasks</h2>
+          <p></p>
+          <?php echo $this->content()->renderWidget('user.repairagent-task'); ?>
+          <hr style="clear: both;">
+        </div>
+      </div>
+      <?php endif;?>
+      
+      <?php if($this->profile_type_id == 4 || $this->profile_type_id == 1):?>
+       <div class="newprofile-container newprofile-card-2 newprofile-white newprofile-container-gallery" style="margin-top: 15px;">
         <div class="newprofile-container">
           <h5 class="newprofile-opacity"><b></b></h5>
           <h2 class="newprofile-padding-16"><i class="fa fa-certificate fa-fw newprofile-margin-right newprofile-xxlarge newprofile-text-teal"></i>Galleries</h2>
@@ -496,16 +535,7 @@ var viewer_identity='<?php echo $viwer_id; ?>';
           <hr style="clear: both;">
         </div>
       </div>
-      <!--<div class="newprofile-container newprofile-card-2 newprofile-white">
-        <div class="newprofile-container">
-          <h5 class="newprofile-opacity"><b></b></h5>
-          <h2 class="newprofile-text-grey newprofile-padding-16"><i class="fa fa-certificate fa-fw newprofile-margin-right newprofile-xxlarge newprofile-text-teal"></i>Galleries</h2>
-          <p></p>
-          <?php // echo $this->content()->renderWidget('album.profile-albums'); ?>
-          <hr>
-        </div>
-      </div>-->
-      <div class="newprofile-container newprofile-card-2 newprofile-white" style="margin-top: 15px;">
+      <div class="newprofile-container newprofile-card-2 newprofile-white newprofile-container-documents" style="margin-top: 15px;">
         <div class="newprofile-container">
           <h5 class="newprofile-opacity"><b></b></h5>
           <h2 ><i class="fa fa-certificate fa-fw newprofile-margin-right newprofile-xxlarge newprofile-text-teal"></i>Documents</h2>
@@ -515,6 +545,7 @@ var viewer_identity='<?php echo $viwer_id; ?>';
           <hr>
         </div>
       </div>
+      <?php endif;?>
     <!-- End Right Column -->
     </div>
   <!-- End Grid -->
@@ -619,32 +650,64 @@ var viewer_identity='<?php echo $viwer_id; ?>';
 
 <!-- block modal end-->
 
+<!-- task more info modal-->
 
+<div class="modal fade" id="taskmoreinfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content-new">
+      <div class="modal-header">
+        
+      </div>
+       <div class="modal-body">
+        
+      </div>
+            <div class="loader" style="display:none"></div>
+    </div>
+  </div>
+</div>
+<!-- schedule task  modal-->
 
+<div class="modal fade" id="scheduletaskModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content-new">
+      <div class="modal-header">
+        
+      </div>
+       <div class="modal-body">
+		   <div class="pro_field_wrapper">
+		   <div>Schedule Your Task</div><br><br>
+		   <input type="hidden" value="" class="task_id_text prty_field input-box">
+		   </div>
+		   <div class="pro_field_wrapper">
+		   <div>Schedule Date</div>
+		   <div><input type="text" class="schedule_date_text prty_field input-box"></div><br>
+		   </div>
+           <div class="pro_field_wrapper">
+		   <div>Expense</div><br>
+		   <div><input type="text" class="expense_text prty_field input-box"></div><br>
+		   </div>
+		   <div class="pro_field_wrapper">
+		   <div>Change Status</div><br>
+		   <div>
+		   <select class="status_option prty_field input-box">
+		   <option value="">Select</option>
+		   <option value="pending">Pending</option>
+		   <option value="scheduled">Scheduled</option>
+		   <option value="completed">Completed</option>
+		   </select>
+           </div> <br>
+           <div class="pro_field_wrapper">
 
-
+          <input class="submit_task_update" type="button" value="Submit" name="">
+       
+      </div>
+            <div class="loader" style="display:none"></div>
+    </div>
+  </div>
+</div>
 
 
 <script>
-/*jQuery('body').on('click', '.tab_layout_activity_feed', function(event){
-    jQuery('.tab_layout_activity_feed').addClass('active');
-    jQuery('.tab_layout_user_profile_fields').removeClass('active');
-    jQuery('.profile_activity_feed').css('display','block');
-    jQuery('.profile_fields').css('display','none');
-});
-jQuery('body').on('click', '.tab_layout_user_profile_fields', function(event){
-    jQuery('.tab_layout_user_profile_fields').addClass('active');
-    jQuery('.tab_layout_manage_subscription').removeClass('active');
-    jQuery('.profile_fields').css('display','block');
-    jQuery('.manage_subscription').css('display','none');
-});
-jQuery('body').on('click', '.tab_layout_manage_subscription', function(event){
-    jQuery('.tab_layout_manage_subscription').addClass('active');
-    jQuery('.tab_layout_user_profile_fields').removeClass('active');
-    jQuery('.profile_fields').css('display','none');
-    jQuery('.manage_subscription').css('display','block');
-});*/
-
 jQuery('body').on('click', '.submit_report', function(event){
 	
 	var subjectId  = "<?php echo $subject->getIdentity();?>";
@@ -1268,4 +1331,36 @@ jQuery('.submit_questions').on(handleClick, function() {
 
 	
 });
+jQuery('.renter_task').on(handleClick, function() {
+
+ jQuery('.newprofile-container-profilefields').css('display','none');
+ jQuery('.newprofile-container-gallery').css('display','none');
+ jQuery('.newprofile-container-documents').css('display','none');
+ jQuery('.newprofile-container-rentertask').css('display','block');
+});
+jQuery('.landlord_task').on(handleClick, function() {
+
+ jQuery('.newprofile-container-profilefields').css('display','none');
+ jQuery('.newprofile-container-gallery').css('display','none');
+ jQuery('.newprofile-container-documents').css('display','none');
+ jQuery('.newprofile-container-rentertask').css('display','none');
+ jQuery('.newprofile-container-landlordtask').css('display','block');
+});
+jQuery('.repairagent_task').on(handleClick, function() {alert(1);
+
+ jQuery('.newprofile-container-profilefields').css('display','none');
+ jQuery('.newprofile-container-gallery').css('display','none');
+ jQuery('.newprofile-container-documents').css('display','none');
+ jQuery('.newprofile-container-rentertask').css('display','none');
+ jQuery('.newprofile-container-landlordtask').css('display','none');
+ jQuery('.newprofile-container-repairagenttask').css('display','block');
+});
+jQuery(document).ready(function(){
+		// jQuery(function() {
+		jQuery( ".schedule_date_text" ).datepicker({
+		  dateFormat: 'yy-mm-dd',
+		  minDate: 0
+		});   
+		//}); 
+	});
 </script>

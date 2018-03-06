@@ -357,7 +357,7 @@ var image_error=0; var total_image_uploaded = 0;
             sequentialUploads:true,
             dropZone: jQuery('.share-text-field'),
             acceptFileTypes:'/(\.|\/)(gif|jpe?g|png)$/i',
-            url: '<?php echo $this->baseUrl();?>' +'activity/ajax/shareupload/shareuploads/<?php echo $this->shareupload; ?>/feeduploads/<?php echo $this->feeduploads; ?>'+"/t/"+new Date().getTime()
+            url: '<?php echo $this->baseUrl();?>' +'/activity/ajax/shareupload/shareuploads/<?php echo $this->shareupload; ?>/feeduploads/<?php echo $this->feeduploads; ?>'+"/t/"+new Date().getTime()
         }).bind('fileuploaddone', function (e, data) {
             jQuery(".loader").css('display','none');
             jQuery(".but_submit").prop("disabled", false);
@@ -411,7 +411,7 @@ var image_error=0; var total_image_uploaded = 0;
 
      function loaduploadpreview(id)
     {
-        var sSaveUrl ='<?php echo $this->baseUrl();?>' + 'activity/ajax/uploadpreview/shareuploads/<?php echo $this->shareupload; ?>/feeduploads/<?php echo $this->feeduploads; ?>'+"/t/"+new Date().getTime();;
+        var sSaveUrl ='<?php echo $this->baseUrl();?>' + '/activity/ajax/uploadpreview/shareuploads/<?php echo $this->shareupload; ?>/feeduploads/<?php echo $this->feeduploads; ?>'+"/t/"+new Date().getTime();;
         var oRpost = new Object();
         jQuery.ajax({
                 url:sSaveUrl,
@@ -427,7 +427,7 @@ var image_error=0; var total_image_uploaded = 0;
 
     function updateuploadoption()
     {
-        var sSaveUrl = '<?php echo $this->baseUrl();?>' + 'activity/ajax/uploadstat/shareuploads/<?php echo $this->shareupload; ?>/feeduploads/<?php echo $this->feeduploads; ?>'+"/t/"+new Date().getTime();
+        var sSaveUrl = '<?php echo $this->baseUrl();?>' + '/activity/ajax/uploadstat/shareuploads/<?php echo $this->shareupload; ?>/feeduploads/<?php echo $this->feeduploads; ?>'+"/t/"+new Date().getTime();
         var oRpost = new Object();
         jQuery.ajax({
                 url:sSaveUrl,
@@ -461,7 +461,7 @@ var image_error=0; var total_image_uploaded = 0;
 
     jQuery(".upload_pic_video").on('click','#upload-preview .delete-share-image',
          function(){
-            var sSaveUrl = '<?php echo $this->baseUrl();?>' + 'activity/ajax/removeshareupload/shareuploads/<?php echo $this->shareupload; ?>/feeduploads/<?php echo $this->feeduploads; ?>'+"/t/"+new Date().getTime();
+            var sSaveUrl = '<?php echo $this->baseUrl();?>' + '/activity/ajax/removeshareupload/shareuploads/<?php echo $this->shareupload; ?>/feeduploads/<?php echo $this->feeduploads; ?>'+"/t/"+new Date().getTime();
             var oRpost = new Object();
             oRpost.imageid = jQuery(this).data('imageid');
             jQuery.ajax({
@@ -601,7 +601,7 @@ var video_error=0; var total_video_uploaded = 0;
 
         jQuery(".upload_pic_video").on('click','#video-upload-preview .delete-share-video',
          function(){
-            var sSaveUrl = '<?php echo $this->baseUrl();?>' + 'activity/ajax/removeshareuploadvideo/shareuploads/<?php echo $this->shareupload; ?>/feeduploads/<?php echo $this->feeduploads; ?>'+"/t/"+new Date().getTime();
+            var sSaveUrl = '<?php echo $this->baseUrl();?>' + '/activity/ajax/removeshareuploadvideo/shareuploads/<?php echo $this->shareupload; ?>/feeduploads/<?php echo $this->feeduploads; ?>'+"/t/"+new Date().getTime();
             var oRpost = new Object();
             oRpost.videoid = jQuery(this).data('videoid');
             oRpost.imagepath = jQuery(this).data('imagepath');

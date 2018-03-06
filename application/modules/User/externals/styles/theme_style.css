@@ -3312,6 +3312,9 @@ font-size:24px;
     margin: 0 auto;
     max-width: 900px !important;
 }
+#global_page_user-profile-index #global_content{
+    max-width: 973px !important;
+}
 
 .layout_user_image_header .layout_user_browse_menu .headline {
     margin: 0 auto;

@@ -662,5 +662,14 @@ return array(
 
 		)
 	 ),
+	 'invite_to_property' => array(
+		'route' => 'invitetoproperty',
+		'defaults' => array(
+		'module' => 'user',
+		'controller' => 'index',
+		'action' => 'invitetoproperty'
+
+		)
+	 ),
   )
 ); ?>
