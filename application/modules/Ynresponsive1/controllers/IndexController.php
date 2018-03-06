@@ -13,7 +13,7 @@ class Ynresponsive1_IndexController extends Core_Controller_Action_Standard
               $optionId        = $fieldsByAlias['profile_type']->getValue($viewer);
               $profile_type_id = $optionId->value;
            }
-     if($profile_type_id == 34){		
+     if($profile_type_id == 34 || $profile_type_id == 32){		
 		             return $this->_forward('notfound');
 	 }      
      $this->view->metaTitle     = 'Member Home Page';

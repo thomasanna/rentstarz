@@ -348,7 +348,7 @@ class User_AuthController extends Core_Controller_Action_Standard
 				   }
 			   }
 		   }
-		   if($profile_type_id == 34){ // repair agent
+		   if($profile_type_id == 34 || $profile_type_id == 32){ // repair agent
             $this->_helper->redirector->gotoRoute(array('controller'=>'profile' ,'action' => 'index' ,'id' =>$viewer->getIdentity()), 'user_profile', true);
 
 		   }

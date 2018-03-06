@@ -114,21 +114,21 @@ class Fields_View_Helper_FieldValueLoop extends Fields_View_Helper_FieldAbstract
 				 $bio = $tmp;
 			} 
 			  
-			if($field->field_id == 33 || $field->field_id == 53|| $field->field_id == 75 || $field->field_id == 86){
+			if($field->field_id == 33 || $field->field_id == 53|| $field->field_id == 75 || $field->field_id == 86|| $field->field_id == 101){
 				
 				 $country_table   =  Engine_Api::_()->getDbtable('countries', 'user');
 		         $country_list = $country_table->fetchRow($country_table->select()->where('id = ?', $tmp));
 		         $tmp= $country_list['country'];
 				
 			}  
-			if($field->field_id == 30 || $field->field_id == 54|| $field->field_id == 76|| $field->field_id == 87){
+			if($field->field_id == 30 || $field->field_id == 54|| $field->field_id == 76|| $field->field_id == 87|| $field->field_id == 102){
 				
 				$state_table   =  Engine_Api::_()->getDbtable('state', 'user');
 	            $state_list = $state_table->fetchRow($state_table->select()->where('state_id = ?', $tmp));
 		        $tmp= $state_list['state'];
 				
 			}  
-			if($field->field_id == 31 || $field->field_id == 55|| $field->field_id == 77|| $field->field_id == 88){
+			if($field->field_id == 31 || $field->field_id == 55|| $field->field_id == 77|| $field->field_id == 88|| $field->field_id == 103){
 				
 				$city_table   =  Engine_Api::_()->getDbtable('city', 'user');
 	            $city_list = $city_table->fetchRow($city_table->select()->where('city_id = ?', $tmp));
