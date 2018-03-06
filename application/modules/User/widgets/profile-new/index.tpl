@@ -1146,7 +1146,7 @@ jQuery('.btn_submit').on(handleClick, function() {
 			 jQuery(".message").text('Phone can only contain numbers and must be between 10 and 15 characters in length');
 			 jQuery("#LandlordPhoneNumber").css('border-color','dd1616');
 			 jQuery('#personal_details').trigger( 'click' );
-			 is_validated =false;alert(5);
+			 is_validated =false;
 			}
 		}
     }
@@ -1346,7 +1346,7 @@ jQuery('.landlord_task').on(handleClick, function() {
  jQuery('.newprofile-container-rentertask').css('display','none');
  jQuery('.newprofile-container-landlordtask').css('display','block');
 });
-jQuery('.repairagent_task').on(handleClick, function() {alert(1);
+jQuery('.repairagent_task').on(handleClick, function() {
 
  jQuery('.newprofile-container-profilefields').css('display','none');
  jQuery('.newprofile-container-gallery').css('display','none');
