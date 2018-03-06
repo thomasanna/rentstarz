@@ -7034,7 +7034,7 @@ public function propertyapprovedrequestslistAction() {
         if(!empty($smartmoveapiApplicationData)){
             $email         =  $smartmoveapiApplicationData->Applicants;
             $applicationId =  $smartmoveapiApplicationData->SmartmoveApplicationId;
-            $viewHelperObj = $this->view->getHelper('SmartmoveApi125');
+            $viewHelperObj = $this->view->getHelper('SmartmoveApi');
             $response      = $viewHelperObj->getApplicationStatus($email,$applicationId);
             if ($response === false)
             {
@@ -7242,7 +7242,7 @@ public function propertyapprovedrequestslistAction() {
                 );
                 //echo print_r($params); exit;
             $params=json_encode($params);
-            $viewHelperObj  = $this->view->getHelper('SmartmoveApi125');
+            $viewHelperObj  = $this->view->getHelper('SmartmoveApi');
             $servertime     = $viewHelperObj->getServertime();
             $partnerId      = 408;
             $SecurityKey    ='Hs3+FsK/Sh/MyLvGIW3TtsMtkTc1C9mJd11EFeHt1LNOpjT4+pLl/BSpChyK/w/nHDZU+IwAosgfrk4jcRQnEg==';
@@ -7712,7 +7712,7 @@ function smartmoveapicreaterentersaveAction(){
         );
 
         $params                           = json_encode($params);
-        $viewHelperObj                    = $this->view->getHelper('SmartmoveApi125');
+        $viewHelperObj                    = $this->view->getHelper('SmartmoveApi');
         $response                         = $viewHelperObj->createrenter($params);
 
         if ($response === false)
@@ -7982,7 +7982,7 @@ function smartmoveapicreaterentersaveAction(){
 
         $params=json_encode($params); //print_r($params);
 
-        $viewHelperObj = $this->view->getHelper('SmartmoveApi125');
+        $viewHelperObj = $this->view->getHelper('SmartmoveApi');
         $response      = $viewHelperObj->updaterenter($params);
 
 
@@ -8122,7 +8122,7 @@ function smartmoveapicreaterentersaveAction(){
         $SmartmoveApplicationId =   $smartmoveapiApplicationData->SmartmoveApplicationId;
 
 
-        $viewHelperObj          =   $this->view->getHelper('SmartmoveApi125');
+        $viewHelperObj          =   $this->view->getHelper('SmartmoveApi');
         $Email                  =   $viewer->email;
         $ApplicationStatusResponse = $viewHelperObj->getApplicationStatus($Email,$SmartmoveApplicationId);
         $ApplicationStatusResponse = json_decode($ApplicationStatusResponse, true);
@@ -8205,7 +8205,7 @@ function smartmoveapicreaterentersaveAction(){
                         'AssetValue'                        => $AssetValue,
                         'FcraAgreementAccepted'             => true
                         );
-                    $viewHelperObj = $this->view->getHelper('SmartmoveApi125');
+                    $viewHelperObj = $this->view->getHelper('SmartmoveApi');
                     $params        = json_encode($params);
                     $response      = $viewHelperObj->ExamRetrieve($params);
                     //print_r($response);exit("22");
@@ -8276,7 +8276,7 @@ function smartmoveapicreaterentersaveAction(){
         if($profile_type_id != 1){ //if not tenant
             return $this->_forward('notfound');
         }
-        $viewHelperObj     = $this->view->getHelper('SmartmoveApi125');
+        $viewHelperObj     = $this->view->getHelper('SmartmoveApi');
         $aResult           = array();
         $answerIds         = $aData['answer_ids'];
         $answerIds         = explode(',',$aData['answer_ids']); //print_r($answerIds); exit;
@@ -8454,7 +8454,7 @@ function smartmoveapicreaterentersaveAction(){
         $this->_helper->layout->setLayout('smartmove_api');
         $viewer_id   =   Engine_Api::_()->user()->getViewer()->getIdentity();
         $smartmoveApplicationId                 =  $this->_getParam('id');
-        $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi125');
+        $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi');
         $PaymentpackageTable                    =  Engine_Api::_()->getDbtable('Paymentpackage', 'user');
         $StripeSettingsTable                    =  Engine_Api::_()->getDbtable('Stripesettings', 'user');
         $StripeSettingsData                     =  $StripeSettingsTable->fetchRow($StripeSettingsTable->select()->where('id = ?', 1));
@@ -8650,7 +8650,7 @@ function smartmoveapicreaterentersaveAction(){
          $ApplicantStatus = $applicant['ApplicantStatus'];
         endforeach;
         if($ApplicantStatus =='ReportsRequested'){
-            $viewHelperObj       = $this->view->getHelper('SmartmoveApi125');
+            $viewHelperObj       = $this->view->getHelper('SmartmoveApi');
             $applicationResponse = $viewHelperObj->getApplication($SmartmoveapireportData -> SmartmoveApplicationId);
 
                             if ($applicationResponse === false)
@@ -10479,7 +10479,7 @@ public function filterfeedbypetstypeAction(){
             return $this->_forward('notfound');
         }
 
-        $viewHelperObj   = $this->view->getHelper('SmartmoveApi125');
+        $viewHelperObj   = $this->view->getHelper('SmartmoveApi');
         $stripefiles     = $viewHelperObj->getStripeFiles(); // smartmove api exam evaluate
       $params = array(
             "testmode"   => "off",
@@ -10803,7 +10803,7 @@ public function filterfeedbypetstypeAction(){
         $smartmoveapiRenters_table           =  Engine_Api::_()->getDbtable('Smartmoveapirenters', 'user');
         $PaymentpackageTable                 =  Engine_Api::_()->getDbtable('Paymentpackage', 'user');
         $SmartmoveapireportTable             =  Engine_Api::_()->getDbtable('Smartmoveapireport', 'user');
-        $viewHelperObj                       = $this->view->getHelper('SmartmoveApi125');
+        $viewHelperObj                       = $this->view->getHelper('SmartmoveApi');
         $smartmoveapiRentersData             = $smartmoveapiRenters_table->fetchRow($smartmoveapiRenters_table->select()->where('tenant_id   = ?', $viewer_id));
         if(count($smartmoveapiRentersData) == 0){
 			  return $this->_helper->redirector->gotoRoute(array(), 'smartmoveapi_createrenter', true);
@@ -11996,7 +11996,7 @@ public function filterfeedbypetstypeAction(){
         $CardholderdetailsTable =  Engine_Api::_()->getDbtable('Cardholderdetails', 'user');
 	    $this->view->CardholderdetailsData  =  $CardholderdetailsTable->fetchRow($CardholderdetailsTable->select()->where('userId = ?',  $viewer_id));
 
-        /*$viewHelperObj                          =  $this->view->getHelper('SmartmoveApi125');
+        /*$viewHelperObj                          =  $this->view->getHelper('SmartmoveApi');
         $stripefiles     = $viewHelperObj->getStripeFiles(); // smartmove api exam evaluate
         $params = array(
             "testmode"   => "on",
@@ -12043,7 +12043,7 @@ public function filterfeedbypetstypeAction(){
 
             if($package == 'landlord_pro_package'){  $packageRate = $settings->user_landlordProPrice; }
             if($package == 'management_gold_package'){  $packageRate = $settings->user_managementGoldPrice; }
-            $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi125');
+            $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi');
             $stripefiles     = $viewHelperObj->getStripeFiles();
            $params = array(
             "testmode"   => "off",
@@ -12426,7 +12426,7 @@ public function filterfeedbypetstypeAction(){
 
 
 
-            $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi125');
+            $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi');
             $stripefiles     = $viewHelperObj->getStripeFiles(); // smartmove api exam evaluate
            $params = array(
             "testmode"   => "off",
@@ -13594,7 +13594,7 @@ public function filterfeedbypetstypeAction(){
 						 $settings = Engine_Api::_()->getApi('settings', 'core');
 						 if($userPackagesData->package_type == 'landlord_pro_package'){  $packageRate = $settings->user_landlordProPrice; }
 						 if($userPackagesData->package_type == 'management_gold_package'){  $packageRate = $settings->user_managementGoldPrice; }
-						 $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi125');
+						 $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi');
 						 $stripefiles     = $viewHelperObj->getStripeFiles();		
 						 
 						 
@@ -13883,7 +13883,7 @@ public function filterfeedbypetstypeAction(){
         $this->_helper->layout->disableLayout();
         $aData     = $this->_request->getPost();
         
-        $viewHelperObj                    =  $this->view->getHelper('SmartmoveApi125');        
+        $viewHelperObj                    =  $this->view->getHelper('SmartmoveApi');        
         $Questions        = $viewHelperObj -> getPropertyQuestionAnsArray($aData['q1Ans'],$aData['q2Ans'],$aData['q3Ans'],$aData['q4Ans'],$aData['q5Ans']);
        // echo "<pre>"; print_r($Questions); exit;
 
@@ -13974,7 +13974,7 @@ public function filterfeedbypetstypeAction(){
 			    
 			    $smartmoveapiquestions_table      =  Engine_Api::_()->getDbtable('smartmoveapiquestions', 'user');
 				$smartmoveapiquestionAnswer_table =  Engine_Api::_()->getDbtable('Smartmoveapiquestionanswers', 'user');
-				$viewHelperObj                    =  $this->view->getHelper('SmartmoveApi125');
+				$viewHelperObj                    =  $this->view->getHelper('SmartmoveApi');
 			    $smartmoveQuestions_select   =   $smartmoveapiquestions_table->select()
                         ->setIntegrityCheck(false)
                         ->from(array('question'=>'engine4_smartmoveapi_questions',))
@@ -14568,7 +14568,7 @@ public function filterfeedbypetstypeAction(){
               $profile_type_id = $optionId->value;
         }
         
-        if($profile_type_id == 34){
+        if($profile_type_id == 32){
 	         $mainContent    = '';   
 	         $mainContent = $mainContent.'The repair agent '.$viewer->displayname. ' has scheduled task for land'; 
 	         $renter   =  Engine_Api::_()->user()->getUser($taskData->task_created_by);

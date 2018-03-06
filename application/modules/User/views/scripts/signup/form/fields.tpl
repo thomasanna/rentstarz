@@ -584,6 +584,13 @@ jQuery("#1_1_15").keyup(function(){		//Annual Income validation in teanant
 		jQuery("#1_34_90").attr("placeholder", "Phonenumber  *");
 		jQuery("#1_34_93").attr("placeholder", "Employment  *");
 		
+		// repair agent test server
+		jQuery("#1_32_79").attr("placeholder", "First Name  *");
+		jQuery("#1_32_80").attr("placeholder", "Last Name  *");
+		jQuery("#1_32_103").attr("placeholder", "Zipcode  *");
+		jQuery("#1_32_96").attr("placeholder", "Phonenumber  *");
+		jQuery("#1_32_104").attr("placeholder", "Employment  *");
+		
 		
 	});
 	

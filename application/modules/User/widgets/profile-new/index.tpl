@@ -82,7 +82,7 @@ var viewer_identity='<?php echo $viwer_id; ?>';
           <?php if($this->profile_type_id == 6):?>
           Services
           <?php endif;?>
-          <?php if($this->profile_type_id == 34):?>
+          <?php if($this->profile_type_id == 32):?>
           Repair Agent
           <?php endif;?>
           </p>
@@ -173,7 +173,7 @@ var viewer_identity='<?php echo $viwer_id; ?>';
              <?php if($this->profile_type_id == 4 && ($subject->getIdentity() == $viewer -> getIdentity())):?>
              <p class="landlord_task" style="cursor:pointer"><i class="fa fa-briefcase fa-fw newprofile-margin-right newprofile-large newprofile-text-teal" ></i>Task</p>
              <?php endif;?>
-             <?php if($this->profile_type_id == 34 && ($subject->getIdentity() == $viewer -> getIdentity())):?>
+             <?php if($this->profile_type_id == 32 && ($subject->getIdentity() == $viewer -> getIdentity())):?>
              <p class="repairagent_task" style="cursor:pointer"><i class="fa fa-briefcase fa-fw newprofile-margin-right newprofile-large newprofile-text-teal" ></i>Task</p>
              <?php endif;?>
           <hr>
@@ -511,7 +511,7 @@ var viewer_identity='<?php echo $viwer_id; ?>';
       </div>
       <?php endif;?>
       
-       <?php if($this->profile_type_id == 34 && ($subject->getIdentity() == $viewer -> getIdentity())):?>
+       <?php if($this->profile_type_id == 32 && ($subject->getIdentity() == $viewer -> getIdentity())):?>
 
          <div class="newprofile-container newprofile-card-2 newprofile-white newprofile-container-repairagenttask" style="margin-top: 15px;display:none;">
         <div class="newprofile-container">

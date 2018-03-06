@@ -342,15 +342,15 @@ jQuery("#1_6_64").keyup(function(){		//Years in Business
 						type: 'POST',
 					 success: function (data) { console.log(data);
 						
-						jQuery("#1_34_86")
-						.replaceWith('<select id="1_34_86" name="1_34_86" class="" > </select>') ;
-						jQuery('#1_34_86').append('<option>Select Country</option>');
+						jQuery("#1_32_101")
+						.replaceWith('<select id="1_32_101" name="1_32_101" class="" > </select>') ;
+						jQuery('#1_32_101').append('<option>Select Country</option>');
 						jQuery.each(data, function (i, item) {
-						jQuery('#1_34_86').append(jQuery('<option>', { 
+						jQuery('#1_32_101').append(jQuery('<option>', { 
 							value: item.id,
 							text : item.country 
 						}));
-						jQuery("#1_34_86").find("option").eq(0).remove();
+						jQuery("#1_32_101").find("option").eq(0).remove();
 						
 					});},
 					   error: function(e){  
@@ -364,11 +364,11 @@ jQuery("#1_6_64").keyup(function(){		//Years in Business
 						dataType: 'json',
 						type: 'POST',
 					 success: function (data) { console.log(data);
-						jQuery("#1_34_87")
-						.replaceWith('<select id="1_34_87" name="1_34_87" class="repairagentstatefield"> </select>') ;
-						 jQuery('#1_34_87').html('<option>Select State</option>');
+						jQuery("#1_32_102")
+						.replaceWith('<select id="1_32_102" name="1_32_102" class="repairagentstatefield"> </select>') ;
+						 jQuery('#1_32_102').html('<option>Select State</option>');
 						jQuery.each(data, function (i, item) {						
-						jQuery('#1_34_87').append(jQuery('<option>', { 
+						jQuery('#1_32_102').append(jQuery('<option>', { 
 							value: item.id,
 							text : item.state 
 						}));
@@ -379,18 +379,18 @@ jQuery("#1_6_64").keyup(function(){		//Years in Business
 					});
 					
 					
-		         jQuery("#1_34_88")
-				.replaceWith('<select id="1_34_88" name="1_34_88" class="cityfield" > </select>') ;
-				jQuery('#1_34_88').html('<option>Select City</option>');	
+		         jQuery("#1_32_103")
+				.replaceWith('<select id="1_32_103" name="1_32_103" class="cityfield" > </select>') ;
+				jQuery('#1_32_103').html('<option>Select City</option>');	
 	
 	 jQuery('body').on('change', '.repairagentstatefield', function () {
 		  
-		  		jQuery("#1_34_88")
-			    .replaceWith('<select id="1_34_88" name="1_34_88" class="cityfield" > </select>') ;
-			     jQuery('#1_34_88').html('<option value="Loading">Loading....</option>');
+		  		jQuery("#1_32_103")
+			    .replaceWith('<select id="1_32_103" name="1_32_103" class="cityfield" > </select>') ;
+			     jQuery('#1_32_103').html('<option value="Loading">Loading....</option>');
 		  
 		      var url	=	'<?php echo $this->baseUrl()?>' + '/user/signup/getcity';
-		      var state_id	=	jQuery('#1_34_87').val(); 
+		      var state_id	=	jQuery('#1_32_102').val(); 
 			  jQuery.ajax({
 						 url:  url,
 						data: "stateId="+state_id,
@@ -400,14 +400,14 @@ jQuery("#1_6_64").keyup(function(){		//Years in Business
 
 				        var i=1;
 						jQuery.each(data, function (i, item) {
-						jQuery('#1_34_88').append(jQuery('<option>', { 
+						jQuery('#1_32_103').append(jQuery('<option>', { 
 							value: item.id,
 							text : item.city 
 						}));
 						i=i+1;
 						if(i==data.length){
-							jQuery("#1_34_88 option[value='Loading']").remove();
-							jQuery('#1_34_88').prepend('<option selected>Select City</option>');
+							jQuery("#1_32_103 option[value='Loading']").remove();
+							jQuery('#1_32_103').prepend('<option selected>Select City</option>');
 						}
 					});},
 					   error: function(e){  
