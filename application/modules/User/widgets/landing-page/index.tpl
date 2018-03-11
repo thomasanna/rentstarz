@@ -1,3 +1,5 @@
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAWRDCCJZYbD17HwNNUMK-6DzyHziKhN8&libraries=places" async defer></script>
+<script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/autocomplete_address_googleapi.js"></script>
 <?php
 
  $settings         = Engine_Api::_()->getApi('settings', 'core'); 
@@ -10,6 +12,17 @@
       $bodyHtmlTemplate   = str_replace($artclecontent, $articlepart, $bodyHtmlTemplate); 
  echo  $bodyHtmlTemplate   = str_replace($featuredStoryContent, $featuredStoryPart, $bodyHtmlTemplate); 
  ?>
+        <input type="hidden" class="apartement_street" id="street_number" ></input>
+        <input type="hidden" class="apartement_route" id="route"></input>
+        <input type="hidden" class="apartement_neighborhood" id="neighborhood" ></input>
+        <input type="hidden" class="apartement_city" id="locality"></input>
+        <input type="hidden" class="apartement_sublocality_level_1 county" id="sublocality_level_1"></input>
+        <input type="hidden" class="apartement_state" id="administrative_area_level_1">
+        <input type="hidden" class="apartement_zip" id="postal_code">
+        <input type="hidden" class="apartement_country" id="country">
+        <input type="hidden" class="apartement_latitude" id="latitude">
+        <input type="hidden" class="apartement_longitude" id="longitude">
+       
  <!-- FOOTER -->
 <div class="footer-top col-md-12">
 <div class="container">
@@ -86,6 +99,11 @@ AOS.init({
 // ]]></script>
 
 <script type="text/javascript">
+jQuery(document).ready(function(){
+	
+initAutocomplete1();
+
+});
 jQuery('.carousel-indicators li').text('');
 jQuery('.item.slides .slide-1').text('');
 jQuery('.item.slides .slide-2').text('');
@@ -192,5 +210,45 @@ jQuery('body').on('click', '.contact_btn', function(event){
 		  jQuery('.contact_btn').show();
 	  }
   });			
-			
+jQuery('body').on('click', '.search_apartment_btn', function(event){
+	var street = jQuery('.apartement_street').val();
+	var neighborhood = jQuery('.apartement_neighborhood').val();
+	var city = jQuery('.apartement_city').val();
+	var county = jQuery('.apartement_sublocality_level_1').val();
+	var state = jQuery('.apartement_state').val();
+	var zip = jQuery('.apartement_zip').val();
+	var latitude = jQuery('.apartement_latitude').val();
+	var longitude = jQuery('.apartement_longitude').val();
+	
+	var oData           = new Object();
+    var street    = oData.street =jQuery.trim(jQuery("#country").val());
+    var state      = oData.state =jQuery.trim(jQuery("#administrative_area_level_1").val());
+    var city       = oData.city =jQuery.trim(jQuery("#locality").val());
+    var country       = oData.country =jQuery.trim(jQuery("#country").val());
+    if(city == ''){
+         var city        = oData.city =jQuery.trim(jQuery("#sublocality_level_1").val());
+    }
+    var county           =  oData.county =jQuery.trim(jQuery("#sublocality_level_1").val());
+    var neighborhood     =  oData.neighborhood =jQuery.trim(jQuery("#neighborhood").val());
+    var street   = oData.street =jQuery.trim(jQuery("#street_number").val());
+    var zip          = oData.zip =jQuery.trim(jQuery("#postal_code").val());
+    var latitude         = oData.latitude =jQuery.trim(jQuery("#latitude").val());
+    var longitude        = oData.longitude =jQuery.trim(jQuery("#longitude").val());
+   
+	
+     var formURL    = '<?php echo $this->baseUrl(); ?>' + '/user/index/locationsearch';
+     jQuery.ajax( {
+                        url : formURL,
+                        type: "POST",
+                        dataType: 'json',
+                        data : oData,
+                            success: function (returndata) {
+                                       location.href = '<?php echo $this->baseUrl(); ?>' + '/apartments';
+                            },
+                            error: function(e){
+                           jQuery(".set_location_loader").css("display", "none");
+                           jQuery(".results-pane-loader").css("display", "none");
+                           jQuery('.set_location').css('display','block');  }
+                        });});
+		
 </script>

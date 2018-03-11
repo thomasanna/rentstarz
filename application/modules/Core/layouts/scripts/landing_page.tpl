@@ -56,6 +56,7 @@
     <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/latestlanding/styles_optimized.css" type="text/css">
     <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/latestlanding/swiper_optimized.css" type="text/css">
     <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/latestlanding/aos.css" type="text/css">
+        <link href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/newstyles.css" rel="stylesheet" type="text/css">
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Khula:300,400,600" rel="stylesheet">

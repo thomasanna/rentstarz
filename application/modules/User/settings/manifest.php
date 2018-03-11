@@ -671,5 +671,14 @@ return array(
 
 		)
 	 ),
+	 'apartments' => array(
+		'route' => 'apartments',
+		'defaults' => array(
+		'module' => 'user',
+		'controller' => 'index',
+		'action' => 'apartments'
+
+		)
+	 ),
   )
 ); ?>

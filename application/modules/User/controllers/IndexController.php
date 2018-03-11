@@ -14664,4 +14664,188 @@ public function filterfeedbypetstypeAction(){
          echo json_encode($response);
 
     }
-}
+    
+    public function locationsearchAction(){
+		
+		$viewer     = Engine_Api::_()->user()->getViewer();
+        $this->_helper->viewRenderer->setNoRender(true);
+        $this->_helper->layout->disableLayout();
+
+        $propertycountrtyTable  =  Engine_Api::_()->getDbtable('propertycountry', 'user');
+        $propertystateTable     =  Engine_Api::_()->getDbtable('propertystate', 'user');
+        $propertycityable       =  Engine_Api::_()->getDbtable('propertycity', 'user');
+        $userTable              =  Engine_Api::_()->getDbtable('users', 'user');
+
+
+        $location_mode_array    =  [];
+
+        if(isset($_SESSION['countryId'])){
+            unset($_SESSION['countryId']);
+            unset($_SESSION['stateId']);
+            unset($_SESSION['cityId']);
+            unset($_SESSION['zipcode']);
+        }
+        unset($_SESSION['set_to_usa']);
+        unset($_SESSION['matching_array']);
+        unset($_SESSION['feedicon']);
+        unset($_SESSION['feedpreferenceunit']);
+        if( $this->getRequest()->isPost()){
+             $aData = $this->_request->getPost();
+//echo "<pre>"; print_r($aData); exit;
+
+    /*[street] => 
+    [state] => New York
+    [city] => New York
+    [country] => United States
+    [county] => Manhattan
+    [neighborhood] => 
+    [zip] => 
+    [latitude] => 40.7830603
+    [longitude] => -73.97124880000001*/
+
+
+
+                 if($aData['country'] !=''){//echo $aData['country'];
+                     $propertycountryData = $propertycountrtyTable->fetchRow($propertycountrtyTable->select()->where('prty_country = ?', $aData['country']));
+                    // echo count($propertycountryData); exit;
+                     
+                      if(count($propertycountryData) > 0){
+                           $propertycountryid =  $propertycountryData->country_id;
+                      }
+                      else{
+                          $propertycountryid = '';
+                      }
+                 }
+                  if($aData['state'] != ''){
+                     $propertystateData = $propertystateTable->fetchRow($propertystateTable->select()->where('prty_state = ?', $aData['state']));
+                     if(count($propertystateData) > 0){
+                         $propertystateid =  $propertystateData->state_id;
+                      }
+                      else{
+                          $propertystateid  = '';
+                      }
+                  }
+
+                  if($aData['city'] != ''){
+                     $propertycityData = $propertycityable->fetchRow($propertycityable->select()->where('prty_city = ?', $aData['city']));
+                      if(count($propertycityData) > 0){
+                         $propertycityid =  $propertycityData->city_id;
+                      }
+                      else{
+                          $propertycityid  = '';
+                      }
+                  }
+
+
+                    $_SESSION['countryId'] = $propertycountryid;
+                    $_SESSION['stateId']   = $propertystateid;
+                    $_SESSION['cityId']    = $propertycityid;
+                    $_SESSION['zipcode']   = $aData['zip'];
+                    $_SESSION['country_name']   = $aData['country'];
+                    $_SESSION['state_name']     = $aData['state'];
+                    $_SESSION['city_name']      = $aData['city'];
+                    $_SESSION['county_name']       = $aData['county'];
+                    $_SESSION['neighborhood_name'] = $aData['neighborhood'];
+                    if($aData['is_prefered_location'] == 'true'){           }
+                         $set_to_usa  = '';
+           
+              $location_mode_array['countryId']       = $propertycountryid;
+              $location_mode_array['stateId']         = $propertystateid;
+              $location_mode_array['cityId']          = $propertycityid;
+              $location_mode_array['zipcode']         = $aData['zip'];
+              $location_mode_array['country_name']    = $aData['country'];
+              $location_mode_array['state_name']      = $aData['state'];
+              $location_mode_array['city_name']       = $aData['city'];
+              $location_mode_array['county_name']     = $aData['county'];
+              $location_mode_array['neighborhood_name']  = $aData['neighborhood'];
+              $_SESSION['location_mode_array']        = $location_mode_array;
+              $aResult['status'] = true;
+        }
+        else{
+            $aResult['status'] = false;
+        }$_SESSION['location_mode_array']        = $location_mode_array;
+        //echo "<pre>"; print_r($_SESSION['location_mode_array']); exit;
+
+          echo json_encode($aResult['status']);
+		
+		
+	}
+	public function apartmentsAction(){
+
+        $this->_helper->viewRenderer->setNoRender(false);
+        $this->_helper->layout->setLayout('common_layout');
+        $propertyTable          =  Engine_Api::_()->getDbtable('propertylist', 'user');
+        $propertycountrtyTable  =  Engine_Api::_()->getDbtable('propertycountry', 'user');
+        $propertystateTable     =  Engine_Api::_()->getDbtable('propertystate', 'user');
+        $propertycityable       =  Engine_Api::_()->getDbtable('propertycity', 'user');
+        $userTable              =  Engine_Api::_()->getDbtable('users', 'user');
+
+
+
+        
+           $propertySelect   =   $propertyTable->select()
+                                ->setIntegrityCheck(false)
+                                ->from(array('plist'=>'engine4_property_list',))
+                                ->joinLeft(array('pcountry'=>'engine4_property_countries',),'plist.prty_country_id=pcountry.country_id',array('prty_country'))
+                                ->joinLeft(array('pstate'=>'engine4_property_states',),'plist.prty_state_id=pstate.state_id',array('prty_state'))
+                                ->joinLeft(array('pcity'=>'engine4_property_city',),'plist.prty_city_id=pcity.city_id',array('prty_city','latitude','longitude'))
+                                ->where('plist.enable = ?', 1)
+                                ->where('plist.landlord_enable=?' ,  1)
+                                ->where('plist.property_type !=?' ,  'holding_property')
+                                ->where('plist.property_type !=?' ,  'property_for_backgroundreport')
+                                ->order('plist.created_at DESC');
+//echo "<pre>"; print_r($_SESSION['location_mode_array']); exit;
+       
+		if(isset($_SESSION['location_mode_array'])){
+            $location_mode_array = $_SESSION['location_mode_array'];
+            $propertycountryTable       =  Engine_Api::_()->getDbtable('propertycountry', 'user');
+            $locationSelect             =  $propertycountryTable->select()
+                                            ->setIntegrityCheck(false)
+                                            ->from(array('country'=>'engine4_property_countries'))
+                                            ->where('country.prty_country = ?', 'United States');
+            $locationData               =  $propertycountryTable->fetchRow($locationSelect);
+            $this->view->locationData   = $locationData;
+            $country_id                 = $this->view->country_id = $locationData->country_id;
+            $location_text              = 'United States';
+            
+             $location_mode_array = $_SESSION['location_mode_array']; //print_r($location_mode_array); exit;
+             $this->view->filtermode = 'location_mode';
+                  
+		
+			if( isset($location_mode_array['zipcode']) && !empty($location_mode_array['zipcode']) ) {
+							$propertySelect->where('plist.zip      =?' ,  $location_mode_array['zipcode']);
+						}
+
+		   if( isset($location_mode_array['neighborhood_name']) && !empty($location_mode_array['neighborhood_name']) ) {
+					   $propertySelect->where('plist.prty_neighborhood      =?' ,  $location_mode_array['neighborhood_name']);
+							
+						}
+			if( isset($location_mode_array['county_name']) && !empty($location_mode_array['county_name']) ) {
+					   $propertySelect->where('plist.prty_county      =?' ,  $location_mode_array['county_name']);
+						  
+						} 
+			
+
+			if( isset($location_mode_array['city_name']) && !empty($location_mode_array['city_name']) ) {
+								$propertySelect->where('pcity.prty_city      =?' ,  $location_mode_array['city_name']);
+						}
+
+			if( isset($location_mode_array['state_name']) && !empty($location_mode_array['state_name']) ) {
+							 $propertySelect->where('pstate.prty_state      =?' ,  $location_mode_array['state_name']);
+						}
+
+			 }
+			 
+			if( isset($location_mode_array['country_name']) && !empty($location_mode_array['country_name'])) {
+				   $propertySelect->where('pcountry.prty_country      =?' ,  $location_mode_array['country_name']);                      
+			}
+
+  
+    $propertyListData = $propertyTable->fetchAll($propertySelect);
+	$this->view->propertyListData = $propertyListData;
+       
+     }
+		
+		
+	}
+
