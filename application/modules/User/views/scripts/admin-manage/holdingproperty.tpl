@@ -339,8 +339,11 @@ $displaynameArray =explode(' ',$displayname);
 
 var latitude  = 40.712784;
 var longitude = -74.005941;
+jQuery(document).ready(function(){
 
 initAutocomplete();
+
+});
 var handleClick= 'ontouchstart' in document.documentElement ? 'touchstart': 'click';
 </script>
 <script src='//cdn.tinymce.com/4/tinymce.min.js'></script>

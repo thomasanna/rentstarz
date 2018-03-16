@@ -6,7 +6,7 @@ class User_View_Helper_SmartmoveApi125 extends Zend_View_Helper_Abstract
 	 // Generates the server time
     public function getServertime(){
 
-            $posturl = "https://smlegacygateway-integration.mysmartmove.com/LandlordApi/v2/ServerTime";
+            $posturl = "https://smlegacygateway-integration.mysmartmove.com/LandlordApi/v3/ServerTime";
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, $posturl);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -69,7 +69,7 @@ class User_View_Helper_SmartmoveApi125 extends Zend_View_Helper_Abstract
         $header         = array();
         $header[] = 'Content-type: application/json';
         $header[] = 'Authorization: smartmovepartner partnerId="'.$partnerId.'",serverTime="'.$servertime.'",securityToken="'.$securityToken.'"';
-        $posturl  = "https://smlegacygateway-integration.mysmartmove.com/LandlordApi/v2/Property";
+        $posturl  = "https://smlegacygateway-integration.mysmartmove.com/LandlordApi/v3/Property";
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $posturl);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -92,7 +92,7 @@ class User_View_Helper_SmartmoveApi125 extends Zend_View_Helper_Abstract
         $header         = array();
         $header[] = 'Content-type: application/json';
         $header[] = 'Authorization: smartmovepartner partnerId="'.$partnerId.'",serverTime="'.$servertime.'",securityToken="'.$securityToken.'"';
-        $posturl  = "https://smlegacygateway-integration.mysmartmove.com/RenterApi/v2/Renter";
+        $posturl  = "https://smlegacygateway-integration.mysmartmove.com/RenterApi/v3/Renter";
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $posturl);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -113,7 +113,7 @@ class User_View_Helper_SmartmoveApi125 extends Zend_View_Helper_Abstract
         $header         = array();
         $header[] = 'Content-type: application/json';
         $header[] = 'Authorization: smartmovepartner partnerId="'.$partnerId.'",serverTime="'.$servertime.'",securityToken="'.$securityToken.'"';
-        $posturl  = "https://smlegacygateway-integration.mysmartmove.com/LandlordApi/v2/Application";
+        $posturl  = "https://smlegacygateway-integration.mysmartmove.com/LandlordApi/v3/Application";
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $posturl);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -134,7 +134,7 @@ class User_View_Helper_SmartmoveApi125 extends Zend_View_Helper_Abstract
         $header         = array();
         $header[] = 'Content-type: application/json';
         $header[] = 'Authorization: smartmovepartner partnerId="'.$partnerId.'",serverTime="'.$servertime.'",securityToken="'.$securityToken.'"';
-        $posturl  = "https://smlegacygateway-integration.mysmartmove.com/RenterApi/v2/ApplicationRenterStatus/Accept?email=$email&applicationId=$applicationId";
+        $posturl  = "https://smlegacygateway-integration.mysmartmove.com/RenterApi/v3/ApplicationRenterStatus/Accept?email=$email&applicationId=$applicationId";
 
         $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, $posturl);
@@ -157,7 +157,7 @@ class User_View_Helper_SmartmoveApi125 extends Zend_View_Helper_Abstract
         $header         = array();
         $header[]       = 'Content-type: application/json';
         $header[]       = 'Authorization: smartmovepartner partnerId="'.$partnerId.'",serverTime="'.$servertime.'",securityToken="'.$securityToken.'"';
-        $posturl        = "https://smlegacygateway-integration.mysmartmove.com/RenterApi/v2/ApplicationRenterStatus?email=$email&applicationId=$applicationId";
+        $posturl        = "https://smlegacygateway-integration.mysmartmove.com/RenterApi/v3/ApplicationRenterStatus?email=$email&applicationId=$applicationId";
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $posturl);
@@ -179,7 +179,7 @@ class User_View_Helper_SmartmoveApi125 extends Zend_View_Helper_Abstract
         $header         = array();
         $header[]       = 'Content-type: application/json';
         $header[]       = 'Authorization: smartmovepartner partnerId="'.$partnerId.'",serverTime="'.$servertime.'",securityToken="'.$securityToken.'"';
-        $posturl        = "https://smlegacygateway-integration.mysmartmove.com/RenterApi/v2/Exam/Retrieve";
+        $posturl        = "https://smlegacygateway-integration.mysmartmove.com/RenterApi/v3/Exam/Retrieve";
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $posturl);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -202,7 +202,7 @@ class User_View_Helper_SmartmoveApi125 extends Zend_View_Helper_Abstract
         $header         = array();
         $header[]       = 'Content-type: application/json';
         $header[]       = 'Authorization: smartmovepartner partnerId="'.$partnerId.'",serverTime="'.$servertime.'",securityToken="'.$securityToken.'"';
-        $posturl        = "https://smlegacygateway-integration.mysmartmove.com/RenterApi/v2/Report?email=$email&applicationId=$applicationId";
+        $posturl        = "https://smlegacygateway-integration.mysmartmove.com/RenterApi/v3/Report?email=$email&applicationId=$applicationId";
         $ch             = curl_init();
         curl_setopt($ch, CURLOPT_URL, $posturl);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -224,7 +224,7 @@ class User_View_Helper_SmartmoveApi125 extends Zend_View_Helper_Abstract
         $header         = array();
         $header[]       = 'Content-type: application/json';
         $header[]       = 'Authorization: smartmovepartner partnerId="'.$partnerId.'",serverTime="'.$servertime.'",securityToken="'.$securityToken.'"';
-        $posturl        = "https://smlegacygateway-integration.mysmartmove.com/RenterApi/v2/Exam/Evaluate?email=$email&applicationId=$applicationId";
+        $posturl        = "https://smlegacygateway-integration.mysmartmove.com/RenterApi/v3/Exam/Evaluate?email=$email&applicationId=$applicationId";
         $ch       = curl_init();
         curl_setopt($ch, CURLOPT_URL, $posturl);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -247,7 +247,7 @@ class User_View_Helper_SmartmoveApi125 extends Zend_View_Helper_Abstract
         $header         = array();
         $header[]       = 'Content-type: application/json';
         $header[]       = 'Authorization: smartmovepartner partnerId="'.$partnerId.'",serverTime="'.$servertime.'",securityToken="'.$securityToken.'"';
-        $posturl        = "https://smlegacygateway-integration.mysmartmove.com/LandlordApi/v2/Application/$applicationId";
+        $posturl        = "https://smlegacygateway-integration.mysmartmove.com/LandlordApi/v3/Application/$applicationId";
         $ch             = curl_init();
         curl_setopt($ch, CURLOPT_URL, $posturl);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -268,8 +268,8 @@ class User_View_Helper_SmartmoveApi125 extends Zend_View_Helper_Abstract
         $header         = array();
         $header[]       = 'Content-type: application/json';
         $header[]       = 'Authorization: smartmovepartner partnerId="'.$partnerId.'",serverTime="'.$servertime.'",securityToken="'.$securityToken.'"';
-        $posturl        = "https://smlegacygateway-integration.mysmartmove.com/LandlordApi/v2/Application/$applicationId";
-        $posturl  = "https://smlegacygateway-integration.mysmartmove.com/LandlordApi/v2/Property/$Id";
+        $posturl        = "https://smlegacygateway-integration.mysmartmove.com/LandlordApi/v3/Application/$applicationId";
+        $posturl  = "https://smlegacygateway-integration.mysmartmove.com/LandlordApi/v3/Property/$Id";
 
         $ch             = curl_init();
         curl_setopt($ch, CURLOPT_URL, $posturl);
@@ -289,7 +289,7 @@ class User_View_Helper_SmartmoveApi125 extends Zend_View_Helper_Abstract
         $header         = array();
         $header[] = 'Content-type: application/json';
         $header[] = 'Authorization: smartmovepartner partnerId="'.$partnerId.'",serverTime="'.$servertime.'",securityToken="'.$securityToken.'"';
-        $posturl  = "https://smlegacygateway-integration.mysmartmove.com/RenterApi/v2/Renter";
+        $posturl  = "https://smlegacygateway-integration.mysmartmove.com/RenterApi/v3/Renter";
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $posturl);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -312,7 +312,7 @@ class User_View_Helper_SmartmoveApi125 extends Zend_View_Helper_Abstract
         $header         = array();
         $header[] = 'Content-type: application/json';
         $header[] = 'Authorization: smartmovepartner partnerId="'.$partnerId.'",serverTime="'.$servertime.'",securityToken="'.$securityToken.'"';
-        $posturl  = "https://smlegacygateway-integration.mysmartmove.com/LandLordApi/v2/Property";
+        $posturl  = "https://smlegacygateway-integration.mysmartmove.com/LandLordApi/v3/Property";
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $posturl);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

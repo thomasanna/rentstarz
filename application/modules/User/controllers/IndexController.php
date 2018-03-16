@@ -7721,7 +7721,8 @@ function smartmoveapicreaterentersaveAction(){
             $aResult['errors'] = curl_error($crl);
         }
         else{
-            $data      = json_decode($response, true);
+            $data      = json_decode($response, true);//echo ""; print_r($data); exit;
+            
             if(empty($data['Errors'])){
                 $smartmoveapiRenters_table =  Engine_Api::_()->getDbtable('Smartmoveapirenters', 'user');
                 $smartmoveapiRenters_table->insert(array(
