@@ -1,3 +1,5 @@
+<script> var host = "<?php echo $this->baseUrl();?>";</script>
+
 <?php $current_url = explode("?", $_SERVER['REQUEST_URI']);
       $page_url=$this->view->page_url=$page_url = $current_url[0] ;
       $settings = Engine_Api::_()->getApi('settings', 'core');

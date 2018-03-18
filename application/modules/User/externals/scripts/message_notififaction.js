@@ -41,9 +41,8 @@ var hide_all_drop_box = function(except)
   }
   //header notification
    var notification = function() {
-        var host    =   window.location.host;
         var oData       = new Object();
-        var url =   '/ynresponsive1/index/notification';
+        var url =  host+'/ynresponsive1/index/notification';
         jQuery.ajax({
                         url:  url,
                         data: oData,
@@ -61,8 +60,7 @@ var hide_all_drop_box = function(except)
 
   //header message icon
     var inbox = function() {
-         var host   =   window.location.host;
-         var url    =  '/ynresponsive1/index/message';
+         var url    =  host+'/ynresponsive1/index/message';
          jQuery.ajax({
                         url:  url,
                         dataType : 'html',
@@ -152,8 +150,7 @@ var hide_all_drop_box = function(except)
 
  var getNotificationsTotal = function()
   {
-         var host   =   window.location.host;
-         var url    =  '/application/lite.php?module=ynresponsive1&name=total&viewer_id='+viewer_identity;
+         var url    =  host+'/application/lite.php?module=ynresponsive1&name=total&viewer_id='+viewer_identity;
          jQuery.ajax({
                         url:  url,
                         dataType : 'json',

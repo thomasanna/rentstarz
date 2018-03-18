@@ -1,4 +1,4 @@
-<script src="/application/modules/User/externals/scripts/message_notififaction.js"></script>
+<script src="<?php echo $this->baseUrl()?>/application/modules/User/externals/scripts/message_notififaction.js"></script>
 <?php $viewer     = Engine_Api::_()->user()->getViewer();
  $viewerId=Engine_Api::_()->user()->getViewer()->getIdentity(); 
  $viwer_id=Engine_Api::_()->user()->getViewer()->getIdentity();

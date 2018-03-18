@@ -1356,6 +1356,28 @@ $sql['1.1.2.218']   = "CREATE TABLE `engine4_tasks` (
 						PRIMARY KEY (`id`)
 						) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 						";
+
+$sql['1.1.2.219']   = "INSERT INTO `engine4_activity_notificationtypes` (`type`, `module`, `body`, `is_request`, `handler`, `default`) VALUES ('task_for_maintenance', 'user', '{item:\$subject} has sent task for maintenance.', '0', '', '1');";
+$sql['1.1.2.220']   = "INSERT INTO `engine4_activity_notificationtypes` (`type`, `module`, `body`, `is_request`, `handler`, `default`) VALUES ('assign_task_to_agent', 'user', '{item:\$subject} has assigned a task for you.', '0', '', '1');";
+$sql['1.1.2.221']   = "INSERT INTO `engine4_activity_notificationtypes` (`type`, `module`, `body`, `is_request`, `handler`, `default`) VALUES ('scheduled_task', 'user', '{item:\$subject} has scheduled task.Please check.', '0', '', '1');";
+
+
+$sql['1.1.2.222']   = "CREATE TABLE `engine4_mylinks` (
+						`id` int(11) NOT NULL,
+						`invited_by` int(11) NOT NULL,
+						`user_id` int(11) NOT NULL,
+						`link_name` text NOT NULL,
+						`link_address` text NOT NULL,
+						`link_profile` text NOT NULL,
+						`link_message` varchar(1000) NOT NULL,
+						`status` text NOT NULL,
+						`created_at` varchar(50) NOT NULL,
+						`updated_at` varchar(50) NOT NULL,
+						PRIMARY KEY (`id`)
+						) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+						";
+$sql['1.1.2.223']   = "INSERT INTO `engine4_activity_notificationtypes` (`type`, `module`, `body`, `is_request`, `handler`, `default`) VALUES ('Like_to_link', 'user', '{item:\$subject} like to link', '0', '', '1');";
+
 										
 ?>
 

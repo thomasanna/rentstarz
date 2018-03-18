@@ -14,7 +14,8 @@ public function indexAction()  {
                                 ->setIntegrityCheck(false)
                                 ->from(array('tasks'=>'engine4_tasks',))
                         ->joinLeft(array('users'=>'engine4_users',),'users.user_id=tasks.task_created_by',array('user_id as renter_id','displayname as renter_name','email as renter_email'))
-                        ->where('tasks.task_created_to = ?', $subject->getIdentity());
+                        ->where('tasks.task_created_to = ?', $subject->getIdentity())
+                        ->order('tasks.created_at DESC');
   $maintenaceLog = $TasksTable->fetchAll($maintenaceLogSelect);
   $this->view->maintenaceLog = $maintenaceLog;
         
@@ -48,6 +49,17 @@ public function indexAction()  {
  
  $this->view->repairAgentData = $repairAgentData;
  //echo "<pre>"; print_r($repairAgentData); exit;
+ 
+ $linksTable      = Engine_Api::_()->getDbtable('Mylinks', 'user');
+ $linksData = $linksTable->fetchAll($linksTable->select()
+                                      ->where('status = ?', 1)
+                                      ->where('invited_by = ?', $subject->getIdentity())
+                                      ->group('user_id')
 
+                                      );
+
+
+
+ $this->view->linksData = $linksData;
 }
 }

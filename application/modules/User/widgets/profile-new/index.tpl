@@ -30,7 +30,7 @@
 $smartmoveHelperObj  = $this->getHelper('SmartmoveApi');
 $StateArray          = $smartmoveHelperObj->getState();   
 ?>
-<script src="/application/modules/User/externals/scripts/message_notififaction.js"></script>
+<script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/message_notififaction.js"></script>
 <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/jRating.jquery.js"></script>
 
 <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/new-profile.css">
@@ -173,7 +173,7 @@ var viewer_identity='<?php echo $viwer_id; ?>';
              <?php if($this->profile_type_id == 4 && ($subject->getIdentity() == $viewer -> getIdentity())):?>
              <p class="landlord_task" style="cursor:pointer"><i class="fa fa-briefcase fa-fw newprofile-margin-right newprofile-large newprofile-text-teal" ></i>Task</p>
              <?php endif;?>
-             <?php if($this->profile_type_id == 32 && ($subject->getIdentity() == $viewer -> getIdentity())):?>
+             <?php if(($this->profile_type_id == 32 || $this->profile_type_id == 34) && ($subject->getIdentity() == $viewer -> getIdentity())):?>
              <p class="repairagent_task" style="cursor:pointer"><i class="fa fa-briefcase fa-fw newprofile-margin-right newprofile-large newprofile-text-teal" ></i>Task</p>
              <?php endif;?>
           <hr>
@@ -511,7 +511,7 @@ var viewer_identity='<?php echo $viwer_id; ?>';
       </div>
       <?php endif;?>
       
-       <?php if($this->profile_type_id == 32 && ($subject->getIdentity() == $viewer -> getIdentity())):?>
+       <?php if(($this->profile_type_id == 32  || $this->profile_type_id == 34)&& ($subject->getIdentity() == $viewer -> getIdentity())):?>
 
          <div class="newprofile-container newprofile-card-2 newprofile-white newprofile-container-repairagenttask" style="margin-top: 15px;display:none;">
         <div class="newprofile-container">
@@ -695,18 +695,69 @@ var viewer_identity='<?php echo $viwer_id; ?>';
 		   <option value="scheduled">Scheduled</option>
 		   <option value="completed">Completed</option>
 		   </select>
-           </div> <br>
+           </div> </div> <br>
            <div class="pro_field_wrapper">
 
           <input class="submit_task_update" type="button" value="Submit" name="">
        
-      </div>
+          </div>
             <div class="loader" style="display:none"></div>
     </div>
   </div>
 </div>
+</div>
+<!-- link modal-->
+
+<div class="modal fade" id="linkModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content-new">
+      <div class="modal-header">
+        Link
+      </div>
+       <div class="modal-body">
+		   <div class="message"></div>
+		   <div class="pro_field_wrapper">
+		   <div>Name</div><br>
+		   <input type="text" value="" class="link_name prty_field input-box">
+		   </div><br>
+		   <div class="pro_field_wrapper">
+		   <div>Email Address</div><br>
+		   <div><input type="text" class="link_address prty_field input-box"></div><br>
+		   </div><br>
+           <div class="pro_field_wrapper">
+		   <div>Message</div><br>
+		   <div><textarea class="link_message prty_field" rows="4"></textarea></div><br>
+		   </div>
+		   <br>
+		   <div class="pro_field_wrapper">
+
+          <input class="submit_link" type="button" value="Submit" name="">
+       
+           </div>
+            <div class="loader" style="display:none"></div>
+    
+    </div>
+  </div>
+</div>
+</div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
 <script>
 jQuery('body').on('click', '.submit_report', function(event){
 	

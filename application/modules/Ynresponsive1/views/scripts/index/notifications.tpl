@@ -211,6 +211,22 @@
 						
 						<span class="feed_item_username"><?php echo $subjectData->displayname;?></span> has commented on your property <a href="property/<?php echo $notification->params['pid']?>"><?php echo $notification->params['pname'] ; ?> </a>
 						
+                        <?php elseif($notification->type == 'task_for_maintenance'):  ?>
+						
+						<a class="feed_item_username" title="View Profile" href="/profile/<?php echo $notification->subject_id; ?>"><?php echo $subjectData->displayname;?></a> has sent a new task for maintenance. 
+						
+						<?php elseif($notification->type == 'assign_task_to_agent'):  ?>
+						
+						<a class="feed_item_username" title="View Profile" href="/profile/<?php echo $notification->subject_id; ?>"><?php echo $subjectData->displayname;?></a> has assigned a new task for you.Please check. 
+			
+						<?php elseif($notification->type == 'scheduled_task'):  ?>
+						
+						<a class="feed_item_username" title="View Profile" href="/profile/<?php echo $notification->subject_id; ?>"><?php echo $subjectData->displayname;?></a> has been scheduled a task for you.Please check. 
+			
+			             <?php elseif($notification->type == 'Like_to_link'):  ?>
+						
+						<a class="feed_item_username" title="View Profile" href="/profile/<?php echo $notification->subject_id; ?>"><?php echo $subjectData->displayname;?></a>  would like to link with you do you except.    
+			
 						<?php else:?>
 
 						 

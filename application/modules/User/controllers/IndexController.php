@@ -4773,6 +4773,7 @@ public function propertyapprovedrequestslistAction() {
         $propertyData->granted       = 1;
         $propertyData->granted_date  = date('Y-m-d');
         $propertyData->save();
+        
         // add entry to rating table for both users tenant and lanlord to find rating date
         $ratingValueTable =  Engine_Api::_()->getDbtable('ratingvalue', 'user');
         try{
@@ -4855,6 +4856,25 @@ public function propertyapprovedrequestslistAction() {
       $tenantData    = $userTable->fetchRow($userTable->select()->where('user_id = ?', $selected_tenant));  
       $propertyData  = $propertyTable->fetchRow($propertyTable->select()->where('id = ?', $propertyid));
       
+      
+       // add entry to link table - this renter will automatically link with property owner
+       
+         $linksTable      = Engine_Api::_()->getDbtable('Mylinks', 'user');
+
+        
+         $linksTableId  =   $linksTable->insert(array(
+                    'invited_by'      => $viewer->getIdentity(),
+                    'link_name'       => $tenantData->displayname,
+                    'link_address'    => $tenantData->email,
+                    'link_message'    => '',
+                    'link_profile'    => 'renter',
+                    'status'          => 1,
+                    'user_id'         => $tenantData->user_id,
+                    'created_at'      => date('Y-m-d'),
+                    'updated_at'      => date('Y-m-d')
+                    ));
+        
+   
       
        $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer); //print_r($fieldsByAlias); exit("1111111");
                  $gender_id = $fieldsByAlias['gender']->getValue($viewer);
@@ -14351,7 +14371,9 @@ public function filterfeedbypetstypeAction(){
                                     $header .= 'Content-type: text/html; charset=iso-8859-1' ."\"\r\n\r\n";
                                     mail($landlordData->email, $subject, $bodyHtmlTemplate, $header);
 			
-            
+                          // send notification
+            Engine_Api::_()->getDbtable('notifications', 'activity')
+                    ->addNotification($landlordData, $viewer, $landlordData, 'task_for_maintenance',array());
            $aResult['status']                      = true;
            }
            else {
@@ -14434,7 +14456,11 @@ public function filterfeedbypetstypeAction(){
                                     $header .= "MIME-Version: 1.0\r\n";
                                     $header .= 'Content-type: text/html; charset=iso-8859-1' ."\"\r\n\r\n";
                                     mail($repairagentData->email, $subject, $bodyHtmlTemplate, $header);	
-                      
+                    
+                     // send notification
+            Engine_Api::_()->getDbtable('notifications', 'activity')
+                    ->addNotification($repairagentData, $viewer, $repairagentData, 'assign_task_to_agent',array());
+   
            $aResult['status']                      = true;
         }
     else{
@@ -14569,13 +14595,22 @@ public function filterfeedbypetstypeAction(){
               $profile_type_id = $optionId->value;
         }
         
-        if($profile_type_id == 32){
+        if($profile_type_id == 32 || $profile_type_id == 34) {
 	         $mainContent    = '';   
 	         $mainContent = $mainContent.'The repair agent '.$viewer->displayname. ' has scheduled task for land'; 
 	         $renter   =  Engine_Api::_()->user()->getUser($taskData->task_created_by);
 	         $landlord   =  Engine_Api::_()->user()->getUser($taskData->task_created_to);
              $mailid1 = $landlord->email;
              $mailid2 = $renter->email;
+             
+             
+              // send notification
+            Engine_Api::_()->getDbtable('notifications', 'activity') // to landlord
+                    ->addNotification($landlord, $viewer, $landlord, 'scheduled_task',array());
+   
+            Engine_Api::_()->getDbtable('notifications', 'activity') // to renter
+                    ->addNotification($renter, $viewer, $renter, 'scheduled_task',array());
+   
                   
 		}
     
@@ -14586,9 +14621,18 @@ public function filterfeedbypetstypeAction(){
 	         $repairagentData   =  Engine_Api::_()->user()->getUser($taskData->servicer_id);
 	         $renter   =  Engine_Api::_()->user()->getUser($taskData->task_created_by);
 	         if(count($repairagentData)> 0){
-	         $mailid1 = $repairagentData->email;}
+	         $mailid1 = $repairagentData->email;
+	         
+            Engine_Api::_()->getDbtable('notifications', 'activity') // to agent
+                    ->addNotification($repairagentData, $viewer, $repairagentData, 'scheduled_task',array());
+   
+	         }
 	         $mailid2 = $renter->email;
                                
+               // send notification
+            Engine_Api::_()->getDbtable('notifications', 'activity') // to renter
+                    ->addNotification($renter, $viewer, $renter, 'scheduled_task',array());
+                     
 		}
         if($profile_type_id == 1){
 	         $mainContent    = '';   
@@ -14596,9 +14640,18 @@ public function filterfeedbypetstypeAction(){
 	         $repairagentData   =  Engine_Api::_()->user()->getUser($taskData->servicer_id);
 	         $landlord   =  Engine_Api::_()->user()->getUser($taskData->task_created_to);
 	         if(count($repairagentData)> 0){
-	         $mailid1 = $repairagentData->email;}
+	         $mailid1 = $repairagentData->email;
+	          Engine_Api::_()->getDbtable('notifications', 'activity') // to agent
+                    ->addNotification($repairagentData, $viewer, $repairagentData, 'scheduled_task',array());
+           
+	         }
 	         else{$mailid1 ='';}
-	         $mailid2 = $landlord->email;                             
+	         $mailid2 = $landlord->email;  
+	         
+	          // send notification
+            Engine_Api::_()->getDbtable('notifications', 'activity') // to landlord
+                    ->addNotification($landlord, $viewer, $landlord, 'scheduled_task',array());
+                                         
 		}
     
             
@@ -14692,19 +14745,6 @@ public function filterfeedbypetstypeAction(){
         unset($_SESSION['feedpreferenceunit']);
         if( $this->getRequest()->isPost()){
              $aData = $this->_request->getPost();
-//echo "<pre>"; print_r($aData); exit;
-
-    /*[street] => 
-    [state] => New York
-    [city] => New York
-    [country] => United States
-    [county] => Manhattan
-    [neighborhood] => 
-    [zip] => 
-    [latitude] => 40.7830603
-    [longitude] => -73.97124880000001*/
-
-
 
                  if($aData['country'] !=''){//echo $aData['country'];
                      $propertycountryData = $propertycountrtyTable->fetchRow($propertycountrtyTable->select()->where('prty_country = ?', $aData['country']));
@@ -14846,7 +14886,129 @@ public function filterfeedbypetstypeAction(){
 	$this->view->propertyListData = $propertyListData;
        
      }
+public function savelinkAction(){
+	if( !$this->_helper->requireUser()->isValid() ) {
+          return;
+        }
+
+        $viewer     = Engine_Api::_()->user()->getViewer();
+        date_default_timezone_set("EST");
+        $this->_helper->viewRenderer->setNoRender(true);
+        $this->_helper->layout->disableLayout();
+        if( $this->getRequest()->isPost()){
+            $aData           = $this->_request->getPost();
+            $linksTable      = Engine_Api::_()->getDbtable('Mylinks', 'user');
+            
+            $userTable              =  Engine_Api::_()->getDbtable('users', 'user');
+
+            $UserData = $userTable->fetchRow($userTable->select()->where('email = ?', $aData['link_address']));
+            $status  = 0;        
+            $user_id = 0;        
+                    
+        $mainContent  = '';
+        if(count($UserData) >0){
+			
+			$fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($UserData);
+        if( !empty($fieldsByAlias['profile_type']) ){
+              $optionId        = $fieldsByAlias['profile_type']->getValue($UserData);
+              $profile_type_id = $optionId->value;
+        }
+        if(($profile_type_id == 4 && $aData['link_profile'] == 'landlord') || 
+         ($profile_type_id == 1 && $aData['link_profile'] == 'renter') ||
+         ($profile_type_id == 32 && $aData['link_profile'] == 'service_agent') ||
+         ($profile_type_id == 34 && $aData['link_profile'] == 'service_agent')){ 
+			 
+		    $mainContent = $mainContent .$viewer->displayname. ' would like to link with you do you except.   ';
+		    $mainContent = $mainContent . 'Message :  ' .$aData['link_message'];
+		    $status =1;		
+		    $user_id =$UserData->user_id;		
+		      // send notification
+            Engine_Api::_()->getDbtable('notifications', 'activity')
+                    ->addNotification($UserData, $viewer, $UserData, 'Like_to_link',array());
+        
+        }
+        else {
+			$mainContent = $mainContent .$viewer->displayname. ' would like to link with you do you except. <br>  ';
+		    $mainContent = $mainContent . 'Message :  ' .$aData['link_message'];
+
+			$mainContent = $mainContent . ' Please register on <a href="'.$_SERVER['HTTP_HOST'].'">Rentstarz</a>. <br>  ';
+		}
+
+     			
+		}
+		else {
+			$mainContent = $mainContent .$viewer->displayname. ' would like to link with you do you except. <br>  ';
+			$mainContent = $mainContent . ' Please register on <a href="'.$_SERVER['HTTP_HOST'].'">Rentstarz</a>. <br>  ';
+		}
 		
+		 $linksTableId  =   $linksTable->insert(array(
+                    'invited_by'      => $viewer->getIdentity(),
+                    'link_name'       => $aData['link_name'],
+                    'link_address'    => $aData['link_address'],
+                    'link_message'    => $aData['link_message'],
+                    'link_profile'    => $aData['link_profile'],
+                    'link_profile'    => $aData['link_profile'],
+                    'status'          => $status,
+                    'user_id'         => $user_id,
+                    'created_at'      => date('Y-m-d'),
+                    'updated_at'      => date('Y-m-d')
+                    ));
+           
+
+                                
+                    	$from_email           =  Engine_Api::_()->getApi('settings', 'core')->core_mail_from;
+                        $bodyTextContent      =  '';
+                             if (file_exists("emailtemplates/common_email.html")) {
+                                    $htmlExist  = true;
+                                    $file       = fopen("emailtemplates/common_email.html", "r");
+                                    while(!feof($file))
+                                    {
+                                        $bodyTextContent .= fgets($file);
+                                    }
+                                    fclose($file);
+                                }
+                                if($htmlExist){
+
+                                      $resciverName   = '{resciver_name}';
+                                      $content        = '{content}'; 
+                                     
+                                      $bodyTextTemplate = '';
+                                      $bodyHtmlTemplate = $bodyTextContent;
+                                    foreach( $rParams as $var => $val ) {
+                                          $raw = trim($var, '[]');
+                                          $var = '[' . $var . ']';
+                                          if( !$val ) {
+                                            $val = $var;
+                                          }
+                                          // Fix nbsp
+                                          $val = str_replace('&amp;nbsp;', ' ', $val);
+                                          $val = str_replace('&nbsp;', ' ', $val);
+                                          // Replace
+
+                                         $bodyTextTemplate = str_replace($var, $val, $bodyTextTemplate);
+                                         $bodyHtmlTemplate = str_replace($var, $val, $bodyHtmlTemplate);
+                                    }
+                                    $bodyTextTemplate = strip_tags($bodyTextTemplate);
+                                    $bodyHtmlTemplate = str_replace($resciverName, $aData['link_name'], $bodyHtmlTemplate);
+                                    $bodyHtmlTemplate = str_replace($content, $mainContent, $bodyHtmlTemplate);
+                                }
+                                    $subject = "Like to link";
+                                    $header  = "From: ".'Rentstarz'." <".$from_email.">\r\n";
+                                    $header .= "MIME-Version: 1.0\r\n";
+                                    $header .= 'Content-type: text/html; charset=iso-8859-1' ."\"\r\n\r\n";
+                                    mail($aData['link_address'], $subject, $bodyHtmlTemplate, $header);	
+                    
+                   
+          $aResult['status'] = true;      
+            
+		}
+		else{
+			$aResult['status'] = false;
+		}
+
+	   echo json_encode($aResult['status']);
+
+	}		
 		
 	}
 
