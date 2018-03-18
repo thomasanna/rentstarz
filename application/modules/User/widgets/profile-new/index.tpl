@@ -866,8 +866,11 @@ jQuery('body').on('click', '.submit_report', function(event){
 	
 	jQuery('body').on('click', '.screen_renter_link', function(event){
 		
+		jQuery('.newprofile-container-profilefields').css('display','block');
 		jQuery('.profile_fields_div').css('display','none');
 		jQuery('.property_div').css('display','block');
+		jQuery('.newprofile-container-landlordtask').css('display','none');
+
 	});
 	
     jQuery('body').on('click', '.invite_renter_backgroundcheck', function(event){
