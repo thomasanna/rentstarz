@@ -401,7 +401,7 @@ return array(
       'title' => 'Renter task management',
     ),
     'requirements' => array(
-      'no-subject',
+      'subject' => 'user',
     ),
     ),
    array(
@@ -415,7 +415,7 @@ return array(
       'title' => 'Landlord task management',
     ),
     'requirements' => array(
-      'no-subject',
+      'subject' => 'user',
     ),
   ),
    array(
@@ -429,7 +429,7 @@ return array(
       'title' => 'Repairagent task management',
     ),
     'requirements' => array(
-      'no-subject',
+      'subject' => 'user',
     ),
   ),
 ) ?>
