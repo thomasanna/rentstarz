@@ -8,7 +8,7 @@
 </div>
 
 <div class="maintenancelog_div">
-	
+<?php if(count($this->maintenaceLog) > 0): ?>	
 	
 <div class="col-md-2 col-sm-3 col-xs-12 task_head">Task</div>
 <div class="col-md-2 col-sm-3 col-xs-12 task_head">Tenant</div>
@@ -27,10 +27,14 @@
 
 <hr style="clear:both">
 <?php endforeach;?>
+<?php else :?>
+<div style="text-align:center; padding:12px;">You have no tasks</div>
+
+<?php endif;?>
 </div>
 <div class="landlord_new_task_div" style="display:none">
 <input type="hidden" value="" class="selected_task_id">
-
+<?php if(count($this->newtaskData) > 0):?>
 <?php foreach($this->newtaskData as $data):?>
 <div>
 <div style="text-align:center; margin-bottom:12px"><?php echo "The tenant ".$data['renter_name']." in ".$data['location'].", requesting a task"?></div>
@@ -42,8 +46,12 @@
 </div>
 <hr style="clear:both">
 <?php endforeach;?>
+<?php else: ?>
+<div style="text-align:center; padding:12px;">You have no new tasks</div>
+<?php endif;?>
 </div>
 <div class="repairagent_div" style="display:none">
+<?php if(count($this->repairAgentData) > 0):?>	
 <?php foreach($this->repairAgentData as $data):?>
 
 <div class="col-md-3 col-sm-3 col-xs-12">
@@ -64,6 +72,10 @@
 <hr style="clear:both">
 
 <?php endforeach;?>
+<?php else:?>
+<div style="text-align:center; padding:12px;">You have no repair agents</div>
+
+<?php endif;?>
 </div>
 <div class="link_div" style="display:none">
 	
