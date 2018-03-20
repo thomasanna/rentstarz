@@ -74,6 +74,8 @@ $landlodsData = $userHelperObj->getYourLandlords($this->subjectId);
 <div class="confirm_btns" style="text-align: left;">
   <input type="submit" value="Send" class="send_task_btn" style="width: 134px;">
 </div>
+                  <div class="loader" style="display:none;"></div>
+
 </form>   
 </div>
 <?php else:?>
@@ -140,7 +142,8 @@ jQuery("#fileUpload").on('change', function () {
 
 jQuery(".taskform").submit(function (event) {
  event.preventDefault();
- jQuery('.send_task_btn').prop('disabled', true);
+ jQuery('.send_task_btn').hide();
+ jQuery('.taskform .loader').show();
 
  var photopath = jQuery('#fileUpload').val(); 
  var task_info = jQuery('.task_info').val(); 
@@ -152,10 +155,9 @@ jQuery(".taskform").submit(function (event) {
  if(ext != "jpg" && ext != "JPG" && ext != "png" && ext != "jpeg" && ext != "JPEG" &&  ext != "PNG") {
 		jQuery('.renter_new_task_div .message').css('color','red');
 		jQuery('.renter_new_task_div .message').html('Sorry, only JPG, JPEG, & PNG  files are allowed');
-	    jQuery('.send_task_btn').prop('disabled', false);
-		jQuery('.send_task_btn').css('display', 'block');
-        jQuery('.loader').css('display', 'none');
-		
+		jQuery('.send_task_btn').show();
+        jQuery('taskform .loader').hide();
+
  }
  else{	 
  
@@ -177,8 +179,9 @@ jQuery(".taskform").submit(function (event) {
 			jQuery('.task_info').val('');
 			jQuery('.task_location').val('');
 			jQuery('#image-holder').html('');			
-		 jQuery('.send_task_btn').prop('disabled', false);
-		 jQuery('.send_task_btn').css('display', 'block');
+		 jQuery('.send_task_btn').show();
+         jQuery('.taskform .loader').hide();
+
 	     }
        
 	},
@@ -188,6 +191,11 @@ jQuery(".taskform").submit(function (event) {
 	 
  }
  
+}
+else{
+	     jQuery('.send_task_btn').hide();
+         jQuery('.taskform .loader').show();
+
 }
 });
 

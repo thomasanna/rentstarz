@@ -1409,12 +1409,12 @@ jQuery('.repairagent_task').on(handleClick, function() {
  jQuery('.newprofile-container-landlordtask').css('display','none');
  jQuery('.newprofile-container-repairagenttask').css('display','block');
 });
-jQuery(document).ready(function(){
+/*jQuery(document).ready(function(){
 		// jQuery(function() {
 		jQuery( ".schedule_date_text" ).datepicker({
 		  dateFormat: 'yy-mm-dd',
 		  minDate: 0
 		});   
 		//}); 
-	});
+	});*/
 </script>
