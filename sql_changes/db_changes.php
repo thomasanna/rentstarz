@@ -1328,7 +1328,7 @@ $sql['1.1.2.215']   = "INSERT  INTO `engine4_core_settings` (`name`, `value`) VA
 $sql['1.1.2.216']    = "INSERT INTO `engine4_activity_notificationtypes` (`type`, `module`, `body`, `is_request`, `handler`, `default`) VALUES ('invite_renter_to_property', 'user', '{item:\$subject} has been invited to property .', '0', '', '1');";
 
 $sql['1.1.2.217']   = "CREATE TABLE `engine4_invitedrenters_backgroundreport` (
-					  `id` int(11) NOT NULL,
+					  `id` int(11) NOT NULL AUTO_INCREMENT,
 					  `smartmovePid` int(11) NOT NULL,
 					  `pid` int(11) NOT NULL,
 					  `landlord_id` int(11) NOT NULL,
@@ -1340,7 +1340,7 @@ $sql['1.1.2.217']   = "CREATE TABLE `engine4_invitedrenters_backgroundreport` (
 					) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;";
 					
 $sql['1.1.2.218']   = "CREATE TABLE `engine4_tasks` (
-						`id` int(11) NOT NULL,
+						`id` int(11) NOT NULL AUTO_INCREMENT,
 						`task_created_by` int(11) NOT NULL,
 						`task_created_to` int(11) NOT NULL,
 						`task_info` text NOT NULL,
@@ -1363,7 +1363,7 @@ $sql['1.1.2.221']   = "INSERT INTO `engine4_activity_notificationtypes` (`type`,
 
 
 $sql['1.1.2.222']   = "CREATE TABLE `engine4_mylinks` (
-						`id` int(11) NOT NULL,
+						`id` int(11) NOT NULL AUTO_INCREMENT,
 						`invited_by` int(11) NOT NULL,
 						`user_id` int(11) NOT NULL,
 						`link_name` text NOT NULL,
