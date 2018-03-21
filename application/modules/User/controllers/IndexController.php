@@ -12067,7 +12067,7 @@ public function filterfeedbypetstypeAction(){
             $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi125');
             $stripefiles     = $viewHelperObj->getStripeFiles();
            $params = array(
-            "testmode"   => "off",
+            "testmode"   => "on",
             "private_live_key" => "sk_live_bcnF3vdwkx2Q405aOq7POiep",
             "public_live_key"  => "pk_live_evBvNtpwiJlCwieyHNPKsQLO",
             "private_test_key" => "sk_test_K2gnuPgv5SH1P3lkvw86TJIQ",
@@ -12450,7 +12450,7 @@ public function filterfeedbypetstypeAction(){
             $viewHelperObj                          =  $this->view->getHelper('SmartmoveApi125');
             $stripefiles     = $viewHelperObj->getStripeFiles(); // smartmove api exam evaluate
            $params = array(
-            "testmode"   => "off",
+            "testmode"   => "on",
             "private_live_key" => "sk_live_bcnF3vdwkx2Q405aOq7POiep",
             "public_live_key"  => "pk_live_evBvNtpwiJlCwieyHNPKsQLO",
             "private_test_key" => "sk_test_K2gnuPgv5SH1P3lkvw86TJIQ",
@@ -13649,7 +13649,7 @@ public function filterfeedbypetstypeAction(){
 							
 						}
 						 $params = array(
-							"testmode"   => "off",
+							"testmode"   => "on",
 							"private_live_key" => "sk_live_bcnF3vdwkx2Q405aOq7POiep",
 							"public_live_key"  => "pk_live_evBvNtpwiJlCwieyHNPKsQLO",
 							"private_test_key" => "sk_test_K2gnuPgv5SH1P3lkvw86TJIQ",

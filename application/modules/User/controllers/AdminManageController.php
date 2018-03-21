@@ -3962,7 +3962,7 @@ class User_AdminManageController extends Core_Controller_Action_Admin
 			    
 			    $smartmoveapiquestions_table      =  Engine_Api::_()->getDbtable('smartmoveapiquestions', 'user');
 				$smartmoveapiquestionAnswer_table =  Engine_Api::_()->getDbtable('Smartmoveapiquestionanswers', 'user');
-				$viewHelperObj                    =  $this->view->getHelper('SmartmoveApi');
+				$viewHelperObj                    =  $this->view->getHelper('SmartmoveApi125');
 			    $smartmoveQuestions_select   =   $smartmoveapiquestions_table->select()
                         ->setIntegrityCheck(false)
                         ->from(array('question'=>'engine4_smartmoveapi_questions',))
@@ -4183,7 +4183,7 @@ class User_AdminManageController extends Core_Controller_Action_Admin
 			    
 			    $smartmoveapiquestions_table      =  Engine_Api::_()->getDbtable('smartmoveapiquestions', 'user');
 				$smartmoveapiquestionAnswer_table =  Engine_Api::_()->getDbtable('Smartmoveapiquestionanswers', 'user');
-				$viewHelperObj                    =  $this->view->getHelper('SmartmoveApi');
+				$viewHelperObj                    =  $this->view->getHelper('SmartmoveApi125');
 			    $smartmoveQuestions_select   =   $smartmoveapiquestions_table->select()
                         ->setIntegrityCheck(false)
                         ->from(array('question'=>'engine4_smartmoveapi_questions',))
