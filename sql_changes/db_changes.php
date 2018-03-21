@@ -1377,6 +1377,9 @@ $sql['1.1.2.222']   = "CREATE TABLE `engine4_mylinks` (
 						) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 						";
 $sql['1.1.2.223']   = "INSERT INTO `engine4_activity_notificationtypes` (`type`, `module`, `body`, `is_request`, `handler`, `default`) VALUES ('Like_to_link', 'user', '{item:\$subject} like to link', '0', '', '1');";
+$sql['1.1.2.224']   = "ALTER TABLE `engine4_tasks` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;";
+$sql['1.1.2.225']   = "ALTER TABLE `engine4_mylinks` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;";
+$sql['1.1.2.226']   = "ALTER TABLE `engine4_invitedrenters_backgroundreport` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;";
 
 										
 ?>
