@@ -36,7 +36,7 @@ public function indexAction()  {
  // local server 87,88 ,34
 
 
- /*$repairAgentSelect   =   $table->select()
+ $repairAgentSelect   =   $table->select()
                         ->setIntegrityCheck(false)
                         ->from(array('user'=>'engine4_users',))
                         ->joinLeft(array('search_field'=>'engine4_user_fields_search'),'search_field.item_id=user.user_id',null)
@@ -47,8 +47,8 @@ public function indexAction()  {
                         ->where('user.enabled=?' , 1)
                         ->where('search_field.profile_type =?' , '32')
                         ->where('fields_value.field_id=?' , 93)
-                        ->group('user.user_id');*/
- $repairAgentSelect   =   $table->select()
+                        ->group('user.user_id');
+ /*$repairAgentSelect   =   $table->select()
                         ->setIntegrityCheck(false)
                         ->from(array('user'=>'engine4_users',))
                         ->joinLeft(array('search_field'=>'engine4_user_fields_search'),'search_field.item_id=user.user_id',null)
@@ -59,7 +59,7 @@ public function indexAction()  {
                         ->where('user.enabled=?' , 1)
                         ->where('search_field.profile_type =?' , '34')
                         ->where('fields_value.field_id=?' , 93)
-                        ->group('user.user_id');
+                        ->group('user.user_id');*/
 
  $repairAgentData = $table->fetchAll($repairAgentSelect);
  
