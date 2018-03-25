@@ -95,7 +95,7 @@ $root_dirname =   $subject->getIdentity().'_'.$subject->displayname;
 	</ul>
     <?php endif;?>
 </div>
-<script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/lightbox-plus-jquery.min.js"></script>
+<!--<script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/lightbox-plus-jquery.min.js"></script>-->
 <script>jQuery.noConflict();</script>
 <script>
 jQuery('body').on('click', '.dir_open', function(event){

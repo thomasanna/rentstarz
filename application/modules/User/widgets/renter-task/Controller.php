@@ -15,7 +15,17 @@ public function indexAction()  {
                         ->joinLeft(array('users'=>'engine4_users',),'users.user_id=tasks.task_created_to',array('user_id as landlord_id','displayname as landlord_name','email as landlord_email'))
                         ->where('tasks.task_created_by = ?', $viewer->getIdentity());
     $this->view->mytasks = $mytasks = $TasksTable->fetchAll($task_select);
-        
+    $linksTable      = Engine_Api::_()->getDbtable('Mylinks', 'user');
+    $linksData = $linksTable->fetchAll($linksTable->select()
+                                      ->where('status = ?', 1)
+                                      ->where('invited_by = ?', $subject->getIdentity())
+                                      ->group('user_id')
+
+                                      );
+
+
+
+    $this->view->linksData = $linksData;    
 
 	
 }

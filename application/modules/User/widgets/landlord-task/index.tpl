@@ -18,13 +18,14 @@
 <div class="col-md-2 col-sm-3 col-xs-12 task_head">More Info</div>
 <hr style="clear:both">
 <?php foreach($this->maintenaceLog as $data):?>
+<div class="row landlord_task_log_<?php echo $data['id']?>">
 <div class="col-md-2 col-sm-3 col-xs-12"><?php echo $data['task_info'];?></div>
 <div class="col-md-2 col-sm-3 col-xs-12"><?php echo $data['renter_name'];?></div>
 <div class="col-md-2 col-sm-3 col-xs-12"><?php echo $data['created_at'];?></div>
-<div class="col-md-2 col-sm-3 col-xs-12"><?php echo $data['scheduled_date'];?></div>
-<div class="col-md-2 col-sm-3 col-xs-12"><?php echo $data['status'];?></div>
+<div class="col-md-2 col-sm-3 col-xs-12 scheduled_date"><?php echo $data['scheduled_date'];?></div>
+<div class="col-md-2 col-sm-3 col-xs-12 status"><?php echo $data['status'];?></div>
 <div class="col-md-2 col-sm-3 col-xs-12 more_info_task" style="cursor:pointer" taskid ="<?php echo $data['id']?>" data-toggle="modal" data-target="#taskmoreinfoModal">More Info</div>
-
+</div>
 <hr style="clear:both">
 <?php endforeach;?>
 <?php else :?>
@@ -42,6 +43,7 @@
 </div>
 <div class="newtask_options" style="text-align:center">
 <div class="col-md-3 col-sm-3 col-xs-12">Message</div>
+<div class="col-md-3 col-sm-3 col-xs-12 schedule_task" style="cursor:pointer" taskid ="<?php echo $data['id']?>" data-toggle="modal" data-target="#scheduletaskModal">Schedule Task</div>
 <div class="col-md-3 col-sm-3 col-xs-12 selectagent" style="cursor:pointer" task-id ="<?php echo $data['id']?>">Assign to an agent</div>
 </div>
 <hr style="clear:both">
@@ -80,12 +82,12 @@
 <div class="link_div" style="display:none">
 	
 	<div>You can invite someone to join and share task info</div>
-<div class="tabs_alt tabs_parent " style="display:block">
+    <div class="tabs_alt tabs_parent " style="display:block">
      <ul id="main_tabs">
 	<li class="newlink_li active"><a href="javascript:void(0);">New Link</a></li>
 	<li class="mylink_li"><a href="javascript:void(0);">My Links</a></li>
 	</ul>
-</div>
+    </div>
 
 	<div class="newlink_content">
 	who do you want to link with<br><br>
@@ -98,7 +100,7 @@
 	
 	</div>
 	<div class="mylink_content" style="display:none">
-	<div class="search_links" style="padding: 12px;">
+	   <div class="search_links" style="padding: 12px;">
 		<select class="search_links_select">
 		<option value="view_all">View All</option>
 		<option value="renter">My Renters</option>
@@ -258,6 +260,8 @@ jQuery('body').on('click', '.more_info_task', function(event){
 	   	
 	});
 jQuery('body').on('click', '.submit_task_update', function(event){
+		 jQuery('#scheduletaskModal .message').html('');	
+
 	var scheduled_date  = jQuery('#scheduletaskModal .schedule_date_text').val();
 	var expense         = jQuery('#scheduletaskModal .expense_text').val();
 	var status         = jQuery('#scheduletaskModal .status_option').val();
@@ -275,7 +279,11 @@ jQuery('body').on('click', '.submit_task_update', function(event){
 				dataType: 'json',
 				type: 'POST',
 				success: function (result) {
-					    location.reload();
+				 jQuery('#scheduletaskModal .message').html('You have successfully updated your task');	
+                 jQuery('.landlord_task_log_'+taskid + ' .scheduled_date').html(scheduled_date);
+                 jQuery('.landlord_task_log_'+taskid + ' .status').html(status);
+
+					  
 			},
 				error: function(e){ }  
 			   });
@@ -343,5 +351,29 @@ jQuery( ".search_links_select" ).change(function() {
 
   }
 });
+
+
+jQuery('body').on('click', '.schedule_task', function(event){
+	var taskid  = jQuery(this).attr('taskid');
+	var oData       = new Object();		
+    oData.taskid         = taskid;
+    if(taskid != ''){
+	    var url          = '<?php echo $this->baseUrl().'/user/index/gettask' ?>';		
+			jQuery.ajax({
+				url:  url,
+				data: oData,						
+				dataType: 'json',
+				type: 'POST',
+				success: function (result) {
+					//jQuery('#scheduletaskModal').modal('show')
+					jQuery('#scheduletaskModal .schedule_date_text').val(result.scheduled_date);				
+					jQuery('#scheduletaskModal .expense_text').val(result.expense);				
+					jQuery('#scheduletaskModal .status_option').val(result.status);				
+					jQuery('#scheduletaskModal .task_id_text').val(result.taskid);				
+				},
+				error: function(e){ }  
+			   });
+	    }		
+	});
 
 </script>

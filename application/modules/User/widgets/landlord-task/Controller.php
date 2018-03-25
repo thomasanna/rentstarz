@@ -36,7 +36,7 @@ public function indexAction()  {
  // local server 87,88 ,34
 
 
- $repairAgentSelect   =   $table->select()
+ /*$repairAgentSelect   =   $table->select()
                         ->setIntegrityCheck(false)
                         ->from(array('user'=>'engine4_users',))
                         ->joinLeft(array('search_field'=>'engine4_user_fields_search'),'search_field.item_id=user.user_id',null)
@@ -46,6 +46,18 @@ public function indexAction()  {
                         ->where('user.search=?' , 1)
                         ->where('user.enabled=?' , 1)
                         ->where('search_field.profile_type =?' , '32')
+                        ->where('fields_value.field_id=?' , 93)
+                        ->group('user.user_id');*/
+ $repairAgentSelect   =   $table->select()
+                        ->setIntegrityCheck(false)
+                        ->from(array('user'=>'engine4_users',))
+                        ->joinLeft(array('search_field'=>'engine4_user_fields_search'),'search_field.item_id=user.user_id',null)
+                        ->joinLeft(array('fields_value'=>'engine4_user_fields_values'),'fields_value.item_id=user.user_id',array('value'))
+                        ->joinLeft(array('state'=>'engine4_state_list',),'state.state_id=search_field.field_87',array('state'))
+                        ->joinLeft(array('city'=>'engine4_city_list',),'city.city_id=search_field.field_88',array('city'))
+                        ->where('user.search=?' , 1)
+                        ->where('user.enabled=?' , 1)
+                        ->where('search_field.profile_type =?' , '34')
                         ->where('fields_value.field_id=?' , 93)
                         ->group('user.user_id');
 

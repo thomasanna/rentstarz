@@ -32,7 +32,6 @@ $StateArray          = $smartmoveHelperObj->getState();
 ?>
 <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/message_notififaction.js"></script>
 <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/jRating.jquery.js"></script>
-
 <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/new-profile.css">
 <script>
 <?php $viwer_id=Engine_Api::_()->user()->getViewer()->getIdentity(); ?>
@@ -671,16 +670,16 @@ var viewer_identity='<?php echo $viwer_id; ?>';
   <div class="modal-dialog" role="document">
     <div class="modal-content-new">
       <div class="modal-header">
-        
+        Schedule Your Task
       </div>
        <div class="modal-body">
+		   <div class="message" style="color:green; padding:12px"></div>
 		   <div class="pro_field_wrapper">
-		   <div>Schedule Your Task</div><br><br>
 		   <input type="hidden" value="" class="task_id_text prty_field input-box">
 		   </div>
 		   <div class="pro_field_wrapper">
 		   <div>Schedule Date</div>
-		   <div><input type="text" class="schedule_date_text prty_field input-box"></div><br>
+		   <div><input type="text" class="schedule_date_text prty_field input-box" id="datepicker"></div><br>
 		   </div>
            <div class="pro_field_wrapper">
 		   <div>Expense</div><br>
@@ -1409,12 +1408,14 @@ jQuery('.repairagent_task').on(handleClick, function() {
  jQuery('.newprofile-container-landlordtask').css('display','none');
  jQuery('.newprofile-container-repairagenttask').css('display','block');
 });
-/*jQuery(document).ready(function(){
-		// jQuery(function() {
-		jQuery( ".schedule_date_text" ).datepicker({
+
+	jQuery(document).ready(function(){
+		 jQuery(function() {
+		jQuery( "#datepicker" ).datepicker({
 		  dateFormat: 'yy-mm-dd',
 		  minDate: 0
 		});   
-		//}); 
-	});*/
+		}); 
+		//jQuery('input#timepicker').timepicker({});
+	});    
 </script>

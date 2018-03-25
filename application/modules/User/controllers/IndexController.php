@@ -14618,9 +14618,10 @@ public function filterfeedbypetstypeAction(){
 	         $mainContent    = '';   
 	         $mainContent = $mainContent.'The landlord '.$viewer->displayname. ' has scheduled task for land';
 	         
-	         $repairagentData   =  Engine_Api::_()->user()->getUser($taskData->servicer_id);
 	         $renter   =  Engine_Api::_()->user()->getUser($taskData->task_created_by);
-	         if(count($repairagentData)> 0){
+	         if($taskData->servicer_id != 0){
+		     $repairagentData   =  Engine_Api::_()->user()->getUser($taskData->servicer_id);
+		 
 	         $mailid1 = $repairagentData->email;
 	         
             Engine_Api::_()->getDbtable('notifications', 'activity') // to agent
@@ -14637,9 +14638,11 @@ public function filterfeedbypetstypeAction(){
         if($profile_type_id == 1){
 	         $mainContent    = '';   
 	         $mainContent = $mainContent.'The Renter '.$viewer->displayname. ' has updated task for land';  
-	         $repairagentData   =  Engine_Api::_()->user()->getUser($taskData->servicer_id);
+	         //echo $taskData->servicer_id; exit;
 	         $landlord   =  Engine_Api::_()->user()->getUser($taskData->task_created_to);
-	         if(count($repairagentData)> 0){
+	         if($taskData->servicer_id != 0){
+			 $repairagentData   =  Engine_Api::_()->user()->getUser($taskData->servicer_id);
+
 	         $mailid1 = $repairagentData->email;
 	          Engine_Api::_()->getDbtable('notifications', 'activity') // to agent
                     ->addNotification($repairagentData, $viewer, $repairagentData, 'scheduled_task',array());
