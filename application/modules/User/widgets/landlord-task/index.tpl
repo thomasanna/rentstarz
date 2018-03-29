@@ -122,10 +122,10 @@
      <?php if($links['link_profile'] == 'renter') echo "Renter";?>
      <?php if($links['link_profile'] == 'service_agent') echo "Service Agent";?>
     </div>
-    </div>
     <hr style="clear:both">
 
-	
+	</div>
+
 	<?php endforeach;?>
 	
 	</div>
@@ -293,6 +293,8 @@ jQuery('body').on('click', '.submit_task_update', function(event){
 
 jQuery('body').on('click', '.submit_link', function(event){
 	jQuery('#linkModal .message').html('');
+	jQuery('#linkModal .submit_link').css('display','none');
+	jQuery('#linkModal .loader').css('display','block');	
 	var link_name  =    jQuery('#linkModal .link_name').val();
 	var link_address  = jQuery('#linkModal .link_address').val();
 	var link_message  = jQuery('#linkModal .link_message').val();
@@ -315,11 +317,23 @@ jQuery('body').on('click', '.submit_link', function(event){
                         jQuery('#linkModal .link_name').val('');
                         jQuery('#linkModal .link_address').val('');
                         jQuery('#linkModal .link_message').val('');
+                        jQuery('#linkModal .message').css('color','green');
                         jQuery('#linkModal .message').html('Your link has been succesfully sent');
+                        jQuery('#linkModal .submit_link').css('display','block');
+	                    jQuery('#linkModal .loader').css('display','none');
+	
 			},
-				error: function(e){ }  
+				error: function(e){ 
+					jQuery('#linkModal .submit_link').css('display','block');
+                	jQuery('#linkModal .loader').css('display','none');
+	}  
 			   });
 	    }
+	    else{
+			jQuery('#linkModal .submit_link').css('display','block');
+	        jQuery('#linkModal .loader').css('display','none');
+	
+		}
     
 });
 

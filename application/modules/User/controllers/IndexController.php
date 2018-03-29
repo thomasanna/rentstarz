@@ -14306,9 +14306,35 @@ public function filterfeedbypetstypeAction(){
             $target_file     = $dir .'/'. basename($_FILES["fileUpload"]["name"]);
             $imageFileType   = pathinfo($target_file,PATHINFO_EXTENSION);
             $random_filename =  $random_filename.'.'.$imageFileType;
+            
+ /*           $video = $path . escapeshellcmd($_FILES['video']['name']);
+$cmd = "ffmpeg -i $video 2>&1";
+$second = 1;
+if (preg_match('/Duration: ((\d+):(\d+):(\d+))/s', `$cmd`, $time)) {
+    $total = ($time[2] * 3600) + ($time[3] * 60) + $time[4];
+    $second = rand(1, ($total - 1));
+}
+
+$videodir             = dirname($_SERVER['SCRIPT_FILENAME']).'/public/video/tasks/'.$viewer->getIdentity();
+   if(!is_dir($videodir)){
+                                mkdir($videodir,0777,true);
+                            }
+$image  = $videodir.'/'.$this->random_string(8).'.jpg';
+$cmd = "ffmpeg -i $video -deinterlace -an -ss $second -t 00:00:01 -r 1 -y -vcodec mjpeg -f mjpeg $image 2>&1";
+$convert_command  = 'ffmpeg -i '.$target.' -b:a 128k -vcodec mpeg4 -b:v 1200k '.$newtarget.'';
+
+$do = `$cmd`;
+$video_tmp_name = $_FILES['video']['tmp_name'];
+
+ move_uploaded_file($video_tmp_name,$path.$name);
+           
+            */
+            
+                       
+            
 
                 $target_file   = $dir .'/'. $random_filename;
-                if (move_uploaded_file($_FILES["fileUpload"]["tmp_name"], $target_file)) {
+              if (move_uploaded_file($_FILES["fileUpload"]["tmp_name"], $target_file)) {
                     $TasksTable     = Engine_Api::_()->getDbtable('Tasks', 'user');
                     $TasksTableId   = $TasksTable->insert(array(
                       'task_created_by'         => $viewer->getIdentity(),
@@ -14374,6 +14400,8 @@ public function filterfeedbypetstypeAction(){
                           // send notification
             Engine_Api::_()->getDbtable('notifications', 'activity')
                     ->addNotification($landlordData, $viewer, $landlordData, 'task_for_maintenance',array());
+                    
+                    
            $aResult['status']                      = true;
            }
            else {

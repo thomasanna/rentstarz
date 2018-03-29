@@ -296,63 +296,6 @@ class User_Plugin_Signup_Fields extends Core_Plugin_FormSequence_Abstract
         $mailParams
       );
       
-    /*  $bodyTextContent = '';
-
-   if (file_exists("emailtemplates/email_varification.html")) {
-	                        $url = $_SERVER['HTTP_HOST'].$mailParams['object_link'];
-							$htmlExist = true;
-							$file = fopen("emailtemplates/email_varification.html", "r");
-							while(!feof($file))
-							{ 
-								$bodyTextContent .= fgets($file);
-							}
-							fclose($file);
-						} 
-							
-							if($htmlExist){
-							 
-							  $email='{email}';	
-							  $red_url = '{url}';
-							  $username ='{username}';
-							  $email ='{email}'; 
-
-								
-							  $bodyTextTemplate = '';
-							  $bodyHtmlTemplate = $bodyTextContent;
-								
-								
-						  foreach( $rParams as $var => $val ) {
-							  $raw = trim($var, '[]');
-							  $var = '[' . $var . ']';
-							  if( !$val ) {
-								$val = $var;
-							  }
-							  // Fix nbsp
-							  $val = str_replace('&amp;nbsp;', ' ', $val);
-							  $val = str_replace('&nbsp;', ' ', $val);
-							  // Replace
-
-							 $bodyTextTemplate = str_replace($var, $val, $bodyTextTemplate);
-							 $bodyHtmlTemplate = str_replace($var, $val, $bodyHtmlTemplate);
-							}
-							$bodyTextTemplate = strip_tags($bodyTextTemplate);							
-							$bodyHtmlTemplate = str_replace($email, $mailParams['email'], $bodyHtmlTemplate);
-							$bodyHtmlTemplate = str_replace($red_url, $url, $bodyHtmlTemplate);
-							$bodyHtmlTemplate = str_replace($email, $mailParams['email'], $bodyHtmlTemplate);
-							$bodyHtmlTemplate = str_replace($username, $mailParams['recipient_title'], $bodyHtmlTemplate);
-							
-					$from_email    = Engine_Api::_()->getApi('settings', 'core')->core_mail_from; 		
-					$subject = "Rentstarz Email Varification";
-
-					$header  = "From: ".'Rentstarz'." <".$from_email.">\r\n";
-					$header .= "MIME-Version: 1.0\r\n";
-					$header .= 'Content-type: text/html; charset=iso-8859-1' ."\"\r\n\r\n";
-
-                    mail($mailParams['email'], $subject, $bodyHtmlTemplate, $header);   
-					
-
-						 }*/
-      
     
       
     }

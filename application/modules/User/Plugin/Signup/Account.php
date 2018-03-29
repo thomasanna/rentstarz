@@ -234,16 +234,56 @@ class User_Plugin_Signup_Account extends Core_Plugin_FormSequence_Abstract
 		 
 		if($data['profile_type'] == 1) {   
 		  $user->level_id = 7;   //tenants       
+		  $profile_type= 'renter';
 		}
 		if($data['profile_type'] == 4) {
-		  $user->level_id = 6;  //landlords               
+		  $user->level_id = 6;  //landlords  
+		  $profile_type= 'landlord';
+             
 		}
 		if($data['profile_type'] == 6) {
 		  $user->level_id = 8;  //services 
-		  $user->services_type_id	=	$data['services_type'];              
+		  $user->services_type_id	=	$data['services_type'];    
+		  $profile_type= 'services';
+          
+		}
+		if($data['profile_type'] == 32 || $data['profile_type'] == 34) {
+		  $user->level_id = 9;  //service_agent 
+		  $profile_type= 'service_agent';
+
 		}
 		 $user->save();
 	}
+	
+	// if linked by someone
+	$linksTable      = Engine_Api::_()->getDbtable('Mylinks', 'user');
+    $linksData = $linksTable->fetchAll($linksTable->select()
+                                      ->where('status = ?', 0)
+                                      ->where('link_address = ?', $user->email)
+                                      ->where('link_profile = ?', $profile_type)
+                                      );
+   if(count($linksData > 0)){
+	 foreach($linksData as $data){ 
+	   $Data = $linksTable->fetchRow($linksTable->select()->where('id = ?', $data['id'])); 
+	   $Data->status = 1;  
+	   $Data->user_id = $user->getIdentity(); 
+	   $Data->save();
+	   
+	   $user->verified  = 1; 
+	   $user->approved  = 1; 
+	   $user->save();
+	   
+	   $resceiver = Engine_Api::_()->user()->getUser($data['invited_by']);
+
+	   if(!empty($resceiver)){
+	      // send notification
+            Engine_Api::_()->getDbtable('notifications', 'activity')
+                    ->addNotification($resceiver, $user, $resceiver, 'linked_with_you',array());
+	   }
+
+	 } 
+   }
+   
 
     // Increment signup counter
     Engine_Api::_()->getDbtable('statistics', 'core')->increment('user.creations');

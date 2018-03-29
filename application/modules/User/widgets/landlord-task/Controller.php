@@ -25,7 +25,8 @@ public function indexAction()  {
 				->setIntegrityCheck(false)
 				->from(array('tasks'=>'engine4_tasks',))
 		->joinLeft(array('users'=>'engine4_users',),'users.user_id=tasks.task_created_by',array('user_id as renter_id','displayname as renter_name','email as renter_email'))
-		->where('tasks.status = ?', 'pending')
+		->where('(tasks.status = ?', 'pending')
+		->orWhere('tasks.servicer_id = ?)', 0)
 		->where('tasks.task_created_to = ?', $subject->getIdentity());
  $newtaskData = $TasksTable->fetchAll($newtask_select);
 

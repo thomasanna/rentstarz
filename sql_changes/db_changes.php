@@ -1381,6 +1381,7 @@ $sql['1.1.2.224']   = "ALTER TABLE `engine4_tasks` CHANGE `id` `id` INT(11) NOT 
 $sql['1.1.2.225']   = "ALTER TABLE `engine4_mylinks` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;";
 $sql['1.1.2.226']   = "ALTER TABLE `engine4_invitedrenters_backgroundreport` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;";
 
+$sql['1.1.2.227']   = "INSERT INTO `engine4_activity_notificationtypes` (`type`, `module`, `body`, `is_request`, `handler`, `default`) VALUES ('linked_with_you', 'user', '{item:\$subject} has been linked with you.', '0', '', '1');";
 										
 ?>
 

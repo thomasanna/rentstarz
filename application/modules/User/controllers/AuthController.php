@@ -337,22 +337,6 @@ class User_AuthController extends Core_Controller_Action_Standard
            }
            
            
-           $linksTable      = Engine_Api::_()->getDbtable('Mylinks', 'user');
-           $linksData = $linksTable->fetchAll($linksTable->select()
-                                      ->where('status = ?', 0)
-                                      ->where('link_address = ?', $viewer->email)
-                                      );
-           if(count($linksData > 0)){
-			 foreach($linksData as $data){ 
-		       $Data = $linksTable->fetchRow($linksTable->select()->where('id = ?', $data['id'])); 
-			   $Data->status = 1;  
-			   $Data->user_id = $viewer->getIdentity(); 
-			   $Data->save();
-		     } 
-		   }
-           
-           
-           
            if($profile_type_id == 1){ // checking for renter is invited for background report
 			   
 			   $userTable = Engine_Api::_()->getDbtable('users', 'user');

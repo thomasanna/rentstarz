@@ -1,6 +1,6 @@
 <div class="tabs_alt tabs_parent " style="display:block">
           <ul id="main_tabs">
-            <li class="repairagent_new_task_li active"><a href="javascript:void(0);">My Task</a></li>
+            <li class="repairagent_new_task_li active"><a href="javascript:void(0);">Maintenance Log</a></li>
           </ul>
 </div>
 
