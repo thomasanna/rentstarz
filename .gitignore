@@ -1,5 +1,4 @@
 .DS_Store
-/.htaccess
 /.ftpquota
 /error_log
 temporary/*
