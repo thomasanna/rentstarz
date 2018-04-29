@@ -40,26 +40,21 @@
     }
     </script> 
 
-    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/latestlandingjs/aos.js"></script> 
-    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/latestlandingjs/jquery-2.2.4.min.js"></script>
-	<script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/latestlandingjs/jquery.easing.min_optimized.js" type="text/javascript"></script> 
-	<script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/latestlandingjs/swiper.min.js" type="text/javascript"></script> 
-	<script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/latestlandingjs/scripts_optimized.js"></script>
-	<script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/latestlandingjs/bootstrap.min.js"></script>
-	<script>jQuery.noConflict();</script>
-	
-	
-    <link rel="icon" type="image/png" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/rentstarz_favicon.png" />
-    <link rel="stylesheet" href="/application/modules/User/externals/styles/latestlanding/jquery-ui.min.css" type="text/css" />
-    <link href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo $this->baseUrl(); ?>/application/modules/Ynresponsive1/externals/styles/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/latestlanding/styles_optimized.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/latestlanding/swiper_optimized.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/latestlanding/aos.css" type="text/css">
-        <link href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/newstyles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/css/slick.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/css/sh.css" rel="stylesheet">
 
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Khula:300,400,600" rel="stylesheet">
+    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/js/jquery-3.1.1.min.js"></script>
+    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/js/slick.min.js"></script>
+    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/js/paginathing.min.js"></script>
+    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/js/custom.js"></script> 
    <base href="<?php echo rtrim('//' . $_SERVER['HTTP_HOST'] . $this->baseUrl(), '/'). '/' ?>" />
 
   
@@ -128,29 +123,8 @@
 
  
 </head>
-<body id="global_page_<?php echo $identity ?>">
-
- <div class="wrapper">
-	 
-  <script type="javascript/text">
-    if(DetectIpad()){
-      $$('a.album_main_upload').setStyle('display', 'none');
-      $$('a.album_quick_upload').setStyle('display', 'none');
-      $$('a.icon_photos_new').setStyle('display', 'none');
-    }
-
-  </script>  
-
-  <div id='global_wrapper'>	  
-    <div id='global_content'>    
-      <?php echo $this->layout()->content ?>   
-    </div>
-  </div>
- 
-  <div class="push"></div>
-  
-   </div>
-
-  <div id="janrainEngageShare" style="display:none">Share</div>
+<body id="global_page_<?php echo $identity ?>" class="landing">
+      <?php echo $this->layout()->content ?> 
+      <?php echo $this->content()->renderWidget('user.footer'); ?> 
 </body>
 </html>

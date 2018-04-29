@@ -14830,6 +14830,11 @@ $video_tmp_name = $_FILES['video']['tmp_name'];
               $location_mode_array['city_name']       = $aData['city'];
               $location_mode_array['county_name']     = $aData['county'];
               $location_mode_array['neighborhood_name']  = $aData['neighborhood'];
+              $location_mode_array['bedroom']  = $aData['bedroom'];
+              $location_mode_array['propertyType']  = $aData['propertyType'];
+              $location_mode_array['budget']  = $aData['budget'];
+              
+              
               $_SESSION['location_mode_array']        = $location_mode_array;
               $aResult['status'] = true;
         }
@@ -14911,6 +14916,26 @@ $video_tmp_name = $_FILES['video']['tmp_name'];
 			if( isset($location_mode_array['country_name']) && !empty($location_mode_array['country_name'])) {
 				   $propertySelect->where('pcountry.prty_country      =?' ,  $location_mode_array['country_name']);                      
 			}
+			if( isset($location_mode_array['bedroom']) && !empty($location_mode_array['bedroom'])) {
+                            $propertySelect->where('plist.no_of_rooms  =?' , $location_mode_array['bedroom']);
+			}
+			if( isset($location_mode_array['propertyType']) && !empty($location_mode_array['propertyType'])) {
+                            $propertySelect->where('plist.housing_type  IN(?)' , $location_mode_array['propertyType']);
+			}
+			 if( isset($location_mode_array['budget'])) 
+                        {
+						    $pricearray                              =  explode('-', $location_mode_array['budget']);
+							$price_from = (int)$pricearray['0'];
+						    $price_to   = (int)$pricearray['1'];
+						    if($location_mode_array['price_from'] !='0' && $location_mode_array['price_to'] == '0'){
+								$propertySelect->where('plist.price =?' , $price_from);
+							}
+							if($location_mode_array['price_from'] !='0' && $location_mode_array['price_to'] != '0'){
+								$propertySelect->where('plist.price >=?' , $price_from);
+                                $propertySelect->where('plist.price <=?' , $price_to);	
+							}
+													
+     					}
 
   
     $propertyListData = $propertyTable->fetchAll($propertySelect);

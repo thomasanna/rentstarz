@@ -1,0 +1,4717 @@
+body{background-color: #fcfcfc !important;}
+.wrapper {
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    height: 700px;
+    background-size: cover;
+}
+
+.bg {
+    background-color: #fafafa
+}
+.dropdown-menu>li{background:none;}
+.dropdown-menu>li>a:hover {
+    color: #f58300;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{background:none !important;}
+.navbar-nav > li > a {
+    color: #1A1A1A;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+.navbar-nav > li > a:hover{
+color: #f58300 !important;
+transition: all 0.3s ease;
+}
+.navbar-toggle .icon-bar {
+    background-color: #000;
+}
+
+.navbar {
+    margin-bottom: 0!important
+}
+
+.navbar-brand > img {
+    height: 47px;
+}
+
+.nav > li > a:focus,
+.nav > li > a:hover {
+    background-color: transparent!important;
+}
+
+.header {
+    padding: 15px 40px;
+    padding: 15px 40px;
+    box-shadow: 0 6px 6px -6px black;
+    border-bottom: 2px solid #EEE !important;
+    z-index: 99;
+    position: relative;
+}
+
+.navbar-nav > li {
+    padding-left: 30px;
+}
+.nav>li {
+    position: relative;
+    display: block;
+    z-index: 9999999;
+}
+.navbar-brand {
+    padding: 0!important
+}
+
+.login a img {
+    width: 30px;
+    margin-right: 20px;
+    margin-top: -5px;
+}
+
+.bannerText {
+    position: absolute;
+    bottom: 11%;
+    left: 3%;
+}
+
+.bannerText p {
+    color: #fff;
+    font-size: 27px;
+}
+
+.margin50 {
+    margin-bottom: 50px
+}
+
+/*===============================================search bar================================*/
+
+.bannerSearch {
+    background-color: #ffffff75;
+    padding: 30px 1px;
+    margin-top: 50px;
+}
+
+.mapsLandLord li .content .cotentlenks span a:hover {
+    color: #f58201;
+}
+
+/*
+<<<<<<< HEAD
+.searchFilter {
+    background-color: #fff;
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+}
+
+.searchFilter ul {
+    padding-left: 0;
+    margin-bottom: 0
+}
+
+.searchFilter ul li {
+    display: inline-block;
+    padding: 0px 0px 0px 122px
+}
+
+.searchFilter ul li input {
+    border: none!important;
+    padding: 30px;
+    position: relative;
+}
+
+.searchFilter ul li:first-child img {
+    position: absolute;
+    z-index: 99999;
+    left: 21.5%;
+    top: 51%;
+}
+
+.searchFilter ul li:first-child {
+    padding-left: 0
+}
+
+.searchFilter ul li:nth-child(2),
+.searchFilter ul li:nth-child(3),
+.searchFilter ul li:nth-child(4) {
+    position: relative;
+}
+
+.searchFilter ul li .btn {
+    padding: 22px 50px;
+    background-color: #f58300;
+    border-radius: 0;
+    border: none
+}
+
+.searchFilter ul li input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.searchFilter ul li:nth-child(2) a,
+.searchFilter ul li:nth-child(3) a,
+.searchFilter ul li:nth-child(4) a {
+    position: relative;
+}
+
+.searchFilter ul li:nth-child(2) a:before {
+    background-image: url(../images/propertyType.png);
+}
+
+.searchFilter ul li:nth-child(3) a:before {
+    background-image: url(../images/budget.png);
+}
+
+.searchFilter ul li:nth-child(4) a:before {
+    background-image: url(../images/bedroom.png);
+}
+
+
+.searchFilter ul li:nth-child(2) a:before,
+.searchFilter ul li:nth-child(3) a:before,
+.searchFilter ul li:nth-child(4) a:before {
+    content: " ";
+    position: absolute;
+    background-repeat: no-repeat;
+    height: 17px;
+    width: 17px;
+    left: -32%;
+    top: 18%;
+}
+
+
+
+
+
+
+.searchFilter ul li a {
+    color: #ccc;
+}
+
+#menu3 .dropdown-menu li {
+    text-align: center
+}
+
+.propertyinfo li a {
+    color: #747474;
+    position: relative;
+}
+
+.propertyinfo li a:before {
+    content: "";
+    position: absolute;
+    left: -50%;
+}
+
+.propertyinfo li:first-child a:before {
+    background-image: url(../images/mesage.png);
+    width: 17px;
+    height: 15px;
+}
+
+.propertyinfo li:nth-child(2) a:before {
+    background-image: url(../images/video.png);
+    width: 17px;
+    height: 13px;
+}
+
+.propertyinfo li:nth-child(3) a:before {
+    background-image: url(../images/share.png);
+    width: 17px;
+    height: 17px;
+}
+
+.propertyinfo li:nth-child(4) a:before {
+    background-image: url(../images/like.png);
+    width: 17px;
+    height: 17px;
+}
+
+.propertyinfo li:nth-child(5) a:first-child::before {
+    background-image: url(../images/chat.png);
+    width: 17px;
+    height: 15px;
+}
+=======
+*/
+
+.searchFilter {
+    background-color: #fff;
+    padding: 0;
+/*    z-index: 999999;*/
+    position: relative;
+    border-bottom: 1px solid #EEE !important;
+    margin-top: 4px;
+}
+
+.searchFilter ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 3px 0 5px;
+}
+
+.searchFilter ul li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.searchFilter ul li input {
+    border: none!important;
+    padding: 30px;
+    position: relative;
+
+}
+
+.searchFilter ul li:first-child img {
+    position: absolute;
+    z-index: 99999;
+    left: 21.5%;
+    top: 51%;
+}
+
+.searchFilter ul li:first-child {
+    padding-left: 0;
+}
+
+.searchFilter ul li .btn {
+    padding: 22px 50px;
+    background-color: #f58300;
+    border-radius: 0;
+    border: none;
+}
+
+.searchFilter ul li input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.searchFilter ul li a.no-border,
+.searchFilter ul li:last-child a {
+    border: 0;
+}
+
+.searchFilter ul li a {
+    color: #6c6c6c;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 5px 48px;
+    display: block;
+    border-right: 1px solid #e0e0e0;
+}
+
+#menu3 .dropdown-menu li {
+    text-align: center;
+}
+
+.propertyinfo li a {
+    color: #747474;
+    position: relative;
+}
+
+.propertyinfo li a:before {
+    content: "";
+    position: absolute;
+    left: -50%;
+}
+
+.propertyinfo li:first-child a:before {
+    background-image: url(../images/mesage.png);
+    width: 17px;
+    height: 15px;
+}
+
+.propertyinfo li:nth-child(2) a:before {
+    background-image: url(../images/video.png);
+    width: 17px;
+    height: 13px;
+}
+
+.propertyinfo li:nth-child(3) a:before {
+    background-image: url(../images/share.png);
+    width: 17px;
+    height: 17px;
+}
+
+.propertyinfo li:nth-child(4) a:before {
+    background-image: url(../images/like.png);
+    width: 17px;
+    height: 17px;
+}
+
+.propertyinfo li:nth-child(5) a:first-child::before {
+    background-image: url(../images/chat.png);
+    width: 17px;
+    height: 15px;
+}
+
+
+/*>>>>>>> ccda1c537a914159fe3a448cb23cf11171d595d5*/
+
+.propertyinfo {
+    padding: 20px 0px 20px 30px;
+}
+
+.propertyinfo li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 55px;
+}
+
+.propertyContent h3 {
+    text-align: left
+}
+
+.propertyContent p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.propertyList .col-sm-4,
+.propertyList .col-sm-8 {
+    padding: 0
+}
+
+.propertyList img {
+    width: 100%
+}
+
+.propertyInformation {
+    padding: 20px 0 0 20px
+}
+
+.saveBtn {
+    width: 100%;
+    background-color: #f58300;
+    color: #fff;
+    border: navajowhite;
+    padding: 20px 0;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+
+/*----- Tabs -----*/
+
+.tabs {
+    width: 100%;
+    display: inline-block;
+}
+
+
+/*----- Tab Links -----*/
+
+/* Clearfix */
+
+.tab-links:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.tab-links li {
+    /*    margin: 0px 5px;*/
+    float: left;
+    list-style: none;
+}
+
+.tab-links a {
+    padding: 12px 55px;
+    display: inline-block;
+    background: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4c4c4c;
+    transition: all linear 0.15s;
+    text-decoration: none;
+}
+
+.tab-links .active a {
+    background: #a4a4a4!important;
+    color: #fff;
+    text-decoration: none;
+}
+
+.tab-links a:hover {
+    background: #a4a4a4;
+    text-decoration: none;
+    color: #fff
+}
+
+.tab-links {
+    border-top: 2px solid #eee;
+}
+
+
+/*
+
+li.active a, li.active a:hover {
+background:#fff;
+color:#4c4c4c;
+}
+*/
+
+/*----- Content of Tabs -----*/
+
+/*
+.tab-content {
+padding:15px;
+border-radius:3px;
+box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+background:#fff;
+}
+*/
+
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: block;
+}
+
+.tab p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.tab-content {
+    padding: 20px 0 24px 50px;
+}
+
+.tabbing {
+    margin-bottom: 20px
+}
+
+
+/*=============================================*map======================================*/
+
+.mapList iframe {
+    width: 100%
+}
+
+
+/*==============================================property page================================================*/
+
+/*
+.propertyBsnner{background-image: url(../images/property/propertyBanner.png);
+    background-repeat: no-repeat;
+    height: 620px;
+    background-size: cover;
+position: relative;}
+*/
+
+.slick-dots {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.slick-dots li {
+    display: inline-block;
+    /* background-color: #dedede; */
+    border-radius: 50%;
+    margin: 3px;
+    /* width:  20px; */
+    /* height: 20px; */
+}
+
+.slick-dots li button {
+    background-color: #dedede;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.slick-active button {
+    background-color: #fbdebd!important
+}
+
+.aboutus .sec1 p {
+    color: #1A1A1A;
+    font-family: 'Heebo', sans-serif;
+    text-align: center;
+    font-size: 21px;
+}
+
+
+/*features*/
+
+.features h4 {
+    text-transform: none;
+}
+
+.features ul li {
+    display: inline-block;
+    background-color: #fff;
+    margin-right: 10px;
+    text-align: center;
+    padding: 40px 60px;
+    border: 1px solid #ececec;
+}
+
+.features ul {
+    display: block;
+    text-align: center;
+}
+
+.features #ul2 {
+    margin-top: 10px;
+}
+
+.features ul img {
+    padding-bottom: 15px;
+}
+
+
+/*video*/
+
+.video-wrapper {
+    position: relative;
+}
+
+.video {
+    width: 100%;
+    height: 30%;
+}
+
+.playButton {
+    border-radius: 100px;
+    border: 8px solid #fff;
+    height: 100px;
+    position: absolute;
+    width: 100px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    cursor: pointer;
+    display: block;
+    opacity: 0.95;
+    transition: opacity 150ms;
+}
+.accountSections.new figure p {
+    color: red !important;
+    display: none;
+}
+.playButton:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 0 25px 50px;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: -10px;
+    bottom: 0;
+    margin: auto;
+}
+
+
+/*map*/
+
+.map iframe {
+    width: 100%;
+}
+
+
+/*social*/
+
+.socialdetails {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+.social ul {
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.social ul li {
+    display: inline-block;
+    padding: 0px 80px 30px 30px;
+    text-align: left;
+    position: relative;
+}
+
+.social ul li h6 {
+    font-weight: 700;
+    color: #747474;
+}
+
+.social ul li:first-child {
+    float: left;
+}
+
+.social ul li:first-child::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/property/viewpng.png);
+    background-repeat: no-repeat;
+    width: 23px;
+    height: 20px;
+    left: 0;
+    top: 6%;
+}
+
+.social ul li:nth-child(2)::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/property/chat.png);
+    background-repeat: no-repeat;
+    width: 23px;
+    height: 20px;
+    left: 0;
+    top: 6%;
+}
+
+.social ul li:nth-child(3)::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/property/like.png);
+    background-repeat: no-repeat;
+    width: 23px;
+    height: 20px;
+    left: 0;
+    top: 6%;
+}
+
+.social ul li:nth-child(3) {
+    float: right
+}
+
+.shared li {
+    display: inline-block;
+    font-size: 23px;
+    margin-right: 100px;
+}
+
+.agent .title .agentcontact ul li,
+.shared li span,
+.shared li,
+.shared h5 {
+    color: #747474;
+}
+
+.shared h5,
+.shared li span {
+    font-weight: 700;
+}
+
+.shared h5 {
+    padding-bottom: 10px;
+}
+
+
+/*agent*/
+
+.agent {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.agent .title {
+    padding-left: 20px;
+}
+
+.agent .title p,
+.agent .title h3 {
+    text-align: left
+}
+
+.agent .title h3 {
+    padding-bottom: 5px;
+}
+
+.agent .title .agentcontact ul li {
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+}
+
+.agent .title .agentcontact ul li span {
+    color: #000
+}
+
+.agent .title .agentName p {
+    font-weight: 400;
+}
+
+.agent .title .agentcontact {
+    float: right;
+}
+
+.agent .title .agentcontact ul li:first-child {
+    margin-right: 35px;
+}
+
+.agent .title .agentcontact ul li:first-child::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/property/chat.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    left: -40%;
+    top: 20%;
+}
+
+.agent .title .agentcontact ul li:nth-child(2)::before {
+    position: absolute;
+    content: "";
+    background-image: url(../images/property/video.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    left: -53%;
+    top: 13%;
+}
+
+.agent .title h4,
+.agent .title h3 {
+    color: #3b3b3d;
+    font-weight: 500;
+}
+.agent .title h3{font-size: 22px;}
+
+.agent .title .agentInfo {
+    padding-top: 20px;
+}
+
+.agent .title .agentInfo p {
+    line-height: 22px;
+    padding-top: 10px;
+}
+
+
+/*===========================================landing Page===================================================*/
+
+.landingPage.newlanding-page {
+    position: relative;
+}
+.landingPage.newlanding-page ul li{display: inline-block !important;}
+.landingPage.newlanding-page video {
+    width: 100%;
+}
+
+
+.landingPage.newlanding-page .searchFilter {
+    border: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 35%;
+    opacity: 0.8;
+    width: 55.9%;
+    margin: 0 auto;
+}
+
+.landingPage.newlanding-page .searchFilter ul {
+    padding: 0;
+    margin: 0 auto;
+}
+
+.landingPage.newlanding-page .searchFilter ul li input {
+        color: #000;
+    width: 400px !important;
+    float: left;
+    text-align: left !important;
+    padding-left: 0px;
+    font-size: 18px;
+}
+
+.landingPage.newlanding-page .searchFilter ul li:first-child img {
+    left: 7% !important;
+    top: 41% !important;
+}
+
+.landingPage.newlanding-page .searchFilter ul li:nth-child(2) img {
+    position: absolute;
+    left: -8%;
+    top: 45%;
+}
+
+.landingPage.newlanding-page .searchFilter ul li {
+    font-size: 18px;
+}
+
+.landingPage.newlanding-page .searchFilter ul li a {
+    border: none;
+    padding: 30px 20px;
+}
+
+.landingPage.newlanding-page .searchFilter ul li .btn {
+        padding: 33px 36px !important;
+
+}
+
+.landingPage.newlanding-page .searchFilter ul li #menu3 img {
+    position: absolute;
+    left: -7%;
+    top: 44%;
+}
+
+.maintain .rentHappyInfo {
+    position: absolute;
+    bottom: 20px;
+}
+
+.maintain {
+    padding-bottom: 70px;
+}
+
+
+.our_mission .imgMission img {
+    float: right
+}
+
+.our_mission .rentHappyInfo {
+    margin-top: 13%;
+}
+
+.who_we_are span {
+    font-size: 22px;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+
+.who_we_are .manage p {
+    padding-top: 15px
+}
+
+.who_we_are {
+    background-image: url(../images/landing/we_are_dif.png);
+    background-repeat: no-repeat;
+    height: 940px;
+    background-size: contain;
+}
+
+/*post to scouts*/
+
+.postOfScouts {
+    display: block;
+    text-align: center;
+}
+
+.registration,
+.maintain,
+.scoutsHotel,
+.postOfScouts {
+    background-color: #fafafa
+}
+
+.postOfScouts li {
+    display: inline-block;
+}
+
+.postOfScouts li:first-child {
+    background-color: #8897A0;
+    padding: 30px -39px;
+    width: 448px;
+    padding: 40px 60px;
+    text-align: center;
+    transform: rotate(-6deg);
+    height: 170px;
+    margin-right: 20px;
+    box-shadow: -1px 7px 5px 0px #ccc;
+}
+
+.postOfScouts li:nth-child(2) {
+    background-color: #8897A0;
+    padding: 30px -39px;
+    width: 448px;
+    padding: 50px 60px;
+    text-align: center;
+    transform: rotate(-6deg);
+    height: 170px;
+    box-shadow: -1px 7px 5px 0px #ccc;
+}
+
+/*
+.postOfScouts li:nth-child(2) h4 {
+    color: #000;
+}
+*/
+
+.postOfScouts li h4,
+.postOfScouts li p {
+    transform: rotate(6deg);
+}
+
+.postOfScouts li h4 {
+    font-weight: 600;
+}
+
+.postOfScouts li p {
+    font-weight: 100;
+    font-size: 22px;
+}
+
+.scoutsHotel li {
+    display: inline-block;
+    margin: 5px;
+}
+
+.scoutsHotel li .scoutsImg {
+    width: 367px;
+    height: 270px;
+    overflow: hidden;
+    position: relative
+}
+
+.scoutsImg .scoutsInfo {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4196078431372549);
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+}
+
+.scoutsImg .scoutsInfo p,
+.scoutsImg .scoutsInfo span {
+    color: #fff;
+    font-weight: 400;
+}
+
+.scoutsImg .scoutsInfo p {
+    font-size: 23px;
+
+}
+
+.scoutsImg .scoutsInfo span {
+    font-size: 18px;
+
+}
+
+
+
+/*rent socially*/
+
+.renthappy,
+.rent_socially {
+    height: 850px;
+}
+
+.registration h4,
+.rentHappyInfo h4,
+.rent_socially .rentInfo h4 {
+    font-weight: 700;
+    padding-bottom: 40px
+}
+
+.rentHappyInfo p,
+.rentHappyInfo h4,
+.rent_socially .rentInfo h4,
+.rent_socially .rentInfo p {
+    color: #000
+}
+
+.rent_socially .rentInfo1 {
+    margin-top: 90px;
+}
+
+.rent_socially .rentInfo1 .rentIcon img {
+    float: right;
+}
+
+
+
+/*rent happy*/
+
+.rentHappyInfo h4 {
+    padding-bottom: 15px;
+}
+
+.rent_happy_icon img {
+    padding-top: 53%;
+}
+
+
+
+
+
+/*maitain*/
+
+.maintain img {
+    width: 100%;
+}
+
+/*=======form======*/
+
+.registration {
+    padding-bottom: 70px;
+}
+
+.registration textarea {
+    border: 1px solid #ccc;
+
+    width: 100%;
+    padding-left: 12px;
+    margin-bottom: 20px
+}
+
+.registration textarea:focus,
+.registration .form-control:focus {
+    border: 1px solid #ccc;
+    box-shadow: none;
+    outline: none;
+}
+
+.registration .form-control {
+    height: 75px;
+    border-radius: 0;
+}
+
+.registration input,
+.registration textarea {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.registration input {
+    margin-bottom: 15px;
+}
+
+.registration button {
+    background-color: #f58300;
+    float: right;
+}
+
+.registration .btn {
+    padding: 20px 40px;
+}
+
+
+
+
+
+/*============================================My Document=================================================*/
+
+.myDocument {
+    /*    background-image: url(../images/mydocument/background.png);*/
+    background-repeat: no-repeat;
+}
+
+.myDocument h3 {
+    padding-bottom: 15px;
+    text-align: left
+}
+
+.myDocument p {
+        color: #1A1A1A;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.myDocument .documentHeading {
+    border-bottom: 1px solid #ccc;
+
+    padding-bottom: 20px;
+}
+
+.myDocument .doc1 {
+    margin-top: 25px;
+}
+
+.myDocument .doc1 img {
+    margin-bottom: 20px;
+    border: 1px solid #eaeaea;
+    padding: 4px;
+}
+
+.myDocument .doc1 ul li {
+    display: inline-block
+}
+
+.requested .doc1 .btn,
+.myDocument .doc1 ul li:first-child .btn {
+    background-color: #f78d39
+}
+
+.myDocument .doc1 ul li:nth-child(2) .btn {
+    background-color: #c0c0c0
+}
+
+.myDocument .doc1 .btn {
+    padding: 20px 110px;
+    
+}
+
+.myDocument .doc1 h4 {
+    color: #1A1A1A;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.myDocument .doc1 span {
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+/*==============================================My document Request================================================*/
+
+.requested .doc1 .btn {
+    width: 100%
+}
+
+
+
+
+/*===============================================My Appplication=================================================================*/
+
+.new-task-3{
+    border: 1px solid #666666;
+    padding: 40px 0;
+    position: relative;
+}
+.myApplication {
+  border: 1px solid #ddd;
+    padding: 40px 0;
+    position: relative;   
+}
+
+.myApplication .searchFilter ul {
+    float: left
+}
+
+.myApplication .searchFilter {
+    border: none;
+    float: left
+}
+
+.myApplication .searchFilter h3 {
+    text-align: left;
+    padding-bottom: 0px;
+}
+
+.myApplication .searchFilter ul li:first-child a {
+    padding: 15px 20px 15px 0;
+}
+
+.myApplication .searchFilter ul li a {
+    padding: 15px 20px 15px 20px;
+}
+
+.myApplication #personalInfo li {
+    display: inline-block;
+    font-size: 26px;
+    padding-right: 20px;
+}
+
+.myApplication #personalInfo li a {
+    color: #000
+}
+
+.personalInfo {
+        padding: 0px 15px 0;
+}
+
+.myApplication h4 {
+    font-weight: 400;
+}
+
+.myApplication .radiocheck input[type="radio"]:checked + span::after {
+    left: 2.6px;
+    top: 6px;
+}
+
+.myApplication .radiocheck span,
+.myApplication label {
+       font-size: 14px;
+       vertical-align: middle;
+           color: #636363;
+    font-weight: 400;
+
+}
+
+.myApplication textarea {
+    color: #000
+}
+
+.myApplication .radiocheck {
+    margin-right: 20px;
+}
+.personalInfo.back-check-p .aboutme label {
+    margin: 0;
+    padding-bottom: 2px;
+}
+
+.myApplication .aboutme ul {
+    padding: 20px 0
+}
+
+.myApplication .aboutme ul label {
+    padding: -5px 0 0 28px!important;
+}
+
+.myApplication .radiocheck label span::before {
+    top: 4px;
+}
+
+.myApplication .form-control {
+    height: 63px;
+    border-radius: 0;
+}
+
+.myApplication button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 38px;
+    padding: 11px 20px;
+    border: 0;
+    
+}
+
+.myApplication img {
+    position: absolute;
+    top: 5%;
+    right: 10px;
+    width: 130px;
+    z-index: 999999;
+}
+
+
+/*==========================================User Info page===================================================*/
+
+.userProfile h3,
+.userInfo .searchFilter {
+    float: left
+}
+
+.userProfile {
+    margin-top: 30px;
+    margin-left: 35px;
+}
+
+.userProfile h3 {
+    padding-bottom: 0;
+}
+
+.userProfile ul li {
+    list-style-type: none;
+    font-size: 28px;
+    padding-bottom: 15px;
+}
+
+.userProfile ul li span {
+    color: #ccc;
+    position: absolute;
+    left: 33%;
+}
+
+.userProfile textarea {
+    width: 95%;
+    max-width: 100%!important;
+    background-color: #fafafa!important;
+    height: 300px!important;
+    color: #000;
+    margin-top: 20px!important;
+}
+
+
+
+/*=======================================Application Review======================================================*/
+
+.myApplicationReview {
+    padding-bottom: 0;
+    background-image: url(../images/sentmail.png);
+    background-repeat: no-repeat;
+    background-position: 100%;
+}
+
+.myApplicationReview table {
+    color: #000;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.myApplicationReview .personalInfo {
+    padding: 0
+}
+
+.myApplicationReview table thead tr th {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px 20px 20px 60px
+}
+
+.myApplicationReview .searchFilter {
+    padding: 0 40px 0
+}
+
+.myApplicationReview table tbody tr td h4 {
+    font-size: 30px;
+}
+
+.myApplicationReview table tbody tr td {
+    padding: 30px 20px 30px 60px;
+
+}
+
+.myApplicationReview table tbody tr td,
+.myApplicationReview table tbody tr td span {
+    font-size: 16px;
+    font-weight: 300;
+    /*
+    white-space: normal;
+    word-break: break-all;
+*/
+}
+
+
+/*=========================================Choose Profile====================================================*/
+
+.chooseProfile {
+    background-image: url(../images/Asset%205@3x.png);
+    background-repeat: no-repeat;
+    height: 800px;
+    background-size: contain;
+}
+
+.Profile img {
+    display: block;
+    margin: 0 auto;
+}
+
+.Profile {
+    background-color: #fff;
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    padding: 60px 0;
+    border: 1px solid #e6e6e6;
+}
+
+.Profile ul li {
+    text-align: center;
+    list-style-type: none;
+}
+
+.Profile ul li button {
+    width: 80%;
+    margin-bottom: 20px
+}
+
+.Profile ul li .btn.btn-default:hover {
+    background-color: #f58300;
+    color: #fff;
+}
+
+.Profile ul li .btn.btn-default {
+    padding: 25px 15px;
+    background-color: #F2F2F2;
+    border: 1px solid #E6E6E6;
+    
+}
+
+
+
+/*=========================================PROFILE REGISTRATION=====================================================*/
+
+.profile_reg {
+    background-image: url(../images/Asset%206@3x.png);
+    background-repeat: no-repeat;
+    height: 900px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.profile_reg .myApplication {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.95);
+    margin: 0 auto;
+    display: table;
+    padding: 0px 0 40px;
+}
+
+.profile_reg .myApplication .personalInfo {
+    display: table-cell;
+    width: 80%
+}
+
+.profile_reg .myApplication .personalInfo .forwardArrow img {
+    position: unset;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    width: 100px;
+}
+
+.profile_reg .myApplication .logoImg {
+    display: table-cell;
+    width: 20%
+}
+
+/*.profile_reg .myApplication .logoImg img {
+    position: absolute;
+    top: 16%;
+    right: 40px;
+
+*/}
+
+.profile_reg .myApplication .birthday li {
+    display: inline-block;
+    width: 30%;
+}
+
+.profile_reg .myApplication .form-control {
+    background-color: #E6E6E6;
+}
+
+.profile_reg .myApplication .aboutme .birthday label {
+    margin-bottom: 0
+}
+
+.profile_reg .Tandc li {
+    display: inline-block
+}
+
+.profile_reg .Tandc .checkbox label span::after {
+    width: 21px;
+    height: 21px;
+}
+
+.profile_reg .myApplication .imageUpload #myImg {
+    background-color: #e6e6e6;
+    width: 200px;
+    height: 200px;
+    color: transparent;
+}
+
+.profile_reg .myApplication .imageUpload input[type=file] {
+    display: none
+}
+
+.profile_reg .myApplication .imageUpload {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin-top: 30px;
+}
+
+.profile_reg .myApplication .imageUpload a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.profile_reg .myApplication .imageUpload label {
+    cursor: pointer
+}
+
+.profile_reg .Tandc label {
+    margin: 0
+}
+
+.profile_reg .Tandc .checkbox label input[type="checkbox"]:checked + span::before {
+    left: 5px;
+    top: 3px;
+}
+
+.profile_reg textarea {
+    width: 100%;
+    background-color: #e6e6e6;
+
+
+}
+
+.profile_reg textarea::-webkit-input-placeholder {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.account_signup1,
+.account_signup2,
+.account_sendmessage {
+    background-image: url(../images/banner.png)
+}
+
+.account_sendmessage .myApplication {
+    padding-top: 40px;
+}
+
+.account_sendmessage p {
+
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.account_sendmessage textarea {
+    margin-top: 30px;
+}
+
+.userblueImg img {
+    width: 350px!important;
+}
+
+.accountSections {
+    display: table;
+}
+
+.account_socialInfo .myApplication {
+    margin-left: -4%;
+    /*    margin-top: 5%;*/
+}
+
+
+
+
+.social_profile_reg .forwardArrow img {
+    width: 60px!important;
+}
+
+
+.social_profile_reg {
+    background-image: url(../images/socialBg.png);
+    height: 700px!important;
+    position: relative;
+}
+
+.account_socialInfo {
+    width: 50%;
+    display: table-cell;
+
+}
+
+.social_profile_reg .myApplication {
+    position: absolute;
+    top: 10%
+}
+
+.social_profile_reg .myApplication .imageUpload {
+    height: 260px
+}
+
+.account_social1 {
+    width: 50%;
+    display: table-cell;
+    padding: 0px 50px 0;
+}
+
+.social_profile_reg .myApplication .form-control {
+    height: 53px
+}
+
+.account_social1 img {
+    display: block;
+    /*    width: 250px;*/
+    margin: 0 auto;
+    padding-bottom: 40px
+}
+
+
+.myApplication .filter-search.searchFilter, .row.tabnab.userInfo section.filter-search.searchFilter {
+    box-shadow: none;
+    border: none !important;
+}
+
+.d-none{display: none;}
+
+.sAgentForm.new .row{display: flex;justify-content: center;}
+.myApplication.assignTM.new {
+    border-bottom: 0;
+        padding-bottom: 40px;
+}
+.sAgentForm.new input {
+    border-radius: 0;
+    padding: 6px 20px;
+}
+h3.my_list_new {
+    font-size: 16px;
+    font-weight: normal;
+    padding-bottom: 0;
+    padding-top: 6px;
+}
+
+.sAgentForm.new a.butn {
+      padding: 5px 40px;
+    display: inline-block;
+    font-size: 16px;
+}
+h6.chooseUnits .btn{padding: 10px 60px;}
+.sAgentForm.new {
+        padding: 10px 0 10px 0;
+}
+.plus-iocn-col {
+    width: 20px;
+    padding: 0;
+}
+
+.sAgentForm.new .col-sm-3 {
+    width: 30%;
+}
+.plus-iocn-col p.center {
+    text-align: center;
+    padding-top: 7px;
+}
+.myApplication.credit-new-re ul.budget tr:nth-child(even) {
+    background: #fcfcfc;
+}
+
+.myApplication.credit-new-re ul.budget tr:hover{
+    background: #fcfcfc;
+}
+
+
+#mylisting ul > li.item:nth-child(even){background: #fafafa;}
+#mylisting ul > li.item{background: #fff;}
+
+.new-task3 .tableview tr:nth-child(even) {
+    background: #fff !important;
+}
+.new-task3 .tableview tr {
+    background: #fcfcfc;
+    transition: all 0.3s ease-in;
+}
+.new-task3 .tableview tr:hover{
+    transition: all 0.3s ease-in;
+    background: #fcfcfc !important;
+}
+
+.outerboxContent {
+    background: #f9f9f9;
+}
+.outerboxContent:hover {
+    background: #f9f9f9 !important;
+    transition: all 0.3s ease-in;
+}
+.outerboxContent:nth-child(even) {
+    background: white;
+}
+
+.mynetwork .outerBox .outerboxContent .divisions.div1 img {
+    width: 65%;
+    margin: 0 auto;
+    display: block;
+}
+.mynetwork .outerBox .outerboxContent a.butn {
+    padding: 10px 0 !important;
+    width: 65%;
+    margin: 0 auto;
+    display: block;
+}
+.addproperties .userdetails figure span{    width: 70%;background-color: #fff !important;
+    margin: 0 auto;}
+.edit-sum a {
+    font-size: 20px;
+    color: #a7a7a7;
+}   
+.edit-sum {
+    text-align: right;
+    position: absolute;
+    top: 10%;
+    right: 18px;
+}
+
+ul.rightListing.newlisting-right span {
+    display: inline !important;
+    transition: all 0.3s ease-in;
+    padding: 4px;
+
+}
+ul.rightListing.newlisting-right a:hover, .edit-sum a:hover{
+    color: #f58300 !important;
+    transition: all 0.3s ease-in;
+}
+
+ul.rightListing.newlisting-right a {
+    color: #3b3b3d;
+}
+
+.myDocument .doc1 .btn {
+    padding: 10px 20px;
+}
+
+.scoult .filter-search.searchFilter button.btn.btn-primary {
+       padding: 5px 15px;
+    font-size: 16px;}
+.scoult .landlordList .media .btn{padding: 10px;}
+.pagination>.active>a {
+    border-radius: 4px;
+    background: #8796a0;
+}
+.pagination a:hover{background:#f58300 !important;color: #fff !important;border-radius: 4px;}
+section.new_task.Updated .btn {
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+
+
+
+.newfilter-c {
+    width: 100%;
+}
+.qualificationCheck.firstSlide.first-s-center {
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 100px 80px;
+    width: 60%;
+    color: #333333;
+    
+
+}
+
+ul.proprtyList li {
+    padding: 10px 0!important;
+}
+
+.new_listing_P ul {
+    padding-left: 32px;
+    margin-top: 15px;
+}
+.new_listing_P ul li {
+    line-height: 0;
+}
+
+
+
+.sub-heading {
+    color: #1A1A1A;
+    font-size: 18px;
+    font-weight: normal;
+}
+.aboutme {
+    padding: 20px 15px;
+}
+.m-b-40 {
+    margin-bottom: 40px;
+}
+
+.myApplication .aboutme label {
+    margin: 25px 0 0px 0  !important;
+}
+.personalInfo.back-check-p .form-control {
+    margin-bottom: 50px;
+}.profile_reg .myApplication .birthday li {
+    display: inline-block;
+    width: 30%;
+}
+.accountSections.new .myApplication {
+    top: 23px;
+}
+.personalInfo.back-check-p .aboutme select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(../images/down-arow.png) no-repeat right 5px center;
+}
+
+.m-0 {
+    margin: 0 !important;
+}
+.filter-search.transunion > p.txt-black {
+    font-weight: bold;
+}
+.filter-search.transunion > p.txt-black b {
+    font-weight: 500;
+}
+.transunion img {
+    width: 136px !important;
+    margin-top: 5px;
+}
+
+.bold {
+    font-weight: bold;
+}
+.personalInfo.rentalApp.transUnionFOrm .bold {
+    font-size: 16px;
+}
+
+.personalInfo.rentalApp.transUnionFOrm label {
+    margin-bottom: 0;
+}
+
+
+
+.new-erp h6{
+    padding-top: 30px;
+}
+
+.personalInfo.rentalApp.transUnionFOrm.Credit-report-b {
+    padding-top: 30px !important;
+}
+
+.Credit-report-b td, .Credit-report-b th {
+    border: 0 !important;
+    font-weight: normal;
+}
+
+.Credit-report-b h6 {
+    padding-bottom: 40px;
+}
+hr.twopx {
+    clear: both;
+    width: 97%;
+    border: 1px solid #b3b3b3;
+}
+
+
+.tableview.sity-state{padding-top: 40px;}
+.tableview.sity-state:after {
+    content: "";
+    display: table;
+    width: 100%;
+}
+
+.tableview.sity-state th {
+    font-weight: bold;
+    font-size: 15px;
+       border-bottom: 1px solid #000 !important;
+}
+
+.personalInfo.rentalApp.transUnionFOrm .aboutme {
+    padding-left: 0;
+    padding-right: 0;
+}
+.personalInfo.rentalApp.transUnionFOrm {
+    padding: 0;
+}
+.new-erp .col-sm-10.userProfile.newuser {
+    margin: 0;
+}
+ul#topLinksbar1 li.nav-item {
+    padding: 8px 10px 12px;
+}
+
+.active-orage {
+    color: #f58300 !important;
+}
+
+
+
+
+
+.tableview.sity-state td:last-child {
+    border-right: 0 !important;
+}
+.tableview.sity-state td {
+    border-right: 1px solid #727071 !important;
+}
+.tableview.sity-state td {
+    border-bottom: 1px solid #ccc !important;
+    padding: 20px;
+}
+.lft {
+    text-align: left !important;
+}
+
+
+.userProfile.newuser {
+    margin: 0;
+}
+
+.personalInfo.rentalApp.transUnionFOrm.profile_summar{
+    padding-top: 30px !important;
+}
+.profile_summar h6{padding-bottom: 30px;}
+
+
+.new-erp h6 {
+    padding-bottom: 30px;
+}
+.tableview.sity-state tr:hover {
+    background: #72707136;
+    transition: all 0.3s ease-in;
+}
+
+
+.btn.btn-default.orange-btn-custom {
+    background: #f58300 !important;
+     transition: all 0.3s ease-in;
+}
+
+
+
+
+.btn.btn-default.orange-btn-custom:hover{
+        background: #8796a0 !important;
+       transition: all 0.3s ease-in;
+       color: #fff !important;
+}
+
+
+.gray-bgg {
+    background: #fafafa;
+}
+
+ul#topLinksbar1 a.nav-link.btn.btn-primary:hover{color: #fff !important;}
+
+.gray-bg-light{
+    background: #fcfcfc;
+}
+.white-bg{background-color: #fff !important;}
+
+.taskDefinedInner .col-sm-3 {
+    width: 20%;
+}
+.ten-page .addproperties .tabnab .item{border-right: 0 !important;}
+.wrap-p {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.newservice-agent input.form-control {
+    text-align: center;
+    width: 85% !important;
+    margin: auto;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    background: #fcfcfc;
+    font-size: 13px;
+}
+
+.personalInfo.taskLink.newservice-agent {
+    background: #fff !important;
+}
+
+
+textarea#task-textarea {
+    font-size: 13px;
+    font-weight: normal;
+    width: 85% !important;
+    margin: 0 auto;
+}
+section.filter-search.searchFilter.docFilter i.fa.fa-link {
+    transform: rotate(90deg);
+    color: #cfe2f1;
+    margin-left: 2px;
+    transition: all 0.3s ease-in;
+}
+.myApplication.assignTM.new.maintenance {
+    border-color: #ddd;
+}
+
+ul.linkZ.new:before {
+    top: -45px;
+}
+
+
+ul.linkZ.new {
+    margin-top: 20px;
+}
+section.new_task.new-task3.new ul.linkZ.new {
+    padding: 40px;
+}
+section.new_task.new-task3.new .myApplication h5{padding-left: 40px;}
+
+section.filter-search.searchFilter.profile-dec ul li a{border-right: 0 !important;}
+
+
+.myDocument.profileDocument.nnw ul.file.row img {
+    width: 100px;
+}
+
+
+
+.myDocument.profileDocument.nnw .mydocument {
+    padding-top: 25px;
+}
+
+
+.myDocument.profileDocument.nnw ul.file.row {
+    padding-left: 90px;
+    padding-top: 20px;
+}
+.border-b hr {
+        clear: both;
+    margin-top: 80px !important;
+    display: block;
+}
+.user-cla .myApplication {
+    border: 1px solid #ddd !important;
+}
+
+
+
+.user-cla  div#container {
+    margin-top: 15px;
+}
+/*.myApplication.credit-new-re {
+    border: 0 !important;
+}*/
+.myApplication.credit-new-re {
+    padding: 50px;
+    max-width: 925px;
+        background: #fdfdfd;
+    margin: 0 auto;
+}
+.myApplication.credit-new-re .package h3, .myApplication.credit-new-re .package label.txt-black {    
+    
+    padding-bottom: 20px;
+}
+.myApplication.credit-new-re .package h3{
+    
+    
+    padding-bottom: 20px;
+}
+
+
+
+.myApplication.credit-new-re .package label.txt-black {
+    padding-top: 40px;
+    color: #000 !important;
+}
+
+
+.myApplication.credit-new-re .budget .table thead tr th {
+    text-align: center;
+    background-color: #fbd2a4;
+    padding: 15px !important;
+}
+.filter-search.searchFilter.CreditReport.credit-pyment-b {
+       border: 1px solid #ccc!important;
+    max-width: 800px;
+    padding: 40px 0 20px;
+        background: #fcfcfc;
+}
+
+.col-sm-12.filter-search.searchFilter.CreditReport.credit-pyment-b ul.expiration li {
+    float: left;
+    padding-right: 0 !important;
+}
+
+.col-sm-12.filter-search.searchFilter.CreditReport.credit-pyment-b .expiration li:nth-child(2){width: 85px;  margin-left: 12px;}
+
+
+.p-0{padding: 0 !important;}
+.p-r-0{padding-right: 0;}
+
+.myApplication.credit-new-re .paymentForm{width: 100% !important;    }
+
+
+
+.myApplication.credit-new-re .creditForm .paymentUser li {
+    padding-right: 45px;
+}
+
+.radiocheck label span::before {
+    content: '';
+    position: absolute;
+    border: 1px solid #c6c6c6;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    top: 1px !important;
+    left: 0;
+}
+
+.myApplication.credit-new-re .radiocheck input[type="radio"]:checked + span::after {
+    left: 2.6px;
+    top: 4px !important;
+}
+
+.myApplication.credit-new-re label {
+    color: #000 !important;
+    text-transform: lowercase;
+}   
+
+
+
+
+
+.myApplication.credit-new-re .paymentForm {
+    width: 50%;
+    border-right: 1px solid #ccc;
+    display: table-cell;
+    padding-right: 15px;
+}
+
+
+.myApplication.credit-new-re .aboutme .form-control {
+    margin-bottom: 40px;
+}
+
+
+ul.paymentOption.paymentOption-rightbar li img {
+     position: relative !important;
+    left: inherit;
+    width: 55px;
+    top: inherit !important;
+    margin-right: 10px;
+}
+ul.paymentOption.paymentOption-rightbarli.radiocheck.txt-black{display: block;}
+
+
+ul.paymentOption1.sec img {
+    width: 52px;
+}
+ul.paymentOption1.sec {
+    border-top: 1px solid #ddd;
+}
+
+
+ul.paymentOption1.sec li:first-child img {
+    
+    top: 0 !important;
+    width: 60px;
+}
+
+li.radiocheck.txt-black.mastercard img {
+    margin-top: 13px;
+}
+
+
+.m-b-0 {
+    margin-bottom: 0 !important;
+}
+
+
+button.btn.btn-default.ornage-btn-payment {
+    background: #f58300 !important;
+    transition: all  0.3s ease-in;
+}
+button.btn.btn-default.ornage-btn-payment:hover {
+    background: #8796a0 !important;
+    transition: all  0.3s ease-in;
+}
+
+.myApplication.credit-new-re td.txt-orange sup b {
+    font-size: 16px;
+}
+
+
+body.new_rental-page label.txt-black {
+    color: #000 !important;
+}
+
+
+
+body.new_rental-page input, body.new_rental-page select {
+    border-radius: 0 !important;
+    height: inherit !important;
+    padding: 0 10px;
+}
+
+.new_rental-page .form-control {
+    margin-bottom: 0;
+}
+
+.personalInfo.rentalApp div {
+    padding: 0;
+}
+.first-ren-input, .first-ren-inputsec{position: relative;}
+/*.first-ren-input:after {
+    content: "";
+    background: #ccc;
+    width: 1px;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.first-ren-inputsec:after{
+     content: "";
+    background: #ccc;
+    width: 1px;
+    height: 15px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}*/
+th.light-blubg {
+    background: #b0d4ea !important;
+}
+hr.pck {
+    clear: both;
+    margin-left: 15px;
+}
+.new_rental-page .rentalApp .aboutme label{margin-top: 15px !important;}
+
+body.new_rental-page h4.txt-orange {
+    padding-bottom: 30px;
+    display: block;
+}       
+
+.profile-infobox .userProfile li {
+    font-size: 14px !important;
+}
+.profile-infobox ul li span {
+    color: #ccc;
+    position: relative !important;
+     left:inherit; 
+}
+
+
+
+
+.user-cla .myApplication {
+    border: 1px solid #ddd !important;
+    padding: 20px !important;
+}
+
+
+
+
+.innerpage-Wrapper.profile-infobox .userProfile {
+    margin: 0;
+    padding: 0;
+}
+
+.profile-infobox .userProfile li:last-child {
+    padding-bottom: 0;
+}
+.innerpage-Wrapper.profile-infobox .userProfile ul {
+    padding: 50px 35px;
+}
+.innerpage-Wrapper.profile-infobox .userProfile hr {
+    margin: 0;
+}
+
+ul.use-tow {
+    padding-bottom: 250px !important;
+}
+.innerpage-Wrapper .searchFilter ul li a{border-right: 0 !important;}
+
+
+.innerpage-Wrapper.profile-infobox .userProfile ul li span{left: 0 !important;}
+.innerpage-Wrapper.profile-infobox span.dashed, .innerpage-Wrapper.profile-infobox .userProfile ul li span {
+    position: relative;
+    left: 0;
+}
+
+
+
+span.dashed {
+    padding-right: 10px;
+    padding-left: 2px;
+}
+
+.userPhotos-list li {
+    width: calc(44%/3);
+    float: left;
+}
+.userPhotos-list li img {
+    width: 115px !important;
+}
+
+.userProfile.userPhotos.photo-fix {
+    clear: both;
+    padding: 60px 0;
+}
+
+
+
+
+.profile-heading hr {
+    margin: 0;
+}
+.profile-heading h3 {
+    text-align: left;
+    padding: 40px 15px;
+    margin: 0;
+}
+
+.userProfile.userPhotos.photo-fix:after {
+    content: "";
+    display: table;
+    width: 100%;
+}
+
+
+.userProfile.userPhotos.photo-fix {
+    padding-bottom: 140px;
+}
+
+
+.userProfile.userPhotos.photo-fix .userPhotos-list:after {
+    content: "";
+    display: table;
+    width: 100%;
+}
+.userProfile.userPhotos.photo-fix .userPhotos-list {
+    padding-bottom: 30px !important;
+}
+
+.new-ttsk-2 th.orange-text {
+    color: #f58300!important;
+}
+
+.new-ttsk-2 th {
+    font-size: 16px !important;
+}
+
+
+.new-ttsk-2:before {
+   background-size: 80% !important;
+    right: -12% !important;
+    top:15%;
+}
+
+
+
+.new-ttsk-2 th {
+    font-size: 16px !important;
+    padding: 20px !important;
+    border-bottom: 0 !important;
+}
+
+.new-ttsk-2 td {
+    padding: 20px !important;
+    font-size: 13px !important;
+}
+
+.orange-text {
+    color: #f58300!important;
+}
+.new-ttsk-2 tr {
+    background: #fcfcfc;
+}
+.new-ttsk-2 tr:nth-child(even) {
+    background: white !important;
+}
+
+
+.new-ttsk-2 tr:hover {
+ background: #fcfcfc !important;
+ transition: all 0.3s ease-in;   
+}
+.myApplication.myApplicationReview.maintain-log.new-ttsk-2 {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+b.dot-ll {
+    font-size: 21px;
+    color: #9a9a9a;
+}
+
+.new_task.new-task2.fst {
+    padding-bottom: 100px;
+}
+
+.personalInfo.hidden-over {
+    overflow: hidden !important;
+}
+
+section.addproperties.newlisting-page .tableview h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1A1A1A !important;
+}
+button.btn.btn-primary.ornage-btn {
+    background: #f98d2a !important;
+    padding: 20px !important;
+}
+
+button.btn.btn-primary.ornage-btn:hover{
+    background:#8796a0 !important;
+    transition: all 0.3s;
+}
+.newdocty h3 {
+    font-weight: bold;
+}
+
+section.myDocument.my-docmnt .doc1 .btn {
+    padding: 20px 110px !important;
+}
+
+.mydocument.newdocty::before{left: -200px !important;top: 10px !important;}
+
+section.myDocument.my-docmnt .newdocty {
+    margin-bottom: 40px !important;
+}
+
+.mydocument.newdocty::before{left: -200px !important;top: 10px !important;}
+
+section.myDocument.my-docmnt .newdocty {
+    margin-bottom: 40px !important;
+}
+.mypost-five-show .scoutBox {
+    max-width: 1090px;
+}
+
+.mypost_btn-show button {
+    padding: 10px 15px !important;
+    margin-right: 25px;
+}
+
+button.btn.btn-primary.ornage-btn-post {
+    background-color: #f58300 !important;
+    transition: all 0.3s ease-in;
+}
+button.btn.btn-primary.ornage-btn-post:hover{
+    background: #8796a0 !important;
+    transition: all 0.3s ease-in;
+}
+.mypost-five-show .checkbox {
+    margin-top: 0;
+}
+.my-post-five.mypost-five-show .scoutIcons{padding-bottom: 20px;}
+.landlordScout .scoutBox .scoutDetailsBox .scoutdescription {
+    margin: 45px 0 !important;
+}
+
+.my-post-five p.location {  font-weight: normal !important;}
+
+p.bold-gray {
+    font-weight: 500;
+    color: #b9b4b4;
+}
+.myDocuments-area ul.file.row {
+    padding-top: 20px;
+}
+section.myDocument.myDocuments-area li.folder p {
+    font-size: 20px !important;
+    font-weight: normal !important;
+}
+.myDocuments-area .folder img {
+    max-width: 140px !important;
+}
+
+.myDocuments-area .folder {
+    margin-bottom: 30px !important;
+}
+
+section.myDocument.myDocuments-area .documentHeading h3 {
+    font-weight: 600 !important;
+    font-size: 30px;
+}
+section.myDocument.myDocuments-area .mydocument::before{top: 6% !important;    left: -160px;}
+
+section.myDocument.myDocuments-area {
+    padding-bottom: 100px;
+}
+
+
+section.myDocument.myDocuments-area .fileContainr {
+    
+    
+    background-position: 67% 122%;
+    background-size: 224px;
+    padding-bottom: 50px;
+}
+
+.main-h {
+    font-weight: 600 !important;
+    font-size: 30px;
+}
+
+.myDocument.myfile-area .fileContainr {
+    background-position: 67% 50% !important;
+}
+
+.myfile-area ul.file.open.row {
+    padding: 10px 30px;
+}
+
+.account_socialInfo-n .myApplication {
+    width: 64%;
+}
+
+.account_socialInfo-n .profile_reg.page_continue.social_profile_reg label {
+    padding: 0;
+    margin: 15px 0 !important;
+    color: #000 !important;
+}
+
+.over-flow {
+    overflow: hidden;
+    padding-left: 0;
+}
+.account_socialInfo-n .addMore a {
+    display: block;
+    text-align: left !important;
+}
+.account_socialInfo-n .profile_reg .myApplication .imageUpload #myImg{width: 100%;}
+
+.account_socialInfo-n .profile_reg .myApplication .imageUpload {
+    position: relative;
+    width: 175px;}
+.account_socialInfo-n .myApplication img{right: 0 !important;}
+.account_socialInfo-n ul.Tandc {    
+    padding: 0;
+    margin-top: -42px;
+}
+.account_socialInfo-n ul.Tandc li img {
+    margin: 0 !important;
+    padding-left: 10px;
+}
+.account_socialInfo-n ul.Tandc li {
+    vertical-align: middle;
+    margin: 0 !important;
+}
+.account_socialInfo-n ul.Tandc li:first-child {
+    margin-right: 27px !important;
+}
+
+.account_socialInfo-n .account_socialInfo .myApplication {
+    margin-left: -8%;
+ 
+}
+.account_socialInfo-n .social_profile_reg .myApplication{top:10% !important;}
+
+
+.accountSections.new.account_socialInfo-n .account_social1 p {
+    padding: 50px;
+    font-weight: 400;
+    color: #191919;
+}
+
+.accountSections.new.account_socialInfo-n .profile_reg.page_continue.social_profile_reg {
+    margin-right: 50px;
+}
+.accountSections.new.account_socialInfo-n .myApplication {
+    padding-bottom: 0 !important;
+}
+.accountSections.new.account_socialInfo-n .personalInfo {
+    padding-left: 56px;
+}
+.accountSections.new.account_socialInfo-n .myApplication {
+    width: 78%;
+    padding-right: 56px;
+}
+
+.accountSections.new.account_socialInfo-n ul{padding: 0;}
+
+.accountSections.new.account_socialInfo-n .birthday{margin: 33px 0;}
+.accountSections.new.account_socialInfo-n .account_social1 img {
+    width: 250px;
+}
+div#myapplication-area .main-h {padding-bottom: 20px;   }
+
+div#myapplication-area .searchFilter ul li a {font-weight: 500;font-size: 16px;}
+div#myapplication-area .personalInfo {
+    padding: 0px 30px 0;
+}
+div#myapplication-area .filter-search.searchFilter {
+    padding: 0 20px;
+}
+div#myapplication-area ul#personalInfo {
+    padding: 10px 15px 0px;
+}
+div#myapplication-area .personalInfo h4 {
+    font-weight: 500;
+}
+div#myapplication-area >.personalInfo label, div#myapplication-area >.personalInfo select {
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    color: #3f3f41 !important;
+}
+
+div#myapplication-area li.radiocheck span {
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    color: #3f3f41 !important;
+}
+
+div#myapplication-area .aboutme input {
+    height: 62px !important;
+}   
+
+div#myapplication-area .myApplication .aboutme label {
+    margin: 20px 0;
+}
+
+div#myapplication-area  .myApplication .aboutme ul {
+    padding: 0;
+}
+div#myapplication-area .radiocheck label span::before{    top: 6px !important;}
+
+
+div#myapplication-area .radiocheck input[type="radio"]:checked + span::after {
+    
+    top: 9px !important;
+}
+div#myapplication-area li.radiocheck label {
+    margin: 10px 0 15px !important;
+}
+
+div#myapplication-area .myApplication textarea {
+    color: #000;
+    border: 1px solid #ccc;
+}
+button.btn.btn-default.ornage-btn-sumit {
+    margin-top: 0;
+    padding: 15px 44px !important;
+    background: #f58300 !important;
+}
+button.btn.btn-default.ornage-btn-sumit:hover {
+    background: #8796a0 !important;
+}
+div#myapplication-area {
+    margin-top: 18px;
+    background: #fff;
+}
+img.Application-img-head {
+    width: 218px;
+    position: absolute;
+    float: right;
+    margin-top: -53px;
+    margin-right: 20px;
+}
+#my-income-app .personalInfo {
+    padding: 0px 15px 0;
+}
+#my-income-app ul#personalInfo {
+    padding: 0px 25px 0;
+}
+
+#my-income-app .filter-search.searchFilter {
+    padding-left: 80px;
+}
+#my-income-app >.container {
+    max-width: 940px;
+}
+#my-income-app .aboutme h4:after {
+    content: "";
+    background: #e6e6e6;
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+#my-income-app .aboutme h4 {
+    font-size: 16px;
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+#my-income-app .myApplication .radiocheck label span::before {
+    top: 2px !important;
+}
+
+
+#my-income-app .myApplication .aboutme ul {
+    padding: 0;
+    padding-left: 20px;
+}
+
+#my-income-app .myApplication .aboutme label {
+    margin: 10px 0;
+}
+
+#my-income-app .radiocheck input[type="radio"]:checked + span::after {top: 4.5px !important;} 
+#my-income-app .personalInfo {
+    padding-top: 10px !important;
+}
+
+#my-income-app label, p.txt-black.totla-text {
+    font-size: 14px !important;
+    color:#b1b1b1 !important;
+    font-weight: normal !important;
+}
+
+p.txt-black.totla-text{    padding: 15px 20px 10px;}
+#my-income-app ul#personalInfo li a {
+    font-size: 14px !important;
+    text-transform: uppercase;
+}
+#my-income-app .myApplication {
+    padding: 10px 0 110px;
+}
+
+
+#my-income-app .searchFilter ul li a {
+        padding: 5px 14px!important;
+}
+#my-income-app .searchFilter ul li:first-child a {padding-left: 0 !important;}
+#my-income-app .filter-search.searchFilter ul {
+    padding-top: 15px;
+}
+#new-profile-resg {
+    background-position-y: 20%;
+    height: auto;
+}
+
+#new-profile-resg .myApplication {
+    padding-bottom: 0;
+}
+#new-profile-resg .myApplication {
+    padding-left: 75px;
+    margin-bottom: -110px;
+}
+.spacer-box {height: 150px;}
+#new-profile-resg  .forwardArrow img {
+    position: unset;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    width: 70px;
+}
+#new-profile-resg .myApplication .form-control {
+    background-color: #e7e7e7;
+}
+#new-profile-resg .myApplication {width: 60%;}
+
+#new-profile-resg  .profile_reg .myApplication{width: 70%;}
+#new-profile-resg .myApplication img{right: 10px;}
+
+#new-profile-resg  .myApplication .logoImg {
+    display: table-cell;
+    width: 20%;
+}
+#new-profile-resg .personalInfo {
+    display: table-cell;
+    width: 82%;
+}
+
+#new-profile-resg .myApplication img {
+    top: 12%;
+    right: 10px;
+    width: 96px;
+}
+#new-profile-resg label{
+    margin: 20px 0 6px !important;
+    color: #1A1A1A;
+}
+
+
+
+#new-profile-resg .myApplication {background-color: rgba(255, 255, 255, 0.90);}
+
+#new-profile-resg .myApplication {
+    border: 1px solid #cbcbcb;   
+}
+.p-regist-cont .myApplication {
+    width: 80% !important;
+}
+.searchFilter ul li a:hover .fa{color: #f58300!important;}
+.sub-head .fa-link:hover {
+    color: #f58300!important;
+}
+.sub-head .fa-link {
+    font-size: 20px;
+    color: #0070be !important;
+}
+#new-update-tast .myApplication {
+    background: #fff;
+}
+
+#new-update-tast .chooseUnits img {
+    width: 20px;
+}
+#new-update-tast h6.chooseUnits {
+    font-weight: 400;
+    font-size: 16px;
+    
+    border:0;
+}
+#new-update-tast .myApplication {
+    width: 70%;
+    margin: auto;
+    padding: 50px 35px !important;
+    margin-top: 50px !important;
+}
+#new-update-tast h6.chooseUnits { width: 85%;}
+
+.uplode-repair-s {
+    border-bottom: 1px solid #e6e6e6;
+    display: block;
+    max-width: 840px;
+    padding-bottom: 4px;
+}
+
+#new-update-tast .aboutme input[type=button], #new-update-tast .aboutme textarea {transition: all 0.3s ease-in; border: 1px solid #ddd;background: #fcfcfc;color: #cecaca;font-weight: 300;}
+#new-update-tast .aboutme input[type=button] {width: 100%;display: block;box-shadow: none;padding: 8px;text-transform: lowercase; font-size: 16px;}
+#new-update-tast .aboutme ::placeholder{color: #cecaca;}
+#new-update-tast .aboutme textarea {height: 197px;padding: 35px; resize: vertical;}
+#new-update-tast .aboutme input[type=button]:hover { background: #f58300 !important;border-color: #f58300 !important;transition: all 0.3s ease-in;color: #fff;}
+#new-update-tast button.btn.btn-default.send-qu {width: 58.5%;margin: 30px auto 0;}
+#new-update-tast .btn.btn-default {margin: 25px 0 40px;}
+#new-update-tast .myApplication span.bgIMAGE img {
+    width: 134px !important;
+}
+
+
+#new-update-tast .myApplication img {
+   
+    top: -41px !important;
+    right: 0px;
+   
+}
+section.myDocument.my-docmnt .documentHeading.newdocty h3 {
+    font-size: 30px;
+}
+
+section.myDocument.my-docmnt .doc1 h4 {
+    color: #1A1A1A;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+section.myDocument.my-docmnt .documentHeading.newdocty p {
+    font-weight: 500;
+    color: #929292;
+}
+.myDocument.my-docmnt .mydocument::before {
+  
+    left: -158px;
+  
+}
+.notification.new-notification {
+    margin-top: 50px;
+    padding-top: 0;
+    padding-bottom: 100px;
+}
+
+.notification.new-notification ul.notificationList, .notification.new-notification .title {max-width: 100%;}
+.notification.new-notification .media {
+     margin-top: 0; 
+}
+.notification.new-notification .media {
+   
+    padding: 35px 0px;
+   
+}
+
+.notification.new-notification .title {
+    font-size: 30px;
+    margin-left: 0;
+   
+}
+.notification.new-notification .media .media-left {
+    min-width: 140px;
+}
+.notification .media .checkbox{margin-right: 10px;}
+.notification.new-notification .media label {
+    font-weight: 500 !important;
+    font-size: 22px !important;
+    color: #060606 !important;
+}
+.notification.new-notification .media .media-body p {
+    color: #3a3a3a !important;
+    font-size: 15px;
+    font-weight: 400;
+}
+.notification.new-notification  .media-body {
+    padding-left: 10px;
+}
+.notification.new-notification  .media .checkbox{top: -20px}
+#addpropertie ul.tab-bar.text-left li {
+    margin: 0;
+}
+#addpropertie .tab-link.active {
+    background: #f58300 !important;
+}
+#addpropertie .tab-link.active:hover {
+    background: #8796a0 !important;
+    color: #fff !important;
+}
+#addpropertie .tab-link:hover{
+    background: #f58300 !important;
+    color: #fff !important;
+
+}
+
+#addpropertie div#mylisting {
+    padding: 15px;
+}
+
+#addpropertie .radiocheck input[type="radio"]:checked + span::after{top:4px !important;}
+
+#addpropertie  #mylisting h4 {
+    font-size: 18px !important;
+}
+
+#addpropertie li.radiocheck span {
+    font-weight: 500;
+}
+#addpropertie #mylisting ul{margin:0;}
+#addpropertie label.form-inline {
+    font-weight: 500 !important;
+    padding-bottom: 1px;
+}
+
+#addpropertie hr.row.full-width {
+    border-top: 2px solid #f6f6f6;
+    margin: 5px;
+}
+#addpropertie .small, #addpropertie small {
+    font-size: 100%;
+}
+
+#addpropertie .addMore a {
+    display: inline-block;
+    padding: 5px 10px !important;
+    text-align: center;
+    font-size: 15px !important;
+    background: #f58300 !important;
+}
+
+
+#addpropertie .addMore a:hover {    background: #8796a0 !important;}
+.uploadPhoto li .active .header{display: block;}
+#addpropertie ul.uploadPhoto .header {border: 0 !important;}
+ul.uploadPhoto.uploadVideo {
+    width: 100%;
+}
+
+#addpropertie  #mylisting ul li{    padding: 12px 8px 20px 0;}
+#addpropertie  .uploadPhoto.uploadVideo li {
+    height: 189px;
+    width: 268px !important;
+}
+
+
+
+
+#addpropertie input, #addpropertie select, #addpropertie textarea, #addpropertie #mylisting input.form-control, #addpropertie option {
+    border: 1px solid #dcdcdc;
+    color: #9c9c9c !important;
+    font-weight: 300;
+    font-size: 14px !important;
+}
+
+#addpropertie .location-box-s iframe {
+    margin-top: 15px;
+}
+
+#addpropertie textarea {
+    height: 200px !important;
+    max-width: 100%;
+    background: #ffffff !important;
+        text-transform: uppercase;
+}
+#addpropertie .tabnab {
+    border-bottom: 1px solid #ddd !important;
+}
+
+.location-wrap:after {
+    content: "";
+    display: table;
+    width: 100%;
+}
+
+.location-wrap {
+    background: #fff;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.location-wrap input {
+    padding-left: 30px;
+}
+
+.list-row-custom{
+    padding-right: 50px;
+}
+#addpropertie .uploadPhoto.uploadVideo .header {
+    display: block;
+}
+.list-row-custom:after {
+    content: "";
+    display: table;
+    width: 100%;
+}
+.list-row-custom{transition: all 0.3s ease-in;}
+
+
+.list-row-custom:nth-child(even) {
+    background: #fff;
+}
+.list-row-custom:nth-child(odd) {
+    background: #fcfcfc;
+}
+.list-row-custom:hover{
+    transition: all 0.3s ease-in;
+    background: #fcfcfc;
+}
+
+.list-row-custom {
+    padding-top: 5px;
+    border-bottom:  2px solid #f6f6f6;
+    width: 100% !important;
+}
+
+#addpropertie .b-0{border:0 !important;}
+
+
+
+
+
+.faq-area .myApplication {
+    background: #fdfdfd;
+    padding-top: 40px;
+    max-width: 75%;
+    margin: auto;
+}
+
+.faq-area .personalInfo .faqStart img.firstImage, .faq-area .personalInfo .faqStart img.secondImage {
+   
+    z-index: 99;
+}
+.faq-area .filter-search.searchFilter {
+    width: 98%;
+    padding: 0 20px;
+    border-bottom: 1px solid #efefef!important;
+    padding-bottom: 10px;
+}
+
+.faq-area .myApplication .searchFilter h3 {   
+    display: inline;
+    float: left;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+.faq-area .myApplication h3 span img{    margin-top: -17px;}
+.faq-area .filter-search.searchFilter li a {
+    padding: 0 10px !important;
+    border: 0;
+    color: #1a1a1a;
+}
+.faq-area .filter-search.searchFilter ul{
+
+    padding-left: 30px;
+    padding-top:0;
+}
+hr.faq-top-b {
+    border-top: 1px solid #d3d3d3;
+    max-width: 90%;
+    margin: inherit;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.faq-area .faqColumn {
+    padding-left: 20px;
+}
+.faq-area .faqColumn h5 {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 70px 0;
+}
+.faq-area .faqColumn >p {
+    text-transform: uppercase;
+    border-bottom: 1px solid #efefef!important;
+    max-width: 46%;
+}
+.faq-area button.active:after {
+    content: "\2796";
+    color: #fff;
+}
+
+.faq-area button.accordion.active {
+    background: #f58300 !important;
+    transition: all 0.3s ease-in;
+    color: #fff;
+}
+
+.faq-area .myApplication button {
+    padding: 8px 20px;
+    font-weight: 300;
+    font-size: 14px !important;
+    margin-top: 0 !important;
+    color: #292828;
+    z-index: 9999;
+    position: relative;
+}
+
+
+.faq-area .faqColumn h5 {
+    font-size: 18px;
+    text-transform: uppercase;
+  
+}
+.faq-area .faqColumn  {
+   
+    margin: 50px 0;
+}
+.faq-area .FAQSection .faqColumn:first-child{margin-bottom: 0;}
+.faq-area .faqColumn:first-child h5{margin-top: 0;margin-bottom: 30px;}
+
+.faq-area .panel {
+    background: #efefef;
+    transition: all 0.3s ease-in
+}
+
+
+
+
+.faq-area .personalInfo .faqStart img.firstImage {
+    width: 223px;
+    top: -54px;
+    right: 18%;
+}
+
+.faq-area .personalInfo .faqStart img.secondImage {
+    right: -3%;
+    width: 233px;
+    bottom: -53px;
+}
+.faq-area .personalInfo .faqStart img.thirdImage {
+    right: 5%;
+    width: 233px;
+    top: 58px;
+}
+
+.faq-area .contactForm.faqColumn h5 {
+    margin: 0;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+.faq-area  .contactForm .cForm input, .contactForm .cForm textarea {
+    margin-bottom: 20px;
+    border-color: #e6e6e6 !important;    
+    box-shadow: none;
+    background: #fff !important;
+}
+.faq-area  .contactForm .cForm input{height: 50px !important;}
+.faq-area .contactForm .cForm textarea {
+    text-align: center;
+    padding-top: 82px !important;
+    height: 180px;
+}
+
+   
+   
+.faq-area ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+     color: #929292 !important;
+}
+.faq-area ::-moz-placeholder { /* Firefox 19+ */
+    color: #929292 !important;
+}
+.faq-area :-ms-input-placeholder { /* IE 10+ */
+    color: #929292 !important;
+}
+.faq-area :-moz-placeholder { /* Firefox 18- */
+     color: #929292 !important;
+}
+.faq-area .contactForm img.contactBG {
+    position: absolute;
+    right: 10%;
+    top: 29px;
+    width: 313px;
+}
+.faq-area .cForm button.btn.btn-default {
+    color: #fff;
+    margin-left: inherit;
+}
+.faq-area .accordion:after{font-size: 10px;}
+.applic_submit-area h3.main-h {
+    font-size: 32px;
+    padding-bottom: 10px;
+}
+.applic_submit-area .filter-search.searchFilter {
+    font-weight: 500;
+}
+.applic_submit-area .searchFilter ul li a{font-size: 16px;}
+
+
+
+.applic_submit-area .myApplicationReview table th {
+    font-size: 26px !important;
+    color: #3c3c3e !important;
+}
+
+
+
+
+.applic_submit-area .myApplicationReview table tbody tr td h4 {
+    font-size: 30px;
+}
+
+
+.applic_submit-area .myApplication h4{font-weight: 500;}
+
+.applic_submit-area .myApplicationReview table tbody tr td, .myApplicationReview table thead tr th {
+    padding: 30px 80px !important;
+    vertical-align: middle;
+}
+
+.applic_submit-area .myApplicationReview table tbody tr td, .applic_submit-area .myApplicationReview table tbody tr td span {
+    font-size: 26px;
+    font-weight: 300;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #000 !important;
+}
+
+.applic_submit-area .myApplication {
+    padding: 25px 0 0;
+}
+
+.applic_submit-area .searchFilter ul li a {
+    font-size: 16px;
+    color: #9c9b9b;
+}
+footer .contactUs h4, footer .stayintouch h4 {
+    color: #fff;
+}
+
+
+
+
+
+.applic_submit-area .myApplicationReview {
+    padding-bottom: 0 !important;
+    background-image: url(../images/sentmail.png) !IMPORTANT;
+    background-repeat: no-repeat !important;
+    
+}
+.applic_submit-area .myApplicationReview {
+    background-position: 95% 76% !important;
+    background: #fff;
+}
+
+
+
+
+
+
+
+
+.qualificationCheck.firstSlide.first-s-center .radiocheck input[type="radio"]:checked + span::after {
+   
+    top: 3.5px !important;
+   }
+
+
+
+/*===========================================New Task===================================================*/
+
+.new_task input[type=file] {
+    display: none;
+}
+
+.new_task figure .btn.btn-default {
+    margin: 30px 0
+}
+
+.new_task .myApplication .form-control,
+.new_task figure .btn.btn-default {
+    width: 100%
+}
+
+.new_task textarea {
+    width: 100%
+}
+.new_task button {
+    display: inline-block;
+    width: 80%;
+    margin-top: -10px;
+    padding: 10px 20px;
+    background: #8796a0 !important;
+    font-size: 16px !important;
+    font-family: 'roboto';
+    transition: all 0.3s ease-in;
+    box-shadow: none;
+    border: 0;
+}
+.searchFilter ul li a:hover {
+    color: #f58300!important;
+    transition: all 0.3s ease-in;
+}
+
+.new_task textarea::-webkit-input-placeholder {
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+
+
+
+/*maintainance log*/
+
+.maintain-log {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    background: none
+}
+
+.maintain-log {
+    position: relative;
+}
+
+.maintain-log:before {
+    background-image: url(../images/Asset%201@3x.png);
+    background-repeat: no-repeat;
+    content: "";
+    height: 600px;
+    position: absolute;
+    width: 130px;
+    right: -10%;
+    opacity: 0.3;
+}
+
+
+.profileName {
+    padding: 30px 0 20px;
+}
+
+.userPhotos ul {
+    width: 80%
+}
+
+.userPhotos ul li {
+    display: inline-block;
+    padding-right: 10px
+}
+
+.userPhotos ul li img {
+    width: 300px;
+}
+
+
+
+
+
+/*=======================================credit-task============================================*/
+
+.CreditReport {
+    display: table
+}
+
+.paymentForm {
+    width: 80%;
+    border-right: 1px solid #ccc;
+    display: table-cell
+}
+
+.filter-search.searchFilter.CreditReport.credit-pyment-b .paymentMode {
+    width: 2%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+.expiration {
+    padding-top: 0!important
+}
+
+.expiration li {
+    display: inline-block
+}
+
+.expiration li:nth-child(2) {
+    width: 160px;
+}
+
+.paymentMode .paymentOption li img {
+    position: unset
+}
+
+.paymentMode .paymentOption1 li {
+    position: relative
+}
+
+/*
+.paymentMode .paymentOption1 li:before {
+    position: absolute;
+    width: 60px;
+    height: 70px;
+    background-image: url(../images/paypal.png);
+    background-repeat: no-repeat;
+    content: ""
+}
+*/
+
+.paymentOption1 li {
+    padding-left: 90px!important;
+}
+
+
+.budget {
+    color: #000
+}
+
+.budget .table {
+    border: 1px solid #ccc;
+}
+
+.budget .table tbody tr td {
+    text-align: left;
+    padding: 15px 20px;
+    height: 40px;
+}
+
+.budget .table thead tr th {
+    text-align: center;
+    background-color: #fbd2a4;
+}
+
+.budget1 .table thead tr th {
+    background-color: #b0d3e9
+}
+
+.CreditReport {
+    border: 1px solid #ccc!important;
+    padding: 30px;
+}
+
+.CreditReport .paymentUser {
+    padding: 0!important
+}
+
+.CreditReport .paymentUser li label {
+    margin: 0
+}
+
+.credit_report_payments h3 {
+    text-align: left;
+    padding: 15px 0 30px
+}
+
+.credit_report_payments button {
+    float: left;
+    width: 50%
+}
+
+.paymentOption li:first-child img {
+    left: 0px!important;
+    top: 40px!important;
+}
+
+.filter-search.searchFilter.CreditReport.credit-pyment-b hr {
+    width: 93%;
+}
+
+.profileDocument .mydocument:before {
+    background-image: none!important;
+}
+
+.profileDocument .mydocument {
+    margin: 40px 0 0 40px;
+}
+
+.profileDocument .fileContainr {
+    height: 550px;
+}
+
+
+ul.paymentUser.paying {
+    padding-left: 15px !important;
+}
+
+
+/*rental application*/
+
+.form-control1 {
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    box-shadow: none;
+}
+
+.form-control1:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.rentalApp .aboutme label {
+    margin-top: 20px;
+}
+
+.previousResidence {
+    margin-top: 50px;
+}
+
+.rentalApp {
+    margin-bottom: 50px;
+}
+
+
+
+/*=========================================Transunion====================================================*/
+
+.transunion {
+    text-align: center;
+}
+
+.transunion img {
+    width: 200px;
+}
+
+.transunion p {
+    font-weight: 500
+}
+
+.transunion p span {
+    font-weight: 300
+}
+
+.transUnionFOrm h6 {
+    text-align: center;
+}
+
+.transUnionFOrm input {
+    width: 100%;
+    color: #000
+}
+.transUnionFOrm {
+    border-top: 4px solid #727071;
+    margin-bottom: 30px;
+    padding-top: 5px!important;
+    margin-top: 70px;
+}
+.transUnionFOrm .userProfile span {
+    width: 40%;
+    left: 39%
+}
+
+.transUnionFOrm .userProfile ul li {
+    font-size: 18px;
+    position: relative;
+}
+
+.transUnionFOrm .table {
+    color: #000
+}
+
+.personalInfo.rentalApp.transUnionFOrm input.form-control.form-control1 {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/*.form-control:focus {
+    border-color: #f38320;
+    transition: all 0.3s ease-in;
+}*/
+
+
+
+.my-post-five .scoutDetailsBox{    width: 40% !important;}
+.my-post-five .scoutImage{width: 33% !important;    padding: 15px !important;}
+.my-post-five p.location {
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.post_new_h{padding-top: 20px;}
+.my-post-five span.cusomer_name {
+    font-size: 20px;
+    padding-right: 20%;
+}
+.post_new_h li.my_account a {
+    padding-right: 0;
+}
+.post_new_h .login a img {
+    width: 50px;
+    margin-right: 10px;
+    margin-top: -30px;
+}
+
+.post_new_h li.login.dropdown a {
+    padding-left: 10px;
+    cursor: pointer;}
+
+.my-post-five .scoutdescription{    margin: 60px 0 !important;}
+.account_social1{vertical-align: middle;}
+
+
+
+
+
+a#menu2 img {
+    display: none;
+}
+
+
+
+
+
+
+
+
+/*===========================================my calender===================================================*/
+.myCalender iframe{width: 100%}
+
+
+
+/*=========================================footer==============================================*/
+
+footer {
+    background-color: #1073b9;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer1 p,
+footer p {
+    color: #fff;
+    font-weight: 300;
+}
+
+footer h4 {
+    text-transform: uppercase;
+}
+
+footer h4,
+footer .footerLogo img {
+       padding-bottom: 25px;
+    font-size: 24px;
+}
+
+.footer1 {
+    background-color: #0963a3;
+    padding:10px 0
+}
+
+.footer1 a p {
+    text-align: center;
+}
+
+footer .contactUs,
+footer .stayintouch {
+    float: right;
+}
+
+
+
+.stayintouch .fa-facebook {
+    background: #fff;
+    padding: 0;
+    font-size: 29px;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.2s ease-in;
+}
+.stayintouch i.fa.fa-facebook:hover {
+    background: #f58300;
+    color: #fff;
+    transition: all 0.2s ease-in;
+}
+
+
+
+
+
+
+
+
+
+.landing footer {
+    margin-top: 0
+}
+
+.bannerSlider .item {
+    min-height: 615px;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slick-prev,
+.slick-next {
+    font-size: 0;
+    height: 40px;
+    width: 40px;
+    border: 2px solid #fff;
+    background: transparent;
+    position: absolute;
+    top: 41%;
+    display: none !important;
+    outline: 0;
+    z-index: 9;
+    border-radius: 50%;
+}
+
+.slick-prev {
+    left: 6%;
+}
+
+.slick-next {
+    right: 6%;
+}
+
+
+
+@media(max-width:1600px) {
+    .maintain-log .personalInfo {
+        overflow: scroll;
+    }
+    .landingPage.newlanding-page .searchFilter ul li:first-child img {
+        left: 8%;
+    }
+    .landingPage.newlanding-page .searchFilter {
+
+        width: 65.9%;
+    }
+
+    .userProfile ul li span {
+        left: 38%;
+    }
+    .profile_reg {
+        height: 900px;
+    }
+    .social_profile_reg .myApplication .imageUpload {
+        width: 165px;
+    }
+
+    .who_we_are {
+        height: 780px;
+    }
+}
+
+@media(max-width:1440px) {
+    .account_socialInfo-n .myApplication { width: 93%;   }
+    .profile_reg .myApplication .imageUpload label {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+   .social_profile_reg .forwardArrow img {
+        width: 38px!important;
+    }
+    .profile_reg .myApplication .imageUpload #myImg, .social_profile_reg .myApplication .imageUpload{width: 100% !important;}
+
+    .who_we_are {
+        height: 700px;
+    }
+    .maintain-log:before {
+        right: -13%
+    }
+    .userPhotos ul li img {
+        width: 250px;
+    }
+
+
+}
+@media(max-width:1380px) {
+    .accountSections.new.account_socialInfo-n .myApplication {
+    width: 100%;
+    padding-right: 56px;
+}
+    
+
+    .maintain-log:before{    width: 110px;top:30%;}
+
+    .new-ttsk-2:before {
+        background-size: 71% !important;
+    }
+
+
+
+.new-task3 .myApplication span.bgIMG {
+    position: absolute;
+    left: -60px;
+    top: 30%;
+    width: 43px !important;
+    }
+}
+
+
+@media(max-width:1280px) {
+
+    .accountSections.new.account_socialInfo-n .profile_reg.page_continue.social_profile_reg { margin-right: 0px; }
+
+
+
+.new-task3 .myApplication span.bgIMG {
+    position: absolute;
+    left: -40px;
+    top: 30%;
+    width: 30px !important;
+    }
+}
+
+@media(max-width:1199px) {
+    #addpropertie .row.tabnab > .container-fluid {padding-left: 0;}
+    .uplode-repair-s {max-width: 88%;}
+    #new-profile-resg .myApplication {width: 70%;}
+    .maintain-log:before {width: 98px;top: 41%;}   
+    .accountSections.new.account_socialInfo-n .myApplication {padding-right: 25px;}
+    ul.proprtyList li {padding: 10px 22px!important;}
+    .mynetwork .TopBox .topboxInner span{margin-top: 5px;display: inline-block;}
+    .accountSections.new .myApplication {width: 100% !important;}
+    .header.post_new_h .nav>li>a {  padding: 10px 8px;font-size: 13px !important;}
+    .header.post_new_h .navbar-brand > img {height: 33px;}
+    .applic_submit-area .myApplicationReview table tbody tr td, .myApplicationReview table thead tr th {padding: 25px 35px !important;}
+}
+    
+
+
+
+@media(max-width:1024px) {
+    #new-update-tast .myApplication span.bgIMAGE img {width: 90px !important;}
+    #new-update-tast .myApplication img {top: 31px !important;right: -20px !important;}
+    .maintain-log:before {width: 83px;top: 52%;}
+    .new-task3 .myApplication span.bgIMG img{display: none;}
+    .profile_reg .myApplication .imageUpload a{bottom: 0 !important;}
+
+    .profile_reg .myApplication .imageUpload {width: 200px; display: block; margin: 0 auto;text-align: center;  height: 180px; margin-top: 60px;}
+
+ .accountSections.new .personalInfo {
+    padding: 0px 20px 0;
+}
+
+    .landingPage.newlanding-page .searchFilter {
+        width: 84.9%;
+    }
+    .features ul li {
+        padding: 20px 50px;
+    }
+    .agent .agentimg img {
+        width: 160px;
+    }
+    .agent .title .agentInfo p {
+        font-size: 16px;
+    }
+    .features ul img {
+        width: 15px;
+    }
+    .rent_happy_icon img {
+        padding-top: 75%;
+    }
+    .rent_socially {
+        background-position: 100% 100%;
+    }
+    .scoutsHotel li .scoutsImg {
+        width: 300px;
+        height: 200px;
+    }
+
+    .landingPage.newlanding-page .searchFilter ul li input,
+    .landingPage.newlanding-page .searchFilter ul li {
+        font-size: 14px;
+    }
+
+    .landingPage.newlanding-page .searchFilter ul li input {
+        width: 280px;
+    }
+    .landingPage.newlanding-page .searchFilter ul li:first-child img {
+
+        top: 38%
+    }
+    .myApplication .radiocheck span,
+    .myApplication label {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .userProfile textarea {
+        height: 230px!important;
+    }
+    .userProfile ul li span {
+        left: 48%;
+    }
+    .myApplicationReview table tbody tr td,
+    .myApplicationReview table thead tr th {
+        padding: 10px 20px 20px 30px;
+    }
+    .Profile img {
+        width: 120px;
+    }
+
+/*    .profile_reg .myApplication .imageUpload #myImg {
+        width: 180px;
+        height: 200px;
+    }*/
+    .profile_reg .myApplication .imageUpload {
+        width: 150px;
+        height: 235px;
+    }
+    .profile_reg .myApplication .imageUpload #myImg {
+
+
+    height: 175px;
+
+}
+
+    .profile_reg .myApplication .imageUpload a {
+        
+        left: -0px;
+        right: 0;
+    }
+
+    .account_social1 img {
+        width: 380px;
+    }
+    .social_profile_reg .myApplication {
+        width: 100%
+    }
+
+    .who_we_are {
+        height: 510px;
+    }
+    .our_mission .imgMission img {
+        width: 100%;
+    }
+    .userPhotos ul li img {
+        width: 160px;
+    }
+
+    .expiration li:nth-child(2) {
+        width: 111px;
+    }
+}
+
+
+
+@media(max-width:1023px) {
+    .agentProfile .proprtyList .media-body ul li label{
+        padding: 12px 2px !important;
+    }
+}
+
+
+@media(max-width:991px) {
+    .applic_submit-area .table {display: inline-table;}
+    .applic_submit-area .myApplicationReview { background-position: 90% 75%;background-size: 70%;}
+    .applic_submit-area .myApplicationReview table th {font-size: 22px !important;color: #3c3c3e !important;}
+    .applic_submit-area .myApplicationReview table tbody tr td h4 { font-size: 24px;}
+    .applic_submit-area .myApplicationReview table tbody tr td, .applic_submit-area .myApplicationReview table tbody tr td span {font-size: 18px;}
+    .accountSections.new.account_socialInfo-n .profile_reg.page_continue.social_profile_reg {height: 703px !important;}
+    .applic_submit-area .myApplicationReview table tbody tr td, .myApplicationReview table thead tr th {padding:15px 30px !important;}
+    section.myDocument.my-docmnt .doc1 .btn{margin-bottom: 20px !important;}
+    #new-update-tast .myApplication span.bgIMAGE img {width: 124px;}
+    #new-update-tast .myApplication img {top: -27px;right: -22px;}
+    section.credit-area-main .myApplication.credit-new-re .paymentForm div{padding-left: 5px;padding-right: 5px;}
+    .col-sm-12.filter-search.searchFilter.CreditReport.credit-pyment-b .expiration li:nth-child(2) {width: 62px;margin-left: 12px;}
+    .myApplication.credit-new-re {padding: 10px;}
+    #new-update-tast .myApplication {padding: 30px 15px !important;}
+    .spacer-box {height: auto;}
+    #new-profile-resg .myApplication{margin-bottom: 0 !important;}
+    #new-profile-resg .personalInfo {width: 80%;}
+    #new-profile-resg .myApplication{padding-left: 0;}
+    #my-income-app .filter-search.searchFilter {padding-left: 25px;}
+    img.Application-img-head{margin-top: -23px;width: 180px !important;}
+    .accountSections.new.account_socialInfo-n {padding-top: 40px;}
+    .accountSections.new.account_socialInfo-n .account_social1 p{padding-bottom: 50px !important;}
+    .account_socialInfo-n .account_social1 img{padding-bottom: 0;}
+    .account_socialInfo-n .addMore a{text-align:center !important;}
+    .maintain-log:before {width: 68px; top: 63%;}
+    .filter-search.searchFilter.CreditReport.credit-pyment-b .expiration li:nth-child(2) { width: 65px;margin-left: 12px;}
+    .myDocument.profileDocument.nnw ul.file.row { padding-left: 30px;}
+    .taskDefinedInner .col-sm-3 { width: 25%;}
+    .edit-sum{top:15px;}
+    .TopBox >.topboxInner {margin-bottom: 13px;}
+    .accountSections.new .account_social1 p.txt-black{text-align: center;padding-bottom: 10px;}
+    .nav>li>a {       
+        
+        padding: 10px 5px;
+        font-size: 13px !important;
+    }
+    .navbar-brand > img {
+        height: 40px;
+    }
+    .my-post-five span.cusomer_name{padding-right: 5%;}
+    .header.post_new_h .nav>li>a {
+    padding: 10px 3px;
+    font-size: 12px !important;
+}
+    .accountSections.new{
+        display: block;
+    }
+    .accountSections.new .myApplication {
+    width: 94% !important;
+    margin: 0 auto !important;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+.accountSections.new .social_profile_reg {
+    
+    height: 790px!important;
+    
+}
+
+.accountSections.new .account_socialInfo {
+   width: 100%;
+   display: table;
+}
+.accountSections.new .account_socialInfo .myApplication{margin-left: 0;}
+
+    .profile_reg .myApplication .logoImg img {
+        position: absolute;
+        top: 14%;
+        right: 0;
+    }
+
+
+    .profile_reg .myApplication .imageUpload{height: 250px;}
+    .profile_reg .myApplication .imageUpload a {  
+    right: 10px;
+    font-size: 15px !important;
+    bottom: 0 !important;
+    }
+    .profile_reg .myApplication .imageUpload #myImg {
+        height: 174px;
+    }
+    .account_social1{
+        width: 100% !important;
+        display: block !important;}
+
+    .myApplication img {
+        top: 3%;
+        width: 200px;    }
+}
+
+
+@media(max-width:768px) {
+
+    img.Application-img-head{top: 2.2% !important;}
+    .navbar-brand > img {
+        height: 33px;
+    }
+    .landingPage.newlanding-page .searchFilter {
+        width: 93.9%;
+    }
+    .navbar-nav > li > a {
+        font-size: 14px;
+        padding: 10px 7px;
+    }
+
+    .bannerSlider .item {
+        min-height: 325px;
+    }
+    .features ul li {
+        padding: 15px 30px;
+    }
+    .features h4 {
+        font-size: 20px;
+    }
+    .features p {
+        font-size: 16px;
+    }
+    .shared li {
+        margin-right: 50px;
+    }
+    .agent {
+        padding: 10px;
+    }
+    .agent .title .agentcontact ul li {
+        font-size: 11px;
+    }
+    .agent .title {
+        padding-left: 40px;
+    }
+    .agent .title .agentInfo p {
+        font-size: 14px;
+    }
+    .agent .title .agentcontact ul li:nth-child(2)::before {
+        left: -94%;
+    }
+    .agent .title .agentcontact ul li:first-child::before {
+        left: -50%
+    }
+    .rentIcon img,
+    .rent_socially .rentInfo1 .rentIcon img {
+        width: 100%;
+    }
+    .rent_socially {
+        height: 720px;
+    }
+    .postOfScouts li:nth-child(2) {
+        width: 287px
+    }
+    .postOfScouts li:first-child {
+        width: 300px;
+    }
+    .scoutsHotel li .scoutsImg {
+        width: 227px;
+        height: 160px;
+    }
+    .postOfScouts li h4 {
+        font-size: 22px;
+    }
+    .scoutsImg .scoutsInfo span {
+        font-size: 14px;
+    }
+    .scoutsImg .scoutsInfo p {
+        font-size: 18px;
+    }
+    .landingPage.newlanding-page .searchFilter ul li input {
+        width: 200px;
+    }
+    .landingPage.newlanding-page .searchFilter ul {
+        width: 100%
+    }
+    .landingPage.newlanding-page .searchFilter ul li:first-child img {
+        left: 1%;
+    }
+    .landingPage.newlanding-page .searchFilter ul li .btn {
+        padding: 30px 50px;
+        font-size: 14px;
+    }
+    .landingPage.newlanding-page .searchFilter ul li a {
+        border: none;
+        padding: 30px 17px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    .rentHappyInfo p,
+    .rent_socially .rentInfo p {
+        font-size: 16px;
+    }
+    .registration h4,
+    .rentHappyInfo h4,
+    .rent_socially .rentInfo h4 {
+        padding-bottom: 15px;
+    }
+    .renthappy {
+        height: 550px!important
+    }
+    .rent_socially .rentInfo1 {
+        margin-top: 40px;
+    }
+    .myApplication img {
+        top: 6%;
+        width: 102px;
+    }
+    .myApplication .radiocheck span,
+    .myApplication label {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .userProfile ul li span {
+        left: 71%;
+    }
+    .userProfile textarea {
+        width: 100%
+    }
+    .myApplicationReview table tbody tr td,
+    .myApplicationReview table tbody tr td span,
+    .myApplicationReview table thead tr th {
+        font-size: 18px;
+    }
+    .myApplicationReview table tbody tr td h4 {
+        font-size: 20px;
+    }
+    .myApplicationReview {
+        background-position: 100% 100%;
+    }
+
+    .chooseProfile {
+        background-position: 100%;
+        height: 650px;
+    }
+
+    .profile_reg .myApplication .logoImg img {
+        right: 5px;
+        width: 100px;
+    }
+    .profile_reg .myApplication .aboutme label {
+        margin: 20px 0 10px;
+    }
+    .profile_reg .myApplication .form-control {
+        height: 53px
+    }
+    .profile_reg {
+        height: 800px;
+    }
+    .profile_reg .myApplication .imageUpload #myImg {
+        width: 140px;
+        height: 150px;
+    }
+    .profile_reg .myApplication .imageUpload {
+        width: 108px;
+        height: 280px;
+    }
+/*    .profile_reg .myApplication .imageUpload {
+        margin-top: 3px;
+    }
+*/    .profile_reg .myApplication .imageUpload a {
+        bottom: 60px;
+    }
+    .profile_reg .myApplication .aboutme label {
+        vertical-align: text-bottom
+    }
+/*    .profile_reg .myApplication .personalInfo .forwardArrow img {
+        margin-top: -10px;
+    }*/
+
+    .account_signup2 .myApplication .personalInfo .forwardArrow img {
+        margin-top: 30px;
+    }
+    .a2465ccount_social1,
+    .account_socialInfo {
+        width: 100%;
+        display: block;
+    }
+
+    .social_profile_reg .myApplication {
+        width: 90%!important;
+        left: 0;
+        right: 0;
+        margin-left: 0;
+        display: block;
+        margin: 0 auto
+    }
+    .account_social1 {
+        padding-bottom: 30px;
+    }
+
+    .paymentMode .paymentOption li img {
+        width: 100%
+    }
+    .expiration li:nth-child(2) {
+        width: 52px;
+    }
+
+    .paymentForm label {
+        font-size: 13px;
+    }
+
+    .paymentMode .paymentOption li img,
+    .paymentMode .paymentOption1 li img {
+        width: 50px;
+    }
+}
+
+@media(max-width:767px) {
+    .applic_submit-area .myApplication {padding: 10px 0 0;}
+    .myApplicationReview .searchFilter {  padding: 0 10px;}
+    .applic_submit-area .searchFilter ul li a { font-size: 15px;}
+    .applic_submit-area .myApplicationReview table th { font-size: 16px !important;}
+    .applic_submit-area .myApplicationReview table tbody tr td, .myApplicationReview table thead tr th { padding: 10px 5px !important;}
+    .applic_submit-area .myApplicationReview table tbody tr td, .applic_submit-area .myApplicationReview table tbody tr td span { font-size: 15px;}
+    .applic_submit-area .myApplicationReview table tbody tr td h4 {font-size: 18px;}
+    .applic_submit-area h3.main-h {font-size: 24px;}
+    .faq-area .contactForm img.contactBG{display: none;}
+    .faq-area .myApplication button{padding-right: 26px !important;}
+    section.faq-area .accordion:after {top: 36%;bottom: 0;margin: auto; right: 15px;position: absolute;}
+    .faq-area .faqColumn{ margin: 0 !important;padding-left: 0 !important;}
+    .faq-area .faqColumn h5 {padding: 15px 0;margin: 0 !important;}
+
+    .faq-area .myApplication button {border: 1px solid #f58300;margin: 10px 0 0 !important;}
+    section#addpropertie .container-fluid{padding: 0 !important;}
+    .location-wrap{padding-top: 0;}
+    #addpropertie .uploadPhoto li:last-child{clear: both;}
+    .addproperties .container-fluid{padding-left: 15px !important;}
+    .addproperties .container-fluid {padding-right: 15px !important;}
+    .list-row-custom {padding-right: 0px;}
+    .location-wrap {padding-left: 0px;}
+    .notification.new-notification .media-body{padding-top: 0 !important;}
+    .notification.new-notification span.pull-right {display: block !important; padding-top: 20px;}
+    .notification.new-notification .title span {display: inline;}
+    .notification.new-notification{padding-bottom: 0;}
+    .notification.new-notification .media .media-left {width: auto !important;}
+    .new_task.new-task3 button.butn {margin-top: 0;}
+    #new-update-tast .personalInfo {padding: 0;}
+    hr.pck{margin-left: 0;}
+    .myApplication.credit-new-re .package h3 {padding-bottom: 0;}
+    .credit-area-main .personalInfo {padding: 15px;}
+    #new-update-tast button.btn.btn-default.send-qu {width: 80.8%;}
+    #new-update-tast .myApplication,#new-update-tast h6.chooseUnits, .uplode-repair-s { width: 100%;max-width: 100%;}
+    .forwardArrow img {width: 50px !important;padding-top: 20px;display: block;}
+    #new-profile-resg .myApplication img {top: 0;right: 10px;bottom: 0;margin: auto;}
+    #new-profile-resg .myApplication .form-control{margin-bottom: 0;}
+    #my-income-app ul#personalInfo {text-align: center;}
+    #my-income-app li.radiocheck span{    font-size: 14px !important;  color: #b1b1b1 !important;  font-weight: normal !important;}
+    #my-income-app .personalInfo {padding-top: 20px !important;}
+    #my-income-app ul#personalInfo, #my-income-app .personalInfo .aboutme {padding: 0;}
+    #my-income-app .form-control{margin-bottom: 0 !important;}
+    #my-income-app .filter-search.searchFilter {padding-left: 0;}
+    #my-income-app .searchFilter ul li a {padding: 5px 5px!important;}
+    img.Application-img-head{display: none;}
+    #myapplication-area {margin-top:0px;}
+    #myapplication-area{padding: 15px 0;}
+    div#myapplication-area .searchFilter ul li a {font-weight: 500;font-size: 14px;}
+    div#myapplication-area .filter-search.searchFilter {padding: 10px;}
+    div#myapplication-area .personalInfo h4 {font-weight: 500; font-size: 20px;}
+    div#myapplication-area .personalInfo {padding: 0px 10px 0 !important;}
+    div#myapplication-area .aboutme input, div#myapplication-area li.radiocheck span {height: 62px !important;margin-bottom: 0;}
+    div#myapplication-area .personalInfo {padding: 0px 10px 0;  }
+    div#myapplication-area >.personalInfo label, div#myapplication-area >.personalInfo select {font-size: 15px !important;}
+    .accountSections.new.account_socialInfo-n .birthday {margin: 0;}
+    .over-flow {padding-left: 15px;}
+    div#myapplication-area li.radiocheck span{font-size: 15px !important;}
+    .accountSections.new.account_socialInfo-n .form-control {margin-bottom: 0 !important;}
+    .accountSections.new.account_socialInfo-n .personalInfo{padding:0;}
+    .accountSections.new.account_socialInfo-n .myApplication{padding-right: 0 !important;}
+    .account_socialInfo-n .social_profile_reg .myApplication {top: 60px;} 
+    .accountSections.new .account_socialInfo .myApplication {top: 7% !important;}
+    .accountSections.new.account_socialInfo-n .account_social1 p{padding:20px 0;text-align: justify;}    
+    .profile_reg .myApplication .imageUpload #myImg { width: 140px; height: 110px;}    
+    .accountSections.new.account_socialInfo-n .account_social1{padding: 0 15px;}
+    .accountSections.new.account_socialInfo-n {padding: 50px 0 0;}
+    section.myDocument.myDocuments-area {padding-bottom: 0;}
+    .mypost-five-show .scoutDetailsBox {margin-bottom: 0 !important;}
+    .my-post-five.mypost-five-show .scoutIcons { padding-bottom: 0;}
+    .my-post-five.mypost-five-show .scoutImage {width: 100% !important;}
+    .landlordScout .scoutBox .scoutDetailsBox .scoutdescription {margin: 12px 0 !important;}
+    .mypost-five-show .scoutDetailsBox {width: 100% !important;}   
+    .my-docmnt button.btn.btn-primary.ornage-btn{margin-bottom: 15px !important;}    
+    .myApplication.myApplicationReview.maintain-log.new-ttsk-2 {max-width: 100% !important;width: 90%;}
+    .myApplication.myApplicationReview.maintain-log.new-ttsk-2 .filter-search.searchFilter h3 { font-size: 21px;}
+    .new-ttsk-2 th {font-size: 14px !important;padding: 8px !important;border-bottom: 0 !important;}
+    .myApplication.myApplicationReview.maintain-log.new-ttsk-2 .aboutme { padding-top: 0;}
+    .maintain-log:before{display: none;}
+    ul.use-tow {padding-bottom: 0px !important;}
+   .innerpage-Wrapper.profile-infobox .userInfo .searchFilter ul li:last-child{width: auto !important;margin:inherit !important;}
+   .innerpage-Wrapper.profile-infobox .searchFilter ul li{vertical-align: middle !important;}
+    .profile-infobox .userProfile li {font-size: 13px !important;}
+    .innerpage-Wrapper.profile-infobox .userProfile ul li span{font-size: 12px;}
+    .innerpage-Wrapper.profile-infobox .userProfile ul {padding: 50px 1px;}
+    .myApplication.credit-new-re .package label.txt-black {
+    padding-top: 20px;
+ 
+}
+    .myApplication.credit-new-re{padding: 0;}
+    .myApplication.credit-new-re .paymentForm{border-right: 0;}
+    ul.paymentOption1.sec {
+        border-top: 0;
+    padding: 0 !important;
+    margin: 0 auto;
+    width: 100%;
+}
+.myApplication.credit-new-re table.table {
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+ul.paymentOption1.sec li {
+    padding-left: 0 !important;
+}
+ul.paymentOption1.sec img{position: relative !important;left: inherit !important;}
+ul.paymentOption.paymentOption-rightbar {
+    padding: 0;
+    width: 100%;
+}
+ul.paymentOption.paymentOption-rightbar {
+    padding: 0;
+}
+.myApplication .radiocheck {
+    margin-right: 20px;
+    display: block;
+}
+    .myApplication.credit-new-re .paymentForm{display: block;width: 100%;}
+    .filter-search.searchFilter.CreditReport.credit-pyment-b .paymentMode {
+    width: 100% !important;
+    display: block;
+    vertical-align: middle;
+}
+    .col-sm-12.filter-search.searchFilter.CreditReport.credit-pyment-b .form-control {
+    margin-bottom: 20px !important;
+}
+   .filter-search.searchFilter.CreditReport.credit-pyment-b .expiration li:nth-child(2){margin-left: 0 !important;}
+    .myApplication.credit-new-re .filter-search.searchFilter.package {
+        width: 100%;
+    }
+    .col-sm-12.filter-search.searchFilter.CreditReport.credit-pyment-b ul.expiration li {
+    float: none;
+    display: block;
+    width: 100% !important;
+}
+ul.expiration.m-b-0 {
+    width: 100%;
+    float: none;
+}
+
+    .aboutme .form-control {
+        margin-bottom: 20px;
+    }
+    .myDocument.profileDocument.nnw ul.file.row{padding-left: 0;}
+    .myDocument.profileDocument.nnw ul.file.row img {
+        width: 54px;
+    }
+
+
+    ul.linkZ.new:before{top:0;}
+    .taskDefinedInner .col-sm-3 {width: 100%;}
+    
+    .screenTenants .qualificationCheck {width: 100% !important;height: 400px !important;padding: 35px 20px !important; }
+    .edit-sum{position: relative;}
+    .mynetwork .TopBox .topboxInner input {display: block;width: 80%;padding: 8px;margin: 0 auto;}
+    .mynetwork .butn {padding: 5px 25px;margin: 0 5px;font-size: 16px;}
+    .mynetwork .TopBox .topboxInner .butns .butn{display: inline-block;}
+    .mynetwork .TopBox .topboxInner h4{padding-bottom: 5px;}
+    .mynetwork .outerBox .outerboxContent .divisions.div1 img{width: 36%;}
+    .mynetwork .outerBox .outerboxContent a.butn{width: 36%;}
+    footer{margin-top: 30px !important;}
+    section.myDocument, .myDocument h3{text-align: center;}
+    .sAgentForm.new .row{display: block;justify-content: center;}
+    .sAgentForm.new .col-sm-3 {width: 100%;}
+    .new-task3 .tableview td span{font-size: 14px;}
+    footer{    padding: 0 0 20px;}
+    footer h4, footer .footerLogo img {padding-bottom: 25px;font-size: 20px; padding: 15px 0;}
+    .sAgentForm.new {padding: 15px;}
+    .myApplication.assignTM.new {border-bottom: 0;padding: 15px;}
+    h3.my_list_new{padding-bottom: 25px;}    
+    section.new_task.new-task3 .linkZ, .personalInfo.taskLink.newservice-agent { padding-left: 15px;padding-right: 15px;}
+    .sAgentForm.new .agentFormButn{text-align: center;}
+    .plus-iocn-col {width: 100%;padding-bottom: 8px;}
+    section.new_task.new-task3 a.btn { padding: 15px;}
+    .new-task3 .myApplication h5, .new-task3 h5{font-size: 20px;}
+    .transUnionFOrm h6{font-size: 24px;}
+    .transUnionFOrm .userProfile ul li{font-size: 14px;}
+    .userProfile.newuser input{height: 25px;}
+    .personalInfo.rentalApp.transUnionFOrm{padding: 0;}
+    .userProfile.newuser{margin: 0; padding: 0 20px;margin-top: 30px;}
+    .new-task3 .tableview .table{text-align: center;}
+    .new-task3 .tableview td{display: block;}
+    .new_task button{width: 100%;}
+    .transUnionFOrm .userProfile span {right: 0 !important;left: 0 !important;position: relative;}
+    .transUnionFOrm .table {color: #000;display: block;overflow: scroll;}
+    .agentProfile .proprtyList .media-body ul li label{border:0 !important;padding: 0;padding-left:20px !important;}
+    .agentProfile .proprtyList .media-body ul li{border-bottom: 1px solid #ccc;}
+    .agentProfile ul.rightListing li:last-child {border: 0 !important;}
+    .profile_reg .myApplication .imageUpload a {font-size: 15px !important;bottom: 14px !important;right: 10px;}
+    .account_social1 img{width: 100%;}    
+    .new_landlo ul li:last-child{width: inherit !important;margin: inherit !important;}
+    .bgImageStar img {width: 100%;}
+    .my-post-five .scoutdescription{margin: 30px 0 !important;}
+    .transUnionFOrm .userProfile span{ right: 60px;left: inherit !important;}
+    .addproperties #mylisting ul{text-align: left !important;}
+    .new-img-uplode li {width: calc(100%/2) !important;float: left; padding-right: 8px !important;}
+    .clear {clear: both;padding-top: 10px;}
+    .addpost_new input.form-control {max-width: 100% !important;}
+    .accountSections.new .social_profile_reg {height: 1000px!important;}
+    .accountSections.new .profile_reg .myApplication .birthday li{width: 32%;}
+    .navbar-nav .open .dropdown-menu > li > a {line-height: 20px;text-align: right;}
+    .navbar-nav > li {padding-left: 0;text-align: right;}
+    .aboutus .sec1 p {font-size: 16px;}
+    .agent .agentimg img {width: 100%; padding-bottom: 20px;}
+    .agentInfo h4, .agent .title p, .agent .title h3 {text-align: center; }
+    .agent .title {padding: 0;}
+    .agent .title .agentInfo {padding-top: 40px;}
+    .agent .title .agentcontact {float: none; text-align: center;}
+    .shared li {font-size: 16px;}
+    .social p {font-size: 14px;}
+    footer .contactUs, footer .stayintouch {float: none;}
+    footer { margin-top: 50px;}
+    .rentIcon img, .rent_socially .rentInfo1 .rentIcon img {width: 250px;}
+    .rent_happy_icon, .rentIcon {text-align: center; }
+    .rent_socially .rentInfo1 .rentIcon img { float: none;}
+    .rent_socially {height: 870px;}
+    .rent_happy_icon img {padding-top: 39%;}
+    .renthappy {height: auto!important;}
+    .scoutsHotel ul {display: block;text-align: center;}
+    .registration input, .registration textarea {font-size: 16px; }
+    .registration .btn {padding: 17px 30px; display: block;margin: 0 auto;}
+    .registration button {float: none;}
+    .maintain {padding-bottom: 100px;}
+    .our_mission .imgMission img { float: none;margin: 0 auto; display: block;width: auto;}
+    .landingPage.newlanding-page .searchFilter ul li {display: block;}
+    .landingPage.newlanding-page .searchFilter ul li input {width: 100%;text-align: center;}
+    .landingPage.newlanding-page .searchFilter ul li:first-child img { left: 28%; top: 8%;}
+    .landingPage.newlanding-page .searchFilter ul li #menu3 img {position: absolute;left: 41%;top: 44%;}
+    .landingPage.newlanding-page .searchFilter {top: 4%;}
+    .landingPage.newlanding-page .searchFilter ul li .btn {width: 100%;}
+    .landingPage.newlanding-page .searchFilter ul li #menu3 img {position: absolute;left: -10% !important;  top: 44% !important; }
+    .myApplication .aboutme textarea {width: 100%;}
+    .myApplication .radiocheck span, .myApplication label {font-size: 15px; }
+    .myApplication .radiocheck label span::before {  top: 0;}
+    .myApplication .radiocheck input[type="radio"]:checked + span::after {top: 3px;}
+    .myApplication .form-control {height: 45px;}
+    .userProfile ul li span {left: 63%; }
+    .myApplicationReview { overflow: hidden; }
+    .myApplicationReview .tableview {overflow: scroll;}
+    .Profile ul li .btn.btn-default { padding: 15px; }
+    .Profile ul li button {width: 90%;}
+    .Profile {width: 50%;padding: 30px 0;}
+    .chooseProfile {height: 550px;}
+    .profile_reg .myApplication .imageUpload {width: auto;}
+    .profile_reg .myApplication .imageUpload a {left: auto;}
+    .profile_reg .myApplication .imageUpload {width: 200px; display: block;margin: 0 auto;text-align: center;height: 180px;}
+    .profile_reg .myApplication .imageUpload a { bottom: -15%;left:0;}
+    .page_continue {height: 900px!important;}
+    .account_signup2 {height: 800px!important;}
+    .who_we_are {height: 440px;}
+    .our_mission .rentHappyInfo {margin-top: 0;margin-bottom: 40px;}
+    .userPhotos ul {margin: 0 auto;}
+    .CreditReport {display: block;width: 100%;}
+    .paymentForm, .paymentMode { display: block;width: 100%;}
+    .paymentMode .paymentOption li img {width: 50px;}
+    .paymentOption, .paymentOption1 {width: 50%;}
+    .paymentMode .paymentOption1 li:before {top: 10px;left: 13px;}
+    .CreditReport {padding: 30px 0;}
+    .paymentForm {border: none;}
+    .expiration {padding: 0!important; }
+    .paymentForm label {display: block;}
+    .post_new_h .login a img {width: 35px;margin-top: 0;}
+    .my-post-five .scoutDetailsBox, .my-post-five .scoutImage{width: 100%;}
+    .map-box iframe{width: 100%;display: block;}
+    .profile_reg.page_continue.social_profile_reg {height: 850px !important;}
+
+}
+
+@media(max-width:575px) {
+    .faq-area .myApplication{max-width: 100%;}
+
+    .notification.new-notification .media-body { padding-top: 15px !important;}
+    .notification.new-notification .media-body { padding-left: 35px !important;}
+    #new-update-tast h6.chooseUnits{font-size: 12px;}
+    #new-profile-resg .myApplication { width: 100%;}
+    #new-profile-resg .myApplication { width: 90%;}
+    div#myapplication-area .searchFilter ul li a {font-weight: 500;font-size: 12px;}
+    .myApplication .searchFilter ul li a {padding: 5px !important;}
+    .accountSections.new.account_socialInfo-n ul {padding: 0 !important;}
+    .accountSections.new.account_socialInfo-n ul.Tandc li label {font-size: 12px !important;}
+    .screenTenants .qualificationCheck {height: auto !important;}
+    .mynetwork .outerBox .outerboxContent a.butn{width: 100% !important;}
+    .my-post-five span.cusomer_name{display: block;}
+    .uploadPhoto li figure{background-size: cover !important;}
+    .profile_reg .myApplication .logoImg img {right: 5px;width: 77px !important;  top: 25%; }
+    .transUnionFOrm .userProfile span {display: block !important; width: 100%; left: 0 !important;    position: relative;  }
+    .myApplication img { top: 9%;width: 80px;}
+    .header {padding: 15px 20px; }
+    .renthappy, .rent_socially { background: none; }
+    .landingPage.newlanding-page .searchFilter ul li:first-child img {left: 11%; top: 7%;  }
+    .landingPage.newlanding-page .searchFilter ul li #menu3 img {position: absolute;left: 33%;top: 44%;  }
+    .renthappy { background: none!important}
+    h1 {font-size: 33px;}
+    .social ul li {padding: 0px 31px 30px 30px; }
+    .shared li {margin-right: 16px;}
+    .social h6 { font-size: 13px;}
+    .map iframe {width: 100%; height: 350px; }
+    .features ul li {padding: 55px 120px;margin-bottom: 10px;}
+    .postOfScouts li:first-child {padding: 40px 10px;width: 250px;}
+    .postOfScouts li:nth-child(2) {width: 253px;margin-top: 30px;padding: 50px 10px;}
+    .scoutsHotel li .scoutsImg {width: 300px; height: 200px;}
+    .postOfScouts {margin-top: 110%;}
+    .postOfScouts li p {font-weight: 100;font-size: 18px;}
+    .landingPage.newlanding-page .searchFilter {top: 96%;}
+    .docFilter ul li:last-child {margin: 0!important;width: auto!important; }
+    .myDocument .doc1 .btn {padding: 15px 36px;}
+    .myApplication .radiocheck {display: block;}
+    .myApplication .aboutme label { margin: 8px 0;}
+    .personalInfo {padding: 0px 20px 0;}
+    .userInfo .searchFilter ul li:last-child, .myApplication .searchFilter ul li:last-child { margin: 0;  width: auto; }
+    .myApplication .btn.btn-default { font-size: 18px;}
+    .userProfile ul li {font-size: 19px;}
+    .userProfile { margin-left: 0}
+    .userProfile h3, .userInfo .searchFilter {float: none; }
+    .userInfo .searchFilter ul li a { padding: 5px; }
+    .myApplicationReview {background-position: center center; }
+    .Profile {  width: 100%; }
+    .profile_reg { height: 700px;}
+    .profile_reg .myApplication {width: 100%;}
+    .userblueImg img {width: 210px!important;}
+    .account_social1 img,
+    .account_sendmessage .myApplication .logoImg,
+    .account_sendmessage .myApplication .personalInfo {width: 100%;}
+    .who_we_are {height: 490px;}
+    .maintain .rentHappyInfo {position: absolute; bottom: -40px;}
+    .rent_happy_icon img {padding-top: 17%;}
+    .new_task .myApplication .form-control, .new_task figure .btn.btn-default, .new_task textarea, .new_task button {width: 100%;}
+    .userPhotos ul li img, .userPhotos ul, .userPhotos ul li {width: 100%;}
+    .userPhotos ul li {padding-right: 0}
+    .paymentUser {float: none!important;text-align: left!important}
+    .paymentUser li {display: block!important}
+    .paymentMode .paymentOption1 li:before {top: -7px; left: 50%;}
+    .paymentMode .paymentOption li img {width: 33px;}
+    .paymentOption li:first-child img {left: 36px!important;top: 24px!important; }
+    .profileDocument .mydocument { margin: 40px 0 0 0px; }
+    .transUnionFOrm .userProfile ul li {font-size: 14px; }
+    .transUnionFOrm .userProfile span {left: 55%;}
+    .transUnionFOrm .tableview {overflow: scroll;}
+
+}
+
+@media(max-width:375px) {
+    .myApplication .searchFilter ul li:first-child a{border:0;}
+    .account_socialInfo-n ul.Tandc li img {
+    margin: auto !important;
+    padding-left: 10px;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+    .screenTenants .qualificationCheck {
+        width: 100% !important;
+        height: auto !important;
+        padding: 15px 20px !important;
+    }
+    .butn {
+    padding: 5px 25px !important;}
+    .mynetwork .outerBox .outerboxContent a.butn, .mynetwork .outerBox .outerboxContent .divisions.div1 img{width: 80% !important;}
+
+    .bgImageStar {
+    
+    top: 0px;
+    }
+
+    .profile_reg .myApplication .logoImg img{
+    width: 60px !important;
+    top: 27%;
+    }
+    .profile_reg .myApplication .personalInfo .forwardArrow img{width: 70px;}
+    .navbar-brand > img {
+        width: 170px
+    }
+    .social ul li {
+        padding: 0px 0px 30px 30px;
+    }
+    .shared li {
+        font-size: 14px;
+    }
+    .shared li {
+        margin-right: 8px;
+    }
+    .agentInfo h4 {
+        font-size: 22px;
+    }
+    .agent .title .agentInfo {
+        padding-top: 20px;
+    }
+    .landingPage.newlanding-page .searchFilter ul li:first-child img {
+        left: 7%;
+        top: 8%;
+    }
+    .rent_happy_icon img {
+        /*        padding-top: 59%;*/
+        width: 100%;
+    }
+    .docFilter .container {
+        padding: 0
+    }
+
+    .profile_reg .Tandc li:nth-child(2) label {
+        margin-top: 0;
+        font-size: 10px;
+    }
+
+    .paymentOption li:first-child img {
+        left: 0px!important;
+        top: 27px!important;
+    }
+}
+@media(max-width:429px) {
+    .accountSections.new .profile_reg .myApplication .birthday li {
+    width: 31.6%;
+    }
+}
+
+@media(max-width:320px) {
+    .landingPage.newlanding-page .searchFilter ul li:first-child img {
+        left: 0%;
+        top: 7%;
+    }
+    .landingPage.newlanding-page .searchFilter ul li #menu3 img {
+        left: 30%;
+        top: 44%;
+    }
+    .postOfScouts {
+        margin-top: 120%;
+    }
+    .rent_happy_icon img {
+        /*        padding-top: 89%;*/
+    }
+    .social_profile_reg .Tandc li:nth-child(3) {
+        display: block;
+        margin: 0 auto;
+        text-align: center
+    }
+
+    .who_we_are {
+        height: 540px;
+    }
+    .scoutsHotel li .scoutsImg {
+        width: 280px;
+        height: 200px;
+
+    }
+    .maintain .rentHappyInfo {
+        bottom: -80px;
+    }
+}

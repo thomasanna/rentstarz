@@ -432,4 +432,18 @@ return array(
       'subject' => 'user',
     ),
   ),
+   array(
+    'title' => 'Footer',
+    'description' => 'footer',
+    'category' => 'User',
+    'type' => 'widget',
+    'name' => 'user.footer',
+    'isPaginated' => true,
+    'defaultParams' => array(
+      'title' => 'footer',
+    ),
+    'requirements' => array(
+      'subject' => 'user',
+    ),
+  ),
 ) ?>

@@ -1,0 +1,1204 @@
+<style>
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+</style>
+
+
+body {
+    font-family: 'Roboto', sans-serif!important;
+    color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+/*    font-family: 'Muli', sans-serif;*/
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff!important;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #464646;
+    padding-bottom: 40px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    color: #1a1a1a;
+    padding-bottom: 30px;
+}
+
+h4 {
+    font-size: 26px;
+    font-weight: 400;
+   
+}
+
+h5 {
+    font-size:25px;
+    font-weight:normal;
+}
+
+h6 {
+    font-size:20px;
+    font-weight:normal;
+}
+
+section {
+    padding: 40px 0 0;
+}
+
+    /*.table tr:nth-child(even) {
+        background: #fff !important;
+    }
+    .table tr:nth-child(odd) {
+        background: #fcfcfc !important;
+        z-index: 9999;
+    }*/
+
+
+p {
+    font-size: 16px;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300; 
+    
+}
+.form-control{height: 40px !important;}
+body a {
+    text-decoration: none;
+}
+ul{padding-left: 0; margin: 0}
+body a:hover {
+    text-decoration: none;
+}
+
+.section{padding: 90px 0 }
+.txt-center {
+    text-align: center
+}
+
+.btn-default {
+    color: #fff;
+    background-color: #ff2d43;
+    border-color: #fff!important;
+    transition: 0.6s ease all;
+}
+
+.txt-white{color: #fff;}
+.txt-black{color: #1A1A1A;}
+
+.btn-default:hover {
+    color: #fff;
+    background-color: #f61d34;
+    border-color: #fff!important;
+}
+
+label  {
+        font-size: 14px !important;
+    color: #636363 !important;
+    font-weight: 400 !important;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 60px !important;
+    margin-bottom: 0;
+    font-size: 16px !important;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 0px;
+        background: #8796a0 !important;
+            transition: all 0.3s ease-in;
+}
+.btn:hover{
+        background: #f58300 !important;
+    border-color: #f58300 !important;
+        transition: all 0.3s ease-in;
+}
+
+
+.borderright {
+    border-right: 2px solid #000;
+}
+
+.borderBottom {
+    border-bottom: 2px solid #000;
+}
+
+.grey_section {
+	background-color:#f3f3f3;
+}
+.white_section{background-color: #fff;}
+.paddingBottom{padding-bottom: 0}
+.grey{background-color: #a4a4a4!important}
+
+.txt-orange{color: #f58300!important;}
+
+
+@media(max-width:768px){
+    h3{padding-bottom: 25px; font-size: 25px;}
+    section {
+    padding: 30px 0 0;
+}
+}
+
+
+@media(max-width:767px){
+    
+    h6{font-size: 16px;}
+}
+
+
+/*NEW HTML NIKHIL*/
+
+.userdetails .nav>li.active a{
+    color: #f38323!important;
+}
+.screenTenants .qualificationCheck {
+    background-image: url(../images/newpage/Asset%203.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px;
+    width: 60%;
+    color: #333333;
+    height: 600px;
+}
+.screenTenants .qualificationCheck h5 {
+    margin-bottom: 20px;
+}
+.screenTenants .qualificationCheck li {
+    display: block;
+    margin-bottom: 20px;
+}
+.butn {
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #f7931e;
+    transition: .5s all ease;
+    display: block;
+    
+    text-align: center;
+}
+.radioButns input[type=radio] {
+    margin-bottom: 20px;
+}
+input[type=radio]:checked + label{ 
+    color:#f7931e;
+    font-weight: 400;
+}
+input[type=radio] + label{ 
+    font-weight: 400;
+    margin-left: 10px;
+    font-size: 16px;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+a.butn:hover {
+    background-color: #1073b9;
+}
+.none {
+    display: none;
+}
+
+.screenTenants .myApplication {
+    border: none;
+}
+.screenTenants .myApplication .aboutme label {
+    color: #808080;
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+}
+ul.inline {
+    display: inline-block;
+    margin-left: 30px;
+}
+.addproperties .userdetails .nav li.active:hover a {
+    color: #fff!important;
+}
+.aboutProperty {
+    margin-top: 40PX;
+}
+.GallerySelector {
+    padding: 30px 20px;
+    margin-bottom: 40px;
+}
+.GallerySelector a.tablinks {
+    font-size: 20px;
+    margin: 0 20px;
+    color: #000;
+    cursor: pointer;
+}
+.GallerySelector a.tablinks.active {
+    color: #F28300;
+}
+.GallerySelector a:hover {
+    color: #F28300;
+    text-decoration: none;
+}
+.tabcontent h5 {
+    color: #000;
+    font-size: 22px;
+    margin-left: 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e6e6e6;
+}
+.tab h5 span img {
+    margin-right: 10px;
+    width: 50px;
+    vertical-align: middle;
+}
+.aboutme .radioButns label {
+    display: inline-block!important;
+    margin: 10px!important;
+}
+.qualificationCheck .radioButns .loadmore {
+    display: block;
+    color: #999999;
+    text-decoration: inherit;
+}
+.fifthSlide .form-group input {
+    margin-bottom: 20px;
+}
+.fifthSlide .form-group {
+    padding-right: 30px;
+}
+.fifthSlide textarea {
+    width: 100%;
+    margin: 10px 0!important;
+    font-size: 14px;
+    color: #999;
+    border: 1px solid #b1b1b1;
+    background-color: #fff;
+}
+
+.myApplication .personalInfo input.rentalAppSearch {
+    padding: 15px;
+    color: #000;
+    border: 1px solid #ccc!important;
+    width: 100%;
+}
+.RentalAPP .searchBox {
+    display: inline-block;
+    padding-left: 30px;
+    width: 40%;
+}
+.RentalAPP .searchFilter ul {
+    width: 100%;
+    text-align: left;
+    float: none!important;
+}
+.RentalAPP .searchFilter {
+	float: none!important;
+}
+.RentalAPP .tableview {
+    margin-top: 30px;
+}
+.RentalAPP  button {
+    margin-top: 0!important;
+}
+.RentalAPP .tableview tr td {
+    vertical-align: middle;
+}
+.RentalAPP .imaGe img {
+    position: relative;
+    width: 120px;
+    margin-top: 20px;
+}
+.searchFilter .item .filterLinks.active {
+    color: #f38323;
+}
+.filterlinks.active {
+    color: #f38323;
+}
+
+.myApplication h3 span img {
+    position: relative;
+    width: 120px;
+    margin-right: 10px;
+}
+.faqColumn h5 {
+    color: #000;
+    margin-bottom: 20px;
+}
+.personalInfo .faqColumn p {
+    color: #000;
+    margin-bottom: 20px!important;
+} 
+.personalInfo .faqStart {
+    position: relative;
+}
+.personalInfo .faqStart img.firstImage {
+    position: absolute;
+    top: -20px;
+    right: 25%;
+    width: 300px;
+    z-index: -1;
+}
+.personalInfo .faqStart img.secondImage {
+    position: absolute;
+    bottom: 0px;
+    top: auto;
+    right: 10%;
+    width: 300px;
+    z-index: -1;
+}
+.personalInfo .faqStart img.thirdImage {
+    position: absolute;
+    top: 0px;
+    right: 25%;
+    width: 300px;
+}
+.personalInfo .faqStart p {
+    color: #000;
+}
+button.accordion {
+    margin-top: 10px!important;
+}
+.accordion {
+    background-color: transparent;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+/*    border: 1px solid #e0e0e0;*/
+}
+.panel {
+    padding: 20px 18px;
+    display: none;
+    background-color: transparent;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+button.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+.panel p {
+    font-size: 16px;
+}
+.FAQSection .faqColumn {
+    margin-top: 30px;
+}
+.FAQSection .faqColumn:first-child {
+	margin-top: 0;
+}
+.contactForm {
+    position: relative;
+}
+.contactForm img.contactBG {
+    position: absolute;
+    right: 10%;
+    top: 20px;
+    width: 400px;
+}
+.contactForm .cForm {
+    width: 50%;
+}
+.contactForm .cForm  input {
+    margin-bottom: 20px;
+}
+.contactForm .cForm textarea {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+}
+
+/*
+.docFilter {
+    margin-bottom: 40px;
+}
+*/
+.linkZ {
+    padding: 30px 30px 10px 30px;
+    position: relative;
+}
+.linkZ:before {
+    position: absolute;
+    content: '';
+    background-image: url(../images/newpage/figure.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 20%;
+    top: 0;
+    width: 250px;
+    height: 100%;
+}
+.linkZ li {
+    display: block;
+    margin-bottom: 20px;
+    color: #000;
+}
+.linkZ li span {
+    font-weight: 400!important;
+}
+.taskLink {
+    margin-top: 40px;
+}
+.taskLink input {
+    margin-bottom: 20px;
+}
+.taskLink figure textarea {
+    height: auto!important;
+    width: 100%!important;
+}
+.taskLink p.txt-black {
+	text-align: center;
+    padding-bottom: 20px;
+}
+.taskLink figure input {
+    width: 100%!important;
+}
+.new-task3 .myApplication {
+    position: relative;
+}
+.new-task3 .myApplication span.bgIMG {
+    position: absolute;
+    left: -100px;
+    top: 30%;
+}
+.new-task3 .myApplication span.bgIMG img {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+}
+.new-task3 h5 {
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+.new-task3 .myApplication h5 {
+	padding-left: 30px;
+    margin-bottom: 0;
+}
+.new-task3 .btn {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 30px;
+    color: #fff;
+    background-color: #b3b3b3;
+}
+.serviceAgent {
+    padding: 0 40px;
+}
+.serviceAgent .sAgentForm {
+    margin-top: 30px;
+}
+p.center {
+    text-align: center;
+    padding-top: 15px;
+}
+.serviceAgent .sAgentForm input {
+    width: 100%!important;
+}
+.serviceAgent .sAgentForm .plusSign {
+	position: relative;
+}
+.serviceAgent .sAgentForm .or {
+    color: #000;
+    text-align: center;
+    margin: 20px 0!important;
+} 
+.new-task3 .tableview {
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.new-task3 .tableview td {
+    vertical-align: bottom;
+    padding:15px 30px;
+}
+.new-task3 .tableview td p {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+}
+.new-task3 .tableview td span {
+    color: #666666;
+    font-size: 16px;
+}
+.new-task3 .tableview td .imaGe {
+    margin-bottom: 10px;
+}
+.new-task3 .tableview td .imaGe img {
+    width: 100px;
+}
+/*
+.addproperties .userdetails figure span {
+    width: 70%;
+    margin: 0 auto;
+}
+*/
+.screenTenants h5.chooseUnits {
+    margin: 30px 0;
+    color: #000;
+    font-size: 20px;
+    padding-left: 30px;
+}
+.screenTenants h5.chooseUnits span img{
+    width: 40px;
+    margin-right: 10px;
+        margin-top: -20px;
+}
+
+/*TASK DEFINED*/
+
+.taskDefined {
+    position: relative;
+}
+.bgImageStar {
+        position: absolute;
+    left: 80px;
+    top: -100px;
+    z-index: 9999999999999 !important;
+}
+.bgImageStar img {
+    width: 130%;
+}
+.taskDefined h4.taskHeading {
+    color: #5f5f5f;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 30px !important;
+    padding-bottom: 10px;
+    font-size: 24px;
+    max-width: 930px !important;
+    margin: 0 auto;
+}
+.taskDefined .taskDefinedInner {
+        border: 1px solid #e6e6e6;
+    padding: 0px 30px;
+    margin-bottom: 40px;
+    position: relative;
+    max-width: 930px;
+    margin: 0 auto;
+}
+.taskDefined .taskDefinedInner .bgIMAGE {
+    position: absolute;
+    bottom: 20%;
+    right: -200px;
+}
+.taskDefined .taskDefinedInner .bgIMAGE img {
+    width: 200px;
+}
+.taskDefined .taskDefinedInner {
+    color: #4d4d4d;
+    margin-bottom: 40px;
+}
+.taskDefined .taskDefinedInner .col-sm-9 {
+    border-left: 1px solid #e6e6e6;
+}
+.taskDefinedInner .headings p {
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 20px!important;
+    font-size: 18px;
+    padding-top: 35px;
+}
+.taskDefinedInner .headings span {
+    display: block;
+    margin: 5px 0;
+    font-weight: 400;
+    font-size: 15px;
+}
+.taskDefinedInner .iconHolders {
+    word-wrap: break-word;
+    margin-top: 30px;
+}
+.taskDefinedInner .iconHolders ul {
+    list-style: none;
+}
+.taskDefinedInner .iconHolders ul li {
+        padding: 7px 0 4px 0;
+    vertical-align: middle;
+    padding-left: 42px;
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.taskDefinedInner .iconHolders ul li span {
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+.taskDefinedInner .iconHolders ul li span img {
+    width: 30px;
+}
+.taskDetails {
+    padding-left: 50px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+.taskDetails .userTask {
+    max-width: 130px;
+    margin-bottom: 10px;
+}
+.taskDetails .taskImage {
+    margin-top: 30px;
+}
+.taskDetails .taskImage img {
+    max-width: 350px;
+    margin-bottom: 20px;
+}
+.taskDetails .taskUserName {
+    color: #999999;
+}
+.taskDetails .userAddress {
+    color: #333333;
+    font-size: 16px;
+}
+
+/*Landlord Homepage*/
+
+.txt-left {
+    text-align: left!important;
+}
+.landlordScout .scoutBox {
+    border: 1px solid #e6e6e6;
+    display: table;
+    width: 100%;
+    color: #000;
+    max-width: 850px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.landlordScout .scoutBox .colorBox {
+    background-color: #8796a0;
+    display: table-cell;
+    width: 10%;
+    vertical-align: top;
+    transition: .2s ease all;
+}
+.landlordScout .scoutBox .colorBox h4 {
+    display: none;
+}
+.landlordScout .scoutBox .colorBox:hover {
+    background-color: #f8931f;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.landlordScout .scoutBox .colorBox:hover img {
+    display: none;
+}
+.landlordScout .scoutBox .colorBox:hover h4 {
+    display: block;
+}
+.landlordScout .scoutBox .colorBox img {
+    width: 70px;
+    margin: 0 auto;
+    display: block;
+    padding-top: 20px;
+}
+.landlordScout .scoutBox .colorBox h4 span {
+    display: block;
+    color: #fff;
+    text-align: center;
+}
+.landlordScout .scoutBox .scoutDetailsBox {
+    display: table-cell;
+    width: 60%;
+    vertical-align: middle;
+    padding: 0 40px;
+}
+.landlordScout .scoutBox .scoutImage {
+    display: table-cell;
+    width: 30%;
+    vertical-align: middle;
+    padding: 10px 0 20px 10px;
+    border-left: 1px solid #e6e6e6;
+    padding-left: 30px;
+}
+.landlordScout .scoutBox .scoutImage img {
+      margin: 5px 0 !important;
+    width: 100px !important;
+
+
+}
+.landlordScout .scoutBox:nth-child(even){background-color: #fff;}
+.landlordScout .scoutBox:hover{background-color: #fafafa;transition: all 0.3s ease-in;}
+
+.landlordScout .scoutBox .active {
+    background-color: #f8931f;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.d-none{display: none !important;}
+.landlordScout .scoutBox .colorBox .active{display: block;}
+
+.scoutImage p {
+    font-weight: 500;
+}
+.landlordScout .scoutBox .scoutDetailsBox .scoutdescription {
+    margin: 30px 0;
+}
+.landlordScout .scoutBox .scoutIcons p {
+    display: inline-block;
+    margin: 0 10px;
+}
+.landlordScout .scoutBox .scoutIcons p i {
+    top: 2px;
+}
+.new_task.Updated .myApplication {
+    width: 80%;
+    margin-left: auto;
+    position: relative;
+}
+.new_task.Updated .myApplication span.bgIMAGE {
+	position: absolute;
+    left: -50px;
+}
+.new_task.Updated .myApplication span.bgIMAGE img {
+    width: 120px;
+}
+.new_task.Updated h6.chooseUnits {
+    color: #000;
+    width: 80%;
+    margin: 0 0 30px auto;
+    border-bottom: 2px solid #e6e6e6;
+}
+.new_task.Updated h6.chooseUnits span img {
+    width: 40px;
+    margin-right: 10px;
+}
+.new_task.Updated button {
+    width: 80%;
+    margin: 50px 0 0 auto;
+    display: block;
+}
+.Mtop50 {
+    margin-top: 50px;
+}
+.allAppList {
+    border-top: 2px solid #e6e6e6;
+    margin-top: 20px;
+}
+.allAppList .allAppInner {
+    width: 70%;
+    padding-top: 30px;
+    border-bottom: 2px solid #e6e6e6;
+}
+.allAppList img {
+    position: relative!important;
+}
+.allAppList .shortlist .iMAGe {
+    width: 150px;
+}
+.chooseButns a {
+    display: inline-block;
+}
+.chooseButns a img {
+    width: 50px;
+    margin: 0 10px;
+} 
+.allAppList .headings {
+    color: #1a1a1a;
+    padding-left: 50px;
+}
+.allAppList .headings span {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+
+/*AGENT NETWORK PAGE*/
+
+.mynetwork {
+    position: relative;
+}
+.mynetwork span.bgIMG {
+    position: absolute;
+    left: 13%;
+    top: 160px;
+}
+.mynetwork span.bgIMG img {
+    width: 120px;
+}
+.mynetwork .TopBox .topboxInner {
+	display: inline-block;
+}
+.mynetwork .TopBox .topboxInner h4 {
+    color: #989898;
+}
+.mynetwork .TopBox .topboxInner h4 span {
+    color: #f7931e;
+}
+.mynetwork .TopBox .topboxInner .butns .butn {
+    display: inline-block;
+}
+.mynetwork .butn {
+    padding: 15px 25px;
+    margin: 0 5px;
+    font-size: 16px;
+}
+.mynetwork .TopBox .topboxInner input {
+    padding: 15px 30px;
+    border: 2px solid #e6e6e6;
+    margin: 0 10px;
+}
+.mynetwork .TopBox .topboxInner .butns .butn:hover {
+    color: #fff;
+}
+.mynetwork .TopBox .topboxInner span {
+    color: #000;
+}
+.mynetwork .outerBox {
+	margin-top: 20px;
+    border: 1px solid #e6e6e6;
+    position: relative;
+}
+.mynetwork .outerBox .outerboxContent .media-body {
+	display: table;
+    width: 100%;
+    position: relative;
+    padding-left: 15px;
+}
+.mynetwork .outerBox .outerboxContent .media-body:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #23b471;
+    top: 10px;
+    left: 0;
+    border-radius: 50%;
+    z-index: 9999;
+}
+.mynetwork .outerBox .outerboxContent .media-body .divisions {
+    display: table-cell;
+    vertical-align: middle;
+}
+.mynetwork .outerBox .outerboxContent .divisions.div1 {
+    width: 20%;
+}
+.mynetwork .outerBox .outerboxContent .divisions.div1 p {
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0;
+}
+.mynetwork .outerBox .outerboxContent .divisions.div1 p span {
+    color: #999999;
+}
+.mynetwork .outerBox .outerboxContent .divisions.div1 img {
+    width: 100%;
+}
+.mynetwork .outerBox .outerboxContent .divisions.div2 {
+    width: 60%;
+}
+.mynetwork .outerBox .outerboxContent .divisions.div3 {
+    width: 20%;
+    border-left: 1px solid #e6e6e6;
+    padding-left: 30px;
+}
+.mynetwork .outerBox .outerboxContent .divisions.div3 .mess {
+    text-transform: uppercase;
+    color: #9f9f9f;
+}
+.mynetwork .outerBox .outerboxContent {
+	padding:15px 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.mynetwork .outerBox .outerboxContent ul {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+}
+.mynetwork .outerBox .outerboxContent ul li {
+    display: inline-block;
+    padding: 12px 20px 20px 0;
+}
+.mynetwork .outerBox .outerboxContent ul li label {
+    display: block;
+    width: 100%;
+    padding: 12px 12px;
+    border-bottom: 1px solid #c7c7c7;
+    color: #6c6c6c;
+    font-weight: 500;
+    margin: 0 20px 17px 20px;
+}
+.mynetwork .outerBox .outerboxContent ul li span {
+    display: block;
+    text-align: center;
+    width: 100%;
+    color: #9f9f9f;
+    margin-right: 20px;
+}
+.mynetwork .outerBox .outerboxContent ul li {
+    padding-right: 0 !important;
+}
+@media screen and (min-width: 1920px){
+    .mynetwork .outerBox .outerboxContent ul li label {
+        padding: 12px 20px;
+        font-size: 18px;
+    }
+}
+
+
+@media(max-width:1200px){
+    .contactForm img.contactBG {
+        width: 300px;
+    }
+    .personalInfo .faqStart img.secondImage, .personalInfo .faqStart img.firstImage , .personalInfo .faqStart img.thirdImage{
+        width: 240px;
+    }
+    .taskDetails {
+        padding-left: 20px;
+    }
+    .taskDetails .taskImage img {
+        max-width: 350px;
+    }
+    .taskDefinedInner .iconHolders ul li {
+        padding-left: 50px;
+        padding-bottom: 30px;
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+    .taskDefinedInner .iconHolders ul li span img {
+        width: 40px;
+    }
+    .taskDefinedInner .iconHolders ul li span {
+        top: 12px;
+    }
+    .mynetwork span.bgIMG {
+        display: none;
+    }
+}
+@media(max-width:991px){
+    .butn {
+        font-size: 16px;
+    }
+    
+    .tabcontent h5 {
+        font-size: 18px;
+    }
+    .screenTenants .qualificationCheck h5 {
+        font-size: 16px;
+    }
+    .fifthSlide textarea {
+        font-size: 15px!important;
+    }
+    .RentalAPP .searchBox {
+        display: block;
+        padding-left: 0;
+        margin-top: 20px;
+        width: 100%;
+    } 
+    .myApplicationReview table {
+        display: block;
+        overflow-x: auto;
+    }
+    .contactForm img.contactBG {
+        width: 240px;
+        top: 50px;
+        z-index: -1;
+    }
+    .personalInfo .faqStart img.firstImage {
+        right: 15%;
+    }
+    .personalInfo .faqStart img.thirdImage {
+        right: 10%;
+    }
+    .taskDetails .taskImage img {
+        width: 100%;
+    }
+    .taskDefined .taskDefinedInner .bgIMAGE img {
+        display: none;
+    }
+    .taskDefined .taskDefinedInner .col-sm-9 {
+        border: none;
+    }
+    .taskDetails {
+        margin-top: 20px;
+        border-top: 1px solid #e6e6e6;
+        padding-top: 20px;
+        padding-left: 0;
+    }
+    .landlordScout .scoutBox .colorBox img {
+        width: 50px;
+    }
+    .allAppList .allAppInner {
+        width: 100%;
+    }
+    .mynetwork .outerBox .outerboxContent .divisions.div2 {
+        display: block;
+    }
+    .mynetwork .outerBox .outerboxContent .divisions.div1 {
+        display: block;
+        width: 100%;
+    }
+    .mynetwork .outerBox .outerboxContent .divisions.div1 img {
+    width: 200px;
+}
+
+}
+@media(max-width:767px){
+    
+    .bgImageStar img{width: 100% !important;}
+    .bgImageStar{
+        left:0;right: 0;margin: auto;top: 0;
+    } 
+
+    .contactForm .cForm {
+        width: 100%;
+    }
+    .agentFormButn {
+        margin-top: 20px;
+    }
+    .screenTenants h5.chooseUnits {
+        padding-left: 0px;
+    }
+    .landlordScout .scoutBox .scoutImage {
+        display: block;
+        width: 100%;
+    }
+    .landlordScout .scoutBox .colorBox {
+        vertical-align: middle;
+        height: 60px;
+        display: block;
+        width: 100%;
+    }
+    .landlordScout .scoutBox .colorBox h4 {
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 20px;
+    }
+    .landlordScout .scoutBox .colorBox h4 span {
+        display: inline-block;
+    }
+    .landlordScout .scoutBox .colorBox img {
+        padding: 10px 0;
+        width: 40px;
+    }
+    .landlordScout .scoutBox .scoutDetailsBox {
+        display: block;
+        width: 100%;
+        margin: 20px 0;
+        padding: 0 20px;
+    }
+    .new_task.Updated .myApplication span.bgIMAGE {
+        display: none;
+    }
+    .new_task.Updated .myApplication {
+        width: 100%;
+    }
+    .new_task.Updated h6.chooseUnits {
+        width: 100%;
+    }
+    .new_task.Updated button {
+        width: 100%;
+    }
+    .mynetwork .outerBox .outerboxContent .media-body {
+        padding: 0;
+    }
+    .mynetwork .outerBox .outerboxContent .media-body:before {
+        right: 0;
+        left: auto;
+    }
+    .mynetwork .outerBox .outerboxContent .divisions.div3 {
+        display: block;
+        width: 100%;
+    }
+    .mynetwork .outerBox .outerboxContent .divisions.div2 {
+        width: 100%;
+    }
+    .mynetwork .outerBox .outerboxContent .divisions.div3 {
+        padding: 0;
+        border: none;
+    }
+    .mynetwork .outerBox .outerboxContent ul {
+        text-align: center;
+        display: block;
+    }
+    .mynetwork .outerBox .outerboxContent ul li {
+        padding: 0 !important;
+        width: 100%;
+        vertical-align: top;
+        text-align: left;
+    }
+    .mynetwork .outerBox .outerboxContent ul li label {
+        text-align: center;
+        margin: 0 0 17px 0;
+    }    
+    .mynetwork .outerBox .outerboxContent .divisions.div3 .mess {
+        text-align: center;
+        border: 2px solid #e6e6e6;
+        margin-top: 20px;
+        padding: 20px 0;
+    }
+    .mynetwork .TopBox .topboxInner {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .mynetwork .outerBox .outerboxContent .divisions.div1 img {
+        margin: 0 auto;
+    }
+    .mynetwork .outerBox .outerboxContent .divisions.div1 {
+        text-align: center;
+    }
+    .mynetwork .TopBox .topboxInner .butns {
+        margin-top: 20px;
+    }
+    .mynetwork .TopBox .topboxInner .butns .butn {
+        display: block;
+        margin-bottom: 10px;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
