@@ -29,10 +29,10 @@
                 <div id="navbar2" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active">
-                            <a href="index.html">SIGNUP</a>
+                            <a href="<?php echo $this->baseUrl(); ?>/signup">SIGNUP</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)">LOGIN</a>
+                            <a href="<?php echo $this->baseUrl(); ?>/login/return_url/64-Lw%3D%3D">LOGIN</a>
                         </li>
                       
                     </ul>
@@ -403,7 +403,7 @@
                 <div class="col-sm-7">
                     <div>
                         <h4 class="txt-black">JOIN OUR LIST OR SIMPLY SEND US A MESSAGE </h4>
-                        <div class="contact_message" style="padding:0px 0px 12px 0px">fhgfhgh</div>
+                        <div class="contact_message" style="padding:0px 0px 12px 0px"></div>
                         <form action="">
                             <input type="text" class="form-control your_name" placeholder="Enter Your Name">
                             <input type="text" class="form-control your_email" placeholder="Enter Your Email id">
