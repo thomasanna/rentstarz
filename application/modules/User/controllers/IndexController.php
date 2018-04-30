@@ -14850,7 +14850,7 @@ $video_tmp_name = $_FILES['video']['tmp_name'];
 	public function apartmentsAction(){
 
         $this->_helper->viewRenderer->setNoRender(false);
-        $this->_helper->layout->setLayout('common_layout');
+        $this->_helper->layout->setLayout('common_new');
         $propertyTable          =  Engine_Api::_()->getDbtable('propertylist', 'user');
         $propertycountrtyTable  =  Engine_Api::_()->getDbtable('propertycountry', 'user');
         $propertystateTable     =  Engine_Api::_()->getDbtable('propertystate', 'user');

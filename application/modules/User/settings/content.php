@@ -446,4 +446,17 @@ return array(
       'subject' => 'user',
     ),
   ),
+    'title' => 'Header',
+    'description' => 'header',
+    'category' => 'User',
+    'type' => 'widget',
+    'name' => 'user.header',
+    'isPaginated' => true,
+    'defaultParams' => array(
+      'title' => 'header',
+    ),
+    'requirements' => array(
+      'subject' => 'user',
+    ),
+  ),
 ) ?>
