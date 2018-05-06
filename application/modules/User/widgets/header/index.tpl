@@ -3,9 +3,110 @@ $userHelperObj  = $this->getHelper('User');
 $userdetails    = $userHelperObj->getuserDetails($this->viewer->getIdentity());
 $profileType    = $userdetails['profile_type'];
     
-
+    $useragent=$_SERVER['HTTP_USER_AGENT'];
+    $iPod = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
+    $iPhone = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+    $iPad = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
+    $Android = stripos($_SERVER['HTTP_USER_AGENT'],"Android");
+    if( $iPod || $iPhone || $iPad || $Android)  {
+        $dev_type= 1; // mobile
+    }
+    else{
+        $dev_type= 2; // system
+    }
+    if($iPhone){
+        $device_name = 'iPhone';
+    }
+    elseif($Android){
+        $device_name = 'Android';
+    }
+    else{
+        $device_name = 'Web';
+    }
+    $userHelperObj  = $this->getHelper('User');
+    $memberPackage  = $userHelperObj->getmemberpackage($this->viewer->getIdentity());
+    $package_type   = $memberPackage ->package_type;
+    $scoutCount     = $userHelperObj->getscoutcount($this->viewer->getIdentity());
+    $userdetails    = $userHelperObj->getuserDetails($this->viewer->getIdentity());
+    $profileType    = $userdetails['profile_type'];
+    $settings                         = Engine_Api::_()->getApi('settings', 'core');
+    $user_premiumLevelProvision       = $settings->user_premiumLevelProvision;
+    $user_basicPropertyLimit          = $settings->user_basicPropertyLimit;
+    $user_landlordProPropertyLimit    = $settings->user_landlordProPropertyLimit;
+    $user_basicScoutLimit             = $settings->user_basicScoutLimit;
+    $user_landlordProScoutLimit       = $settings->user_landlordProScoutLimit;
+    $introHelperObj  = $this->getHelper('Intro');
+    $introText      = $introHelperObj->introtext($profileType);
 
 ?>
+ <!-- For tichat -->
+        <?php
+            $tichat_viewer        =   Engine_Api::_()->user()->getViewer();
+            if($tichat_viewer->getIdentity()):
+                $tichat_viewHelperObj      =   $this->getHelper('ItemPhoto');
+                $tichat_profileNoPicInfo   =   $tichat_viewHelperObj->getNoPhoto($viewer);
+                $tichat_type               =   'thumb.icon';
+                $tichat_safeName           =   ( $tichat_type ? str_replace('.', '_', $tichat_type) : 'main' );
+                $tichat_src                =   $tichat_viewer->getPhotoUrl($type);
+                if($tichat_src):
+                $tichat_src                =   $tichat_src;
+                else:
+                $tichat_src                =   $tichat_viewHelperObj->getNoPhoto($tichat_viewer,$tichat_safeName);
+                endif;
+        ?>
+                <script>
+                    var viewerId            =   '<?php echo $tichat_viewer->getIdentity();?>';
+                    var viewerName          =   '<?php echo $tichat_viewer->displayname;?>';
+                    var viewerProfilePic    =   '<?php echo $tichat_src ?>';
+                    var viewer_identity     =    viewerId;
+                    var devType             =   '<?php echo $dev_type ?>';
+                    var baseUrl             =   '<?php echo $this->baseUrl(); ?>';
+                    var viewer_profile_type =   '<?php echo $userdetails['profile_type']; ?>';
+                    var viewer_video_payment=   '<?php echo $userdetails['video_payment']; ?>';  //alert(viewer_video_payment);
+                    var viewer_package_type =   '<?php echo $package_type; ?>';
+                    var user_premiumLevelProvision =   '<?php echo $user_premiumLevelProvision; ?>'; //if value is 1 ->promotion time,if value is 2->not promotion time
+                    var scoutCount                 =   '<?php echo $scoutCount;?>';
+                    var user_basicScoutLimit       =   '<?php echo $user_basicScoutLimit;?>';
+                </script>
+
+                <link rel='stylesheet' href='<?php echo $this->baseUrl(); ?>/application/modules/User/externals/chat/css/style.css' type='text/css'/>
+                <link rel='stylesheet' href='<?php echo $this->baseUrl(); ?>/application/modules/User/externals/chat/css/responsive-style.css' type='text/css'/>
+                <link rel='stylesheet' href='<?php echo $this->baseUrl(); ?>https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.7.0/css/perfect-scrollbar.min.css' type='text/css'/>
+
+                <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/chat/js/sails.io.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.7.0/js/perfect-scrollbar.jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+                <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/chat/js/config.js"></script>
+                <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/chat/js/helper.js"></script>
+                <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/chat/js/chatFunctions.js"></script>
+                <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/chat/js/websocketRequest.js"></script>
+                <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/chat/js/websocket.js"></script>
+                <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/chat/js/chatPageScripts.js"></script>
+                <?php
+                    $iPod       = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
+                    $iPhone     = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+                    $iPad       = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
+                    if($iPod || $iPhone || $iPad) {
+
+                    } else {
+                ?>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/adapterjs/0.15.0/adapter.min.js"></script>
+                <?php } ?>
+                <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/chat/js/webrtc.js"></script>
+
+        <?php endif;?>
+
+    <!-- For tichat -->
+<input type="hidden" class="apartement_street" id="street_number" ></input>
+        <input type="hidden" class="apartement_route" id="route"></input>
+        <input type="hidden" class="apartement_neighborhood" id="neighborhood" ></input>
+        <input type="hidden" class="apartement_city" id="locality"></input>
+        <input type="hidden" class="apartement_sublocality_level_1 county" id="sublocality_level_1"></input>
+        <input type="hidden" class="apartement_state" id="administrative_area_level_1">
+        <input type="hidden" class="apartement_zip" id="postal_code">
+        <input type="hidden" class="apartement_country" id="country">
+        <input type="hidden" class="apartement_latitude" id="latitude">
+        <input type="hidden" class="apartement_longitude" id="longitude">
 
   <div class="header">
         <div class="container-fluild">

@@ -25,6 +25,9 @@
     <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/js/bootstrap.min.js"></script>
     <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/js/slick.min.js"></script>
     <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/js/paginathing.min.js"></script>
+ 
+    
+    
 <!--
     <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/js/custom.js"></script>
 -->
@@ -134,4 +137,5 @@
 
 </body>
 </html>
+
 

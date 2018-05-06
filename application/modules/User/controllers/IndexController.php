@@ -1229,7 +1229,7 @@ public function tenantsAction() {
         $shareupload  = $this->_getParam('shareuploads');
         $feeduploads  = $this->_getParam('feeduploads');
         $aAttachment  = array();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
 
         $feedupload_session   =  json_decode($this->user_readsession($feeduploads), true);
         $shareupload_session  =  json_decode($this->user_readsession($shareupload), true);
@@ -1664,11 +1664,9 @@ public function tenantsAction() {
 
     public function propertydetailAction($pid) {
 
-    if( !$this->_helper->requireUser()->isValid() ) {
-          return;
-        }
+ 
         $this->_helper->viewRenderer->setNoRender(false);
-        $this->_helper->layout->setLayout('property_detail');
+        $this->_helper->layout->setLayout('property_detail_new');
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $property_id        =   $this->_getParam('id');
         $admin              =   $this->_getParam('admin');
@@ -1679,8 +1677,8 @@ public function tenantsAction() {
         else{
             $this->view->is_from_admin = 0;
         }
-        $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        $viewer     = Engine_Api::_()->user()->getViewer(); 
+        date_default_timezone_set('EST');
         $propertyTable        =  Engine_Api::_()->getDbtable('propertylist', 'user');
         $propertyimageTable   =  Engine_Api::_()->getDbtable('propertyimages', 'user');
         $propertyRequestTable =  Engine_Api::_()->getDbtable('propertyrequest', 'user');
@@ -1690,7 +1688,7 @@ public function tenantsAction() {
                         ->joinLeft(array('user'=>'engine4_users'),'plist.property_owner_id=user.user_id',array('bg_verified'))
                         ->joinLeft(array('country'=>'engine4_property_countries',),'plist.prty_country_id=country.country_id',array('prty_country'))
                         ->joinLeft(array('state'=>'engine4_property_states',),'plist.prty_state_id=state.state_id',array('prty_state'))
-                        ->joinLeft(array('city'=>'engine4_property_city',),'plist.prty_city_id=city.city_id',array('prty_city'))
+                        ->joinLeft(array('city'=>'engine4_property_city',),'plist.prty_city_id=city.city_id',array('prty_city','latitude','longitude'))
                         ->joinLeft(array('pimages'=>'engine4_property_images'),'plist.id=pimages.property_id',array('image'))
                         ->joinLeft(array('smartmovePrty'=>'engine4_smartmoveapi_property'),'plist.id=smartmovePrty.Pid',array('UnitNumber'))
                         ->where('plist.id=?' , $property_id)
@@ -1700,13 +1698,21 @@ public function tenantsAction() {
         if(empty($propertyData)){
                 return $this->_forward('notfound');
         }
-        if($viewer->level_id  != 1 ){
-            if($propertyData -> property_owner_id != $viewer_id){
-                if($propertyData -> landlord_enable == 0 || $propertyData -> enable == 0){
-                    return $this->_forward('notfound');
-                }
-            }
-        }
+        if($viewer_id){exit("1111");
+			if($viewer->level_id  != 1 ){ // if landlord
+				if($propertyData -> property_owner_id != $viewer_id){ // if viewer is not owner
+					if($propertyData -> landlord_enable == 0 || $propertyData -> enable == 0){ //  return false if not enabled
+						return $this->_forward('notfound');
+					}
+				}
+			}
+		}
+		else{
+			if($propertyData -> landlord_enable == 0 || $propertyData -> enable == 0){ //  return false if not enabled
+							return $this->_forward('notfound');
+			}
+	   }
+        
         if($viewer_id){
             $propertyReq_select = $propertyRequestTable->select()
                         ->where('property_id = ?', $property_id)
@@ -1920,7 +1926,7 @@ public function tenantsAction() {
         $this->_helper->viewRenderer->setNoRender(true);
         $viewer     = Engine_Api::_()->user()->getViewer();
         $viwer_id   = Engine_Api::_()->user()->getViewer()->getIdentity();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $aResult    =  array();
         $aData      = $this->_request->getPost();
         try{
@@ -2536,7 +2542,7 @@ public function tenantsAction() {
         $fileids    = explode(",",$fileids);
         $user_id    = Engine_Api::_()->user()->getViewer()->getIdentity();
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $aResult=array();
         $shareupload   = $this->_getParam('shareuploads');
         $feeduploads   = $this->_getParam('feeduploads');
@@ -3107,7 +3113,7 @@ public function tenantsAction() {
         $this->_helper->layout->disableLayout();
         $viewerid   = Engine_Api::_()->user()->getViewer()->getIdentity();
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $aData                  =   $this->_request->getPost();
         $doc_path               =   $aData['doc_path'];
         $subject_id             =   $aData['subject_id'];
@@ -3313,7 +3319,7 @@ public function tenantsAction() {
         $this->_helper->layout->disableLayout();
         $this->_helper->viewRenderer->setNoRender(true);
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viwer_id         =  Engine_Api::_()->user()->getViewer()->getIdentity();
         $aResult          =  array();
         $aData            =  $this->_request->getPost();
@@ -3353,7 +3359,7 @@ public function tenantsAction() {
     $this->_helper->viewRenderer->setNoRender(false);
     $this->_helper->layout->setLayout('common_layout');
     $this->view->viewer = $viewer = Engine_Api::_()->user()->getViewer();
-    date_default_timezone_set($viewer->timezone);
+    date_default_timezone_set('EST');
     $tmpResultData     =  array();
     $tmpArrayFile      =  array();
     $resultData        =  array();
@@ -3462,7 +3468,7 @@ public function tenantsAction() {
         $this->_helper->layout->disableLayout();
         $user_id    = Engine_Api::_()->user()->getViewer()->getIdentity();
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);        
+        date_default_timezone_set('EST');        
         $aData           = $this->_request->getPost();
         if($aData){
 		$subject         = Engine_Api::_()->core()->getSubject();
@@ -3507,7 +3513,7 @@ public function tenantsAction() {
         }
 
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
         if( $this->getRequest()->isPost()){
@@ -3583,7 +3589,7 @@ public function tenantsAction() {
         $this->_helper->layout->disableLayout();
         $user_id     = Engine_Api::_()->user()->getViewer()->getIdentity();
         $viewer      = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $aData              = $this->_request->getPost();
         if($aData){
         $filename           = $aData['file_name'];
@@ -3632,7 +3638,7 @@ public function tenantsAction() {
         $this->_helper->layout->disableLayout();
         $user_id            = Engine_Api::_()->user()->getViewer()->getIdentity();
         $viewer             = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $aData              = $this->_request->getPost();
         if($aData){
         $deleteddir_name    = $aData['dir_name'];
@@ -3665,7 +3671,7 @@ public function tenantsAction() {
         $this->_helper->layout->disableLayout();
         $user_id    = Engine_Api::_()->user()->getViewer()->getIdentity();
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $aData = $this->_request->getPost();
         if($aData){
         $new_name           =   $aData['new_name'];
@@ -3764,7 +3770,7 @@ public function tenantsAction() {
 
         $user_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $aData = $this->_request->getPost();
         if($aData){
         
@@ -4000,7 +4006,7 @@ if( !$this->_helper->requireUser()->isValid() ) {
 
         $user_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $viewer     = Engine_Api::_()->user()->getViewer() ;
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
 
         $aData = $this->_request->getPost();
         if($aData){
@@ -4098,7 +4104,7 @@ if( !$this->_helper->requireUser()->isValid() ) {
     $this->_helper->viewRenderer->setNoRender(true);
 
     $viewer     = Engine_Api::_()->user()->getViewer();
-    date_default_timezone_set($viewer->timezone);
+    date_default_timezone_set('EST');
     $viwer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
     $aResult    =   array();
     $aData = $this->_request->getPost();
@@ -4134,7 +4140,7 @@ if( !$this->_helper->requireUser()->isValid() ) {
     $this->_helper->viewRenderer->setNoRender(true);
 
     $viewer     = Engine_Api::_()->user()->getViewer();
-    date_default_timezone_set($viewer->timezone);
+    date_default_timezone_set('EST');
     $viwer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
     $aResult    =   array();
     $aData = $this->_request->getPost();
@@ -4166,7 +4172,7 @@ if( !$this->_helper->requireUser()->isValid() ) {
     $this->_helper->viewRenderer->setNoRender(true);
 
     $viewer     = Engine_Api::_()->user()->getViewer();
-    date_default_timezone_set($viewer->timezone);
+    date_default_timezone_set('EST');
     $viwer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
     $aResult    =   array();
     $aData = $this->_request->getPost();
@@ -4427,7 +4433,7 @@ if( !$this->_helper->requireUser()->isValid() ) {
 
         $user_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $viewer     = Engine_Api::_()->user()->getViewer() ;
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $aData = $this->_request->getPost();
         
         if($aData){
@@ -4499,7 +4505,7 @@ if( !$this->_helper->requireUser()->isValid() ) {
 
         $user_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $viewer     = Engine_Api::_()->user()->getViewer() ;
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $aData = $this->_request->getPost();
         if($aData){
         $file_id        =   $aData['file_id'];
@@ -4529,7 +4535,7 @@ if( !$this->_helper->requireUser()->isValid() ) {
 
         $user_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $viewer     = Engine_Api::_()->user()->getViewer() ;
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $aData = $this->_request->getPost();
         if($aData){
         $file_id            =   $aData['file_id'];
@@ -4606,7 +4612,7 @@ if( !$this->_helper->requireUser()->isValid() ) {
     $this->_helper->layout->disableLayout();
     $user_id    = Engine_Api::_()->user()->getViewer()->getIdentity();
     $viewer     = Engine_Api::_()->user()->getViewer() ;
-    date_default_timezone_set($viewer->timezone);
+    date_default_timezone_set('EST');
     $dirname =   $viewer->getIdentity().'_'.$viewer->displayname;
     $dir     = dirname($_SERVER['SCRIPT_FILENAME']).'/filemanager/'.$dirname;
     if (is_dir($dir)) {
@@ -4648,7 +4654,7 @@ public function propertyapprovedrequestslistAction() {
           return;
         }
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         if( !empty($fieldsByAlias['profile_type']) )
             {
@@ -4731,11 +4737,11 @@ public function propertyapprovedrequestslistAction() {
         $this->_helper->layout->disableLayout();
         $this->_helper->viewRenderer->setNoRender(true);
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viwer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $aResult    =   array();
         $aData = $this->_request->getPost();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         try{
         $selected_tenant    =   $aData['selected_tenant'];
         $unselected_tenants =   $aData['unselected_tenants'];
@@ -5036,7 +5042,7 @@ public function propertyapprovedrequestslistAction() {
           return;
         }
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         if( !empty($fieldsByAlias['profile_type']) )
             {
@@ -5123,7 +5129,7 @@ public function propertyapprovedrequestslistAction() {
         $this->_helper->layout->disableLayout();
         $this->_helper->viewRenderer->setNoRender(true);
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viwer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $aResult    =   array();
         $aData = $this->_request->getPost();
@@ -5161,7 +5167,7 @@ public function propertyapprovedrequestslistAction() {
           return;
         }
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         if( !empty($fieldsByAlias['profile_type']) )
             {
@@ -5229,7 +5235,7 @@ public function propertyapprovedrequestslistAction() {
         $this->_helper->viewRenderer->setNoRender(true);
 
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viwer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $aResult    =   array();
         $aData = $this->_request->getPost();
@@ -5452,7 +5458,7 @@ public function propertyapprovedrequestslistAction() {
         $this->_helper->layout->disableLayout();
         $this->_helper->viewRenderer->setNoRender(true);
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viwer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $aResult    =   array();
         $ratingintervalTable = Engine_Api::_()->getDbtable('ratinginterval', 'user');
@@ -5484,7 +5490,7 @@ public function propertyapprovedrequestslistAction() {
           return;
         }
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         if( !empty($fieldsByAlias['profile_type']) )
             {
@@ -5535,7 +5541,7 @@ public function propertyapprovedrequestslistAction() {
         $this->_helper->layout->disableLayout();
         $this->_helper->viewRenderer->setNoRender(true);
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viwer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $aResult    =   array();
         $aResult    =   array();
@@ -5579,7 +5585,7 @@ public function propertyapprovedrequestslistAction() {
         $this->_helper->layout->disableLayout();
         $this->_helper->viewRenderer->setNoRender(true);
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viwer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $aResult    =   array();
         $aResult    =   array();
@@ -5621,7 +5627,7 @@ public function propertyapprovedrequestslistAction() {
           return;
         }
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         if( !empty($fieldsByAlias['profile_type']) )
         {
@@ -5649,7 +5655,7 @@ public function propertyapprovedrequestslistAction() {
         $aData = $this->_request->getPost();
     //    echo $aData['accept_vouchers'];exit;
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $aResult=array();
 
@@ -6019,7 +6025,7 @@ public function propertyapprovedrequestslistAction() {
         $this->_helper->viewRenderer->setNoRender(false);
         $this->_helper->layout->setLayout('default');
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $property_id        =   $this->_getParam('id');
 
         $propertyTable =  Engine_Api::_()->getDbtable('propertylist', 'user');
@@ -6061,7 +6067,7 @@ public function propertyapprovedrequestslistAction() {
         $this->_helper->viewRenderer->setNoRender(false);
         $this->_helper->layout->setLayout('property_detail');
         $viewer        = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         if( !empty($fieldsByAlias['profile_type']) )
             {
@@ -6121,7 +6127,7 @@ public function propertyapprovedrequestslistAction() {
         $this->_helper->viewRenderer->setNoRender(false);
         $this->_helper->layout->setLayout('property_detail');
         $viewer        = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         if( !empty($fieldsByAlias['profile_type']) )
             {
@@ -6267,7 +6273,7 @@ public function propertyapprovedrequestslistAction() {
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $property_id        =  $this->_getParam('id');
         $viewer             =  Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $propertyTable      =  Engine_Api::_()->getDbtable('propertylist', 'user');
         $propertySelect     =  $propertyTable->select()
                         ->setIntegrityCheck(false)
@@ -6470,7 +6476,7 @@ public function propertyapprovedrequestslistAction() {
         $this->_helper->viewRenderer->setNoRender(false);
         $this->_helper->layout->setLayout('property_detail');
         $viewer             = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id          = Engine_Api::_()->user()->getViewer()->getIdentity();
         $property_id        = $this->_getParam('id');
         if($property_id ==''){
@@ -6543,7 +6549,7 @@ public function propertyapprovedrequestslistAction() {
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id  = Engine_Api::_()->user()->getViewer()->getIdentity();
         $aData      = $this->_request->getPost();
         if(!empty($aData)){
@@ -6570,7 +6576,7 @@ public function propertyapprovedrequestslistAction() {
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id  = Engine_Api::_()->user()->getViewer()->getIdentity();
         $aData      = $this->_request->getPost();
         if(!empty($aData)){
@@ -6611,7 +6617,7 @@ public function propertyapprovedrequestslistAction() {
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id  = Engine_Api::_()->user()->getViewer()->getIdentity();
         $aData      = $this->_request->getPost();
         if(!empty($aData)){
@@ -6661,7 +6667,7 @@ public function propertyapprovedrequestslistAction() {
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id  = Engine_Api::_()->user()->getViewer()->getIdentity();
         $aData      = $this->_request->getPost();
         if(!empty($aData)){
@@ -6684,7 +6690,7 @@ public function propertyapprovedrequestslistAction() {
         $this->_helper->layout->disableLayout();
         $this->_helper->viewRenderer->setNoRender(true);
         $viewer      = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viwer_id    = Engine_Api::_()->user()->getViewer()->getIdentity();
         $aResult     =   array();
         $aData       = $this->_request->getPost();
@@ -7009,7 +7015,7 @@ public function propertyapprovedrequestslistAction() {
           return;
         }
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $this->_helper->viewRenderer->setNoRender(false);
         $this->_helper->layout->setLayout('property_detail');
         $viewer_id                  =   Engine_Api::_()->user()->getViewer()->getIdentity();
@@ -7096,7 +7102,7 @@ public function propertyapprovedrequestslistAction() {
           return;
         }
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $this->_helper->viewRenderer->setNoRender(false);
         $this->_helper->layout->setLayout('property_detail');
         $viewer_id          =   Engine_Api::_()->user()->getViewer()->getIdentity();
@@ -7321,7 +7327,7 @@ public function propertyapprovedrequestslistAction() {
         $this->_helper->viewRenderer->setNoRender(false);
         $this->_helper->layout->setLayout('property_detail');
         $viewer     =  Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id  =  Engine_Api::_()->user()->getViewer()->getIdentity();
         $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         if( !empty($fieldsByAlias['profile_type']) ){
@@ -7373,7 +7379,7 @@ public function propertyapprovedrequestslistAction() {
         $this->_helper->layout->disableLayout();
         $this->_helper->viewRenderer->setNoRender(true);
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viwer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $aResult    =   array();
         $aData = $this->_request->getPost();
@@ -7623,7 +7629,7 @@ public function propertyapprovedrequestslistAction() {
         $this->_helper->layout->disableLayout();
         $this->_helper->viewRenderer->setNoRender(true);
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viwer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $stateTable = Engine_Api::_()->getDbtable('state', 'user');
         $states_arr  = array('AL'=>"Alabama",'AK'=>"Alaska",'AZ'=>"Arizona",'AR'=>"Arkansas",'CA'=>"California",'CO'=>"Colorado",'CT'=>"Connecticut",'DE'=>"Delaware",'FL'=>"Florida",'GA'=>"Georgia",'HI'=>"Hawaii",'ID'=>"Idaho",'IL'=>"Illinois", 'IN'=>"Indiana", 'IA'=>"Iowa",  'KS'=>"Kansas",'KY'=>"Kentucky",'LA'=>"Louisiana",'ME'=>"Maine",'MD'=>"Maryland", 'MA'=>"Massachusetts",'MI'=>"Michigan",'MN'=>"Minnesota",'MS'=>"Mississippi",'MO'=>"Missouri",'MT'=>"Montana",'NE'=>"Nebraska",'NV'=>"Nevada",'NH'=>"New Hampshire",'NJ'=>"New Jersey",'NM'=>"New Mexico",'NY'=>"New York",'NC'=>"North Carolina",'ND'=>"North Dakota",'OH'=>"Ohio",'OK'=>"Oklahoma", 'OR'=>"Oregon",'PA'=>"Pennsylvania",'RI'=>"Rhode Island",'SC'=>"South Carolina",'SD'=>"South Dakota",'TN'=>"Tennessee",'TX'=>"Texas",'UT'=>"Utah",'VT'=>"Vermont",'VA'=>"Virginia",'WA'=>"Washington",'DC'=>"Washington D.C.",'WV'=>"West Virginia",'WI'=>"Wisconsin",'WY'=>"Wyoming");
@@ -7645,7 +7651,7 @@ function smartmoveapicreaterenterformAction(){
           return;
         }
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         if( !empty($fieldsByAlias['profile_type']) ){
               $optionId = $fieldsByAlias['profile_type']->getValue($viewer);
@@ -7696,7 +7702,7 @@ function smartmoveapicreaterentersaveAction(){
         $this->_helper->layout->disableLayout();
         $aData = $this->_request->getPost();
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $aResult=array();
         $City                   = $aData['City'];
@@ -7898,7 +7904,7 @@ function smartmoveapicreaterentersaveAction(){
           return;
         }
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
 
         if( !empty($fieldsByAlias['profile_type']) ){
@@ -7933,7 +7939,7 @@ function smartmoveapicreaterentersaveAction(){
         $aData = $this->_request->getPost();
 
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $aResult=array();
 
@@ -8065,7 +8071,7 @@ function smartmoveapicreaterentersaveAction(){
         $this->_helper->layout->disableLayout();
 
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
 
         $aData = $this->_request->getPost();
@@ -8126,7 +8132,7 @@ function smartmoveapicreaterentersaveAction(){
           return;
         }
         $viewer        = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         if( !empty($fieldsByAlias['profile_type']) ){
               $optionId        = $fieldsByAlias['profile_type']->getValue($viewer);
@@ -8287,7 +8293,7 @@ function smartmoveapicreaterentersaveAction(){
         $this->_helper->layout->disableLayout();
         $aData         = $this->_request->getPost();
         $viewer        = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id     = Engine_Api::_()->user()->getViewer()->getIdentity();
         $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         if( !empty($fieldsByAlias['profile_type']) ){
@@ -8422,7 +8428,7 @@ function smartmoveapicreaterentersaveAction(){
         $this->_helper->layout->disableLayout();
         $aData      = $this->_request->getPost();
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id  = Engine_Api::_()->user()->getViewer()->getIdentity();
         $prtyId     = $aData['prtyId'];
         $renterId   = $aData['renterId'];
@@ -8462,7 +8468,7 @@ function smartmoveapicreaterentersaveAction(){
           return;
         }
         $viewer        = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         if( !empty($fieldsByAlias['profile_type']) ){
               $optionId        = $fieldsByAlias['profile_type']->getValue($viewer);
@@ -8655,7 +8661,7 @@ function smartmoveapicreaterentersaveAction(){
           return;
         }
         $viewer        = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         $this->_helper->viewRenderer->setNoRender(false);
         $this->_helper->layout->setLayout('smartmove_api');
@@ -8702,7 +8708,7 @@ function smartmoveapicreaterentersaveAction(){
         }
 
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
 
@@ -8848,7 +8854,7 @@ function smartmoveapicreaterentersaveAction(){
         $this->_helper->viewRenderer->setNoRender(false);
         $this->_helper->layout->setLayout('property_detail');
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $userid                   =   $this->_getParam('id');
         $propertyRequirementTable =  Engine_Api::_()->getDbtable('propertyrequirement', 'user');
@@ -8879,7 +8885,7 @@ function smartmoveapicreaterentersaveAction(){
     $this->_helper->viewRenderer->setNoRender(true);
     $this->_helper->layout->disableLayout();
    // date_default_timezone_set('Asia/Calcutta');
-    date_default_timezone_set($viewer->timezone);
+    date_default_timezone_set('EST');
     $dismissdatetime        = date('H:i:s d-m-Y');
     $viewer                 = Engine_Api::_()->user()->getViewer();
     $viewerId               =   $viewer->getIdentity();
@@ -8907,7 +8913,7 @@ function smartmoveapicreaterentersaveAction(){
           return;
         }
     $viewer     = Engine_Api::_()->user()->getViewer();
-    date_default_timezone_set($viewer->timezone);
+    date_default_timezone_set('EST');
     $this->_helper->viewRenderer->setNoRender(true);
     $this->_helper->layout->disableLayout();
     $common_settings_table =  Engine_Api::_()->getDbtable('commonsettings', 'user');
@@ -8920,7 +8926,7 @@ function smartmoveapicreaterentersaveAction(){
     if($viewer->tip_dismiss_time !=''){
         $tipdismisdatetime= $viewer->tip_dismiss_time;
         //date_default_timezone_set('Asia/Calcutta');
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $currentdatetime = date('H:i:s d-m-Y');
         $currentdatetime = DateTime::createFromFormat('H:i:s d-m-Y', $currentdatetime);
         $tipdismisdatetime = DateTime::createFromFormat('H:i:s d-m-Y', $tipdismisdatetime);
@@ -8952,7 +8958,7 @@ function smartmoveapicreaterentersaveAction(){
         $this->_helper->viewRenderer->setNoRender(false);
         $this->_helper->layout->setLayout('property_detail');
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id  = Engine_Api::_()->user()->getViewer()->getIdentity();
         $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         $userTable     = Engine_Api::_()->getDbtable('users', 'user');
@@ -8992,7 +8998,7 @@ function smartmoveapicreaterentersaveAction(){
         }
 
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
@@ -9110,7 +9116,7 @@ function smartmoveapicreaterentersaveAction(){
         $this->_helper->viewRenderer->setNoRender(false);
         $this->_helper->layout->setLayout('property_detail');
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id  = Engine_Api::_()->user()->getViewer()->getIdentity();
         $meetingSchedulerTable   =  Engine_Api::_()->getDbtable('meetingscheduler', 'user');
 
@@ -9135,7 +9141,7 @@ function smartmoveapicreaterentersaveAction(){
         $this->_helper->viewRenderer->setNoRender(false);
         $this->_helper->layout->setLayout('property_detail');
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id  = Engine_Api::_()->user()->getViewer()->getIdentity();
         $meetingSchedulerTable   =  Engine_Api::_()->getDbtable('meetingscheduler', 'user');
         $scheduledMeetingsSelect = $meetingSchedulerTable->select()    
@@ -9167,7 +9173,7 @@ function smartmoveapicreaterentersaveAction(){
         if($profile_type_id == 1){ // if renter		
 		 return $this->_forward('notfound');
 	    }
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id               =  Engine_Api::_()->user()->getViewer()->getIdentity();
         $meetingSchedulerTable   =  Engine_Api::_()->getDbtable('meetingscheduler', 'user');
         $scheduledMeetingsSelect = $meetingSchedulerTable->select()
@@ -9184,7 +9190,7 @@ function smartmoveapicreaterentersaveAction(){
 
  /*   public function approvemeetingAction(){
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
@@ -9270,7 +9276,7 @@ function smartmoveapicreaterentersaveAction(){
         }
 
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
@@ -9371,7 +9377,7 @@ function smartmoveapicreaterentersaveAction(){
         $this->_helper->viewRenderer->setNoRender(false);
         $this->_helper->layout->setLayout('common_layout');
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
     }
 
@@ -9380,7 +9386,7 @@ function smartmoveapicreaterentersaveAction(){
           return;
         }
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
         unset($_SESSION['matching_array']);
@@ -9641,7 +9647,7 @@ public function filterfeedbypetstypeAction(){
         }
 
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
 
@@ -9765,7 +9771,7 @@ public function filterfeedbypetstypeAction(){
         }
 
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
 
@@ -9838,7 +9844,7 @@ public function filterfeedbypetstypeAction(){
         }
 
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
         if( $this->getRequest()->isPost()){
@@ -9915,7 +9921,7 @@ public function filterfeedbypetstypeAction(){
         }
 
         $viewer         = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
         if( $this->getRequest()->isPost()){
@@ -10401,7 +10407,7 @@ public function filterfeedbypetstypeAction(){
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
         $viewer         = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id  = Engine_Api::_()->user()->getViewer()->getIdentity();
         if( $this->getRequest()->isPost()){
             $aData            = $this->_request->getPost();
@@ -10430,7 +10436,7 @@ public function filterfeedbypetstypeAction(){
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
         $viewer         = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id     = Engine_Api::_()->user()->getViewer()->getIdentity();
         if( $this->getRequest()->isPost()){
         $aData       = $this->_request->getPost();
@@ -10465,7 +10471,7 @@ public function filterfeedbypetstypeAction(){
         $this->_helper->viewRenderer->setNoRender(false);
         $this->_helper->layout->setLayout('property_detail');
         $viewer          = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id       = Engine_Api::_()->user()->getViewer()->getIdentity();
         $fieldsByAlias   = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         if( !empty($fieldsByAlias['profile_type']) ){
@@ -10489,7 +10495,7 @@ public function filterfeedbypetstypeAction(){
         $this->_helper->viewRenderer->setNoRender(false);
         $this->_helper->layout->setLayout('smartmove_api');
         $viewer            = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id         = Engine_Api::_()->user()->getViewer()->getIdentity();
         $fieldsByAlias     = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         if( !empty($fieldsByAlias['profile_type']) ){
@@ -10611,7 +10617,7 @@ public function filterfeedbypetstypeAction(){
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
         $viewer          = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id       = Engine_Api::_()->user()->getViewer()->getIdentity();
         $fieldsByAlias   = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         if( !empty($fieldsByAlias['profile_type']) ){
@@ -10807,7 +10813,7 @@ public function filterfeedbypetstypeAction(){
           return;
         }
         $viewer        = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         if( !empty($fieldsByAlias['profile_type']) ){
               $optionId        = $fieldsByAlias['profile_type']->getValue($viewer);
@@ -11073,7 +11079,7 @@ public function filterfeedbypetstypeAction(){
           return;
         }
     $viewer     = Engine_Api::_()->user()->getViewer();
-    date_default_timezone_set($viewer->timezone);
+    date_default_timezone_set('EST');
     $this->_helper->viewRenderer->setNoRender(true);
     $this->_helper->layout->disableLayout();
     $oData          = $this->_request->getPost();
@@ -11108,7 +11114,7 @@ public function filterfeedbypetstypeAction(){
         }
 
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
 
@@ -11291,7 +11297,7 @@ public function filterfeedbypetstypeAction(){
     $this->_helper->viewRenderer->setNoRender(true);
     $this->_helper->layout->disableLayout();
     $viewer     = Engine_Api::_()->user()->getViewer();
-    date_default_timezone_set($viewer->timezone);
+    date_default_timezone_set('EST');
     $oData          = $this->_request->getPost();
     $preference_id  = $oData['requirement_id'];
     try{
@@ -11312,7 +11318,7 @@ public function filterfeedbypetstypeAction(){
      $this->_helper->viewRenderer->setNoRender(true);
      $this->_helper->layout->disableLayout();
      $viewer     = Engine_Api::_()->user()->getViewer();
-     date_default_timezone_set($viewer->timezone);
+     date_default_timezone_set('EST');
      $viewer_id  = Engine_Api::_()->user()->getViewer()->getIdentity();
      if( $this->getRequest()->isPost()){
             $aData           = $this->_request->getPost();
@@ -11342,7 +11348,7 @@ public function filterfeedbypetstypeAction(){
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id  = Engine_Api::_()->user()->getViewer()->getIdentity();
         if( $this->getRequest()->isPost()){
         $aData         = $this->_request->getPost();
@@ -11396,7 +11402,7 @@ public function filterfeedbypetstypeAction(){
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
 
         $viewer_id  = Engine_Api::_()->user()->getViewer()->getIdentity();
         $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
@@ -11562,7 +11568,7 @@ public function filterfeedbypetstypeAction(){
         }
 
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
 
         $this->_helper->viewRenderer->setNoRender(true);
@@ -11587,7 +11593,7 @@ public function filterfeedbypetstypeAction(){
         }
 
     $viewer     = Engine_Api::_()->user()->getViewer();
-    date_default_timezone_set($viewer->timezone);
+    date_default_timezone_set('EST');
     $this->_helper->viewRenderer->setNoRender(true);
     $this->_helper->layout->disableLayout();
     $oData       =  $this->_request->getPost();
@@ -11608,7 +11614,7 @@ public function filterfeedbypetstypeAction(){
         }
 
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
         $aData       =  $this->_request->getPost();
@@ -12012,7 +12018,7 @@ public function filterfeedbypetstypeAction(){
 
         if(!isset($_SESSION['userpackage'])){return $this->_forward('notfound');}
 
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $CardholderdetailsTable =  Engine_Api::_()->getDbtable('Cardholderdetails', 'user');
 	    $this->view->CardholderdetailsData  =  $CardholderdetailsTable->fetchRow($CardholderdetailsTable->select()->where('userId = ?',  $viewer_id));
@@ -12047,7 +12053,7 @@ public function filterfeedbypetstypeAction(){
         $viewer     = Engine_Api::_()->user()->getViewer();
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
 
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         if( $this->getRequest()->isPost()){
 
             $aData                  = $this->_request->getPost();
@@ -12430,7 +12436,7 @@ public function filterfeedbypetstypeAction(){
         }
         if($profile_type_id == 4){
 
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         if( $this->getRequest()->isPost()){
             $aData                = $this->_request->getPost();
             $cardholder_name      = $aData['cardholder_name'];
@@ -12563,7 +12569,7 @@ public function filterfeedbypetstypeAction(){
         $this->_helper->viewRenderer->setNoRender(false);
         $this->_helper->layout->setLayout('common_layout');
         $this->view->viewer = $viewer = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
 
         $spclDir = dirname($_SERVER['SCRIPT_FILENAME']).'/filemanager/specialdocuments';
 
@@ -12838,7 +12844,7 @@ public function filterfeedbypetstypeAction(){
             $this->_helper->layout->disableLayout();
 			$aData = $this->_request->getPost();
 			$viewer     = Engine_Api::_()->user()->getViewer();
-			date_default_timezone_set($viewer->timezone);
+			date_default_timezone_set('EST');
             $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
             $viewer     = Engine_Api::_()->user()->getViewer();
 	        $meetingSchedulerTable   =  Engine_Api::_()->getDbtable('meetingscheduler', 'user');
@@ -12971,7 +12977,7 @@ public function filterfeedbypetstypeAction(){
         }
 
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
@@ -13081,7 +13087,7 @@ public function filterfeedbypetstypeAction(){
           return;
         }
 		$viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
@@ -13182,7 +13188,7 @@ public function filterfeedbypetstypeAction(){
 			$this->_helper->viewRenderer->setNoRender(true);
             $this->_helper->layout->disableLayout();
             $viewer        = Engine_Api::_()->user()->getViewer();
-            date_default_timezone_set($viewer->timezone);
+            date_default_timezone_set('EST');
 			
 			if( $this->getRequest()->isPost()){	
             $aData = $this->_request->getPost();
@@ -13213,7 +13219,7 @@ public function filterfeedbypetstypeAction(){
 			$this->_helper->viewRenderer->setNoRender(true);
             $this->_helper->layout->disableLayout();
             $viewer        = Engine_Api::_()->user()->getViewer();
-            date_default_timezone_set($viewer->timezone);
+            date_default_timezone_set('EST');
         if( $this->getRequest()->isPost()){	
             $aData             = $this->_request->getPost();
 			$table = Engine_Api::_()->getItemTable('core_report');
@@ -13248,7 +13254,7 @@ public function filterfeedbypetstypeAction(){
 			$this->_helper->viewRenderer->setNoRender(true);
             $this->_helper->layout->disableLayout();
             $viewer        = Engine_Api::_()->user()->getViewer();
-            date_default_timezone_set($viewer->timezone);
+            date_default_timezone_set('EST');
 		  if( $this->getRequest()->isPost()){	
             $aData             = $this->_request->getPost();
             $user_id  = $aData['subjectId'];
@@ -13299,7 +13305,7 @@ public function filterfeedbypetstypeAction(){
 			$this->_helper->viewRenderer->setNoRender(true);
             $this->_helper->layout->disableLayout();
             $viewer        = Engine_Api::_()->user()->getViewer();
-            date_default_timezone_set($viewer->timezone); 
+            date_default_timezone_set('EST'); 
 		 	if( $this->getRequest()->isPost()){	
             $aData             = $this->_request->getPost();
             $user_id           = $aData['subjectId'];
@@ -13830,7 +13836,7 @@ public function filterfeedbypetstypeAction(){
 		$this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout(); $aData = $this->_request->getPost();
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $aResult=array();
         $aData = $this->_request->getPost();
@@ -13879,7 +13885,7 @@ public function filterfeedbypetstypeAction(){
 	    $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout(); $aData = $this->_request->getPost();
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $aResult=array();
         $aData = $this->_request->getPost();
@@ -13913,7 +13919,7 @@ public function filterfeedbypetstypeAction(){
         $viewer    = Engine_Api::_()->user()->getViewer();
         
         $aResult   = array();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $propertyTable          =  Engine_Api::_()->getDbtable('propertylist', 'user');
         $propertyimageTable     =  Engine_Api::_()->getDbtable('propertyimages', 'user');
         $propertycountrtyTable  =  Engine_Api::_()->getDbtable('propertycountry', 'user');
@@ -14138,7 +14144,7 @@ public function filterfeedbypetstypeAction(){
 		$this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout(); $aData = $this->_request->getPost();
         $viewer     = Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id=Engine_Api::_()->user()->getViewer()->getIdentity();
         $aResult=array();
         $aData = $this->_request->getPost();
@@ -14229,7 +14235,7 @@ public function filterfeedbypetstypeAction(){
         $this->_helper->viewRenderer->setNoRender(false);
         $this->_helper->layout->setLayout('common_layout');
         $viewer     =  Engine_Api::_()->user()->getViewer();
-        date_default_timezone_set($viewer->timezone);
+        date_default_timezone_set('EST');
         $viewer_id  =  Engine_Api::_()->user()->getViewer()->getIdentity();
         $fieldsByAlias = Engine_Api::_()->fields()->getFieldsObjectsByAlias($viewer);
         if( !empty($fieldsByAlias['profile_type']) ){
@@ -14859,18 +14865,18 @@ $video_tmp_name = $_FILES['video']['tmp_name'];
 
 
 
-        
-           $propertySelect   =   $propertyTable->select()
-                                ->setIntegrityCheck(false)
-                                ->from(array('plist'=>'engine4_property_list',))
-                                ->joinLeft(array('pcountry'=>'engine4_property_countries',),'plist.prty_country_id=pcountry.country_id',array('prty_country'))
-                                ->joinLeft(array('pstate'=>'engine4_property_states',),'plist.prty_state_id=pstate.state_id',array('prty_state'))
-                                ->joinLeft(array('pcity'=>'engine4_property_city',),'plist.prty_city_id=pcity.city_id',array('prty_city','latitude','longitude'))
-                                ->where('plist.enable = ?', 1)
-                                ->where('plist.landlord_enable=?' ,  1)
-                                ->where('plist.property_type !=?' ,  'holding_property')
-                                ->where('plist.property_type !=?' ,  'property_for_backgroundreport')
-                                ->order('plist.created_at DESC');
+	
+	   $propertySelect   =   $propertyTable->select()
+							->setIntegrityCheck(false)
+							->from(array('plist'=>'engine4_property_list',))
+							->joinLeft(array('pcountry'=>'engine4_property_countries',),'plist.prty_country_id=pcountry.country_id',array('prty_country'))
+							->joinLeft(array('pstate'=>'engine4_property_states',),'plist.prty_state_id=pstate.state_id',array('prty_state'))
+							->joinLeft(array('pcity'=>'engine4_property_city',),'plist.prty_city_id=pcity.city_id',array('prty_city','latitude','longitude'))
+							->where('plist.enable = ?', 1)
+							->where('plist.landlord_enable=?' ,  1)
+							->where('plist.property_type !=?' ,  'holding_property')
+							->where('plist.property_type !=?' ,  'property_for_backgroundreport')
+							->order('plist.created_at DESC');
 //echo "<pre>"; print_r($_SESSION['location_mode_array']); exit;
        
 		if(isset($_SESSION['location_mode_array'])){
@@ -14887,7 +14893,6 @@ $video_tmp_name = $_FILES['video']['tmp_name'];
             
              $location_mode_array = $_SESSION['location_mode_array']; //print_r($location_mode_array); exit;
              $this->view->filtermode = 'location_mode';
-                  
 		
 			if( isset($location_mode_array['zipcode']) && !empty($location_mode_array['zipcode']) ) {
 							$propertySelect->where('plist.zip      =?' ,  $location_mode_array['zipcode']);
@@ -14911,7 +14916,7 @@ $video_tmp_name = $_FILES['video']['tmp_name'];
 							 $propertySelect->where('pstate.prty_state      =?' ,  $location_mode_array['state_name']);
 						}
 
-			 }
+			 
 			 
 			if( isset($location_mode_array['country_name']) && !empty($location_mode_array['country_name'])) {
 				   $propertySelect->where('pcountry.prty_country      =?' ,  $location_mode_array['country_name']);                      
@@ -14936,8 +14941,8 @@ $video_tmp_name = $_FILES['video']['tmp_name'];
 							}
 													
      					}
-
-  
+    }
+    $this->view->location_mode_array  = $_SESSION['location_mode_array'];
     $propertyListData = $propertyTable->fetchAll($propertySelect);
 	$this->view->propertyListData = $propertyListData;
        

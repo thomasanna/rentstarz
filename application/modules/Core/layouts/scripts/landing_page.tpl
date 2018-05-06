@@ -49,7 +49,7 @@
     <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/css/slick.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/css/custom.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/css/sh.css" rel="stylesheet">
-
+    <script>jQuery.noConflict();</script>
     <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/js/jquery-3.1.1.min.js"></script>
     <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/js/bootstrap.min.js"></script>
     <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/js/slick.min.js"></script>

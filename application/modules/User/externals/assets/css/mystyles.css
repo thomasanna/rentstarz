@@ -1,0 +1,7 @@
+ .like_property.saved{
+    background: #f58300 !important;
+    border-color: #f58300 !important;
+    outline: none;
+    transition: all 0.3s ease-in;
+    color: #fff !important;
+ }
