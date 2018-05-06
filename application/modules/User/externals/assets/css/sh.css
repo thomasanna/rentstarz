@@ -42,13 +42,13 @@
     transition: all 0.3s ease-in; color: #fff !important;}
 
 
-.landlordList {background: #fafafa;}
+.landlordList {background: #fcfcfc;}
 .landlordList .media figcaption span a{color:#333}
 .landlordList .media figcaption span{width: 100%;text-align: center;padding: 12px 0;color: #333;  }
 .landlordList .media figcaption{ display:flex;}
 .landlordList .media .content h2{ padding-bottom:12px;}
 .landlordList .media .content p{white-space:normal;font-size: 18px;line-height: 24px;}
-.landlordList .media:hover{background:#e4e4e4;}
+.landlordList .media:hover{background:#e4e4e4 !important;}
 .landlordList .media{background:#fff;border:1px solid #ccc;color:#333;padding:15px;margin-bottom: 20px;}
 .landlordList .content .cotentlenks span{padding-right: 30px;color: #6c6c6c; }
 .landlordList .content .cotentlenks span i{font-style:normal; }
@@ -61,7 +61,11 @@
 /* pagination */
 .pagination .pageNumbers, .pagination .first, .pagination .last{display:none;}
 .pagination li a{ margin: 0 8px; background: transparent; border: 0;font-size: 18px; color: #333; }
-.pagination li.prev a,.pagination li.next a { font-size: 0; position: relative; }
+.pagination li.prev a, .pagination li.next a {
+    font-size: 0;
+    position: relative;
+    background: #fcfcfc;
+}
 .pagination li.prev a::after{content:'Previous'; position: relative;    font-size: 20px; } 
 .pagination li.next a::after{content:'Next'; position: relative;    font-size: 20px; } 
 .pagination>.active>a {border-radius: 4px;}
@@ -96,7 +100,7 @@ li.dropdown li{display: block; padding: 0; margin: 0;}
 .addpost .box .form-inline{text-transform:uppercase; font-size:20px; color:#333;font-family: 'Roboto'; display: block; font-weight: 500;}
 .addpost .box textarea{height:120px; border-radius:0; font-size:18px; background-color:#fcfcfc; }
 .addpost .box select{width: 100%;color: #9c9c9c; font-size: 18px; -webkit-appearance: none; -moz-appearance: none; appearance: none;  padding: 10px 12px;background-image: url(../images/dropdown.png); background-size: 12px; background-repeat: no-repeat; background-position: 95% center; }
-.addpost .box input[type="text"].form-control{height: 50px; max-width: 450px; border-radius: 0; font-size: 18px;background-color:#fcfcfc;}
+.addpost .box input[type="text"].form-control{height: 50px; max-width: 450px; border-radius: 0; font-size: 18px;background-color:#fff;}
 .addpost .features{margin-top:60px; position: relative;    padding-top: 20px;}
 .addpost .features h3{font-size:25px;}
 .addpost .features li{color:#333;cursor: pointer;padding: 40px 53px; }
@@ -142,7 +146,7 @@ li.dropdown li{display: block; padding: 0; margin: 0;}
 
 ul#topLinksbar1 {
     padding-left: 30px !important;
-    background: #fafafa;
+    background: #fcfcfc;
     border-radius: 0;
     overflow: hidden !important;
     width: 100% !important;
@@ -151,7 +155,8 @@ ul#topLinksbar1 {
 #mylisting ul {
     list-style: none;
     padding: 0;
-    margin: 0 15px;
+    margin: 0 15px;z-index: 9999999999 !important;
+    position: relative;
 }
 
 .addproperties .container-fluid{padding-right: 0;overflow: hidden!important;}
@@ -199,6 +204,7 @@ section.myDocument.myfile-area .fileContainr{background-position: 67% 50% !impor
 #mylisting select{width: 100%;color: #9c9c9c; font-size: 18px; -webkit-appearance: none; -moz-appearance: none; appearance: none;  padding: 10px 12px;background-image: url(../images/dropdown.png); background-size: 12px; background-repeat: no-repeat; background-position: 95% center; }
 .uploadPhoto li{ height:200px; width:200px !important; vertical-align:top;}
 .addproperties input{max-width:767px;}
+section#addpost-now label{font-size: 16px !important;font-size: 400 !important;}
 .uploadPhoto li figure{ height:100%; width:100%;background-size:contain; position: relative;}
 .uploadPhoto li figure .header a{ color:#fff;}
 .uploadPhoto li figure:hover .header{ display:block;}    
@@ -215,7 +221,8 @@ section.myDocument.myfile-area .fileContainr{background-position: 67% 50% !impor
 .addproperties textarea {height: 120px;border-radius: 0;margin:40px 0 20px;font-size: 18px;padding:15px;max-width:991px;background-color: #fcfcfc;}
 #mylisting .form-inline {font-size: 18px;}
 button.mobileUserDetail {display:none;float: left;position: relative;top: 2px;margin-right: 6px;background: transparent;border: 0;left: 0px;color: #333;font-size: 30px;cursor: pointer;opacity: 0.6;}
-.agentProfile #mylisting{ padding-top:0; position: relative;background: #fff !important;}
+.agentProfile #mylisting{ padding-top:0; position: relative;}
+.gray-bg-light{background: #fcfcfc;}
 .agentProfile .topNavOption li .btn {
     font-size: 15px !important;
     padding: 9.5px 20px !important;
@@ -242,14 +249,17 @@ button.mobileUserDetail {display:none;float: left;position: relative;top: 2px;ma
 .agentProfile button.mobToggle { display:none; background: transparent;border: 0;color: #333;position: relative;right: 2px;top:0px;}
 /* .agentProfile #mylisting .mobToggle{right:0;} */
 .agentProfile li.item .media-body{position: relative;}
-.agentProfile li.item:hover .media-body::after {    content: '';
+.agentProfile li.item:hover .media-body::after {
+    content: '';
     position: absolute;
     height: 100%;
     width: 100%;
-        background: rgba(51, 51, 51, 0.5);
-        
+    background: rgba(181, 181, 181, 0.28);
     top: 0;
-    left: 0;}
+    left: 0;
+}
+
+
 .myDocument .mydocument {position: relative;  min-height: 500px;}
 .myDocument .mydocument::before {content: '';position: absolute;height: 100%;width: 141px;background-image: url(../images/mydocument/sideLogo.png);background-repeat: no-repeat;top: 0;left: -129px;background-size: contain;}
 .myDocument .mydocument .folder {margin-top: 20px;}
@@ -310,7 +320,7 @@ textarea.form-control {height: auto;height: 90px;border-radius: 0;box-shadow: in
 }
 @media screen and (max-width:1620px){
     .agentProfile .proprtyList .media-body ul.rightListing{    width: 44%;}
-    .agentProfile .proprtyList .media-body ul.listing{width: 40%;}
+    .agentProfile .proprtyList .media-body ul.listing{width: 42%;}
     .agentProfile .proprtyList .media-body ul li label{font-size:12px !important;}
     /* .searchFilter ul li a{    padding: 11px 48px;} */
     .myDocument .mydocument .folder figcaption p{font-size:18px;}
@@ -320,24 +330,39 @@ textarea.form-control {height: auto;height: 90px;border-radius: 0;box-shadow: in
 
 
 @media screen and (max-width:1300px){
-
+    .leftbar-listings .proprtyList .media-body ul.rightListing {
+    width: 46% !important;
+}
+.agentProfile .proprtyList .media-body ul.listing {
+    width: 44%;
+}
     .landlordList .media .content p {font-size: 16px;}
     .addpost .features ul img { height: 45px; width: auto; }
     .addproperties .tabnab .item .tab-link { padding: 11px 30px;font-size: 14px;}
     .agentProfile .proprtyList .media-body ul.listing, .agentProfile .proprtyList .media-body ul.rightListing{font-size:11px;}
-    .agentProfile .proprtyList .media-body ul li label {padding: 12px 6px;}
+    .agentProfile .proprtyList .media-body ul li label {padding: 12px 2px;}
 }
 
 @media screen and (max-width:1280px){
 
-.agentProfile .proprtyList .media-body ul.listing {
-
-    width: 46%;
+.agentProfile .proprtyList .media-body ul.listing { width: 46%;}
+#mylisting ul{margin:0;}
+.agentProfile .proprtyList .media-body h3{padding-left: 0;}
+.leftbar-listings .proprtyList .media-body ul.rightListing {
+    width: 50% !important;
 }
+}
+
+@media(max-width:1200px) {
+    .agentProfile .proprtyList .media-body ul.listing {width: 42%; }
+    .leftbar-listings .proprtyList .media-body ul.rightListing { width: 49% !important;}
+    .agentProfile .proprtyList .media-body ul li label { font-size: 14px !important;}
+    .agentProfile .proprtyList .media-body ul li span{font-size: 12px;}
 }
 
 
 @media screen and (max-width:1199px){
+    ul#topLinksbar1{padding-left: 0 !important;}
     .agentProfile .proprtyList .media-body ul.listing{border-right: 0 !important;}
     .agentProfile .proprtyList .media-body ul li label{padding: 15px !important;}
     .agentProfile .proprtyList .media-body ul.listing, .agentProfile .proprtyList .media-body ul.rightListing{width: 100% !important;}    
@@ -355,17 +380,18 @@ textarea.form-control {height: auto;height: 90px;border-radius: 0;box-shadow: in
 
 
 @media screen and (max-width:991px){
-    #addpropertie .uploadPhoto.uploadVideo li {
-    width: calc(100%/2) !important;
-    float: left;
+    .agentProfile .nav-link{padding: 0 5px;}
+    .agentProfile .proprtyList figure.media-left {
+    width: 20%;}
+    .agentProfile .proprtyList .media-body ul li label {
+    padding: 10px !important;
+    min-height: 85px;
 }
-#addpropertie .uploadPhoto li:last-child {
-    float: none !important;
-    margin: 0 auto;
-    display: block;
+    .agentProfile .proprtyList .media-body ul li label {padding: 10px !important;}
+    ul#topLinksbar1 li.nav-item {padding: 8px 1px 12px;}
+    #addpropertie .uploadPhoto.uploadVideo li {width: calc(100%/2) !important;float: left;}
 
-    height: auto;
-}
+    #addpropertie .uploadPhoto li:last-child {float: none !important; margin: 0 auto; display: block; height: auto;}
 
 #addpropertie .uploadPhoto li {width: calc(98%/2) !important;padding: 5px !important;}
     .uploadPhoto.uploadVideo li video {width: 100%;height: 100%; background: #fff;}
@@ -385,6 +411,23 @@ textarea.form-control {height: auto;height: 90px;border-radius: 0;box-shadow: in
     
 }
 @media screen and (max-width:767px){
+    div#mylisting {
+    padding: 0;
+}
+.agentProfile .proprtyList .media-body ul li label {
+    padding: 10px !important;
+    min-height:inherit;
+}
+    ul#topLinksbar1{padding-left: 0 !important;}
+    .edit-sum{position: relative !important;text-align: center;top:inherit;}
+    .agentProfile .checkbox {
+    width: 100%;
+    display: block;
+}
+    #new-profile-resg .personalInfo{width: 100% !important;padding: 0;}
+       #new-profile-resg .aboutme {  padding-top: 0;}
+    #new-profile-resg .myApplication img{display: none;}
+    .leftbar-listings .innerpage-Wrapper.agentProfile, .leftbar-listings .innerpage-Wrapper{padding-left: 0 !important;}
     .list-row-custom{padding-top: 10px;}
     #addpropertie #mylisting ul li {padding: 12px 5px 5px 0;}
     #addpropertie textarea {margin-bottom: 0;}
@@ -397,7 +440,7 @@ textarea.form-control {height: auto;height: 90px;border-radius: 0;box-shadow: in
     ul.notificationList .media-body {padding-top: 15px;width: 100% !important;padding-left: 30px;}
     .agentProfile .proprtyList .media-body ul li { padding: 0 !important;  width: 100%; vertical-align: top;  text-align: left;padding-bottom: 10px !important;}
         .agentProfile .proprtyList .media-body ul.listing, .agentProfile .proprtyList .media-body ul.rightListing{display:block;}
-    .agentProfile .proprtyList .media-body ul li span{text-align:left; padding-left:20px; margin-bottom:6px;}
+    .agentProfile .proprtyList .media-body ul li span{text-align:center; padding-left:20px; margin-bottom:6px;}
     .header{padding:15px;}
     .agentProfile button.mobToggle { display:block;}
     .agentProfile .proprtyList figure.media-left{display:block; width:100%; height:257px; }
@@ -418,9 +461,13 @@ textarea.form-control {height: auto;height: 90px;border-radius: 0;box-shadow: in
     .addpost .features h3 {font-size: 20px;}
     .addpost .features::before { top: -21px; left: -5px; width: calc(100% + 10px); }
     #mylisting ul li { padding: 12px 0px 4px 0; }
-    .agentProfile .proprtyList .media-body ul li label {padding: 5px 15px; margin-bottom: 4px; }
+    .agentProfile .proprtyList .media-body ul li label {padding: 5px 15px; margin-bottom: 0px; }
     .agentProfile .proprtyList .media-body ul li label {font-size: 15px;font-weight: 500;}
-    .agentProfile .proprtyList .media-body h3 { margin-bottom: 20px; font-weight:500;}
+.agentProfile .proprtyList .media-body h3 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-align: center;
+}
     .agentProfile .proprtyList .media-body{padding:15px 0;}
     .agentProfile .topNavOption::before {bottom: 0px;}
 

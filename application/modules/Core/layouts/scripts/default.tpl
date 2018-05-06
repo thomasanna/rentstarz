@@ -8,8 +8,9 @@
  * @license    http://www.socialengine.com/license/
  * @version    $Id: default.tpl 10227 2014-05-16 22:43:27Z andres $
  * @author     John
- */
+ */ 
 ?>
+<?php $viewer         = Engine_Api::_()->user()->getViewer(); ?>
 <?php echo $this->doctype()->__toString() ?>
 <?php $locale = $this->locale()->getLocale()->__toString(); $orientation = ( $this->layout()->orientation == 'right-to-left' ? 'rtl' : 'ltr' ); ?>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $locale ?>" lang="<?php echo $locale ?>" dir="<?php echo $orientation ?>">
@@ -20,57 +21,43 @@
     <title>Rentstarz </title>
     <?php endif;?>
     <meta name="google-site-verification" content="IyeQmae8bkHckvyjWGGFzu6S71OhV6jfRUuwlEHRhpE" />
-    <script type='application/ld+json'>
-    {
-     "@context": "http://schema.org/",
-     "@type": "LocalBusiness",
-     "name": "Rentstarz LLC",
-     "url": "https://www.rentstarz.com",
-     "image": "https://www.rentstarz.com/application/modules/User/externals/images/latestlandingimages/logo_optimized4kb.png",
-     "description": "Rentstarz is a social driven rental platform. This means we do not rely on real estate agencies nor do we piggy back off of rental platforms to get property listings. Our listings comes straight from landlords and property managers. Simply build your profile and start connecting with landlords and renters all over the country.",
-     "address": {
-     "@type": "PostalAddress",
-     "streetAddress": "1956 Rockaway Parkway",
-     "addressLocality": "Brooklyn",
-     "addressRegion": "NY",
-     "postalCode": "11236",
-     "addressCountry": "USA"
-      },
-     "telephone": "1(877) 5075335"
-    }
-    </script> 
-    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/jquery.min.js"></script>
-    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/jquery-ui.js"></script>    
+    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/js/jquery-3.1.1.min.js"></script>
+    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/js/slick.min.js"></script>
+    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/js/paginathing.min.js"></script>
+ 
     
-    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/jquery.fileupload.js"></script>
-    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/jquery.fileupload-fp.js"></script>
-    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/jquery.fileupload-jui.js"></script>
-    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/jquery.fileupload-ui.js"></script>
-    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/jquery.dialogBox.js"></script>
-    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/ratingstar.js"></script>
-    <script src="<?php echo $this->baseUrl(); ?>/application/modules/Ynresponsive1/externals/scripts/bootstrap.min.js"></script>
-
+    
+<!--
+    <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/js/custom.js"></script>
+-->
     <script>jQuery.noConflict();</script>
-    <link href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/style.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/theme_style.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/newstyles.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/jquery.dialogbox.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/lightbox.min.css" rel="stylesheet" type="text/css">
+     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals//assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/css/slick.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/css/sh.css" rel="stylesheet">  
+    <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/css/mystyles.css" rel="stylesheet">  
+     
     <link rel="icon" type="image/png" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/images/rentstarz_favicon.png" />
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/blitzer/jquery-ui.css" type="text/css" />
-    <link href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/jRating.jquery.css" rel="stylesheet" type="text/css">
-    <link href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-   <link rel="stylesheet" href="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/styles/online.css" type="text/css">
-
+   
   <base href="<?php echo rtrim('//' . $_SERVER['HTTP_HOST'] . $this->baseUrl(), '/'). '/' ?>" />
+
+
   <?php // ALLOW HOOKS INTO META ?>
   <?php echo $this->hooks('onRenderLayoutDefault', $this) ?>
+
+
   <?php // TITLE/META ?>
   <?php
     $counter = (int) $this->layout()->counter;
     $staticBaseUrl = $this->layout()->staticBaseUrl;
     $headIncludes = $this->layout()->headIncludes;
+
     $request = Zend_Controller_Front::getInstance()->getRequest();
     $this->headTitle()
       ->setSeparator(' - ');
@@ -87,13 +74,17 @@
     $this->headMeta()
       ->appendHttpEquiv('Content-Type', 'text/html; charset=UTF-8')
       ->appendHttpEquiv('Content-Language', $this->locale()->getLocale()->__toString());
+
     // Make description and keywords
     $description = '';
     $keywords = '';
+
     $description .= ' ' .$this->layout()->siteinfo['description'];
     $keywords = $this->layout()->siteinfo['keywords'];
+
     if( $this->subject() && $this->subject()->getIdentity() ) {
       $this->headTitle($this->subject()->getTitle());
+
       $description .= ' ' .$this->subject()->getDescription();
       // Remove the white space from left and right side
       $keywords = trim($keywords);
@@ -102,9 +93,12 @@
       }
       $keywords .= $this->subject()->getKeywords(',');
     }
+
     $keywords = trim($keywords, ',');
+
     $this->headMeta()->appendName('description', trim($description));
     $this->headMeta()->appendName('keywords', trim($keywords));
+
     // Get body identity
     if( isset($this->layout()->siteinfo['identity']) ) {
       $identity = $this->layout()->siteinfo['identity'];
@@ -114,74 +108,34 @@
           $request->getActionName();
     }
   ?>
-  <?php //echo $this->headTitle()->toString()."\n" ?>
-  <?php //echo $this->headTitle($this->metaTitle)."\n"; ?>
+
   <?php echo $this->headMeta()->toString()."\n" ?>
-  <?php // LINK/STYLES ?>
-  <?php
-    $this->headLink(array(
-      'rel' => 'favicon',
-      'href' => ( isset($this->layout()->favicon)
-        ? $staticBaseUrl . $this->layout()->favicon
-        : '/favicon.ico' ),
-      'type' => 'image/x-icon'),
-      'PREPEND');
-    $themes = array();
-    if( !empty($this->layout()->themes) ) {
-      $themes = $this->layout()->themes;
-    } else {
-      $themes = array('default');
-    }
-    foreach( $themes as $theme ) {
-      if( APPLICATION_ENV != 'development' ) {
-        $this->headLink()
-          ->prependStylesheet($staticBaseUrl . 'application/css.php?request=application/themes/' . $theme . '/theme.css');
-      } else {
-        $this->headLink()
-          ->prependStylesheet(rtrim($this->baseUrl(), '/') . '/application/css.php?request=application/themes/' . $theme . '/theme.css');
-      }
-    }
-  ?>
-  <?php echo $this->headLink()->toString()."\n" ?>
-  <?php echo $this->headStyle()->toString()."\n" ?>
+    <style>      
+
+        .searchFilter ul li a {
+            padding: 26px 20px;
+        }
+
+        .searchFilter ul li .morebutton {
+               padding: 23px 20px;
+    background: #8796a0;
+            border: 0;
+        }
+        .filter-search.searchFilter button {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.searchFilter ul li .morebutton:hover{background-color: #f58300;transition: all 0.3s ease-in;}
+
+    </style>
+
 </head>
-<body id="global_page_<?php echo $identity ?>">
- <div class="wrapper">
-  <script type="javascript/text">
-    if(DetectIpad()){
-      $$('a.album_main_upload').setStyle('display', 'none');
-      $$('a.album_quick_upload').setStyle('display', 'none');
-      $$('a.icon_photos_new').setStyle('display', 'none');
-    }
-  </script>
-  <div id="global_header">
-    <?php echo $this->content('header') ?>
-  <script>
- jQuery(document).on('click', function (e) {
-    if (jQuery(e.target).closest(".user-profile").length === 0) {
-        jQuery("#user-profile-submenu").css('display','none');
-        jQuery("#user-profile-submenu").removeClass('in');
-    }
-});
-</script>
-  </div>
-  <div id='global_wrapper'>
-  <?php /*   <script src="<?php echo $this->baseUrl(); ?>/cometchat/cometchatjs.php"></script>
-    <script src="<?php echo $this->baseUrl(); ?>/cometchat/cometchatcss.php"></script> */ ?>
-    <div id='global_content'>
-      <?php //echo $this->content('global-user', 'before') ?>
-      <?php echo $this->layout()->content ?>
-      <?php //echo $this->content('global-user', 'after') ?>
-    </div>
-  </div>
-  </div>
-  <div class="push"></div>
-   </div>
-   <div class="footer">
-  <div id="global_footer">
-    <?php echo $this->content('footer') ?>
-  </div>
-  </div>
-  <div id="janrainEngageShare" style="display:none">Share</div>
+<body id="global_page_<?php echo $identity ?>" class="wrappers">
+      <?php echo $this->content()->renderWidget('user.header'); ?>
+      <?php echo $this->layout()->content ?> 
+      <?php echo $this->content()->renderWidget('user.footer'); ?> 
+
 </body>
 </html>
+
+

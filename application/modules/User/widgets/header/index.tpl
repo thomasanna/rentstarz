@@ -71,7 +71,7 @@ $profileType    = $userdetails['profile_type'];
 
                 <link rel='stylesheet' href='<?php echo $this->baseUrl(); ?>/application/modules/User/externals/chat/css/style.css' type='text/css'/>
                 <link rel='stylesheet' href='<?php echo $this->baseUrl(); ?>/application/modules/User/externals/chat/css/responsive-style.css' type='text/css'/>
-                <link rel='stylesheet' href='<?php echo $this->baseUrl(); ?>https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.7.0/css/perfect-scrollbar.min.css' type='text/css'/>
+                <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.7.0/css/perfect-scrollbar.min.css' type='text/css'/>
 
                 <script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/chat/js/sails.io.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.7.0/js/perfect-scrollbar.jquery.min.js"></script>

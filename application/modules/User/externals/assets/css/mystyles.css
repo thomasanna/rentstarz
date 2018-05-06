@@ -1,7 +1,10 @@
- .like_property.saved{
-    background: #f58300 !important;
+ #landloard-map .media .btn.like_property.saved {
+    background: #8796a0 !important;
     border-color: #f58300 !important;
     outline: none;
     transition: all 0.3s ease-in;
     color: #fff !important;
  }
+.ybo_headline{
+ display:none;
+}

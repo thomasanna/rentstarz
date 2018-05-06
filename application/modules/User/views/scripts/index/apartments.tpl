@@ -21,7 +21,7 @@
        
 ?>        
  <!--    map tabbing section-->
-    <div class="filter-search searchFilter">
+    <div class="filter-search searchFilter landloard-links">
         <div class="container">
             <ul>
                 <li class="item">
@@ -105,7 +105,7 @@
                 </li>
                 <li class="dropdown bedroom_li">
                     <a class="dropdown-toggle" id="menu3" type="" data-toggle="dropdown">
-                        <img src="assets/images/bedroom.png" alt="">&nbsp;
+                        <img src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/assets/images/bedroom.png" alt="">&nbsp;
                         <?php if(isset($this->location_mode_array['bedroom'])):
                          echo $this->location_mode_array['bedroom'];
                          else: 
@@ -164,9 +164,8 @@
         </div>
     </div>
 
-    <section class="landlordList mapsLandLord">
+    <section class="landlordList mapsLandLord" id="landloard-map">
         <div class="container-fluid">
-            <div id="map"></div>
             <ul class="Listcontainer">
 			<?php foreach($this->propertyListData as $data): ?>
 			<?php $UserData = $userTable->fetchRow($userTable->select()->where('user_id = ?', $data['property_owner_id'])); ?>
@@ -219,7 +218,7 @@
 
 								$description  = strip_tags($data['description']);
 								if(strlen($description)<=300){echo $description;}
-								else{$description=substr($description,0,300) . '...'; echo $description;}
+								else{$description=substr($description,0,200) . '...'; echo $description;}
 								$tagtext    = $data['property_name'];
 								$feed_image = '/'.$propertyImageData->image;
 								$detailUrl  = '/property/'.$data['id'];
@@ -299,6 +298,7 @@
                <?php endforeach;?>
 
             </ul>            
+       </ul>
         </div>
     </section>
 <div id="fb-root"></div>
@@ -311,22 +311,27 @@ initAutocomplete1();
 
 });
 
-function initMap(userLat,userLng) {console.log(userLat)
-     
-	var mapOptions = {
-	    center: { lat: userLat, lng: userLng },
-	    zoom: 200
-	};
-	var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-}
-jQuery( "li.media" ).hover(function() {
-  var lat  = parseFloat(jQuery(this).attr('data-lat'));
-  var longi  = parseFloat(jQuery(this).attr('data-long'));
-  initMap(lat,longi); 
-});
-jQuery(".dropdown-menu li a").click(function(){
- jQuery(this).parents(".dropdown").find('.dropdown-toggle').html($(this).text() + ' <span class="caret"></span>');
- jQuery(this).parents(".dropdown").find('.dropdown-toggle').attr('dataVal',$(this).attr('tabindex')); 
+
+
+//~ jQuery( "li.media" ).hover(function() {
+  //~ var lat  = parseFloat(jQuery(this).attr('data-lat'));
+  //~ var longi  = parseFloat(jQuery(this).attr('data-long'));
+  //~ initMap(lat,longi); 
+//~ });
+//~ function initMap(lat,longi) { 
+	//~ var uluru = { lat: lat, lng:longi };
+	//~ var map = new google.maps.Map(document.getElementById('map'), {
+		//~ zoom: 15,
+		//~ center: uluru
+	//~ });
+	//~ var marker = new google.maps.Marker({
+		//~ position: uluru,
+		//~ map: map
+	//~ });
+ //}
+jQuery(".dropdown  a").click(function(){
+ jQuery(this).parents(".dropdown").find('.dropdown-toggle').html(jQuery(this).text() + ' <span class="caret"></span>');
+ jQuery(this).parents(".dropdown").find('.dropdown-toggle').attr('dataVal',jQuery(this).attr('tabindex')); 
 });		
 
 jQuery('body').on('click', '#searchID', function(event){
@@ -436,7 +441,7 @@ function fbShare(id,tagText,shareImage,detailedurl){
 jQuery('body').on('click', '.like_property', function(event){
 
 	var oData       = new Object();
-	var property_id =oData.property_id =parseInt(jQuery(this).attr('property_id'));
+	var property_id =oData.property_id =parseInt(jQuery(this).attr('property_id'));alert(property_id);
     var self = jQuery(this);
     if(!self.hasClass('saved')){
             var url = '<?php echo $this->baseUrl().'/user/index/likeproperty' ?>';
@@ -479,15 +484,4 @@ jQuery('body').on('click', '.like_property', function(event){
 
 });
 
-function initMap(lat,longi) { alert(lati); alert(longi);
-	var uluru = { lat: lati, lng:longi };
-	var map = new google.maps.Map(document.getElementById('mapCanvas'), {
-		zoom: 15,
-		center: uluru
-	});
-	var marker = new google.maps.Marker({
-		position: uluru,
-		map: map
-	});
-}
 </script>

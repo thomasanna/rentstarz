@@ -1,4 +1,4 @@
-body{background-color: #fcfcfc !important;}
+body{    background-color: #fcfcfc !important;}
 .wrapper {
     background-image: url(../images/banner.png);
     background-repeat: no-repeat;
@@ -91,8 +91,9 @@ transition: all 0.3s ease;
     margin-top: 50px;
 }
 
-.mapsLandLord li .content .cotentlenks span a:hover {
-    color: #f58201;
+.mapsLandLord li .content .cotentlenks span a:hover, .mapsLandLord li .content .cotentlenks span a:hover i {
+    color: #f58201 !important;
+    transform: all 0.3s ease-in;
 }
 
 /*
@@ -1083,7 +1084,9 @@ section.postOfScouts ul{position: relative;}
     float: right;
 }
 
-
+h4.vd-heading {
+    padding-top: 20px;
+}
 
 /*rent happy*/
 
@@ -1349,7 +1352,7 @@ section.postOfScouts ul{position: relative;}
 
 /*==========================================User Info page===================================================*/
 .searchFilter {
-    background-color: #fff;
+    background: #fcfcfc;
     padding: 0;
     /* z-index: 999999; */
     position: relative;
@@ -1736,10 +1739,37 @@ h6.chooseUnits .btn{padding: 10px 60px;}
 .myApplication.credit-new-re ul.budget tr:hover{
     background: #fcfcfc;
 }
+.profile-agent-p #mylisting ul > li.item:nth-child(even) {
+    background: #fcfcfc !important;
+}
+.profile-agent-p #mylisting ul > li.item {
+    background: #fff !important;
+}
+.agentProfile_Pa #mylisting ul > li.item:nth-child(odd){
+    background: #fcfcfc;
+
+}
+.agentProfile_Pa #mylisting ul > li.item:nth-child(even){
+    background: #fff;
+}
+.profile-agent-ten #mylisting ul > li.item:nth-child(even){background: fff;}
+.profile-agent-ten #mylisting ul > li.item:nth-child(odd){
+    background: #fcfcfc;
+}
 
 
-#mylisting ul > li.item:nth-child(even){background: #fafafa;}
-#mylisting ul > li.item{background: #fff;}
+
+
+
+.checkbox label {
+    padding-left: 0;
+    position: relative;
+}
+
+
+.agentProfile_Pa ul.proprtyList {
+    margin-top: 20px !important;
+}
 
 .new-task3 .tableview tr:nth-child(even) {
     background: #fff !important;
@@ -1754,10 +1784,10 @@ h6.chooseUnits .btn{padding: 10px 60px;}
 }
 
 .outerboxContent {
-    background: #f9f9f9;
+    background: #fcfcfc;
 }
 .outerboxContent:hover {
-    background: #f9f9f9 !important;
+    background: #fcfcfc !important;
     transition: all 0.3s ease-in;
 }
 .outerboxContent:nth-child(even) {
@@ -1868,7 +1898,7 @@ ul.proprtyList li {
     margin: 25px 0 0px 0  !important;
 }
 .personalInfo.back-check-p .form-control {
-    margin-bottom: 50px;
+    margin-bottom:0px;
 }.profile_reg .myApplication .birthday li {
     display: inline-block;
     width: 30%;
@@ -1888,9 +1918,10 @@ ul.proprtyList li {
 }
 .filter-search.transunion > p.txt-black {
     font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 .filter-search.transunion > p.txt-black b {
-    font-weight: 500;
+    font-weight: 400;
 }
 .transunion img {
     width: 136px !important;
@@ -1902,13 +1933,19 @@ ul.proprtyList li {
 }
 .personalInfo.rentalApp.transUnionFOrm .bold {
     font-size: 16px;
+    text-transform: capitalize;
 }
 
 .personalInfo.rentalApp.transUnionFOrm label {
     margin-bottom: 0;
 }
-
-
+.personalInfo .transUnionFOrm.new-erp .rentalApp .aboutme label {
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+.userProfile.newuser label {
+    text-transform: capitalize !important;
+}
 
 .new-erp h6{
     padding-top: 30px;
@@ -1997,7 +2034,7 @@ ul#topLinksbar1 li.nav-item {
     padding-bottom: 30px;
 }
 .tableview.sity-state tr:hover {
-    background: #72707136;
+    background: #fcfcfc;
     transition: all 0.3s ease-in;
 }
 
@@ -2018,7 +2055,7 @@ ul#topLinksbar1 li.nav-item {
 
 
 .gray-bgg {
-    background: #fafafa;
+    background: #fcfcfc;
 }
 
 ul#topLinksbar1 a.nav-link.btn.btn-primary:hover{color: #fff !important;}
@@ -2106,10 +2143,16 @@ section.filter-search.searchFilter.profile-dec ul li a{border-right: 0 !importan
 }
 .user-cla .myApplication {
     border: 1px solid #ddd !important;
+    background: #fcfcfc;
 }
-
-
-
+section.new_task.user-cla {
+    background: #fcfcfc;
+}
+.gray-bg-new .userProfile{background: #fcfcfc;}
+.gray-bg-new textarea {
+    background: #fcfcfc !important;
+    border-color: #ccc;
+}
 .user-cla  div#container {
     margin-top: 15px;
 }
@@ -2430,7 +2473,7 @@ span.dashed {
 .new-ttsk-2:before {
    background-size: 80% !important;
     right: -12% !important;
-    top:15%;
+    top:10%;
 }
 
 
@@ -2487,7 +2530,9 @@ section.addproperties.newlisting-page .tableview h4 {
 }
 button.btn.btn-primary.ornage-btn {
     background: #f98d2a !important;
-    padding: 20px !important;
+    padding: 10px !important;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 18px !important;
 }
 
 button.btn.btn-primary.ornage-btn:hover{
@@ -2500,10 +2545,10 @@ button.btn.btn-primary.ornage-btn:hover{
 
 section.myDocument.my-docmnt .doc1 span{  font-weight: 300;  font-family: 'Source Sans Pro', sans-serif;}
 section.myDocument.my-docmnt .doc1 .btn {
-       padding: 20px 106px !important;
+    padding: 10px 28px !important;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
-    font-size: 23px !important;
+    font-size: 16px !important;
 }
 
 .mydocument.newdocty::before{left: -200px !important;top: 10px !important;}
@@ -2668,26 +2713,37 @@ section.myDocument.myDocuments-area .fileContainr {
 .accountSections.new.account_socialInfo-n .account_social1 img {
     width: 250px;
 }
-div#myapplication-area .main-h {padding-bottom: 20px;   }
 
-div#myapplication-area .searchFilter ul li a {font-weight: 400; font-size: 18px;}
+
+div#myapplication-area .searchFilter ul li a {
+    font-weight: 400;
+    font-size: 18px;
+    padding: 0 14px;
+}
+div#myapplication-area .searchFilter ul li:first-child a {
+    padding-left: 0;
+}
+div#myapplication-area ul#personalInfo a {
+    font-size: 20px;
+}
 div#myapplication-area .personalInfo {
-    padding: 0px 30px 0;
+    padding: 0px 30px 0 !important;
+
 }
 div#myapplication-area .filter-search.searchFilter {
     padding: 0 20px;
 }
 div#myapplication-area ul#personalInfo {
-    padding: 10px 15px 0px;
+    padding: 0px 15px 0px;
 }
 div#myapplication-area .personalInfo h4 {
     font-weight: 600;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 30px;
+    font-size: 22px;
 }
 div#myapplication-area >.personalInfo label, div#myapplication-area >.personalInfo select {
     font-weight: 500 !important;
-    font-size: 22px !important;
+    font-size: 14px !important;
     color: #3f3f41 !important;
     font-family: 'Source Sans Pro', sans-serif;
     padding-bottom: 10px;
@@ -2698,33 +2754,48 @@ div#myapplication-area .aboutme label {
 div#myapplication-area .aboutme ul {
     padding: 0;
 }
-
+div#myapplication-area textarea {
+    height: 80px !important;
+}
+div#myapplication-area hr {
+    margin: 10px 0 5px;
+}
 div#myapplication-area li.radiocheck span {
     font-weight: 500 !important;
-    font-size: 20px !important;
+    font-size: 14px !important;
     color: #3f3f41 !important;
 }
 
 div#myapplication-area .aboutme input {
-    height: 62px !important;
+    height: 35px !important;
 }   
-
+div#myapplication-area textarea {
+    height: 80px;
+}
 div#myapplication-area .myApplication .aboutme label {
     margin: 20px 0;
 }
-
+div#myapplication-area .aboutme {
+    padding: 10px 15px;
+}
+div#myapplication-area .searchFilter ul {
+    padding-top: 10px;
+}
 div#myapplication-area  .myApplication .aboutme ul {
     padding: 0;
 }
-div#myapplication-area .radiocheck label span::before{    top: 8px !important;}
+div#myapplication-area .radiocheck label span::before{    top: 4px !important;}
 
 
 div#myapplication-area .radiocheck input[type="radio"]:checked + span::after {
     
-    top: 10px !important;
+    top: 7px !important;
 }
 div#myapplication-area li.radiocheck label {
-    margin: 10px 0 15px !important;
+    margin: 10px 0 10px !important;
+}
+div#myapplication-area textarea {
+    height: 95px;
 }
 
 div#myapplication-area .myApplication textarea {
@@ -2740,8 +2811,8 @@ button.btn.btn-default.ornage-btn-sumit:hover {
     background: #8796a0 !important;
 }
 div#myapplication-area {
-    margin-top: 18px;
     background: #fff;
+    padding-top: 20px;
 }
 img.Application-img-head {
     width: 218px;
@@ -2791,7 +2862,7 @@ img.Application-img-head {
 }
 
 #my-income-app .myApplication .aboutme label {
-    margin: 10px 0;
+    margin: 10px 0 !important;
 }
 
 #my-income-app .radiocheck input[type="radio"]:checked + span::after {top: 4.5px !important;} 
@@ -2801,7 +2872,7 @@ img.Application-img-head {
 
 #my-income-app label, p.txt-black.totla-text {
     font-size: 14px !important;
-    color:#b1b1b1 !important;
+    color: #1A1A1A !important;
     font-weight: normal !important;
 }
 
@@ -2915,7 +2986,7 @@ p.txt-black.totla-text{    padding: 15px 20px 10px;}
     padding-bottom: 4px;
 }
 
-#new-update-tast .aboutme input[type=button], #new-update-tast .aboutme textarea {transition: all 0.3s ease-in; border: 1px solid #ddd;background: #fcfcfc;color: #cecaca;font-weight: 300;}
+#new-update-tast .aboutme input[type=button], #new-update-tast .aboutme textarea {transition: all 0.3s ease-in; border: 1px solid #ddd;background: #fff;color: #cecaca;font-weight: 300;}
 #new-update-tast .aboutme input[type=button] {width: 100%;display: block;box-shadow: none;padding: 8px;text-transform: lowercase; font-size: 16px;}
 #new-update-tast .aboutme ::placeholder{color: #cecaca;}
 #new-update-tast .aboutme textarea {height: 197px;padding: 35px; resize: vertical;}
@@ -3110,16 +3181,16 @@ ul.uploadPhoto.uploadVideo {
 .list-row-custom{transition: all 0.3s ease-in;}
 
 
-.list-row-custom:nth-child(even) {
+/*.list-row-custom:nth-child(even) {
     background: #fff;
-}
-.list-row-custom:nth-child(odd) {
+}*/
+/*.list-row-custom:nth-child(odd) {
     background: #fcfcfc;
-}
-.list-row-custom:hover{
+}*/
+/*.list-row-custom:hover{
     transition: all 0.3s ease-in;
     background: #fcfcfc;
-}
+}*/
 
 .list-row-custom {
     padding-top: 5px;
@@ -3149,7 +3220,7 @@ section.addproperties.newlisting-page table tbody tr td {
 .addproperties.newlisting-page .RentalAPP .imaGe img{right: inherit;}
 
 .faq-area .myApplication {
-    background: #fdfdfd;
+    background: #fcfcfc;
     padding-top: 40px;
     max-width: 75%;
     margin: auto;
@@ -3331,7 +3402,7 @@ hr.faq-top-b {
 
 
 .applic_submit-area .myApplicationReview table th {
-    font-size: 26px !important;
+    font-size: 22px !important;
     color: #3c3c3e !important;
 }
 
@@ -3339,19 +3410,19 @@ hr.faq-top-b {
 
 
 .applic_submit-area .myApplicationReview table tbody tr td h4 {
-    font-size: 30px;
+    font-size: 22px;
 }
 
 
 .applic_submit-area .myApplication h4{font-weight: 500;}
 
 .applic_submit-area .myApplicationReview table tbody tr td, .myApplicationReview table thead tr th {
-    padding: 30px 80px;
+    padding: 10px 80px;
     vertical-align: middle;
 }
 
 .applic_submit-area .myApplicationReview table tbody tr td, .applic_submit-area .myApplicationReview table tbody tr td span {
-    font-size: 26px;
+    font-size: 18px;
     font-weight: 300;
     font-family: 'Source Sans Pro', sans-serif;
     color: #000 !important;
@@ -3380,8 +3451,9 @@ footer .contactUs h4, footer .stayintouch h4 {
     
 }
 .applic_submit-area .myApplicationReview {
-    background-position: 95% 76% !important;
+    background-position: 63% 94% !important;
     background: #fff;
+    background-size: 35%;
 }
 
 .qualificationCheck.firstSlide.first-s-center .radiocheck input[type="radio"]:checked + span::after {
@@ -3440,7 +3512,13 @@ section.registration ::placeholder{color: #555;}
     font-family: 'Source Sans Pro', sans-serif !important;
     font-size: 15px !important;}
 
-    #check-back .myApplication img {position: absolute;top: 3%;right: 10px;width: 256px !important;z-index: 999999;}
+#check-back .myApplication img {
+    position: absolute;
+    top: 6%;
+    right: 10px;
+    width: 164px !important;
+    z-index: 999999;
+}
 
 
 
@@ -3500,13 +3578,19 @@ section.new_task.new-task3 .myApplication.assignTM.new.maintenance h5.txt-black 
 #profile-img .filter-search.searchFilter li a {
     text-transform: uppercase;
 }
-#profile-img .userProfile.userPhotos.photo-fix {
-    background: #fff;
+#profile-img .userProfile.userPhotos.photo-fix, #profile-img .profile-heading {
+    background: #fcfcfc;
 }
-#profile-img .profile-heading {
+/*#profile-img .profile-heading {
     background: #ffffff;
-}
+}*/
 
+section#profile-img .userProfile.userPhotos.photo-fix {
+    padding-bottom: 0;
+}
+section#profile-img .userProfile.userPhotos.photo-fix .userPhotos-list.sec {
+    padding-bottom: 15px !important;
+}
 
 .addproperties.newlisting-page .filter-search.searchFilter {
     padding-left: 80px;
@@ -3527,10 +3611,10 @@ div#Two .filter-search.searchFilter {
 
 #about-p .myApplication img {
     position: absolute;
-    top: 2%;
+    top: 6%;
     right: 20px;
-    width: 260px;
     z-index: 999999;
+    width: 164px;
 }
 
 
@@ -3543,7 +3627,7 @@ div#Two .filter-search.searchFilter {
 #about-p .filter-search.searchFilter ul li a {
     border: 0;
     text-transform: uppercase;
-    padding-right: 0 !important;
+    /*padding-right: 0 !important;*/
 }
 
 
@@ -3673,7 +3757,7 @@ section#msg-send-to .myApplication img {
 }
 
 #uplodee-profile .btn.btn-default {
-    padding: 18px !important;
+    padding: 10px !important;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 22px !important;
     margin-bottom: 25px;
@@ -3702,7 +3786,7 @@ section#msg-send-to .myApplication img {
     content: "";
     height: 725px;
     position: absolute;
-    width: 168px;
+    width: 156px;
     right: -180px;
     opacity: 0.3;
     z-index: 99999999 !important;
@@ -3923,7 +4007,8 @@ section#addpost-now label {
 }
 section#addpost-now textarea {
     height: 170px !important;
-    background: #fcfcfc !important;
+    background: #fff !important;
+    box-shadow: none;
 }
 
 
@@ -3975,6 +4060,697 @@ button.btn.btn-default.post-ford {
     margin-top: 10px;
      background-color: #f58300 !important;
 }
+#mylisting ul > li.item {
+    padding: 0 0 10px !important;
+}
+section#agent-profile .checkbox label span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    border: 1px solid #c3c3c3;
+    box-shadow: inset 0px 0px 7px #c9c9c9;
+}
+
+
+/*.gray-white-al ul li:nth-child(even) {
+    background: #fff !important;
+}
+.gray-white-al ul li:nth-child(odd) {
+    background: #fafafa !important;
+}*/
+
+.ornage-text {
+    color: #f7931e;
+}
+#star-sce .first-s-center {
+    position: relative;
+    padding: 110px 85px !important;
+}
+
+#star-sce .first-s-center:after {
+    background-image: url(../images/Asset%201@3x.png);
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    width: 130px;
+    right: -22%;
+    bottom: 0;
+    opacity: 0.2;
+    background-size: 96%;
+    vertical-align: middle;
+    top: 6%;
+}
+
+#star-sce button#nextBtn {
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 5px 55px;
+    text-transform: lowercase;
+    font-size: 22px;
+    margin-left: 35px;
+}
+
+#star-sce .searchFilter ul li a {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#star-sce .first-s-center ul {
+    padding-left: 15px;
+}
+section#scoult_user button.btn.btn-primary {
+    padding: 5px 20px !important;
+}
+
+.start-login-step textarea.form-control {
+    height: 120px !important;
+
+}
+.start-login-step input, .start-login-step textarea {
+    margin: 0;
+    margin-bottom: 25px;
+    border-radius: 2px;
+    background: #fcfcfccf !important;
+    padding: 22px;
+    text-align: center;
+    /*box-shadow: none !important;*/
+    border-color: #e4e4e4 !important;
+    border: 1px solid;
+}
+.start-login-step ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+         font-size: 14px !important;
+         font-weight: 500;
+    line-height: 1.42857143;
+}
+.start-login-step ::-moz-placeholder { /* Firefox 19+ */
+        font-size: 14px !important;
+        font-weight: 450;
+    line-height: 1.42857143;
+}
+.start-login-step :-ms-input-placeholder { /* IE 10+ */
+        font-size: 14px !important;
+        font-weight: 450;
+    line-height: 1.42857143;
+}
+.start-login-step :-moz-placeholder { /* Firefox 18- */
+         font-size: 14px !important;
+         font-weight: 500;
+    line-height: 1.42857143;
+}
+section#star-sce .qualificationCheck.firstSlide.first-s-center.star-area {
+    padding: 145px 50px !important;
+}
+
+.start-login-step {
+    max-width: 82%;
+}
+.star-area:after {
+    display: none;
+}
+button.btn.btn-default.send-q {
+    background: #f58300 !important;
+    width: 50%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+button.btn.btn-default.send-q:hover {
+    background: #8796a0 !important;
+    border: 0 !important;
+}
+
+section.taskDefined.newtaskone_un .taskDefinedInner{
+    max-width: 830px !important;
+    background: #fcfcfc !important;
+}
+section.taskDefined.newtaskone_un h4.taskHeading {
+    max-width: 830px !important;
+}
+section.taskDefined.newtaskone_un .taskDefinedInner .headings p{text-align: center;}
+
+
+
+section.taskDefined.newtaskone_un .headings span {
+    padding-left: 35px;
+}
+
+section.taskDefined.newtaskone_un .gray-bg-light hr {
+    margin-right: 15px;
+}
+
+
+section.taskDefined.newtaskone_un .taskDetails .userTask {
+    max-width: 100px;
+    
+}
+button#more .caret {
+    color: #f58300;
+}
+
+.landloard-links button#searchID {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: #fff !important;
+    font-size: 16px !important;
+      padding: 10px 24px !important;
+    background-color: #f58300 !important;
+        margin-left: -4px;
+        transition: all 0.3s ease-in;
+}
+.landloard-links button#searchID:hover{background: #8796a0 !important;transition: all 0.3s ease-in;}
+.landloard-links button#more:hover{background: #8796a0 !important;transition: all 0.3s ease-in;}
+.landloard-links button#more {
+    background: #1173ba !important;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: #fff !important;
+    font-size: 16px;
+    padding: 10px 24px;
+    transition: all 0.3s ease-in;
+}
+.landloard-links button#more .caret {
+    color: #f58300;
+}
+.landloard-links button#more:hover .caret {color: #fff;}
+.landloard-links ul li .input-group input {
+    background: transparent;
+    border: 0 !important;
+    box-shadow: none;
+    padding: 14px 7px !important;
+    height: 43px !important;
+}
+.landloard-links ul li a{font-size: 17px;    color: #6c6c6c;border-right: 0 !important;}
+.landloard-links ul li {    border-right: 1px solid #e0e0e0;}
+.landloard-links ul li:nth-child(4) {
+    border: 0;
+}
+.filter-search.searchFilter.landloard-links ul li a {
+    padding: 10px 20px !important;
+}
+
+#landloard-map li .content .cotentlenks span a {
+    color: #6c6c6c;
+    outline: 0;
+    font-size: 12px;
+}
+.filter-search.searchFilter.landloard-links ul li .input-group {
+    max-width: 320px;
+    border-right: 0px !important;
+}
+
+#landloard-map ul.Listcontainer .media-left{
+    padding-right: 0;
+}
+   
+
+
+#landloard-map .media-left .img img {
+        width: 218px;
+    height: 226px;
+}
+#landloard-map  .media-body{position: relative;}
+#landloard-map .media .btn {
+    margin-bottom: 0px;
+    background: #f58300 !important;
+    
+    
+    padding: 10px !important;
+    position: absolute;
+    bottom: 0;
+    width: 100% !important;
+    display: block;
+    left: 0;
+    right: 0;
+}
+#landloard-map .media .btn:hover {
+    background: #8796a0 !important;
+    transition: all 0.3s ease-in;
+}
+#landloard-map  .media{padding: 0;}
+
+#landloard-map .content {
+    padding-left: 20px;
+}
+
+.mapsLandLord .media .content p {
+   
+    color: #000 !important;
+}
+section#landloard-map {
+    padding: 50px;
+}
+
+#landloard-map .content .fa {
+    color: #a6a6a6;
+    font-size: 12px;
+   
+}
+#landloard-map .row.cotentlenks .fa {
+    color: #6b6b6b;
+}
+section#landloard-map #map {
+    height: calc(100% - 224px);
+    position: absolute !important;
+    width: calc(48% - 30px);
+    top: 50px;
+    right: 0;
+    margin-right: 50px;
+}
+.landloard-links ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+         font-family: 'Source Sans Pro', sans-serif;
+     font-size: 17px;    color: #6c6c6c;
+}
+.landloard-links ::-moz-placeholder { /* Firefox 19+ */
+        font-family: 'Source Sans Pro', sans-serif;
+    font-size: 17px;    color: #6c6c6c;
+}
+.landloard-links :-ms-input-placeholder { /* IE 10+ */
+        font-family: 'Source Sans Pro', sans-serif;
+    font-size: 17px;    color: #6c6c6c;
+}
+.landloard-links :-moz-placeholder { /* Firefox 18- */
+         font-family: 'Source Sans Pro', sans-serif;
+     font-size: 17px;    color: #6c6c6c;
+}
+
+section#landloard-map b i {
+    color: #000 !important;
+    font-size: 14px;
+}
+section#landloard-map .media:hover {
+    background: #e4e4e4;
+}
+
+
+
+
+section#transunion-h table td, section#transunion-h table th {
+    text-align: center;
+}
+
+.startScreening-property .filter-search.searchFilter ul li a {
+    font-weight: 500;
+    text-transform: lowercase !important;
+    font-size: 18px;
+    padding: 0;
+    
+}
+
+.startScreening-property  .myApplication hr {
+    margin: 0;
+    display: block;
+    width: 97%;
+    margin: 2px auto;
+    border-top: 2px solid #eee;
+}
+h6.img-with-txt img {
+    position: relative !important;
+    width: auto !important;
+    top: inherit !important;
+    margin-top: -22px;
+    right: inherit !important;
+        padding-right: 5px;
+}
+.startScreening-property .filter-search.searchFilter ul li {
+    border-right: 1px solid #ccc !important;
+    padding: 18px;
+}
+
+
+.img-with-txt .uplode-repair-s {
+    margin-bottom: 40px;
+    font-size: 15px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    margin-right: 60px !important;
+    padding-top: 40px;
+    max-width: 640px;
+}
+.img-with-txt  span.uplode-repair-s > span {
+    background: white;
+    padding: 6px 0 6px 0;
+    z-index: 99999999;
+}
+.startScreening-property .personalInfo {
+    background: #fff;
+    padding: 20px 120px !important;
+}
+
+
+.startScreening-property .aboutme.sec {
+    padding-top: 0 !important;
+}
+.startScreening-property .myApplication h4 {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.startScreening-property .myApplication .aboutme label {
+    padding-bottom: 5px;
+    font-size: 15px !important;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #888787 !important;
+}
+
+.startScreening-property .filter-search.searchFilter ul li:last-child {
+    border-right: 0 !important;
+}
+button.save-continue {
+    width: 50%;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #f58300;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease-in;
+}
+
+button.save-continue:hover {
+    transition: all 0.3s ease-in;
+        background: #8796a0;
+}
+
+div#start_verification ul {
+    padding: 0;
+    margin: 0 !important;
+}
+div#start_verification ul label {
+    margin-top: 10px !important;
+    margin-bottom:20px !important;
+}
+
+
+#start_verification .radiocheck input[type="radio"]:checked + span::after {
+   
+    top: 4px !important;
+}
+div#start_verification .form-control {
+    
+    margin-bottom: 35px;
+}
+
+div#start_verification .aboutme label {
+    margin: 10px 0 0px 0 !important;
+}
+
+
+.packge-lis {
+    padding-top: 30px;
+}
+ .black-t {
+color: #000 !important;
+
+}
+#start_verification .black-t {
+color: #000 !important;
+font-weight: 500 !important;
+}
+
+#start_verification i.plus-blue {
+    font-weight: bold;
+    font-size: 23px;
+    right: -16px;
+    color: #0f79c0;
+    position: absolute;
+    top: -3px;
+}
+
+
+.background_check-about .aboutme label {
+    margin: 0 !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    color: #3f3f41 !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    padding-bottom: 10px !important;
+}
+
+.personalInfo.back-check-p .aboutme label.txt-orange{    color: #f58300!important;}
+
+
+
+.background_check-about .form-control {
+    margin-bottom: 15px !important;
+}
+
+.background_check-about .aboutme input, .background_check-about .aboutme select{height: 40px !important;}
+    
+.background_check-about h4.sub-heading {
+    font-weight: 600;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 30px !important;
+    margin-bottom: 20px;
+}
+
+
+.background_check-about select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none !important;
+background: url(../images/down-arow-1.png) no-repeat right 20px center !important;
+}
+
+
+
+.background_check-about .myApplication .searchFilter h3 {
+    text-align: left;
+    padding-bottom: 0px;
+    font-weight: 600;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 32px;
+}
+
+
+.background_check-about button.btn.btn-default {
+    background: #f58300 !important;
+    padding: 15px 45px !important;
+    margin-top: 0;
+}
+.background_check-about button.btn.btn-default:hover {
+     background: #8796a0 !important;
+}
+
+.personalInfo.rentalApp.transUnionFOrm.profile_summar {
+    border-top: 0 !important;
+}
+.userProfile.newuser > div {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.p-t-20{padding-top: 20px;}
+
+section.filter-search.searchFilter.mypost button.btn.btn-add {
+    padding: 10px 20px !important;
+    color: #fff !important;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+}
+
+section.rentat_application-p input, section.rentat_application-p .form-control1 {
+    border-radius: 0;
+    height: 40px !important;
+    padding-bottom: 10px;
+}
+
+section.filter-search.searchFilter.mypost li.item.active button.btn.btn-add{background-color: #f58300 !important;}
+section.filter-search.searchFilter.mypost li.item.active button.btn.btn-add:hover{       background: #8796a0 !important;}
+
+
+.left-line , .right-line, .left-right-line {
+    position: relative;
+}
+.left-line:after, .left-right-line:after {
+   
+    left: 0;
+}
+
+
+.right-line:after, .left-right-line:before {
+    
+    right: 0;
+}
+
+
+.right-line:after, .left-line:after, .left-right-line:after, .left-right-line:before{
+    content: "";
+    background: #ccc;
+    position: absolute;
+    width: 1px;
+    height: 15px;
+    bottom: 0;  
+}
+.rentat_application-p .rentalApp .aboutme label {
+    margin-top: 3px;
+    margin-bottom: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #1A1A1A !important;
+    font-size: 16px !important;
+}
+
+.rentat_application-p .txt-orange {
+    color: #f58300!important;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+}
+
+.form-sub-h {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    padding-top: 3px;
+}
+
+.rentat_application-p .filter-search h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 32px;
+}
+
+
+.rentat_application-p .rentalApp{margin-bottom: 20px;}
+.p-15{padding: 15px;}
+#user-info .userProfile ul li {
+    font-size: 16px;
+}
+#user-info .row.tabnab.userInfo, #user-info .searchFilter {
+    background: #fcfcfc !important;
+    position: relative;
+}
+
+#user-info .searchFilter ul li a{font-size: 16px;}
+
+#user-info textarea{
+     background: #fcfcfc !important;
+}
+section#mynetworks .outerBox:before {
+    background-image: url(../images/Asset%201@3x.png);
+    background-repeat: no-repeat;
+    content: "";
+    height: 600px;
+    position: absolute;
+    width: 130px;
+    left: -150px;
+    top: 0;
+    background-size: 96%;
+    opacity: 0.1;
+    bottom: 0;
+    margin: auto;
+}
+
+
+
+
+
+#profileDoc-new .fileContainr {
+    height: 362px;
+}
+#profileDoc-new .mydocument {
+    position: relative;
+    min-height: 440px;
+}
+
+#profileDoc-new .fileContainr {
+    background-image: url(../images/bulbBackground.png);
+    background-repeat: no-repeat;
+    background-position: 45% 174%;
+    background-size: 193px;
+}
+
+a.fw {
+    margin-top: 20px !important;
+    display: block;
+}
+
+section#addpost-now .box {
+    background: #fff;
+}
+
+
+
+
+
+section#background_check-me .myApplication img{width: 165px !important;}
+
+
+#sc_user-new .media:nth-child(odd) {
+    background: #fcfcfc !important;
+}
+
+/*changes*/
+.myApplication .aboutme textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+section.startScreening-property.new .myApplication {
+    padding-top: 0 !important;
+}
+#msg-send-to textarea{padding: 15px;}
+section#background_check-me .aboutme h4 {
+    font-size: 20px;
+}
+.rent-white-bg-gorm, .white-area-new {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 30px;
+}
+.white-area-new .personalInfo.rentalApp.transUnionFOrm {
+    padding: 15px;
+}
+.personalInfo.rentalApp.transUnionFOrm.profile_summarCriminal.Criminal {
+    clear: both;
+    padding-top: 30px !important;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/*.form-control:focus, textarea {
+    border-color: #f38320 !important;
+    }*/
+section#addpropertie, section#background_check-me .myApplication, .filter-search.searchFilter.CreditReport.credit-pyment-b,   
+#my-income-app .myApplication{
+    background: #fff;
+}
+
+#mypost-page ul.Listcontainer li.media:nth-child(odd) {
+    background: #fcfcfc;
+}
+#mypost-page ul.Listcontainer li.media:nth-child(odd):hover{background: #e4e4e4 !important;}
+#mypost-page .media .content p{font-size: 15px !important;}
+#mypost-page .content h2{font-size: 28px;}
+#uplodee-profile .Profile, .myApplication.credit-new-re{
+        background: #fcfcfc !important;
+}
+#landloard-map .media:nth-child(odd) {
+    background: #fcfcfc;
+}
+#landloard-map .media:nth-child(even) {
+    background: #fff;
+}
+.applic_submit-area .myApplicationReview, .white-bg{background-color: #fcfcfc !important;}
+.new-ttsk-2 th, section.new_task.new-task3.new .personalInfo.taskLink.newservice-agentsection.new_task.new-task3.new,
+.new_task.new-task3.new .myApplication {
+    background: #fff !important;
+}
+section.new_task.new-task2.fst table.table {
+    margin-bottom: 0;
+}
+section.new_task.new-task2.fst .aboutme {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+section.new_task.new-task3.new .newservice-agent input.form-control, section.new_task.new-task3.new .newservice-agent textarea{background: #fff !important;}
+
+section.new_task.new-task3.new .newservice-agent textarea{box-shadow: none;}
+
+
+
+
+
+
+
+
 
 
 /*===========================================New Task===================================================*/
@@ -4554,31 +5330,26 @@ footer .stayintouch {
 @media(max-width:1600px) {
 
 
-    .maintain-log .personalInfo {
-        overflow: scroll;
-    }
-    #sign-first-l .myApplication, #sign-first-2 .myApplication {
-    
-    width: 45% !important;}
-    
-    .landingPage.newlanding-page .searchFilter {
+    .maintain-log .personalInfo {overflow: scroll;}
+    #sign-first-l .myApplication, #sign-first-2 .myApplication {width: 45% !important;}    
+    .landingPage.newlanding-page .searchFilter {width: 100%;}
+    .userProfile ul li span {left: 38%;}
+    .profile_reg {height: 900px;}
+    .social_profile_reg .myApplication .imageUpload {width: 165px;}
+    .who_we_are {height: 780px;}
+}
 
-        width: 100%;
-    }
-
-    .userProfile ul li span {
-        left: 38%;
-    }
-    .profile_reg {
-        height: 900px;
-    }
-    .social_profile_reg .myApplication .imageUpload {
-        width: 165px;
-    }
-
-    .who_we_are {
-        height: 780px;
-    }
+@media(max-width:1567px) {
+    .mynetwork-wrap-content {
+    max-width: 895px;
+    margin: auto;
+}
+    .leftbar-listings .proprtyList .media-body ul.rightListing { width: 50% !important;}
+   .leftbar-listings .userdetails {width: 200px !important;}  
+   .leftbar-listings .innerpage-Wrapper.agentProfile, .leftbar-listings .innerpage-Wrapper{ padding-left: 184px !important;} 
+     #landloard-map li {width: 60% !important;}
+    #landloard-map .content .fa {color: #a6a6a6;font-size: 14px;}
+    section#landloard-map #map {width: calc(38% - 30px);}
 }
 
 @media(max-width:1440px) {
@@ -4586,6 +5357,7 @@ footer .stayintouch {
     width: calc(56%/3);
     float: left;
 }
+
     .account_socialInfo-n .myApplication { width: 93%;   }
     .profile_reg .myApplication .imageUpload label {
     cursor: pointer;
@@ -4640,14 +5412,45 @@ footer .stayintouch {
     }
 }
 
+@media(max-width:1299px) {
+    
+    
+#landloard-map .media .btn {
+    font-size: 20px !important;
+    padding: 8px !important;
+    margin-top: 0;
+}
+#landloard-map li .content .cotentlenks span a {
+   
+    font-size: 14px;
+}
+#landloard-map .landlordList .media .content p {
+    font-size: 15px;
+}
+   #landloard-map .media-left .img img {
+    width: 220px;
+    height: 228px;
+}
+    #landloard-map li{max-width:100%;width: 100% !important;}
+    section#landloard-map #map {
+    position: relative !important;
+    top: inherit;
+    height: 400px;
+    width: 100% !important;
+}
+#landloard-map .media-button.row {
+    margin-top: 20px;
+}
+}
+
 
 @media(max-width:1280px) {
-
+div#mylisting {
+    padding: 0 15px;
+}
     .accountSections.new.account_socialInfo-n .profile_reg.page_continue.social_profile_reg { margin-right: 0px; }
 
-
-
-.new-task3 .myApplication span.bgIMG {
+    .new-task3 .myApplication span.bgIMG {
     position: absolute;
     left: -40px;
     top: 30%;
@@ -4656,6 +5459,38 @@ footer .stayintouch {
 }
 
 @media(max-width:1199px) {
+
+    ul#topLinksbar1 li.nav-item {
+    padding: 8px 5px 8px;
+}
+    #mylisting ul li{display: block;text-align: center;}
+    #uplodee-profile .Profile:before{width: 155px}
+    .agent-pp-up section#uplodee-profile {height: auto !important;}
+    section.myDocument.myDocuments-area .mydocument { position: relative;  min-height: 700px;}
+    section.myDocument.myDocuments-area .fileContainr {
+    background-position: 34% 108%;
+    background-size: 224px;
+    padding-bottom: 50px;
+    height: 720px;
+}
+    section#mynetworks .butn {padding: 15px 15px;}
+    .mynetwork-wrap-content { max-width: 830px; margin: auto;}
+    section#mynetworks .outerBox .outerboxContent ul li label { padding: 12px 2px;}
+    section#mynetworks .outerBox:before { width: 85px;  left: -85px;}
+    #landloard-map .media-button.row { margin-top: 0px;}
+    .nav>li>a { position: relative;  display: block; padding: 10px 5px;font-size: 13px;}
+    .startScreening-property .personalInfo {background: #fff;padding: 20px 45px !important;}
+    .startScreening-property .myApplication { padding-top: 0;}
+    .filter-search.searchFilter.landloard-links ul li .input-group {  max-width: 265px;  border-right: 0px !important;}
+    .landloard-links ul li a { padding: 26px 10px !important;}
+    .landloard-links button#searchID{padding:20px;}
+    section#star-sce .qualificationCheck.firstSlide.first-s-center.star-area {padding: 100px 50px !important;}
+    .star-area{height: 500px !important;}
+    section#landloard-map{padding-bottom: 0;}
+    section#landloard-map #map{margin-bottom: 0;}
+    #star-sce .first-s-center:after {   right: -25%;  background-size: 65%;  }
+    #star-sce .first-s-center { position: relative;  padding: 90px 75px !important;}
+    #star-sce .qualificationCheck.firstSlide.first-s-center { padding: 50px;  margin-top: 40px;    height: 400px;}
     #Profile-resg .personalInfo { width: 65%;padding-left: 30px;}
     #Profile-resg .birthday input {margin-right: 18px;}
     #Profile-resg .birthday input {width: 90px !important;}
@@ -4683,8 +5518,9 @@ footer .stayintouch {
 
 
 @media(max-width:1024px) {
+    body.landing .registration img{width: 100%;}
     #Profile-resg .imageUpload{margin-top: 0 !important;}
-    #uplodee-profile .Profile:before { width: 157px;}
+    #uplodee-profile .Profile:before { width: 145px;}
     #msg-send-to .myApplication { width: 80% !important;}
     section#star-sce .screenTenants .qualificationCheck{height: 504px;}
     #about-p .myApplication .aboutme label {padding-bottom: 5px;height: 45px;}
@@ -4785,23 +5621,29 @@ footer .stayintouch {
 
 
 @media(max-width:1023px) {
-    .agentProfile .proprtyList .media-body ul li label{
-        padding: 12px 2px !important;
-    }
+    .agentProfile .proprtyList .media-body ul li label{ padding: 12px 2px !important;}
 }
-
-
 @media(max-width:991px) {
-    #Profile-resg .myApplication {
-    width: 100% !important;
-    padding: 0;
-}
-#Profile-resg .birthday input {
-    width: 75px !important;
-}
-#Profile-resg {
-    height: 655px;}
-#Profile-resg .personalInfo{padding-left: 20px;}
+    section#mynetworks .outerBox:before { display: none;}
+    section#mynetworks .outerBox .outerboxContent .divisions.div1 img { width: 200px !important;}
+    .navbar-collapse.collapse {display: none !important;}
+    .navbar-collapse.collapse.in {display: block !important;}
+    .navbar-header .collapse, .navbar-toggle { display:block !important;}
+    .navbar-header {float:none;}
+    .filter-search.searchFilter.landloard-links ul li a {  padding: 10px 8px !important;}
+     .rentat_application-p .rentalApp .aboutme label { height: 44px;}
+    .landloard-links button#more, .landloard-links button#searchID {padding: 10px 15px !important; font-size: 14px !important;}
+    .landloard-links ul li .input-group input {padding: 10px 7px !important;}
+    .filter-search.searchFilter.landloard-links ul li .input-group { max-width: 165px;}
+    .landloard-links ul li a { padding: 10px 10px !important;}
+    section#star-sce .qualificationCheck.firstSlide.first-s-center.star-area {width: 80%;}
+    #star-sce .first-s-center { position: relative;padding: 57px 39px !important;}
+    #star-sce .qualificationCheck.firstSlide.first-s-center {height: 380px;}
+    #star-sce .first-s-center:after { right: -32%;background-size: 60%;}
+    #Profile-resg .myApplication { width: 100% !important; padding: 0;}
+    #Profile-resg .birthday input {width: 75px !important;}
+    #Profile-resg { height: 655px;}
+    #Profile-resg .personalInfo{padding-left: 20px;}
     #sign-first-2 .birthday input { margin-right: 15px;}
     #sign-first-l .personalInfo .aboutme:after, #sign-first-2 .personalInfo .aboutme:after { right: -28%;}
     section.addproperties.newlisting-page .myApplicationReview:after {background-size: 39%;left: 28%;top: 50%;}
@@ -4844,335 +5686,294 @@ footer .stayintouch {
     .accountSections.new.account_socialInfo-n .account_social1 p{padding-bottom: 50px !important;}
     .account_socialInfo-n .account_social1 img{padding-bottom: 0;}
     .account_socialInfo-n .addMore a{text-align:center !important;}
-    .maintain-log:before {width: 68px; top: 63%;}
+    .maintain-log:before {width: 68px; top: 47%;}
     .filter-search.searchFilter.CreditReport.credit-pyment-b .expiration li:nth-child(2) { width: 65px;margin-left: 12px;}
     .myDocument.profileDocument.nnw ul.file.row { padding-left: 30px;}
     .taskDefinedInner .col-sm-3 { width: 25%;}
     .edit-sum{top:15px;}
     .TopBox >.topboxInner {margin-bottom: 13px;}
     .accountSections.new .account_social1 p.txt-black{text-align: center;padding-bottom: 10px;}
-    .nav>li>a {       
-        
-        padding: 10px 5px;
-        font-size: 13px !important;
-    }
-    .navbar-brand > img {
-        height: 40px;
-    }
+    .nav>li>a {padding: 10px 5px;font-size: 13px !important;}
+    .navbar-brand > img {height: 40px;}
     .my-post-five span.cusomer_name{padding-right: 5%;}
-    .header.post_new_h .nav>li>a {
-    padding: 10px 3px;
-    font-size: 12px !important;
-}
-    .accountSections.new{
-        display: block;
-    }
-    .accountSections.new .myApplication {
-    width: 94% !important;
-    margin: 0 auto !important;
-    position: absolute;
-    right: 0;
-    left: 0;
-}
-.accountSections.new .social_profile_reg {
-    
-    height: 790px!important;
-    
-}
-
-.accountSections.new .account_socialInfo {
-   width: 100%;
-   display: table;
-}
-.accountSections.new .account_socialInfo .myApplication{margin-left: 0;}
-
-    .profile_reg .myApplication .logoImg img {
-        position: absolute;
-        top: 14%;
-        right: 0;
-    }
-
-
+    .header.post_new_h .nav>li>a { padding: 10px 3px; font-size: 12px !important;}
+    .accountSections.new{display: block; }
+    .accountSections.new .myApplication { width: 94% !important; margin: 0 auto !important;position: absolute; right: 0; left: 0;}
+    .accountSections.new .social_profile_reg {height: 790px!important;}
+    .accountSections.new .account_socialInfo {width: 100%;display: table;}
+    .accountSections.new .account_socialInfo .myApplication{margin-left: 0;}
+    .profile_reg .myApplication .logoImg img {position: absolute;top: 14%;right: 0;}
     .profile_reg .myApplication .imageUpload{height: 250px;}
-    .profile_reg .myApplication .imageUpload a {  
-    right: 10px;
-    font-size: 15px !important;
-    bottom: 0 !important;
-    }
-    .profile_reg .myApplication .imageUpload #myImg {
-        height: 174px;
-    }
-    .account_social1{
-        width: 100% !important;
-        display: block !important;}
-
-    .myApplication img {
-        top: 3%;
-        width: 200px;    }
+    .profile_reg .myApplication .imageUpload a {right: 10px; font-size: 15px !important;bottom: 0 !important;}
+    .profile_reg .myApplication .imageUpload #myImg {height: 174px;}
+    .account_social1{width: 100% !important;display: block !important;}
+    .myApplication img {top: 3%;width: 200px;  }
 }
 
+ @media (min-width: 768px) and (max-width: 991px) {
+    #landloard-map .media-button.row {margin-top: 20px;}
+    #landloard-map .media-left .img img {width: 220px;height: 256px;}
+        .navbar-nav .open .dropdown-menu {
+            position: static;          
+            width: auto;
+            margin-top: 0;
+            background-color: transparent;
+            border: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+        .navbar-nav .open .dropdown-menu > li > a {
+            line-height: 20px;
+        }
+        .navbar-nav .open .dropdown-menu > li > a,
+        .navbar-nav .open .dropdown-menu .dropdown-header {
+            padding: 5px 15px 5px 25px;
+        }
+        .dropdown-menu > li > a {
+            display: block;
+            padding: 3px 20px;
+            clear: both;
+            font-weight: normal;
+            line-height: 1.42857143;
+            color: #333;
+            white-space: nowrap;
+        }
+        .navbar-header {
+            float: none;
+        }
+        .navbar-toggle {
+            display: block;
+        }
+        .navbar-collapse {
+            border-top: 1px solid transparent;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+        .navbar-collapse.collapse {
+            display: none!important;
+        }
+        .navbar-nav {
+            float: none!important;
+            /*margin: 7.5px -15px;*/
+            /*margin: 7.5px 50px 7.5px -15px*/
+        }
+        .navbar-nav>li {
+            float: none;
+        }
+        .navbar-nav>li>a {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .navbar-text {
+            float: none;
+            margin: 15px 0;
+        }
+        
+        .navbar-collapse.collapse.in {display: block!important; }
+        .collapsing { overflow: hidden!important; }
+        .navbar-nav > li{text-align: right !important;}
+    }
 
-@media(max-width:768px) {
-  
-#Profile-resg .birthday input {
-    width: 78px !important;
-}
+
+
+
+@media(max-width:768px) {  
+
+    section#star-sce .qualificationCheck.firstSlide.first-s-center.star-area {width: 80%;height: 490px !important;}
+    #Profile-resg .birthday input {width: 78px !important;}
     section#star-sce .qualificationCheck{background-size: cover;
-        height: auto !important;padding-bottom: 150px !important;}
+    height: auto !important;padding-bottom: 150px !important;}
     .landingPage.newlanding-page .searchFilter ul li input {width: 236px;}
-        .landingPage.newlanding-page ul li { display: inline-block;float: left;}
+    .landingPage.newlanding-page ul li { display: inline-block;float: left;}
     img.Application-img-head{top: 2.2% !important;}
     .navbar-brand > img {height: 33px;}
-    .landingPage.newlanding-page .searchFilter {
-        width: 93.9%;
-    }
-    .navbar-nav > li > a {
-        font-size: 14px;
-        padding: 10px 7px;
-    }
-
-    .bannerSlider .item {
-        min-height: 325px;
-    }
-    .features ul li {
-        padding: 15px 30px;
-    }
-    .features h4 {
-        font-size: 20px;
-    }
-    .features p {
-        font-size: 16px;
-    }
-    .shared li {
-        margin-right: 50px;
-    }
-    .agent {
-        padding: 10px;
-    }
-    .agent .title .agentcontact ul li {
-        font-size: 11px;
-    }
-    .agent .title {
-        padding-left: 40px;
-    }
-    .agent .title .agentInfo p {
-        font-size: 14px;
-    }
-    .agent .title .agentcontact ul li:nth-child(2)::before {
-        left: -94%;
-    }
-    .agent .title .agentcontact ul li:first-child::before {
-        left: -50%
-    }
-    .rentIcon img,
-    .rent_socially .rentInfo1 .rentIcon img {
-        width: 100%;
-    }
-    .rent_socially {
-        height: 720px;
-    }
-    .postOfScouts li:nth-child(2) {
-        width: 287px
-    }
-    .postOfScouts li:first-child {
-        width: 300px;
-    }
-    .scoutsHotel li .scoutsImg {
-        width: 227px;
-        height: 160px;
-    }
-    .postOfScouts li h4 {
-        font-size: 22px;
-    }
-    .scoutsImg .scoutsInfo span {
-        font-size: 14px;
-    }
-    .scoutsImg .scoutsInfo p {
-        font-size: 18px;
-    }
-
-    .landingPage.newlanding-page .searchFilter ul {
-        width: 100%
-    }
-    .landingPage.newlanding-page .searchFilter ul li:first-child img {
-        left: 1%;
-    }
-    .landingPage.newlanding-page .searchFilter ul li .btn {
-        padding: 30px 50px;
-        font-size: 14px;
-    }
-    .landingPage.newlanding-page .searchFilter ul li a {
-        border: none;
-        padding: 30px 17px;
-    }
-    h4 {
-        font-size: 20px;
-    }
-    .rentHappyInfo p,
-    .rent_socially .rentInfo p {
-        font-size: 16px;
-    }
-    .registration h4,
-    .rentHappyInfo h4,
-    .rent_socially .rentInfo h4 {
-        padding-bottom: 15px;
-    }
-    .renthappy {
-        height: 550px!important
-    }
-    .rent_socially .rentInfo1 {
-        margin-top: 40px;
-    }
-    .myApplication img {
-        top: 6%;
-        width: 102px;
-    }
-    .myApplication .radiocheck span,
-    .myApplication label {
-        font-size: 15px;
-        font-weight: 500;
-    }
-    .userProfile ul li span {
-        left: 71%;
-    }
-    .userProfile textarea {
-        width: 100%
-    }
+    .landingPage.newlanding-page .searchFilter {width: 93.9%;}
+    .navbar-nav > li > a {font-size: 14px;padding: 10px 7px;}
+    .bannerSlider .item {min-height: 325px;}
+    .features ul li {padding: 15px 30px;}
+    .features h4 {font-size: 20px;}
+    .features p {font-size: 16px;}
+    .shared li {margin-right: 50px;}
+    .agent {padding: 10px;}
+    .agent .title .agentcontact ul li {font-size: 11px;}
+    .agent .title {padding-left: 40px;}
+    .agent .title .agentInfo p {font-size: 14px;}
+    .agent .title .agentcontact ul li:nth-child(2)::before {left: -94%;}
+    .agent .title .agentcontact ul li:first-child::before {left: -50%;}
+    .rentIcon img, .rent_socially .rentInfo1 .rentIcon img { width: 100%;}
+    .rent_socially {height: 720px;}
+    .postOfScouts li:nth-child(2) {width: 287px;}
+    .postOfScouts li:first-child { width: 300px;}
+    .scoutsHotel li .scoutsImg {width: 227px;height: 160px;}
+    .postOfScouts li h4 {font-size: 22px;}
+    .scoutsImg .scoutsInfo span {font-size: 14px;}
+    .scoutsImg .scoutsInfo p {font-size: 18px;}
+    .landingPage.newlanding-page .searchFilter ul {width: 100%;}
+    .landingPage.newlanding-page .searchFilter ul li:first-child img {left: 1%;}
+    .landingPage.newlanding-page .searchFilter ul li .btn {padding: 30px 50px; font-size: 14px;}
+    .landingPage.newlanding-page .searchFilter ul li a {border: none;padding: 30px 17px;}
+    h4 {font-size: 20px;}
+    .rentHappyInfo p, .rent_socially .rentInfo p { font-size: 16px;}
+    .registration h4, .rentHappyInfo h4, .rent_socially .rentInfo h4 { padding-bottom: 15px;}
+    .renthappy {height: 550px!important;}
+    .rent_socially .rentInfo1 {margin-top: 40px;}
+    .myApplication img {top: 6%;width: 102px;}
+    .myApplication .radiocheck span, .myApplication label {font-size: 15px; font-weight: 500;}
+    .userProfile ul li span {left: 71%;}
+    .userProfile textarea { width: 100%}
     .myApplicationReview table tbody tr td,
     .myApplicationReview table tbody tr td span,
-    .myApplicationReview table thead tr th {
-        font-size: 18px;
-    }
-    .myApplicationReview table tbody tr td h4 {
-        font-size: 20px;
-    }
-    .myApplicationReview {
-        background-position: 100% 100%;
-    }
-
-    .chooseProfile {
-        background-position: 100%;
-        height: 650px;
-    }
-
-    .profile_reg .myApplication .logoImg img {
-        right: 5px;
-        width: 100px;
-    }
-    .profile_reg .myApplication .aboutme label {
-        margin: 20px 0 10px;
-    }
-    .profile_reg .myApplication .form-control {
-        height: 53px
-    }
-    .profile_reg {
-        height: 800px;
-    }
-    .profile_reg .myApplication .imageUpload #myImg {
-        width: 140px;
-        height: 150px;
-    }
-    .profile_reg .myApplication .imageUpload {
-        width: 108px;
-        height: 280px;
-    }
-/*    .profile_reg .myApplication .imageUpload {
-        margin-top: 3px;
-    }
-*/    .profile_reg .myApplication .imageUpload a {
-        bottom: 60px;
-    }
-    .profile_reg .myApplication .aboutme label {
-        vertical-align: text-bottom
-    }
-/*    .profile_reg .myApplication .personalInfo .forwardArrow img {
-        margin-top: -10px;
-    }*/
-
-    .account_signup2 .myApplication .personalInfo .forwardArrow img {
-        margin-top: 30px;
-    }
-    .a2465ccount_social1,
-    .account_socialInfo {
-        width: 100%;
-        display: block;
-    }
-
-    .social_profile_reg .myApplication {
-        width: 90%!important;
-        left: 0;
-        right: 0;
-        margin-left: 0;
-        display: block;
-        margin: 0 auto
-    }
-    .account_social1 {
-        padding-bottom: 30px;
-    }
-
-    .paymentMode .paymentOption li img {
-        width: 100%
-    }
-    .expiration li:nth-child(2) {
-        width: 52px;
-    }
-
-    .paymentForm label {
-        font-size: 13px;
-    }
-
+    .myApplicationReview table thead tr th {font-size: 18px;}
+    .myApplicationReview table tbody tr td h4 {font-size: 20px;}
+    .myApplicationReview {background-position: 100% 100%;}
+    .chooseProfile {background-position: 100%;height: 650px;}
+    .profile_reg .myApplication .logoImg img {right: 5px;width: 100px;}
+    .profile_reg .myApplication .aboutme label {margin: 20px 0 10px;}
+    .profile_reg .myApplication .form-control {height: 53px;}
+    .profile_reg {height: 800px;}
+    .profile_reg .myApplication .imageUpload #myImg {width: 140px;height: 150px;}
+    .profile_reg .myApplication .imageUpload {width: 108px;height: 280px;}
+    .profile_reg .myApplication .imageUpload a { bottom: 60px;}
+    .profile_reg .myApplication .aboutme label {vertical-align: text-bottom;}
+    .account_signup2 .myApplication .personalInfo .forwardArrow img {margin-top: 30px;}
+    .a2465ccount_social1, .account_socialInfo { width: 100%; display: block;}
+    .social_profile_reg .myApplication {width: 90%!important;left: 0; right: 0;margin-left: 0; display: block; margin: 0 auto;}
+    .account_social1 {padding-bottom: 30px;}
+    .paymentMode .paymentOption li img {width: 100%;}
+    .expiration li:nth-child(2) {width: 52px;}
+    .paymentForm label { font-size: 13px;}
     .paymentMode .paymentOption li img,
-    .paymentMode .paymentOption1 li img {
-        width: 50px;
-    }
+    .paymentMode .paymentOption1 li img { width: 50px;}
 }
 
-@media(max-width:767px) { 
-    .addpost .features h3 {
-    font-weight: 600;
-    font-size: 19px !important;
+@media(max-width:767px) {
+    section#scoult_user button.btn.btn-primary {
+    padding: 5px 10px !important;
+    font-size: 14px !important;
+    margin-top: 5px;
 }
-    #Profile-resg {
-    height: 745px !important;
+    section#addpropertie .row.tabnab {
+    margin-left: 15px !important;
+}
+ section#about-p .searchFilter h3 {
+    line-height: 1.5;
+    font-size: 22px;
+}
+    .agentProfile .topNavOption li .btn {
+    font-size: 14px !important;
+    padding: 10px 10px !important;
+    text-transform: uppercase;
+    border: 0 !important;
+
 }
 
+ul#topLinksbar{margin: 0 !important;}
+ul#topLinksbar li {
+    border-right: 0;
+    display: block;
+}
+    .startScreening-property .filter-search.searchFilter ul{  padding:5px 0px !important;}
+.startScreening-property .filter-search.searchFilter ul li a
+    section#profile-img .userProfile.userPhotos.photo-fix .userPhotos-list.sec { padding-bottom: 0px !important;}
+    .notification.new-notification .media:last-child{padding-bottom: 0;}
+    .notification.new-notification .title { font-size: 24px;  margin-left: 0;}
+    .linkZ:before{left: 0;right: 0;margin:auto;}
+    .new_task.new-task2.fst { padding-bottom: 0;}
+    .notification.new-notification {margin-top: 20px;}
+    #about-p .myApplication .filter-search.searchFilter {  padding: 0 15px;}
+    section#background_check-me .myApplication img {width: 165px !important;  top: 46px !important;}
+    section#background_check-me .Mtop50{margin-top: 20px;}
+    section#background_check-me .personalInfo { padding: 0 !important;}
+    section#background_check-me .filter-search.searchFilter {padding-left: 15px;}
+    section#background_check-me .aboutme h4{padding-bottom: 15px;}
+    section#background_check-me label.txt-black{margin-top:5px !important;}
+    section#background_check-me .myApplication .form-control{margin-bottom: 10px !important;}
+    section.rent_socially img{padding-bottom: 20px;}
+    .p-0-l-r{padding: 0;}
+    .who_we_are span{font-size: 18px;}
+   body.landing section{padding: 20px 0 0;}
+   body.landing .maintain .rentHappyInfo {padding: 20px 0 0!important;}
+   body.landing .registration {padding-bottom: 0;}
+    body.landing .who_we_are{background:#fcfcfc !important;height: auto;padding-bottom: 20px;}
+    body.landing .margin50 {margin-bottom: 20px;}
+    .who_we_are .manage p{padding-top: 5px;}
+    body.landing .maintain img {display: none;}
+     .maintain .rentHappyInfo{position: relative !important;bottom:inherit !important;padding: 30px 0 !important;}
+    .background_check-about .aboutme label{font-size: 18px !important;}
+    .background_check-about .aboutme input, .background_check-about .aboutme select {height: 40px !important;}
+    .background_check-about h4.sub-heading{font-size: 22px !important;}
+    .background_check-about .myApplication .searchFilter h3{font-size: 22px;}
+    img.p-0-r{padding-top: 0 !important;}
+    a.fw {margin-top: 0px !important;display: block;}
+    #profileDoc-new .fileContainr {background-position: 36% 158%; background-size: 166px;}
+    #profileDoc-new .mydocument { position: relative; min-height: inherit;}
+    #profileDoc-new .fileContainr { height: 308px;}
+    #landloard-map .media .btn{position: relative;}
+    .landloard-links ul li .input-group input {padding: 4px 7px !important;}
+    .filter-search.searchFilter.landloard-links ul li a {padding: 5px 8px !important;}
+    .landloard-links ul li .input-group input {padding: 14px 7px !important;height: 30px !important;}
+    #landloard-map .media-button.row {margin-top: 0px;}
+    .main-h {font-size: 25px;}
+    .save-continue{margin-top: 0;}
+    .rentat_application-p input:focus, .rentat_application-p input:hover {border-color: #f38320;transition: all 0.3s ease-in;}
+    .rentat_application-p input, .rentat_application-p .form-control1 {border-radius: 0;height: 40px !important;background: #fff;margin: 10px 0;border: 1px solid #ccc;padding: 10px;}
+    .rentat_application-p .txt-orange {font-size: 20px;}
+    .rentat_application-p .filter-search h3{font-size: 28px;}
+    .right-line:after, .left-line:after, .left-right-line:after, .left-right-line:before{display: none;}
+    .rentat_application-p .rentalApp .aboutme label { height: auto;}
+    #transunion-h .transunion img {width: 50% !important;margin-top: 5px;margin-bottom: 20px;}
+    .userProfile.newuser{margin-top: 0 !important;}
+    #transunion-h  .transUnionFOrm{margin:0 !important}
+    #transunion-h .personalInfo.rentalApp.transUnionFOrm {padding: 15px !important;}
+    #transunion-h .tableview {padding: 0 !important;}
+    .startScreening-property .filter-search.searchFilter {padding-left: 0 !important;}
+    .startScreening-property .filter-search.searchFilter ul li a {font-size: 15px;}
+    .startScreening-property .filter-search.searchFilter ul li {padding: 5px;}
+    .img-with-txt .uplode-repair-s{padding-top: 0;}
+    .startScreening-property .personalInfo {background: #fff;padding: 0px !important;}
+    #landloard-map .media .btn {padding: 10px !important;}
+    .landloard-links button#more, .landloard-links button#searchID{padding: 7px !important;margin-top: 2px;font-size: 14px !important;}
+    .landloard-links ul li a {padding:5px !important;}
+    .landloard-links ul li:last-child {border-right: 0 !important;}
+    .filter-search.searchFilter.landloard-links ul li .input-group{max-width: 100%;}
+    .landloard-links ul li:first-child {margin-bottom: 5px;padding-left: 0;display: block;width: 100%;background: #ececec;border-right: 0;}
+    #landloard-map .content h2 {font-size: 22px;}
+    .landlordList .media .content p {font-size: 14px;line-height: 18px;}
+    #landloard-map li .content .cotentlenks span a {font-size: 14px;}
+    section#landloard-map {padding:20px 0px;}
+    #landloard-map .media-left .img img{margin-top: 20px;}
+    #landloard-map .content {padding: 15px;text-align: center;}
+    #landloard-map .media-button.row {margin-top: 0;}
+    #landloard-map .media-left .img img{height: auto;}
+    section#landloard-map .media-left{margin: 0 auto;height: auto !important;display: block;}
+    section#landloard-map .media-left img {width: 100% !important;margin: 0 auto;display: block;}
+    .start-login-step {max-width: 100%;}
+    section.taskDefined.newtaskone_un .headings span {padding-left: 0;text-align: center;}
+    section#star-sce .screenTenants .qualificationCheck{background-position: center center !important;}
+    #star-sce .first-s-center:after{display: none;}
+    #agent-profile .proprtyList .media-body ul li label, #new-profile-resg .proprtyList .media-body ul li label{font-size: 16px !important;}
+    #agent-profile .proprtyList .media-body ul li span, #new-profile-resg .proprtyList .media-body ul li span{font-size: 15px !important;}
+    #agent-profile #mylisting ul, #new-profile-resg #mylisting ul{margin:0 !important;}
+    #agent-profile ul.proprtyList li, #new-profile-resg ul.proprtyList li{padding-left: 5px !important;padding-right: 5px !important;}
+    #agent-profile ul.listing label, #new-profile-resg ul.listing label {font-size: 16px !important;}
+    #agent-profile .proprtyList .media-body ul li span, #new-profile-resg .proprtyList .media-body ul li span{font-size: 15px !important;} 
+    section#star-sce .qualificationCheck.firstSlide.first-s-center.star-area {padding-bottom: 30px !important;}
+    section#star-sce .qualificationCheck.firstSlide.first-s-center.star-area {padding: 40px 10px !important;}
+    .addpost .features h3 {font-weight: 600;font-size: 19px !important;}
+    #Profile-resg {height: 745px !important;}
     #Profile-resg .logoImg{display: none;}
-    #Profile-resg .imageUpload #myImg {
-    width: 168px !important;
-    height: 138px;
-    top: 73px;
-    left: 0;
-}
-#Profile-resg .birthday input {
-    width: calc(94%/3) !important;
-    margin: 5px;
-}
+    #Profile-resg .imageUpload #myImg {width: 168px !important;height: 138px;top: 73px;left: 0;}
+    #Profile-resg .birthday input {width: calc(94%/3) !important;margin: 5px;}
     .account_signup2 .myApplication .personalInfo .forwardArrow img {margin-top: 0;}
     #sign-first-l .myApplication, #sign-first-2 .myApplication{position:static;}
     section#sign-first-2 {height: 590px !important;}
     #sign-first-l .personalInfo, #sign-first-2 .personalInfo{padding:0 20px !important;}
-    section#sign-first-l {
- 
-    background-size: cover !important;
-}
-    section#sign-first-l input.form-control, section#sign-first-2 input.form-control {
-    margin-bottom: 0 !important;
-}
-    #sign-first-l .myApplication, #sign-first-2 .myApplication {
-    width: 100% !important;
-}
-    section#star-sce section.filter-search.searchFilter.newfilter-c ul li a{
-    padding: 0px 22px !important;
-}
-
-    #uplodee-profile .Profile {
-    position: relative;
-    width: 100%;
-}
-#uplodee-profile .Profile:before, #sign-first-l .personalInfo .aboutme:after, #sign-first-2 .personalInfo .aboutme:after {
- display: none;
-}
-#uplodee-profile{background: none;margin-top: 0 !important;}
+    section#sign-first-l {background-size: cover !important;}
+    section#sign-first-l input.form-control, section#sign-first-2 input.form-control {margin-bottom: 0 !important;}
+    #sign-first-l .myApplication, #sign-first-2 .myApplication {width: 100% !important;}
+    section#star-sce section.filter-search.searchFilter.newfilter-c ul li a{padding: 0px 22px !important;}
+    #uplodee-profile .Profile {position: relative;width: 100%;}
+    #uplodee-profile .Profile:before, #sign-first-l .personalInfo .aboutme:after, #sign-first-2 .personalInfo .aboutme:after {display: none;}
+    #uplodee-profile{background: none;margin-top: 0 !important;}
     #msg-send-to .personalInfo {padding: 0;}
     #msg-send-to .myApplication {padding: 15px 15px 10px;}
     section.addproperties.newlisting-page .table{margin-bottom: 0;}
@@ -5191,8 +5992,8 @@ footer .stayintouch {
     #about-p .myApplication .form-control{margin-bottom: 0;}
     #about-p .myApplication .btn.btn-default {margin-top: 0;}
     #about-p .myApplication{    padding: 20px 0;}  
-    #about-p .myApplication img {width: 190px;}    
-    .filter-search.searchFilter {padding-left: 15px;}
+    #about-p .myApplication img {width: 150px;top:35px !important;right: 5px;}    
+    .filter-search.searchFilter {padding-left: 0px;}
     #about-p .personalInfo {padding: 0;}
     section.new_task.new-task3.new ul.linkZ.new {padding: 20px;}
     section.new_task.new-task3.new .myApplication h5 { padding-left: 20px;font-size: 16px;}
@@ -5259,7 +6060,7 @@ footer .stayintouch {
     #new-profile-resg .myApplication img {top: 0;right: 10px;bottom: 0;margin: auto;}
     #new-profile-resg .myApplication .form-control{margin-bottom: 0;}
     #my-income-app ul#personalInfo {text-align: center;}
-    #my-income-app li.radiocheck span{    font-size: 14px !important;  color: #b1b1b1 !important;  font-weight: normal !important;}
+    #my-income-app li.radiocheck span{    font-size: 14px !important; font-weight: normal !important;}
     #my-income-app .personalInfo {padding-top: 20px !important;}
     #my-income-app ul#personalInfo, #my-income-app .personalInfo .aboutme {padding: 0;}
     #my-income-app .form-control{margin-bottom: 0 !important;}
@@ -5272,7 +6073,7 @@ footer .stayintouch {
     div#myapplication-area .filter-search.searchFilter {padding: 5px;}
     div#myapplication-area .personalInfo h4 {font-weight: 500; font-size: 20px;}
     div#myapplication-area .personalInfo {padding: 0px 10px 0 !important;}
-    div#myapplication-area .aboutme input, div#myapplication-area li.radiocheck span {height: 45px !important;margin-bottom: 0;}
+    div#myapplication-area .aboutme input, div#myapplication-area li.radiocheck span {height: 40px !important;margin-bottom: 0;}
     div#myapplication-area .personalInfo {padding: 0px 10px 0;  }
     div#myapplication-area >.personalInfo label, div#myapplication-area >.personalInfo select {font-size: 15px !important;}
     .accountSections.new.account_socialInfo-n .birthday {margin: 0;}
@@ -5300,77 +6101,33 @@ footer .stayintouch {
     .myApplication.myApplicationReview.maintain-log.new-ttsk-2 .aboutme { padding-top: 0;}
     .maintain-log:before{display: none;}
     ul.use-tow {padding-bottom: 0px !important;}
-   .innerpage-Wrapper.profile-infobox .userInfo .searchFilter ul li:last-child{width: auto !important;margin:inherit !important;}
-   .innerpage-Wrapper.profile-infobox .searchFilter ul li{vertical-align: middle !important;}
+    .innerpage-Wrapper.profile-infobox .userInfo .searchFilter ul li:last-child{width: auto !important;margin:inherit !important;}
+    .innerpage-Wrapper.profile-infobox .searchFilter ul li{vertical-align: middle !important;}
     .profile-infobox .userProfile li {font-size: 13px !important;}
     .innerpage-Wrapper.profile-infobox .userProfile ul li span{font-size: 12px;}
     .innerpage-Wrapper.profile-infobox .userProfile ul {padding: 50px 1px;}
-    .myApplication.credit-new-re .package label.txt-black {
-    padding-top: 20px;
- 
-}
+    .myApplication.credit-new-re .package label.txt-black {padding-top: 20px;}
     .myApplication.credit-new-re{padding: 0;}
     .myApplication.credit-new-re .paymentForm{border-right: 0;}
-    ul.paymentOption1.sec {
-        border-top: 0;
-    padding: 0 !important;
-    margin: 0 auto;
-    width: 100%;
-}
-.myApplication.credit-new-re table.table {
-    margin-bottom: 0;
-    margin-top: 10px;
-}
-ul.paymentOption1.sec li {
-    padding-left: 0 !important;
-}
-ul.paymentOption1.sec img{position: relative !important;left: inherit !important;}
-ul.paymentOption.paymentOption-rightbar {
-    padding: 0;
-    width: 100%;
-}
-ul.paymentOption.paymentOption-rightbar {
-    padding: 0;
-}
-.myApplication .radiocheck {
-    margin-right: 20px;
-    display: block;
-}
+    ul.paymentOption1.sec {border-top: 0;padding: 0 !important;margin: 0 auto;width: 100%;}
+    .myApplication.credit-new-re table.table {margin-bottom: 0;margin-top: 10px;}
+    ul.paymentOption1.sec li {padding-left: 0 !important;}
+    ul.paymentOption1.sec img{position: relative !important;left: inherit !important;}
+    ul.paymentOption.paymentOption-rightbar {padding: 0;width: 100%;}
+    ul.paymentOption.paymentOption-rightbar {padding: 0;}
+    .myApplication .radiocheck {margin-right: 20px;display: block;}
     .myApplication.credit-new-re .paymentForm{display: block;width: 100%;}
-    .filter-search.searchFilter.CreditReport.credit-pyment-b .paymentMode {
-    width: 100% !important;
-    display: block;
-    vertical-align: middle;
-}
-    .col-sm-12.filter-search.searchFilter.CreditReport.credit-pyment-b .form-control {
-    margin-bottom: 20px !important;
-}
-   .filter-search.searchFilter.CreditReport.credit-pyment-b .expiration li:nth-child(2){margin-left: 0 !important;}
-    .myApplication.credit-new-re .filter-search.searchFilter.package {
-        width: 100%;
-    }
-    .col-sm-12.filter-search.searchFilter.CreditReport.credit-pyment-b ul.expiration li {
-    float: none;
-    display: block;
-    width: 100% !important;
-}
-ul.expiration.m-b-0 {
-    width: 100%;
-    float: none;
-}
-
-    .aboutme .form-control {
-        margin-bottom: 20px;
-    }
+    .filter-search.searchFilter.CreditReport.credit-pyment-b .paymentMode {width: 100% !important;display: block;vertical-align: middle;}
+    .col-sm-12.filter-search.searchFilter.CreditReport.credit-pyment-b .form-control {margin-bottom: 20px !important;}
+    .filter-search.searchFilter.CreditReport.credit-pyment-b .expiration li:nth-child(2){margin-left: 0 !important;}
+    .myApplication.credit-new-re .filter-search.searchFilter.package {width: 100%;}
+    .col-sm-12.filter-search.searchFilter.CreditReport.credit-pyment-b ul.expiration li {float: none;display: block;width: 100% !important;}
+    ul.expiration.m-b-0 {width: 100%;float: none;}
+    .aboutme .form-control { margin-bottom: 20px;}
     .myDocument.profileDocument.nnw ul.file.row{padding-left: 0;}
-    .myDocument.profileDocument.nnw ul.file.row img {
-        width: 54px;
-    }
-
-
+    .myDocument.profileDocument.nnw ul.file.row img {width: 54px;}
     ul.linkZ.new:before{top:0;}
-    .taskDefinedInner .col-sm-3 {width: 100%;}
-    
+    .taskDefinedInner .col-sm-3 {width: 100%;}    
     .screenTenants .qualificationCheck {width: 100% !important;height: 400px !important;padding: 35px 20px !important; }
     .edit-sum{position: relative;}
     .mynetwork .TopBox .topboxInner input {display: block;width: 80%;padding: 8px;margin: 0 auto;}
@@ -5393,7 +6150,7 @@ ul.expiration.m-b-0 {
     .sAgentForm.new .agentFormButn{text-align: center;}
     .plus-iocn-col {width: 100%;padding-bottom: 8px;}
     section.new_task.new-task3 a.btn { padding: 15px;}
-    .new-task3 .myApplication h5, .new-task3 h5{font-size: 20px;}
+    .new-task3 .myApplication h5, .new-task3 h5 {font-size: 16px;  margin-bottom: 20px;line-height: 1.5;}
     .transUnionFOrm h6{font-size: 24px;}
     .transUnionFOrm .userProfile ul li{font-size: 14px;}
     .userProfile.newuser input{height: 25px;}
@@ -5441,11 +6198,10 @@ ul.expiration.m-b-0 {
     .registration input, .registration textarea {font-size: 16px; }
     .registration .btn {padding: 17px 30px; display: block;margin: 0 auto;}
     .registration button {float: none;}
-    .maintain {padding-bottom: 100px;}
+    .maintain {padding-bottom: 0px;}
     .landingPage.newlanding-page .searchFilter ul li #menu3 img{position: relative !important;padding-right: 5px;}
     .landingPage.newlanding-page .searchFilter ul li .btn{font-size: 16px !important;}
     .our_mission .imgMission img { float: none;margin: 0 auto; display: block;width: auto;}
-
     .landingPage.newlanding-page .searchFilter ul li a {border: none;padding: 12px 5px;}
     .landingPage.newlanding-page .searchFilter ul li input {width: 100%;text-align: center;}
     .landingPage.newlanding-page .searchFilter ul li #menu3 img {position: absolute;left: 41%;top: 44%;}
@@ -5491,9 +6247,17 @@ ul.expiration.m-b-0 {
 }
 
 @media(max-width:575px) {
-    #Profile-resg .birthday input {
-    width: 95px !important;
-    height: 40px !important;}
+    body.landing .rent_happy_icon img {padding-top: 20px !important; padding-bottom: 20px !important;}
+    section.postOfScouts{height: auto;}
+    .filter-search.searchFilter.landloard-links ul li a {padding: 5px 4px !important;}
+    .landloard-links button#more, .landloard-links button#searchID {padding: 2px 10px !important;margin-top: 2px;}
+    .landloard-links{padding-left: 0 !important;}
+    #user-info textarea { background: #fafafa !important;margin: 0 !important;height: 100px !important;}
+    section#user-info .userProfile h3 { font-size: 18px;}
+    button.save-continue {width: 100%;}
+    section#star-sce > .container-fluid {padding: 0 !important;}
+    section#star-sce .qualificationCheck{padding-bottom: 50px !important;}
+    #Profile-resg .birthday input {width: 95px !important;height: 40px !important;}
     #Profile-resg .aboutme {padding: 0;}
     #Profile-resg .personalInfo{padding: 10px !important;}
     #Profile-resg .birthday input {width: calc(85%/3) !important;margin: 5px;}
@@ -5514,7 +6278,7 @@ ul.expiration.m-b-0 {
     #profile-img .userPhotos-list li img {width: 94px !important;}
     #profile-img .userProfile.userPhotos.photo-fix {padding: 0;}
     #myapplication-area ul#personalInfo { padding: 0px 9px 0px;text-align: center;}
-   #profile-img .userPhotos ul li {width: calc(100%/3);float: left;}
+    #profile-img .userPhotos ul li {width: calc(100%/3);float: left;}
     .myDocument.my-docmnt .doc1 .btn {padding: 10px 50px !important;display: block;width: 100%;}
     .myDocument.my-docmnt .doc1 ul li{display: block;}
     .postOfScouts li:first-child, .postOfScouts li:nth-child(2){width: 100% !important;margin-right: 0;}
@@ -5571,6 +6335,7 @@ ul.expiration.m-b-0 {
     .account_sendmessage .myApplication .logoImg,
     .account_sendmessage .myApplication .personalInfo {width: 100%;}
     .who_we_are {height: 490px;}
+    body.landing .who_we_are{height: auto !important;}
     .maintain .rentHappyInfo {position: absolute; bottom: -40px;}
     .rent_happy_icon img {padding-top: 17%;}
     .new_task .myApplication .form-control, .new_task figure .btn.btn-default, .new_task textarea, .new_task button {width: 100%;}
@@ -5589,11 +6354,15 @@ ul.expiration.m-b-0 {
 }
 
 @media(max-width:429px) {
+
     .accountSections.new .profile_reg .myApplication .birthday li {width: 31.6%;}
     .landingPage.newlanding-page .searchFilter{top: 30% !important;}
 }
 
 @media(max-width:375px) {
+
+    section#star-sce .qualificationCheck {padding-bottom: 20px !important;}
+    #star-sce .first-s-center {position: relative;padding: 20px 30px !important;}
     section#profile-img .userPhotos-list li img {width: 90px !important;}
     .userProfile.userPhotos.photo-fix .userPhotos-list {padding-bottom: 0 !important;}
     .myApplication .searchFilter ul li:first-child a{border:0;}
@@ -5618,32 +6387,12 @@ ul.expiration.m-b-0 {
 
 
 @media(max-width:320px) {
+
     .landingPage.newlanding-page .searchFilter{top: 20% !important;}
-    .landingPage.newlanding-page .searchFilter ul li #menu3 img {
-        left: 30%;
-        top: 44%;
-    }
-    .postOfScouts {
-        margin-top: 120%;
-    }
-    .rent_happy_icon img {
-        /*        padding-top: 89%;*/
-    }
-    .social_profile_reg .Tandc li:nth-child(3) {
-        display: block;
-        margin: 0 auto;
-        text-align: center
-    }
-
-    .who_we_are {
-        height: 540px;
-    }
-    .scoutsHotel li .scoutsImg {
-        width: 280px;
-        height: 200px;
-
-    }
-    .maintain .rentHappyInfo {
-        bottom: -80px;
-    }
+    .landingPage.newlanding-page .searchFilter ul li #menu3 img {left: 30%;top: 44%;}
+    .postOfScouts {margin-top: 120%;}    
+    .social_profile_reg .Tandc li:nth-child(3) { display: block;margin: 0 auto;text-align: center;}
+    .who_we_are {height: 540px;}
+    .scoutsHotel li .scoutsImg {width: 280px;height: 200px;}
+    .maintain .rentHappyInfo {bottom: -80px;}
 }
