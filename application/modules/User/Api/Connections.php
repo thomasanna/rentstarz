@@ -1308,4 +1308,21 @@ class User_Api_Connections extends Core_Api_Abstract
         $result = array('html'=>$content);
         echo json_encode($result);
 	   }
+	public function getComments($aData){
+    $view = Zend_Registry::get('Zend_View');
+	$view = clone $view;
+	$view->clearVars();
+    $postcommentTable      =  Engine_Api::_()->getDbtable('Postcomments', 'user');
+	$userTable             =  Engine_Api::_()->getDbtable('users', 'user');
+
+	$postcommentData       = $postcommentTable->fetchAll($postcommentTable->select()
+									 ->where('actionId = ?',$aData['id'] )
+									  ->order('commentId DESC')
+									 );
+	$view->postcommentData =$postcommentData; 
+	$content = $view->render('_comments.tpl');
+    $result = array('html'=>$content);
+    echo json_encode($result);
+									 
+    }
 }

@@ -11413,10 +11413,10 @@ public function filterfeedbypetstypeAction(){
         
         if( $this->getRequest()->isPost()){
             $aData                  = $this->_request->getPost();
-            $action_id              = $aData['action_id'];
-            $poster_id              = $aData['poster_id'];
+           // $action_id              = $aData['action_id'];
+           // $poster_id              = $aData['poster_id'];
             $status                 = $aData['status'];
-            $propertyid             = $aData['propertyid'];
+            $propertyid             = $aData['id'];
             $article_comment_body   = $aData['feed_comment_body'];
             $postcommentTable       =  Engine_Api::_()->getDbtable('Postcomments', 'user');
             $postcommentTableId     =   $postcommentTable->insert(array(
@@ -11430,7 +11430,8 @@ public function filterfeedbypetstypeAction(){
 
                         ));
            $connectionApi                 =   Engine_Api::_()->getApi('connections', 'user');
-           $aResult['commenthtml']        =   $connectionApi->getviewallcommentsajaxResults($aData['action_id'],$aData['poster_id'],$aData['status'],$aData['actionSubjectId']);
+         //  $aResult['commenthtml']        =   $connectionApi->getviewallcommentsajaxResults($aData['action_id'],$viewer_id,$aData['status'],$aData['actionSubjectId']);
+           $aResult['commenthtml']        =   $connectionApi->getComments($aData);
           
            $propertyTable        =  Engine_Api::_()->getDbtable('propertylist', 'user');   
 	       $userTable            =  Engine_Api::_()->getDbtable('users', 'user');
@@ -15070,6 +15071,31 @@ public function savelinkAction(){
 	   echo json_encode($aResult['status']);
 
 	}		
-		
-	}
+public function getcommentsAction(){
+	
+	$this->_helper->layout->disableLayout();
+	$this->_helper->viewRenderer->setNoRender(true);
+	$oData    = $this->_request->getPost();
+	$user_id  = Engine_Api::_()->user()->getViewer()->getIdentity();
+	$connectionApi  =   Engine_Api::_()->getApi('connections', 'user');
+	$html           =   $connectionApi->getComments($oData);
+	return $html;
+	$viewer     = Engine_Api::_()->user()->getViewer();
+	date_default_timezone_set("EST");
+	$this->_helper->viewRenderer->setNoRender(true);
+	$this->_helper->layout->disableLayout();
+	if( $this->getRequest()->isPost()){
+        $aData                         = $this->_request->getPost();
+        $connectionApi = Engine_Api::_()->getApi('connections', 'user');
+        $html          = $connectionApi->getComments($aData);
+        return $html;
+        }
+        else{
+			$aResult['status'] =false;
+			echo json_encode($aResult);
+		}
+
+
+  }	
+}
 

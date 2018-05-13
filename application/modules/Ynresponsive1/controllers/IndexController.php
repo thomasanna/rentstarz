@@ -19,6 +19,7 @@ class Ynresponsive1_IndexController extends Core_Controller_Action_Standard
 		       //      return $this->_forward('notfound');
 	 }      
      $this->view->metaTitle     = 'Member Home Page';
+     $this->_helper->layout->setLayout('default_new');
     // Render
     $this->_helper->content
         ->setNoRender()

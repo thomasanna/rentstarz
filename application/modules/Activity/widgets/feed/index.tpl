@@ -1,3 +1,5 @@
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAWRDCCJZYbD17HwNNUMK-6DzyHziKhN8&libraries=places" async defer></script>
+<script src="<?php echo $this->baseUrl(); ?>/application/modules/User/externals/scripts/autocomplete_address_googleapi.js"></script>
 <?php
 // member type
     $viewer = Engine_Api::_()->user()->getViewer();
@@ -77,7 +79,7 @@ else{ $checkprofilefeedtype = '';}
         <div class="container">
             <ul class="txt-left">
                 <li class="item">
-                    <a href="javascript:void(0)" class="filterLinks">New Scout</a>
+                    <a href="javascript:void(0)" class="filterLinks matches"  data-toggle="modal" data-target="#matchesModal">New Scout</a>
                 </li>
                 <li class="item">
                     <a href="javascript:void(0)" class="filterLinks">My Scout</a>
@@ -183,6 +185,114 @@ else{ $checkprofilefeedtype = '';}
     </section>
 
     <?php endif;?> <!-- End property requirement list --->
+    
+    
+    
+        
+<!--matches Modal start-->
+
+<div class="modal fade" id="matchesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content-new">
+      <div class="modal-header">
+        <span class="modal-title" id="exampleModalLabel"><a href="javascript:void(0)" target="_blank">New Scout</a></span>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+       <div class="modal-body">
+            <div class="message" style="color:#333;padding: 0px 0px 8px 0px;display:block;">
+          <?php if($profile_type_id == 4): ?>
+            <?php if($user_premiumLevelProvision == 2):  // if premium level provision to all users disabled?>
+
+                 <?php if($package_type == '' || $package_type == 'landlord_pro_package'): ?>
+                 To continue, please upgrade your package. <a href="/support?page=upgradePackage">Upgrade Package</a>
+                 <?php endif;?>
+
+            <?php endif;?>
+           <?php endif;?>
+            </div>
+            <div class="err_msg" style="color:red"></div>
+<div class="matches_div">
+    <input type="hidden" name="scoutcount" value="<?php echo $scoutCount;?>" class="scoutcount">
+    <div class="pro_field_wrapper" style="margin-bottom:5px;" >
+        <div class="prty_lablel pro_label scount_name_mob" style="padding-bottom:12px;">Scout Name <span style="color:red;font-weight: bolder;">*</span>  </div>
+        <input type="text" name="scout_name" value="" class="scout_name prty_field">
+
+   </div>
+   <!--<br>-->
+    <div class="pro_field_wrapper">
+        <div class="prty_lablel pro_label scount_name_mob top_space_mob" style="padding-bottom:12px;">Housing Type</div>
+        <input type="radio" name="housing_type" value="Apartment" style="margin-right:3px;margin-top: 4px;">
+        <label class="radio_label" for="Apartment">Apartment</label>
+        <input type="radio" name="housing_type" value="Room" style="margin-right:3px;margin-top: 4px;">
+        <label class="radio_label" for="Room">Room</label>
+        <input type="radio" name="housing_type" value="House" style="margin-right:3px;margin-top: 4px;">
+        <label class="radio_label" for="House">House</label>
+        <input type="radio" name="housing_type" value="Villa" style="margin-right:3px;margin-top: 4px;">
+        <label class="radio_label" for="Villa">Villa</label>
+   </div> <br>
+   <!--<br>-->
+    <div class="pro_field_wrapper top_space_mob"><div class="prty_lablel pro_label">Pets</div>  <select name="is_petsallowd" id="is_petsallowd"  class="prty_field" onchange="petsType()">
+                                             <option value="">Select</option>
+                                             <option value="Yes">Yes</option>
+                                             <option value="No">No</option>
+    </select></div>   <br>
+    <div class="pets_type_wrapper" style="display:none">
+    <div class="pro_field_wrapper"><div class="prty_lablel pro_label">Type of pets</div>
+                             <select name="pets_type" id="pets_type"  class="prty_field">
+                                             <option value="">Select pets type</option>
+                                             <option value="Cats">Cats</option>
+                                             <option value="Dogs">Dogs</option>
+                                             <option value="Cats & Dogs">Cats & Dogs</option>
+                                             <option value="Birds">Birds</option>
+                                             <option value="Small pets">Small pets</option>
+                             </select>
+                             </div>   <br>
+        </div>
+                <div class="pro_field_wrapper">
+         <div class="prty_lablel pro_label">Location<span style="color:red;font-weight: bolder;">*</span> </div>
+        <input id="autocomplete1" class="preference_place prty_field" placeholder="Enter Location" type="text">
+        <br>
+
+      </div>
+    <div class="pro_field_wrapper"><div class="prty_lablel pro_label">Number Of Bedrooms</div>
+
+    <select id="number_of_rooms" class="prty_field">
+
+                                             <option value="">Select</option>
+                                             <option value="1">1</option>
+                                             <option value="2">2</option>
+                                             <option value="3">3</option>
+                                             <option value="4">4</option>
+                                             <option value="4+">4+</option>
+    </select>
+    </div>   <br>
+    <div class="pro_field_wrapper" style="overflow: hidden;"><div class="prty_lablel pro_label">Rent per Month</div>
+    <input type="text" class="price_range_from prty_field" style="float:left" placeholder="Price">
+    <span class="price_range_to_div" style="display:none">
+        <span class="to_span">To</span>
+     <input type="text" class="price_range_to prty_field" placeholder="Price">
+     </span>
+        <div class="price_range_span_link" style="float:left;padding-top: 3px;margin-left: 4px;">
+            <a href="javascript:void(0)" class="price_range_link">
+                        <img src="/application/modules/User/externals/images/add_range.png" alt="" title="Add Range" >
+            </a>
+        </div>
+
+        </div> <br>
+        
+
+
+       <div class="matches_btn_div"><input class="submit_matches" type="button" value="Save" name=""></div>
+
+      </div>
+            <div class="loader submit_matches_loader" style="display:none"></div>
+    </div>
+  </div>
+</div>
+
+<!--matches Modal end-->    
 
 <?php endif;?>
 
@@ -391,30 +501,32 @@ else{ $checkprofilefeedtype = '';}
                             </p>
                             <div class="row cotentlenks">
                                 <div class="col-sm-12">
-                                    <span>
+                                   
 									<?php if($viewer): ?>
 										 <?php if($dev_type == 1):  $popup_status = 'mobile'; // mobile?> 
-										 <a href="<?php echo $this->baseUrl().'/tichat/singlechatmob'; ?>" target="_blank" onClick="popUpChatClick('<?php echo $UserData->user_id ?>','<?php echo $UserData->displayname; ?>','<?php echo $src ?>','<?php echo $popup_status ?>')"><i class="fa fa-envelope"></i>&nbsp;&nbsp;Message</a>
+										 <span><a href="<?php echo $this->baseUrl().'/tichat/singlechatmob'; ?>" target="_blank" onClick="popUpChatClick('<?php echo $UserData->user_id ?>','<?php echo $UserData->displayname; ?>','<?php echo $src ?>','<?php echo $popup_status ?>')"><i class="fa fa-envelope"></i>&nbsp;&nbsp;Message</a></span>
 									     <?php else: ?>
 										 <span onClick="popUpChatClick('<?php echo $UserData->user_id ?>','<?php echo $UserData->displayname; ?>','<?php echo $src ?>','<?php echo $popup_status ?>')">
 											<a href="javascript:void(0)" ><i class="fa fa-envelope"></i>&nbsp;&nbsp;Message</a>
+										 </span>	
 									     <?php endif; ?>
 								   <?php else:?>	
-								     <a><i class="fa fa-envelope"></i>&nbsp;Message</a></span>     
+								         <span><a><i class="fa fa-envelope"></i>&nbsp;Message</a></span>     
 								   <?php endif; ?>
                                        
-                                    <span>
+                                   
 										<?php if($viewer): ?>
 										 <?php if($dev_type == 1):  $popup_status = 'mobile'; // mobile?> 
-										 <a href="<?php echo $this->baseUrl().'/tichat/singlechatmob'; ?>" target="_blank" onClick="popUpChatClick('<?php echo $UserData->user_id ?>','<?php echo $UserData->displayname; ?>','<?php echo $src ?>','<?php echo $popup_status ?>')"><i class="fa fa-video-camera"></i>&nbsp;&nbsp;Video</a>
+										  <span><a href="<?php echo $this->baseUrl().'/tichat/singlechatmob'; ?>" target="_blank" onClick="popUpChatClick('<?php echo $UserData->user_id ?>','<?php echo $UserData->displayname; ?>','<?php echo $src ?>','<?php echo $popup_status ?>')"><i class="fa fa-video-camera"></i>&nbsp;&nbsp;Video</a></span>
 									     <?php else: ?>
 										 <span onClick="popUpChatClick('<?php echo $UserData->user_id ?>','<?php echo $UserData->displayname; ?>','<?php echo $src ?>','<?php echo $popup_status ?>')">
 											<a href="javascript:void(0)" ><i class="fa fa-video-camera"></i>&nbsp;&nbsp;Video</a>
+									     </span> 
 									     <?php endif; ?>
 										 <?php else:?>	
-											 <a><i class="fa fa-video-camera"></i>&nbsp;Video</a></span>     
+										 <span><a><i class="fa fa-video-camera"></i>&nbsp;Video</a></span>     
 										 <?php endif; ?>
-                                    </span>
+                                    
                                     <span>
                                         <a onClick="fbShare('<?php echo  $data['id']; ?>','<?php echo $tagtext ?>','<?php echo $feed_image; ?>','<?php echo $detailUrl; ?>')"><i class="fa fa-share"></i>&nbsp; Share</a>
                                     </span>
@@ -424,7 +536,7 @@ else{ $checkprofilefeedtype = '';}
                                         <a><i class="fa fa-eye"></i>&nbsp;<?php echo $data['view_count'];?> Views</a>
                                     </span>
                                     <span>
-                                        <a href="#" data-toggle="modal" data-target="#comments"><i class="fa fa-comment" ></i>&nbsp;<?php echo $commentCount;?> Comments </a>
+                                        <a href="#" data-toggle="modal" data-target="#comments" class="comment_btn" action_id = "<?php echo  $data['id']; ?>"><i class="fa fa-comment" ></i>&nbsp;<?php echo $commentCount;?> Comments </a>
                                     </span>
                                 </div>
                             </div>
@@ -466,12 +578,39 @@ else{ $checkprofilefeedtype = '';}
         </div>
        <?php endif;?>  
     </section>
+    
+<!-- comments modal -->
+<div class="modal fade" id="comments" tabindex="-1" role="dialog" aria-labelledby="commentsLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title" id="commentsLabel">Modal title <span class="pull-right">Add a Comment</span></h6>             
+            </div>
+            <input type="hidden" class="action_id" value="">
+            <div class="content"></div>
+		  <div class="modal-footer text-right">
+			<form>
+				<div class="form-group">
+					<textarea class="form-control feed_comment_body"></textarea>
+				</div>    
+				<button type="button" class="btn btn-primary btn-sm comment_post_btn" >Submit</button>              
+			</form>
+		</div>
+  </div>
+</div>
+</div>
+
+
+
+
+<!-- comments modal -->
+    
 <?php endif;?>    
   <!-- End renter home feed-->  
 
     <script>
-        $(document).ready(function () {
-            $('.Listcontainer').paginathing({
+        jQuery(document).ready(function () {
+            jQuery('.Listcontainer').paginathing({
                 perPage: 3,
                 limitPagination: 4,
                 containerClass: 'panel-footer',
@@ -481,3 +620,210 @@ else{ $checkprofilefeedtype = '';}
 
         });
     </script>
+    
+<script>
+
+jQuery('body').on('click', '.submit_matches', function(event){
+	 jQuery('#matchesModal .err_msg').text('');
+	 var package_type = "<?php echo $package_type;?>";
+     var profile_type_id = "<?php echo $profile_type_id;?>";
+     var user_premiumLevelProvision = "<?php echo $user_premiumLevelProvision;?>";
+     var user_basicScoutLimit = "<?php echo $user_basicScoutLimit;?>";
+     var user_landlordProScoutLimit = '<?php echo $user_landlordProScoutLimit;?>';
+
+	
+   jQuery(".submit_matches_loader").css("display", "block");
+   jQuery('.submit_matches').css('display','none');
+
+   var housing_types= jQuery('input[name="housing_type"]:checked').val();
+
+   if(housing_types == undefined){
+       housing_types = '';
+   }
+   var scout_name   = jQuery(".scout_name").val();
+   var is_petsallowd= jQuery("#is_petsallowd").val();
+   var pets_type    = jQuery("#pets_type").val();
+   var price        = jQuery("#matchesModal .price_range_from").val();
+   var price_to        = jQuery("#matchesModal .price_range_to").val();
+   var number_of_rooms        = jQuery("#number_of_rooms").val();
+   var location        = jQuery("#location").val();
+   var oData           = new Object();
+   var PreferenceCountry                        = oData.PreferenceCountry =jQuery.trim(jQuery(".apartement_country").val());
+   var PreferenceState                          = oData.PreferenceState =jQuery.trim(jQuery(".apartement_state").val());
+   var PreferenceCity                           = oData.PreferenceCity =jQuery.trim(jQuery(".apartement_city").val());
+   if(PreferenceCity == ''){
+   var PreferenceCity     = oData.PreferenceCity =jQuery.trim(jQuery(".apartement_sublocality_level_1").val());
+   }
+ 
+   var PreferenceCounty          =  oData.PreferenceCounty =jQuery.trim(jQuery(".apartement_sublocality_level_1").val());
+   var PreferencNeighborhood     =  oData.PreferenceNeighborhood =jQuery.trim(jQuery(".apartement_neighborhood").val());
+   var PreferenceZip             = oData.PreferenceZip =jQuery.trim(jQuery(".apartement_zip").val());
+   oData.housing_types = housing_types;
+   oData.is_petsallowd = is_petsallowd;
+   oData.pets_type     = pets_type;
+   oData.price         = price;
+   oData.price_to         = price_to;
+   oData.number_of_rooms  = number_of_rooms;
+   oData.location         = location;
+   oData.scout_name       = scout_name;
+   
+   var scoutcount         =  oData.scoutcount = jQuery.trim(jQuery(".scoutcount").val());
+
+   var is_validate = true;
+
+  if((package_type == '' && profile_type_id == 4 && user_premiumLevelProvision == 2)){
+	   if(scoutcount >=parseInt(user_basicScoutLimit)){
+		   jQuery('#matchesModal .message').css('color','red');
+       is_validate = false;
+     }
+   }
+   if((package_type == 'landlord_pro_package' && profile_type_id == 4 && user_premiumLevelProvision == 2)){
+	   if(scoutcount >= parseInt(user_landlordProScoutLimit)){
+		   jQuery('#matchesModal .message').css('color','red');
+       is_validate = false;
+     }
+   }
+   
+   if(is_validate == true){
+   
+	   if(PreferenceCountry == '' &&PreferenceState == '' && PreferenceCity == ''){
+			jQuery('.preference_place').css('border-color','#dd1616');
+			is_validate = false;
+	   }
+	   else{
+			jQuery('.preference_place').css('border-color','#b2c6cd');
+			is_validate = true;
+	   }
+   
+   }
+   if(is_validate == true){
+	  if(scout_name ==''){
+		 jQuery('.scout_name').css('border-color','#dd1616');
+		 is_validate = false; 
+	  }else{
+			jQuery('.scout_name').css('border-color','#b2c6cd');
+			is_validate = true;
+	   }
+	   
+   }
+   if(is_validate == true){
+	   
+	  if(price == '' && price_to !=''){
+		  jQuery('.price_range_from').css('border-color','#dd1616');
+		  is_validate = false;		  
+	  }
+	  else{
+		  jQuery('.price_range_from').css('border-color','#b2c6cd');
+		  is_validate = true;
+	  } 
+   }
+   if(is_validate == true){
+		 if(price != '' && price_to !=''){
+			 if(parseFloat(price_to) < parseFloat(price)){
+				jQuery('#matchesModal .price_range_from').css('border-color','#dd1616');
+			    is_validate = false;  
+			 }
+			 else{
+			   jQuery('#matchesModal .price_range_from').css('border-color','#b2c6cd'); 
+			   is_validate = true; 				 
+			 }
+		   
+		 }		 
+	  }
+   if(is_validate == true) {
+	   
+	 if(price ==''){
+		
+		oData.price = 0;
+	}	
+	if(price_to ==''){
+		
+		oData.price_to = 0;
+	}	
+   
+   var formURL    = '<?php echo $this->baseUrl(); ?>' + '/user/index/filterfeedbymatches';
+        jQuery.ajax( {
+                        url : formURL,
+                        type: "POST",
+                        //dataType: 'json',
+                        data : oData,
+                            success: function (returndata) {
+								
+							if(returndata == 'true'){								
+							    var url ='<?php echo $this->baseUrl(); ?>' + '/members/home';
+                                window.location.assign(url);								
+							}	
+							else{
+								jQuery('#matchesModal .err_msg').text('You have already added this preference');
+								jQuery(".submit_matches_loader").css("display", "none");
+                                jQuery('.submit_matches').css('display','block');  
+							}
+
+                            },
+                            error: function(e){
+                           jQuery(".submit_matches_loader").css("display", "none");
+                           jQuery('.submit_matches').css('display','block');  }
+                        });
+        } 
+        else{
+		  jQuery(".submit_matches_loader").css("display", "none");
+          jQuery('.submit_matches').css('display','block');
+			
+		}               
+});
+
+jQuery(document).ready(function(){
+	
+initAutocomplete1();
+
+});
+jQuery('body').on('click', '.comment_btn', function(event){
+
+  var id = jQuery(this).attr('action_id');
+  jQuery('#comments .action_id').val(id);
+  var oData           = new Object();
+  oData.id = id;
+  var formURL    = '<?php echo $this->baseUrl(); ?>' + '/user/index/getcomments';
+  jQuery.ajax( {
+		url : formURL,
+		type: "POST",
+		dataType: 'json',
+		data : oData,
+			success: function (returndata) {
+				jQuery('#comments .content').html(returndata.html);
+			
+			},
+			error: function(e){
+			}
+   });
+});
+
+ jQuery('body').on('click', '.comment_post_btn', function(event){
+	var isValidate = true;
+    var action_id =     jQuery('#comments .action_id').val();
+    var oData              = new Object();
+    oData.id =action_id;
+    var feed_comment_body = jQuery('.feed_comment_body').val();
+    if(feed_comment_body == ''){
+		isValidate = false;
+	}
+	if(isValidate  == true){
+      var feed_comment_body    = oData.feed_comment_body =feed_comment_body;
+      var formURL    = '<?php echo $this->baseUrl(); ?>' + '/user/index/postfeedcomment';
+            jQuery.ajax( {
+                        url : formURL,
+                        type: "POST",
+                        dataType: 'json',
+                        data : oData,
+                        success: function (data) { 
+							jQuery('#comments .content').html(data.html);
+							jQuery('.feed_comment_body').val('');
+                            },
+                            error: function(e){
+                        }
+                    
+       });
+
+     }   
+    });
+</script>    
