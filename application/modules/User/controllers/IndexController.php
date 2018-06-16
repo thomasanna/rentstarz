@@ -1698,7 +1698,7 @@ public function tenantsAction() {
         if(empty($propertyData)){
                 return $this->_forward('notfound');
         }
-        if($viewer_id){exit("1111");
+        if($viewer_id){
 			if($viewer->level_id  != 1 ){ // if landlord
 				if($propertyData -> property_owner_id != $viewer_id){ // if viewer is not owner
 					if($propertyData -> landlord_enable == 0 || $propertyData -> enable == 0){ //  return false if not enabled
@@ -3357,7 +3357,7 @@ public function tenantsAction() {
           return;
     }
     $this->_helper->viewRenderer->setNoRender(false);
-    $this->_helper->layout->setLayout('common_layout');
+    $this->_helper->layout->setLayout('common_layout_new');
     $this->view->viewer = $viewer = Engine_Api::_()->user()->getViewer();
     date_default_timezone_set('EST');
     $tmpResultData     =  array();

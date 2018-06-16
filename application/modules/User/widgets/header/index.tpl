@@ -128,9 +128,10 @@ $profileType    = $userdetails['profile_type'];
 					 <?php if($this->viewer->getIdentity()): ?>
 					 
 					    <?php if($profileType == 'tenant'):?>
-					    <li>
-                            <a href="/members/home">Home</a>
+					    <li class="active">
+                            <a href="<?php echo $this->baseUrl()?>/members/home">RENT</a>
                         </li>
+<!--
                         <li class="dropdown">
                                 <a class="dropdown-toggle" id="menu2" type="" data-toggle="dropdown">
                                    Application
@@ -145,34 +146,34 @@ $profileType    = $userdetails['profile_type'];
                                     </li>                                  
                                 </ul>
                             </li>
-                        <li class="active">
-                                <a href="scoutUser.html">Documents</a>
-                            </li>
-                        <li class="active">
-                                <a href="/property/requirement">Post to scout</a>
+-->
+                        <li>
+                                <a href="scoutUser.html">MESSAGES</a>
                             </li>
                         <li>
-                            <a href="/articles">Articles</a>
-                        </li>
-                        <li>
-                                <a href="index.html">Saved Renters</a>
+                                <a href="scoutUser.html">NOTIFICATION</a>
                             </li>
                         <li>
-                                <a href="index.html">Message</a>
+                                <a href="scoutUser.html">FAVOURITE</a>
                             </li>
                         <li>
-                            <a href="#">Notifications</a>
-                        </li>
-                        <li>
-                                <a href="#">Search</a>
+                                <a href="scoutUser.html">DOCUMENTS</a>
                             </li>
+                        <li>
+                                <a href="<?php echo $this->baseUrl()?>/profile/<?php echo $this->viewer->getIdentity();?>">MY ACCOUNT</a>
+                            </li>
+                      
+                          <li>
+                                <a href="<?php echo $this->baseUrl()?>/logout" class="tichatLogout">SIGN OUT</a>
+                          </li>
                         <?php endif;?>	
 					    
 					    <?php if($profileType == 'landlord'):?>
 					    <li>
-                            <a href="members/home">Home</a>
+                            <a href="<?php echo $this->baseUrl()?>/members/home">RENT</a>
                         </li>
                         <li class="dropdown">
+<!--
                                 <a class="dropdown-toggle" id="menu2" type="" data-toggle="dropdown">
                                    Properties
                                     <span class="caret"></span>
@@ -186,14 +187,23 @@ $profileType    = $userdetails['profile_type'];
                                     </li>                                  
                                 </ul>
                             </li>
+-->
                         <li>
-                            <a href="/documents">Documents</a>
+                            <a href="/documents">MESSAGES</a>
                         </li>
                         <li>
-                            <a href="/articles">Articles</a>
-                        </li>
-                        
-					    
+                                <a href="scoutUser.html">NOTIFICATION</a>
+                            </li>
+                        <li>
+                                <a href="scoutUser.html">FAVOURITE</a>
+                            </li>
+                        <li>
+                                <a href="scoutUser.html">DOCUMENTS</a>
+                            </li>
+                        <li>
+                                <a href="<?php echo $this->baseUrl()?>/profile/<?php echo $this->viewer->getIdentity();?>">MY ACCOUNT</a>
+                            </li>
+                      
 					    <?php endif;?>	
                         
                         

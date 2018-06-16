@@ -446,6 +446,7 @@ return array(
       'subject' => 'user',
     ),
   ),
+   array(
     'title' => 'Header',
     'description' => 'header',
     'category' => 'User',
